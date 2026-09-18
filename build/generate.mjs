@@ -289,7 +289,7 @@ function homeDynamicHtml() {
 // [file, base, activeNavKey]
 const STATIC = [
   ['index.html', '', ''], ['about.html', '', 'about'], ['services.html', '', 'services'],
-  ['contact.html', '', ''], ['gallery.html', '', ''], ['brands.html', '', 'brands'],
+  ['contact.html', '', 'contact'], ['gallery.html', '', ''], ['brands.html', '', 'brands'],
   ['vintage.html', '', 'used'],
   ['collection/luxury.html', '../', 'brands'], ['collection/self-playing.html', '../', 'brands'],
   ['collection/grand-uprights.html', '../', 'used'], ['collection/custom-design.html', '../', 'design'],
