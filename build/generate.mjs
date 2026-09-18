@@ -5,7 +5,7 @@
 // homepage dynamic blocks into the hand-authored static pages.
 //
 // Run by Netlify (`npm run build`) on every deploy; content is edited in
-// the CMS at /admin, which commits to content/ and triggers a rebuild.
+// Pages CMS (see .pages.yml), which commits to content/ and triggers a rebuild.
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -27,7 +27,9 @@ function loadCollection(dir) {
     .filter((f) => f.endsWith('.md'))
     .map((f) => {
       const { data, content } = matter(read(path.join(dir, f)));
-      return { slug: f.replace(/\.md$/, ''), ...data, body: content.trim() };
+      // Pages CMS stores a markdown body field either as the file body or,
+      // for some field setups, as a frontmatter `body:` — accept both.
+      return { slug: f.replace(/\.md$/, ''), ...data, body: (content.trim() || data.body || '') };
     })
     .filter((e) => e.status !== 'draft')
     .sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
@@ -88,7 +90,7 @@ function videoCard(v, base = '') {
   const link = id ? `https://www.youtube.com/watch?v=${id}` : '#';
   const thumb = id
     ? `<img src="https://img.youtube.com/vi/${id}/hqdefault.jpg" alt="${esc(v.title)}" loading="lazy">`
-    : `<div class="video-card__placeholder"><span>Add a YouTube link in /admin</span></div>`;
+    : `<div class="video-card__placeholder"><span>Add a YouTube link in the CMS</span></div>`;
   const tag = id ? 'a' : 'div';
   const attrs = id ? ` href="${link}" target="_blank" rel="noopener"` : '';
   const play = id ? '<span class="video-card__play" aria-hidden="true">▶</span>' : '';
@@ -117,7 +119,7 @@ function sectionHead(eyebrow, title, lead = '', center = true) {
 function buildInsightsIndex() {
   const cards = insights.length
     ? insights.map((a) => postCard(a, '')).join('\n')
-    : `<p class="muted-note">No articles yet — publish the first one in <a href="admin/">the admin</a>.</p>`;
+    : `<p class="muted-note">No articles yet — publish the first one.</p>`;
   const body = `<main>
     <section class="sub-hero">
       <div class="container sub-hero__content">
@@ -161,7 +163,7 @@ function buildInstruments() {
   const list = pianos.filter((p) => (p.section || 'instruments') === 'instruments');
   const cards = list.length
     ? list.map((p) => instrumentCard(p, '')).join('\n')
-    : `<p class="muted-note">No instruments yet — add one in <a href="admin/">the admin</a>.</p>`;
+    : `<p class="muted-note">No instruments yet — add one.</p>`;
   const body = `<main>
     <section class="sub-hero">
       <div class="container sub-hero__content">
@@ -183,7 +185,7 @@ function buildInstruments() {
 function buildVideos() {
   const cards = videos.length
     ? videos.map((v) => videoCard(v, '')).join('\n')
-    : `<p class="muted-note">No videos yet — add one in <a href="admin/">the admin</a>.</p>`;
+    : `<p class="muted-note">No videos yet — add one.</p>`;
   const followRow = socialLinks(social, 'social-icons social-icons--big');
   const body = `<main>
     <section class="sub-hero">
