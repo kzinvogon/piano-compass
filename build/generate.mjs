@@ -52,6 +52,14 @@ function ytId(url = '') {
   return '';
 }
 
+function vimeoId(url = '') {
+  const s = String(url).trim();
+  const m = s.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+  if (m) return m[1];
+  if (/^\d{6,}$/.test(s)) return s;
+  return '';
+}
+
 // ---- component renderers --------------------------------------------------
 function instrumentCard(p, base = '') {
   const badge = [p.constructor, p.year].filter(Boolean).join(' · ');
@@ -90,6 +98,7 @@ const withBase = (u, base) => (isAbs(u) ? u : base + u);
 
 function videoCard(v, base = '') {
   const id = ytId(v.youtube);
+  const vid = vimeoId(v.vimeo);
   const mp4 = v.video_file || v.video_url; // uploaded path or external URL
   const posterAttr = v.poster ? ` poster="${withBase(esc(v.poster), base)}"` : '';
 
@@ -100,6 +109,9 @@ function videoCard(v, base = '') {
     attrs = ` href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener"`;
     play = '<span class="video-card__play" aria-hidden="true">▶</span>';
     thumb = `<img src="https://img.youtube.com/vi/${id}/hqdefault.jpg" alt="${esc(v.title)}" loading="lazy">`;
+  } else if (vid) {
+    // Vimeo: inline iframe player
+    thumb = `<iframe class="video-card__embed" src="https://player.vimeo.com/video/${vid}" title="${esc(v.title)}" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
   } else if (mp4) {
     // Self-hosted / linked MP4: inline HTML5 player
     thumb = `<video class="video-card__video" controls preload="metadata"${posterAttr}>
