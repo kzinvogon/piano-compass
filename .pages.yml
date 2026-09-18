@@ -12,7 +12,7 @@
 media:
   input: images/uploads
   output: images/uploads
-  extensions: [jpg, jpeg, png, webp, gif, svg]
+  extensions: [jpg, jpeg, png, webp, gif, svg, mp4, webm, mov]
 
 content:
   # ── Instruments (New & Interesting / Piano of the Week) ──
@@ -81,7 +81,10 @@ content:
       fields: [title, date]
     fields:
       - { name: title, label: Title, type: string }
-      - { name: youtube, label: YouTube link or ID (paste the full URL), type: string }
+      - { name: youtube, label: "YouTube link (best for large videos — paste the full URL)", type: string }
+      - { name: video_file, label: "…or upload a short MP4 (a few MB max — GitHub rejects files over 100MB)", type: file }
+      - { name: video_url, label: "…or paste a direct link to an MP4 hosted elsewhere", type: string }
+      - { name: poster, label: Thumbnail image (optional, shown before play), type: image }
       - { name: date, label: Date, type: date }
       - { name: description, label: Description, type: text }
 

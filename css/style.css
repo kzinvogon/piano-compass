@@ -746,3 +746,6 @@ body.lightbox-open { overflow: hidden; }
 @media (max-width: 640px) {
   .card-grid, .card-grid--instruments, .card-grid--videos { grid-template-columns: 1fr; }
 }
+
+/* Inline MP4 player inside a video card */
+.video-card__video { width: 100%; height: 100%; object-fit: cover; display: block; background: #000; }

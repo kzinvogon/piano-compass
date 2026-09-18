@@ -85,15 +85,31 @@ function postCard(a, base = '') {
   </a>`;
 }
 
+const isAbs = (u = '') => /^(https?:)?\/\//.test(String(u));
+const withBase = (u, base) => (isAbs(u) ? u : base + u);
+
 function videoCard(v, base = '') {
   const id = ytId(v.youtube);
-  const link = id ? `https://www.youtube.com/watch?v=${id}` : '#';
-  const thumb = id
-    ? `<img src="https://img.youtube.com/vi/${id}/hqdefault.jpg" alt="${esc(v.title)}" loading="lazy">`
-    : `<div class="video-card__placeholder"><span>Add a YouTube link in the CMS</span></div>`;
-  const tag = id ? 'a' : 'div';
-  const attrs = id ? ` href="${link}" target="_blank" rel="noopener"` : '';
-  const play = id ? '<span class="video-card__play" aria-hidden="true">▶</span>' : '';
+  const mp4 = v.video_file || v.video_url; // uploaded path or external URL
+  const posterAttr = v.poster ? ` poster="${withBase(esc(v.poster), base)}"` : '';
+
+  let thumb, tag = 'div', attrs = '', play = '';
+  if (id) {
+    // YouTube: thumbnail links out to the video
+    tag = 'a';
+    attrs = ` href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener"`;
+    play = '<span class="video-card__play" aria-hidden="true">▶</span>';
+    thumb = `<img src="https://img.youtube.com/vi/${id}/hqdefault.jpg" alt="${esc(v.title)}" loading="lazy">`;
+  } else if (mp4) {
+    // Self-hosted / linked MP4: inline HTML5 player
+    thumb = `<video class="video-card__video" controls preload="metadata"${posterAttr}>
+        <source src="${withBase(esc(mp4), base)}" type="video/mp4">
+        Your browser doesn't support embedded video.
+      </video>`;
+  } else {
+    thumb = `<div class="video-card__placeholder"><span>Add a YouTube link or upload an MP4 in the CMS</span></div>`;
+  }
+
   return `<${tag} class="video-card"${attrs}>
     <div class="video-card__thumb">
       ${thumb}
