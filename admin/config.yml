@@ -1,0 +1,120 @@
+# Piano Compass — Decap CMS configuration
+#
+# Login + publishing for the dynamic sections. Stuart edits here; publishing
+# commits to the repo and Netlify rebuilds the site.
+#
+# ── One-time activation (repo owner, in the Netlify dashboard) ──
+#   1. Site configuration → Identity → Enable Identity.
+#   2. Identity → Registration: set to "Invite only", then invite Stuart's email.
+#   3. Identity → Services → Git Gateway: Enable.
+# After that, https://<site>/admin/ offers an email login and Publish works.
+# (Prefer the GitHub backend instead? Replace the `backend` block with:
+#    backend: { name: github, repo: kzinvogon/feurich-iberia, branch: main }
+#  and configure Netlify's OAuth provider — but that needs a GitHub account.)
+
+backend:
+  name: git-gateway
+  branch: main
+
+# Draft → In review → Ready gives Stuart Preview before Publish; deleting an
+# entry removes it. Drafts live off `main`, so they never appear on the site.
+publish_mode: editorial_workflow
+
+media_folder: "images/uploads"
+public_folder: "images/uploads"
+
+site_url: https://stuart-conaghan.netlify.app
+display_url: https://stuart-conaghan.netlify.app
+logo_url: https://stuart-conaghan.netlify.app/images/self-playing-walnut.jpeg
+
+collections:
+  # ── Instruments (New & interesting / Piano of the week) ──
+  - name: pianos
+    label: "Pianos"
+    label_singular: "Piano"
+    folder: "content/pianos"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} — {{constructor}} {{year}}"
+    sortable_fields: [date, title, year]
+    fields:
+      - { label: "Title", name: "title", widget: "string", hint: "e.g. Feurich Vienna 123" }
+      - label: "Constructor / maker"
+        name: "constructor"
+        widget: "select"
+        options: ["Feurich", "Bösendorfer", "Steinway & Sons", "Yamaha", "Kawai", "Blüthner", "C. Bechstein", "Fazioli", "Schimmel", "Grotrian", "Shigeru Kawai", "Other"]
+      - { label: "Year of build", name: "year", widget: "number", value_type: "int", min: 1700, max: 2100 }
+      - label: "Type"
+        name: "type"
+        widget: "select"
+        options: ["Grand", "Baby Grand", "Upright", "Digital", "Other"]
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options: ["New", "Vintage", "Restored", "Pre-owned"]
+      - label: "Section"
+        name: "section"
+        widget: "select"
+        default: "instruments"
+        options:
+          - { label: "New & Interesting Instruments", value: "instruments" }
+      - { label: "Feature as Piano of the Week candidate", name: "featured", widget: "boolean", default: false, required: false }
+      - { label: "Price / guide", name: "price", widget: "string", required: false, hint: "e.g. €38,000 or 'On request'" }
+      - { label: "Main photo", name: "image", widget: "image", required: false }
+      - { label: "More photos", name: "gallery", widget: "list", field: { label: "Photo", name: "photo", widget: "image" }, required: false }
+      - { label: "Short summary", name: "excerpt", widget: "text", required: false, hint: "One or two sentences shown on cards." }
+      - { label: "Date", name: "date", widget: "datetime", default: "" }
+      - { label: "Full description", name: "body", widget: "markdown", required: false }
+
+  # ── Insights / Advice articles ──
+  - name: insights
+    label: "Insights & Advice"
+    label_singular: "Article"
+    folder: "content/insights"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [date, title]
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string", default: "Stuart Conaghan", required: false }
+      - { label: "Header image", name: "image", widget: "image", required: false }
+      - { label: "Excerpt", name: "excerpt", widget: "text", hint: "Shown on cards and previews." }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # ── Videos (YouTube) ──
+  - name: videos
+    label: "Videos"
+    label_singular: "Video"
+    folder: "content/videos"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [date, title]
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "YouTube link or ID", name: "youtube", widget: "string", hint: "Paste the full YouTube URL, e.g. https://www.youtube.com/watch?v=XXXXXXXXXXX" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+
+  # ── Site settings (social links + piano of the week) ──
+  - name: settings
+    label: "Settings"
+    files:
+      - name: social
+        label: "Social links & Piano of the Week"
+        file: "content/settings/social.json"
+        fields:
+          - { label: "Instagram URL", name: "instagram_url", widget: "string", required: false }
+          - { label: "TikTok URL", name: "tiktok_url", widget: "string", required: false }
+          - { label: "YouTube URL", name: "youtube_url", widget: "string", required: false }
+          - { label: "Facebook URL", name: "facebook_url", widget: "string", required: false }
+          - label: "Piano of the Week"
+            name: "piano_of_the_week"
+            widget: "relation"
+            collection: "pianos"
+            search_fields: ["title"]
+            value_field: "{{slug}}"
+            display_fields: ["title"]
+            required: false

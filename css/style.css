@@ -630,3 +630,119 @@ body.lightbox-open { overflow: hidden; }
   .hero__badge { left: 0; }
   .hero__quote { right: 0; }
 }
+
+/* ============================================================
+   Dynamic content sections (Insights, Instruments, Videos,
+   Piano of the Week) + social icons
+   ============================================================ */
+
+/* ── Social icons ──────────────────────────────────────── */
+.social-icons { display: inline-flex; align-items: center; gap: .5rem; }
+.social-icons__link {
+  width: 34px; height: 34px; border-radius: 999px; border: 1px solid var(--line);
+  display: inline-flex; align-items: center; justify-content: center; color: var(--ink-soft);
+  transition: color .2s, border-color .2s, background .2s, transform .2s;
+}
+.social-icons__link svg { width: 17px; height: 17px; }
+.social-icons__link:hover { color: var(--pine); border-color: var(--pine); transform: translateY(-2px); }
+.social-icons--nav { margin-right: .2rem; }
+.social-icons--nav .social-icons__link { width: 30px; height: 30px; }
+.social-icons--nav .social-icons__link svg { width: 15px; height: 15px; }
+.social-icons--footer { margin-top: 1.2rem; }
+.social-icons--big .social-icons__link { width: 44px; height: 44px; }
+.social-icons--big .social-icons__link svg { width: 22px; height: 22px; }
+
+.muted-note { color: var(--muted); font-size: .95rem; }
+.muted-note a { color: var(--pine); }
+
+/* ── Card grids ────────────────────────────────────────── */
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+.card-grid--instruments { grid-template-columns: repeat(3, 1fr); }
+.card-grid--videos { grid-template-columns: repeat(3, 1fr); }
+
+/* ── Post (insight) card ───────────────────────────────── */
+.post-card {
+  display: flex; flex-direction: column; background: var(--surface);
+  border: 1px solid var(--line); border-radius: 18px; overflow: hidden;
+  transition: transform .3s var(--ease), box-shadow .3s, border-color .3s;
+}
+.post-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-sm); border-color: var(--pine); }
+.post-card__img { aspect-ratio: 16/10; overflow: hidden; }
+.post-card__img img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+.post-card:hover .post-card__img img { transform: scale(1.05); }
+.post-card__body { padding: 1.6rem; display: flex; flex-direction: column; flex: 1; }
+.post-card__meta { font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--brass); margin-bottom: .6rem; }
+.post-card__body h3 { color: var(--ink); margin-bottom: .5rem; }
+.post-card__body p { font-size: .9rem; color: var(--muted); margin-bottom: 1rem; }
+.post-card__cta { margin-top: auto; font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--pine); }
+.post-card__cta::after { content: ' →'; }
+
+/* ── Instrument card ───────────────────────────────────── */
+.instrument-card {
+  display: flex; flex-direction: column; background: var(--surface);
+  border: 1px solid var(--line); border-radius: 18px; overflow: hidden;
+  transition: transform .3s var(--ease), box-shadow .3s, border-color .3s;
+}
+.instrument-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-sm); border-color: var(--pine); }
+.instrument-card__img { aspect-ratio: 4/3; overflow: hidden; }
+.instrument-card__img img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+.instrument-card:hover .instrument-card__img img { transform: scale(1.05); }
+.instrument-card__body { padding: 1.6rem; display: flex; flex-direction: column; flex: 1; }
+.instrument-card__badge { font-size: .7rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin-bottom: .5rem; }
+.instrument-card__body h3 { color: var(--ink); margin-bottom: .3rem; }
+.instrument-card__specs { font-size: .8rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); margin-bottom: .8rem; }
+.instrument-card__body p { font-size: .9rem; color: var(--muted); }
+.instrument-card__foot { margin-top: auto; padding-top: 1.1rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.instrument-card__price { font-family: var(--serif); font-size: 1.2rem; color: var(--pine); }
+
+/* ── Video card ────────────────────────────────────────── */
+.video-card { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; transition: transform .3s var(--ease), box-shadow .3s, border-color .3s; }
+.video-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-sm); border-color: var(--pine); }
+.video-card__thumb { position: relative; aspect-ratio: 16/9; overflow: hidden; background: var(--surface2); }
+.video-card__thumb img { width: 100%; height: 100%; object-fit: cover; }
+.video-card__placeholder { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: .82rem; text-align: center; padding: 1rem; }
+.video-card__play { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 56px; height: 56px; border-radius: 50%; background: rgba(20,17,10,.66); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; padding-left: 3px; transition: background .2s, transform .2s; }
+.video-card:hover .video-card__play { background: var(--pine); transform: translate(-50%,-50%) scale(1.08); }
+.video-card__body { padding: 1.4rem 1.5rem; }
+.video-card__body h3 { color: var(--ink); font-size: 1.1rem; margin-bottom: .4rem; }
+.video-card__body p { font-size: .86rem; color: var(--muted); margin-bottom: .6rem; }
+.video-card__meta { font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--brass); }
+
+/* ── Piano of the week ─────────────────────────────────── */
+.potw { display: grid; grid-template-columns: 1.1fr .9fr; gap: 2.4rem; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 22px; overflow: hidden; }
+.potw__media { min-height: 320px; }
+.potw__media img { width: 100%; height: 100%; min-height: 320px; object-fit: cover; }
+.potw__body { padding: clamp(1.6rem,3vw,2.6rem); }
+.potw__body h3 { color: var(--ink); font-size: clamp(1.5rem,2.6vw,2.1rem); margin-bottom: .3rem; }
+.potw__specs { font-size: .82rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+.potw__foot { margin-top: 1.6rem; display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap; }
+
+/* ── Article (single insight) ──────────────────────────── */
+.article { padding-top: 130px; }
+.article__back { display: inline-block; font-size: .78rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--pine); margin-bottom: 1.4rem; }
+.article__meta { font-size: .74rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--brass); margin-bottom: .8rem; }
+.article h1 { margin-bottom: 1rem; }
+.article__excerpt { margin-bottom: 1.6rem; }
+.article__hero { border-radius: 18px; overflow: hidden; margin: 1.6rem 0 2.4rem; border: 1px solid var(--line); }
+.article__hero img { width: 100%; display: block; }
+.article__cta { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+
+/* ── Prose (article body) ──────────────────────────────── */
+.prose { color: var(--ink-soft); font-size: 1.05rem; line-height: 1.8; }
+.prose > * + * { margin-top: 1.2rem; }
+.prose h2 { font-size: clamp(1.4rem,2.4vw,1.9rem); color: var(--ink); margin-top: 2.4rem; }
+.prose h3 { font-size: 1.25rem; color: var(--ink); margin-top: 1.8rem; }
+.prose a { color: var(--pine); text-decoration: underline; text-underline-offset: 3px; }
+.prose ul, .prose ol { padding-left: 1.3rem; }
+.prose li + li { margin-top: .4rem; }
+.prose img { border-radius: 12px; margin: 1.6rem 0; }
+.prose blockquote { border-left: 3px solid var(--brass); padding-left: 1.2rem; color: var(--muted); font-style: italic; }
+
+@media (max-width: 900px) {
+  .card-grid, .card-grid--instruments, .card-grid--videos { grid-template-columns: 1fr 1fr; }
+  .potw { grid-template-columns: 1fr; }
+  .potw__media, .potw__media img { min-height: 240px; }
+}
+@media (max-width: 640px) {
+  .card-grid, .card-grid--instruments, .card-grid--videos { grid-template-columns: 1fr; }
+}
