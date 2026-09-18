@@ -1,0 +1,37 @@
+{
+  "aboutPage": {
+    "eyebrow": "About Piano Compass",
+    "title": "Independent by conviction",
+    "lead": "Piano Compass exists to give piano buyers and owners something the market rarely offers: genuinely impartial, expert advice with no stake in what you choose.",
+    "p1": "Most piano advice comes from someone with a piano to sell. Piano Compass was founded on a different principle — that the person guiding your decision should have no commission, no brand quota and no showroom to fill. Our only measure of success is that you end up with the instrument that's right for you, and that it's cared for properly for years to come.",
+    "p2": "We advise across every leading maker — Feurich, our featured partner, alongside Steinway, Bösendorfer, Fazioli, Yamaha, Kawai, Blüthner, Bechstein and more — as well as verified used and pre-owned instruments. We shortlist, arrange play-tests, commission independent inspections, negotiate fairly, and stay with you through tuning, restoration, valuation and, one day, resale.",
+    "p3": "Based in Iberia and working with clients across Spain and Portugal — and remotely worldwide — we combine decades at the keyboard with an independent network of accredited technicians and restorers.",
+    "expertEyebrow": "Your advisor",
+    "expertName": "Stuart Conaghan",
+    "expertRole": "Concert pianist & founder",
+    "expertBio": "A concert pianist and independent consultant, Stuart has spent his life around fine pianos — performing on them, choosing them and caring for them. He founded Piano Compass to be the trustworthy guide he wished he'd had: someone whose advice you can rely on precisely because they have nothing to sell you.",
+    "valuesEyebrow": "What we stand for",
+    "valuesTitle": "Principles we won't compromise",
+    "v1Title": "Impartiality",
+    "v1Desc": "No commissions, no brand allegiance. Our recommendation is only ever about the best fit for you.",
+    "v2Title": "Truthfulness",
+    "v2Desc": "Clear, honest answers — including when the honest answer is to wait, spend less, or walk away.",
+    "v3Title": "Expertise",
+    "v3Desc": "Decades of playing experience and an accredited technician network behind every recommendation.",
+    "v4Title": "Partnership",
+    "v4Desc": "We're here for the whole journey, not just the sale that never was.",
+    "timelineTitle": "The Piano Compass story",
+    "t1Year": "The problem",
+    "t1Text": "Buyers and owners kept receiving conflicting, sales-driven advice — and paying for it in poor decisions.",
+    "t2Year": "The idea",
+    "t2Text": "An advisory that works only for the client: impartial guidance across all brands, new and used.",
+    "t3Year": "The partnership",
+    "t3Text": "A featured partnership with Feurich brings Viennese craftsmanship into the range, without exclusivity.",
+    "t4Year": "Today",
+    "t4Text": "Piano Compass guides pianists, families and institutions across Iberia and beyond, for the whole ownership journey.",
+    "cta": "Book a consultation"
+  },
+  "images": {
+    "about": "images/custom-grand-mosaic.jpeg"
+  }
+}

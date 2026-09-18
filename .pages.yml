@@ -6,8 +6,13 @@
 #   3. Edit Pianos, Insights, Videos and Settings below. Saving commits to
 #      the repo, and Netlify rebuilds the site automatically.
 #
-# Photos upload into images/uploads and are referenced with a relative path
-# so the generated pages resolve them correctly.
+# Two ways to add images:
+#   • Upload here — photos go into images/uploads and are referenced with a
+#     relative path (used by Pianos / Insights / Videos below).
+#   • Cloudinary (recommended for page images) — upload to your free Cloudinary
+#     media library, copy the image's delivery URL, and paste it into the
+#     "…image URL" fields on the Home / About pages. See CLOUDINARY.md.
+#     Delivery URLs are public, so no API keys or secrets are ever stored here.
 
 media:
   input: images/uploads
@@ -15,6 +20,139 @@ media:
   extensions: [jpg, jpeg, png, webp, gif, svg, mp4, webm, mov]
 
 content:
+  # ── Home page (English text + hero image) ──
+  - name: page_home
+    label: Home page
+    type: file
+    path: content/pages/home.json
+    fields:
+      - name: hero
+        label: Hero (top of the page)
+        type: object
+        fields:
+          - { name: title, label: Headline (you can use <em>…</em> for the italic accent), type: string }
+          - { name: subtitle, label: Sub-heading, type: text }
+          - { name: cta, label: Primary button, type: string }
+          - { name: secondary, label: Secondary button, type: string }
+          - { name: badgeNum, label: Badge — number, type: string }
+          - { name: badgeLabel, label: Badge — caption, type: string }
+      - name: intro
+        label: Introduction
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: lead, label: Lead sentence, type: text }
+          - { name: text, label: Body, type: text }
+      - name: trust
+        label: Trust cards
+        type: object
+        fields:
+          - { name: t1Title, label: Card 1 — title, type: string }
+          - { name: t1Desc, label: Card 1 — text, type: text }
+          - { name: t2Title, label: Card 2 — title, type: string }
+          - { name: t2Desc, label: Card 2 — text, type: text }
+          - { name: t3Title, label: Card 3 — title, type: string }
+          - { name: t3Desc, label: Card 3 — text, type: text }
+          - { name: t4Title, label: Card 4 — title, type: string }
+          - { name: t4Desc, label: Card 4 — text, type: text }
+      - name: images
+        label: Images
+        type: object
+        fields:
+          - { name: hero, label: "Hero image URL — paste a Cloudinary URL, or an uploaded path like images/uploads/photo.jpg (leave blank to keep the current image)", type: string }
+
+  # ── About page (English text + portrait image) ──
+  - name: page_about
+    label: About page
+    type: file
+    path: content/pages/about.json
+    fields:
+      - name: aboutPage
+        label: About text
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: lead, label: Lead sentence, type: text }
+          - { name: p1, label: Paragraph 1, type: text }
+          - { name: p2, label: Paragraph 2, type: text }
+          - { name: p3, label: Paragraph 3, type: text }
+          - { name: expertEyebrow, label: Advisor — eyebrow, type: string }
+          - { name: expertName, label: Advisor — name, type: string }
+          - { name: expertRole, label: Advisor — role, type: string }
+          - { name: expertBio, label: Advisor — bio, type: text }
+          - { name: valuesEyebrow, label: Values — eyebrow, type: string }
+          - { name: valuesTitle, label: Values — title, type: string }
+          - { name: v1Title, label: Value 1 — title, type: string }
+          - { name: v1Desc, label: Value 1 — text, type: text }
+          - { name: v2Title, label: Value 2 — title, type: string }
+          - { name: v2Desc, label: Value 2 — text, type: text }
+          - { name: v3Title, label: Value 3 — title, type: string }
+          - { name: v3Desc, label: Value 3 — text, type: text }
+          - { name: v4Title, label: Value 4 — title, type: string }
+          - { name: v4Desc, label: Value 4 — text, type: text }
+          - { name: timelineTitle, label: Story — title, type: string }
+          - { name: t1Year, label: Story 1 — label, type: string }
+          - { name: t1Text, label: Story 1 — text, type: text }
+          - { name: t2Year, label: Story 2 — label, type: string }
+          - { name: t2Text, label: Story 2 — text, type: text }
+          - { name: t3Year, label: Story 3 — label, type: string }
+          - { name: t3Text, label: Story 3 — text, type: text }
+          - { name: t4Year, label: Story 4 — label, type: string }
+          - { name: t4Text, label: Story 4 — text, type: text }
+          - { name: cta, label: Button, type: string }
+      - name: images
+        label: Images
+        type: object
+        fields:
+          - { name: about, label: "Portrait image URL — paste a Cloudinary URL, or an uploaded path like images/uploads/photo.jpg (leave blank to keep the current image)", type: string }
+
+  # ── Services page (English text) ──
+  - name: page_services
+    label: Services page
+    type: file
+    path: content/pages/services.json
+    fields:
+      - name: services
+        label: Services intro & cards
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: subtitle, label: Sub-heading, type: text }
+          - { name: s1Title, label: Service 1 — title, type: string }
+          - { name: s1Desc, label: Service 1 — text, type: text }
+          - { name: s2Title, label: Service 2 — title, type: string }
+          - { name: s2Desc, label: Service 2 — text, type: text }
+          - { name: s3Title, label: Service 3 — title, type: string }
+          - { name: s3Desc, label: Service 3 — text, type: text }
+          - { name: s4Title, label: Service 4 — title, type: string }
+          - { name: s4Desc, label: Service 4 — text, type: text }
+          - { name: s5Title, label: Service 5 — title, type: string }
+          - { name: s5Desc, label: Service 5 — text, type: text }
+          - { name: s6Title, label: Service 6 — title, type: string }
+          - { name: s6Desc, label: Service 6 — text, type: text }
+      - name: journey
+        label: The journey (process steps)
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: subtitle, label: Sub-heading, type: text }
+          - { name: step1Title, label: Step 1 — title, type: string }
+          - { name: step1Desc, label: Step 1 — text, type: text }
+          - { name: step2Title, label: Step 2 — title, type: string }
+          - { name: step2Desc, label: Step 2 — text, type: text }
+          - { name: step3Title, label: Step 3 — title, type: string }
+          - { name: step3Desc, label: Step 3 — text, type: text }
+          - { name: step4Title, label: Step 4 — title, type: string }
+          - { name: step4Desc, label: Step 4 — text, type: text }
+          - { name: step5Title, label: Step 5 — title, type: string }
+          - { name: step5Desc, label: Step 5 — text, type: text }
+          - { name: step6Title, label: Step 6 — title, type: string }
+          - { name: step6Desc, label: Step 6 — text, type: text }
+
   # ── Instruments (New & Interesting / Piano of the Week) ──
   - name: pianos
     label: Pianos
