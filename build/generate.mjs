@@ -41,6 +41,78 @@ const videos = loadCollection('content/videos');
 const social = exists('content/settings/social.json')
   ? JSON.parse(read('content/settings/social.json')) : {};
 
+// ---- editable page content (Home / About / Services) ----------------------
+// Owners edit content/pages/*.json in Pages CMS. Each file holds the English
+// copy for a page (mirroring the locales/en.json key structure) plus an
+// optional `images` object of picture URLs. The generator overlays the copy
+// onto the English locale so the existing i18n runtime shows it, and injects
+// the images into the hand-authored pages. Editing here never touches the
+// other languages — they keep working and fall back to English per key.
+function loadPage(name) {
+  const p = `content/pages/${name}.json`;
+  if (!exists(p)) return {};
+  try { return JSON.parse(read(p)); }
+  catch (e) { console.warn(`[generate] could not parse ${p}: ${e.message}`); return {}; }
+}
+
+const pageHome = loadPage('home');
+const pageAbout = loadPage('about');
+const pageServices = loadPage('services');
+
+// Map of CMS-IMG marker keys -> image URL, sourced from the page `images`.
+const IMAGES = {
+  'home.hero': pageHome.images?.hero,
+  'about.image': pageAbout.images?.about,
+};
+
+// Deep-merge `src` onto `target`, skipping empty strings so a blank CMS field
+// leaves the seeded English in place rather than wiping it.
+function deepMerge(target, src) {
+  for (const k of Object.keys(src || {})) {
+    const v = src[k];
+    if (v && typeof v === 'object' && !Array.isArray(v)) {
+      if (!target[k] || typeof target[k] !== 'object') target[k] = {};
+      deepMerge(target[k], v);
+    } else if (typeof v === 'string') {
+      if (v.trim() !== '') target[k] = v;
+    } else if (v != null) {
+      target[k] = v;
+    }
+  }
+  return target;
+}
+
+// Overlay the editable page copy onto locales/en.json (English only).
+function overlayEnglishLocale() {
+  if (!exists('locales/en.json')) return;
+  const en = JSON.parse(read('locales/en.json'));
+  for (const page of [pageHome, pageAbout, pageServices]) {
+    const { images, ...text } = page; // `images` is not an i18n key
+    deepMerge(en, text);
+  }
+  write('locales/en.json', JSON.stringify(en, null, 2) + '\n');
+}
+
+// Replace the image reference inside a CMS-IMG marker block (works for both
+// <img src="…"> and CSS `background:url(…)`), keeping the markers so the next
+// build stays idempotent.
+function injectImages(s) {
+  return s.replace(
+    /<!--\s*CMS-IMG:([\w.]+)\s*-->([\s\S]*?)<!--\s*\/CMS-IMG:\1\s*-->/g,
+    (full, key, inner) => {
+      const url = IMAGES[key];
+      if (!url || !String(url).trim()) return full; // no override -> keep default
+      let out = inner;
+      if (/url\(/.test(inner)) {
+        out = inner.replace(/url\((['"]?).*?\1\)/, `url('${url}')`);
+      } else if (/\bsrc\s*=/.test(inner)) {
+        out = inner.replace(/\bsrc\s*=\s*"[^"]*"/, `src="${url}"`);
+      }
+      return `<!-- CMS-IMG:${key} -->${out}<!-- /CMS-IMG:${key} -->`;
+    }
+  );
+}
+
 const fmtDate = (d) => d ? new Date(d).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
 
 // ---- YouTube helper -------------------------------------------------------
@@ -305,6 +377,9 @@ function injectStatic() {
     s = s.replace(/<nav id="nav">[\s\S]*?<\/nav>/, () => nav({ base, active, social }));
     s = s.replace(/<footer>[\s\S]*?<\/footer>/, () => footer({ base, social }));
 
+    // CMS-driven images (Home hero, About portrait)
+    s = injectImages(s);
+
     // Homepage dynamic block between markers
     if (file === 'index.html' && s.includes('<!-- GEN:home-dynamic -->')) {
       s = s.replace(/<!-- GEN:home-dynamic -->[\s\S]*?<!-- \/GEN:home-dynamic -->/,
@@ -315,6 +390,7 @@ function injectStatic() {
 }
 
 // ---- run ------------------------------------------------------------------
+overlayEnglishLocale();
 buildInsightsIndex();
 buildArticles();
 buildInstruments();
@@ -322,4 +398,5 @@ buildVideos();
 injectStatic();
 
 console.log(`[generate] pianos=${pianos.length} insights=${insights.length} videos=${videos.length}`);
+console.log(`[generate] overlaid page copy: home/about/services -> locales/en.json; images: ${Object.entries(IMAGES).filter(([, v]) => v).map(([k]) => k).join(', ') || 'none'}`);
 console.log('[generate] wrote insights.html, insights/*, instruments.html, videos.html; injected nav/social/home blocks');

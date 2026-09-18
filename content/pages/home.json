@@ -1,0 +1,29 @@
+{
+  "hero": {
+    "title": "Find the piano that's <em>right for you</em>",
+    "subtitle": "Your accredited source of truth for the whole piano-owning journey — impartial guidance for buyers and owners, across every leading brand and used instrument.",
+    "cta": "Start the best-fit finder",
+    "secondary": "Book a consultation",
+    "badgeNum": "25+ yrs",
+    "badgeLabel": "advising pianists, families & institutions"
+  },
+  "intro": {
+    "eyebrow": "What Piano Compass is",
+    "title": "An accredited home for anyone on a piano-owning journey.",
+    "lead": "Buying or living with a piano should not mean navigating sales pressure and conflicting opinions alone.",
+    "text": "Piano Compass is an independent advisory that stands beside you — not behind a sales counter. We translate a complex market into clear guidance, help you shortlist and play-test the right instruments, arrange independent inspection, and support you for as long as you own the piano. We advise across Feurich, every leading maker, and carefully verified used instruments."
+  },
+  "trust": {
+    "t1Title": "Impartial by design",
+    "t1Desc": "We work for you, not a showroom. No brand quota, no pressure — only the best fit for your playing, space and budget.",
+    "t2Title": "Accredited expertise",
+    "t2Desc": "Guidance grounded in professional standards, decades of hands-on experience and an independent technician network.",
+    "t3Title": "A source of truth",
+    "t3Desc": "Clear, jargon-free answers on brands, models, value and condition — so you can decide with confidence.",
+    "t4Title": "For the whole journey",
+    "t4Desc": "From first purchase to tuning, restoration, valuation and resale — one trusted partner for life."
+  },
+  "images": {
+    "hero": "images/self-playing-walnut.jpeg"
+  }
+}
