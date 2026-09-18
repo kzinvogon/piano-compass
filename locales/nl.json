@@ -1,0 +1,196 @@
+{
+  "lang": "nl",
+  "langLabel": "Nederlands",
+  "nav": {
+    "home": "Home",
+    "findPiano": "Piano­zoeker",
+    "design": "Design",
+    "used": "Tweedehands",
+    "news": "Nieuws",
+    "insights": "Advies",
+    "pianoOfWeek": "Piano van de week",
+    "newInteresting": "Nieuw & interessant",
+    "videos": "Video's",
+    "brands": "Merken",
+    "vintage": "Tweedehands",
+    "services": "Diensten",
+    "about": "Over ons",
+    "contact": "Contact",
+    "bookConsultation": "Consult aanvragen"
+  },
+  "hero": {
+    "tag1": "Onafhankelijk",
+    "tag2": "Erkend",
+    "tag3": "Onpartijdig",
+    "title": "Vind de piano die <em>bij u past</em>",
+    "subtitle": "Uw erkende bron van waarheid voor de hele pianoreis — onpartijdig advies voor kopers en eigenaren, over alle toonaangevende merken en tweedehands instrumenten.",
+    "cta": "Start de pianozoeker",
+    "secondary": "Consult aanvragen",
+    "trust1": "Geen commissiebelang",
+    "trust2": "Elk toonaangevend merk",
+    "trust3": "Tweedehands geverifieerd",
+    "quote": "«Het advies dat ik had gewild vóór mijn eerste piano.»",
+    "badgeNum": "25+ jaar",
+    "badgeLabel": "advies aan pianisten, gezinnen en instellingen"
+  },
+  "trust": {
+    "t1Title": "Onpartijdig uit principe",
+    "t2Title": "Erkende expertise",
+    "t3Title": "Een bron van waarheid",
+    "t4Title": "Voor de hele reis"
+  },
+  "intro": {
+    "eyebrow": "Wat Piano Compass is",
+    "title": "Een erkend thuis voor iedereen op de pianoreis.",
+    "stat1Label": "Jaar advies",
+    "stat2Label": "Merken die we dekken",
+    "stat3Label": "Verkoopdoelen per merk"
+  },
+  "audience": {
+    "eyebrow": "Wie we helpen",
+    "title": "Waar u ook bent op uw pianoreis",
+    "buyersTag": "Kopers",
+    "buyersTitle": "Het juiste instrument vinden",
+    "ownersTag": "Eigenaren",
+    "ownersTitle": "Zorg voor de piano die u heeft"
+  },
+  "finder": {
+    "eyebrow": "De beste-match-zoeker",
+    "title": "Een adviserende shortlist in vier vragen",
+    "resultEyebrow": "Uw startpunt",
+    "resultCta": "Vraag een consult aan om dit te verfijnen",
+    "back": "Terug",
+    "restart": "Opnieuw beginnen"
+  },
+  "brands": {
+    "eyebrow": "Merken waarover we adviseren",
+    "title": "Elke toonaangevende bouwer — op zijn merites beoordeeld",
+    "subtitle": "We zijn geen enkel merk toegewijd. Feurich is onze partner, maar onze taak is het merk en model aan te bevelen dat echt bij u past, nieuw of tweedehands."
+  },
+  "vintageHome": {
+    "eyebrow": "Tweedehands instrumenten",
+    "title": "De juiste tweedehands piano kan de aankoop van uw leven zijn",
+    "cta": "Ontdek tweedehands zoeken"
+  },
+  "process": {
+    "eyebrow": "Het adviesproces",
+    "title": "Een rustig, begeleid pad naar de juiste beslissing",
+    "s1Title": "Kennismaking",
+    "s2Title": "Onpartijdige shortlist",
+    "s3Title": "Proberen & inspecteren",
+    "s4Title": "Aanschaf & onderhoud"
+  },
+  "servicesHome": {
+    "eyebrow": "Diensten voor eigenaren",
+    "title": "Ondersteuning zolang u de piano bezit"
+  },
+  "expert": {
+    "eyebrow": "Uw erkende adviseur",
+    "title": "Stuart Conaghan",
+    "cite": "Stuart Conaghan, oprichter",
+    "cta": "Lees het hele verhaal"
+  },
+  "voices": {
+    "eyebrow": "In hun woorden",
+    "title": "Beslissingen met vertrouwen genomen"
+  },
+  "contactCta": {
+    "eyebrow": "Begin met een gesprek",
+    "title": "Laten we de piano vinden die bij u past",
+    "subtitle": "Vraag een vrijblijvend consult aan. Of u nu uw eerste piano koopt of voor een geliefde zorgt, wij begeleiden u.",
+    "cta": "Consult aanvragen"
+  },
+  "brandsPage": {
+    "eyebrow": "Merken waarover we adviseren",
+    "title": "Onpartijdig tegenover elke toonaangevende bouwer",
+    "featuredTag": "Partner",
+    "allEyebrow": "De bredere markt",
+    "allTitle": "Andere bouwers die we aanbevelen",
+    "howEyebrow": "Hoe we ze vergelijken",
+    "howTitle": "Kwaliteit, geen marketing",
+    "howCta": "Vraag een merkvergelijking aan",
+    "ctaTitle": "Welke piano past bij u?"
+  },
+  "vintagePage": {
+    "eyebrow": "Tweedehands instrumenten",
+    "title": "Koop tweedehands met zekerheid, niet met hoop",
+    "cta": "Start een tweedehands zoektocht",
+    "whyEyebrow": "Waarom tweedehands",
+    "whyTitle": "Karakter, vakmanschap en waarde",
+    "processEyebrow": "Onze verificatie",
+    "processTitle": "Elke tweedehands piano onafhankelijk gecontroleerd",
+    "bespokeEyebrow": "Zoektocht op maat",
+    "bespokeTitle": "Zoekt u een specifieke bouwer of tijdperk?",
+    "bespokeCta": "Een tweedehands zoektocht aanvragen",
+    "ctaTitle": "Vind een tweedehands piano die het bezitten waard is"
+  },
+  "aboutPage": {
+    "eyebrow": "Over Piano Compass",
+    "title": "Onafhankelijk uit overtuiging",
+    "valuesEyebrow": "Waar we voor staan",
+    "valuesTitle": "Principes waarop we niet inleveren",
+    "expertEyebrow": "Uw adviseur",
+    "expertRole": "Concertpianist en oprichter",
+    "timelineTitle": "Het verhaal van Piano Compass",
+    "cta": "Consult aanvragen"
+  },
+  "services": {
+    "eyebrow": "Diensten voor eigenaren",
+    "title": "Alles wat uw piano ooit nodig heeft",
+    "subtitle": "Eén betrouwbare, onafhankelijke partner — van het kiezen van een instrument tot decennialang onderhoud.",
+    "s1Title": "Onafhankelijk consult",
+    "s2Title": "Zoeken & aanschaf",
+    "s3Title": "Taxatie & beoordeling",
+    "s4Title": "Stemmen & reguleren",
+    "s5Title": "Restauratietoezicht",
+    "s6Title": "Verhuizing & doorverkoop"
+  },
+  "journey": {
+    "eyebrow": "Het adviesproces",
+    "title": "De weg naar de juiste piano",
+    "subtitle": "Een rustig, begeleid pad — naast u bij elke stap, en lang daarna.",
+    "step1Title": "Kennismaking",
+    "step2Title": "Onpartijdige shortlist",
+    "step3Title": "Proberen",
+    "step4Title": "Onafhankelijke inspectie",
+    "step5Title": "Aanschaf & levering",
+    "step6Title": "Levenslang onderhoud"
+  },
+  "contact": {
+    "eyebrow": "Neem contact op",
+    "title": "Consult aanvragen",
+    "subtitle": "Vertel ons waar u bent op uw pianoreis en we reageren persoonlijk om een vrijblijvend gesprek te plannen — in persoon of via video.",
+    "namePlaceholder": "Volledige naam",
+    "emailPlaceholder": "E-mailadres",
+    "phonePlaceholder": "Telefoonnummer",
+    "interestLabel": "Hoe kunnen we helpen?",
+    "messagePlaceholder": "Vertel ons over uw spel, uw ruimte en wat u zoekt…",
+    "submit": "Aanvraag versturen",
+    "interest1": "Kopen — mijn eerste piano",
+    "interest2": "Kopen — mijn piano upgraden",
+    "interest3": "Tweedehands zoektocht",
+    "interest4": "Taxatie / beoordeling",
+    "interest5": "Stemmen, onderhoud of restauratie",
+    "interest6": "Algemene vraag",
+    "showroomLabel": "Gevestigd in",
+    "address": "Spanje & Portugal\nConsult in persoon of via video",
+    "phoneLabel": "Telefoon",
+    "emailLabel": "E-mail",
+    "hoursLabel": "Reactietijd",
+    "hoursVal": "We reageren binnen één werkdag",
+    "successMsg": "Bedankt. We nemen persoonlijk contact op binnen één werkdag."
+  },
+  "footer": {
+    "sub": "Onafhankelijk pianoadvies",
+    "tagline": "Onafhankelijk, erkend en onpartijdig — een bron van waarheid voor uw hele pianoreis.",
+    "explore": "Verkennen",
+    "contactTitle": "Contact",
+    "region": "Spanje · Portugal · Wereldwijd via video",
+    "copyright": "© 2026 Piano Compass. Alle rechten voorbehouden.",
+    "privacy": "Privacy",
+    "terms": "Voorwaarden",
+    "feurich": "Feurich",
+    "disclaimer": "Piano Compass is een onafhankelijk adviesbureau. Merknamen zijn eigendom van hun respectieve eigenaren en worden uitsluitend ter identificatie genoemd; vermelding impliceert geen goedkeuring of samenwerking, behalve waar een samenwerking is vermeld."
+  },
+  "theme": { "label": "Thema" }
+}

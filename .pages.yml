@@ -40,7 +40,7 @@ content:
         label: Category
         type: select
         options:
-          values: [New, Vintage, Restored, "Pre-owned"]
+          values: [New, Used, Restored, "Pre-owned"]
       - name: section
         label: Section
         type: select

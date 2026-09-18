@@ -1,9 +1,9 @@
 ---
-title: New vs vintage — which holds its value?
+title: New vs used — which holds its value?
 date: 2026-08-28
 author: Stuart Conaghan
 image: images/custom-grand-mosaic.jpeg
-excerpt: A verified vintage piano can be the buy of a lifetime — or an expensive mistake. Here is how to tell the difference.
+excerpt: A verified used piano can be the buy of a lifetime — or an expensive mistake. Here is how to tell the difference.
 status: published
 ---
 

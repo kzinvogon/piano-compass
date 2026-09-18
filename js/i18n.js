@@ -1,5 +1,5 @@
 const I18n = (() => {
-  const SUPPORTED = ['en', 'es', 'de', 'fr', 'pt'];
+  const SUPPORTED = ['en', 'es', 'de', 'uk', 'ru', 'nl'];
   const DEFAULT = 'en';
   let current = DEFAULT;
   let strings = {};
@@ -9,7 +9,7 @@ const I18n = (() => {
     const stored = localStorage.getItem('fi_lang');
     if (stored && SUPPORTED.includes(stored)) return stored;
     const browser = (navigator.language || 'en').slice(0, 2).toLowerCase();
-    const map = { es: 'es', de: 'de', fr: 'fr', pt: 'pt' };
+    const map = { es: 'es', de: 'de', uk: 'uk', ru: 'ru', nl: 'nl' };
     return map[browser] || DEFAULT;
   }
 
