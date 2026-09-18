@@ -3,6 +3,7 @@ const I18n = (() => {
   const DEFAULT = 'en';
   let current = DEFAULT;
   let strings = {};
+  let fallback = {};   // always English, used when a key is missing in `strings`
 
   function detectLang() {
     const stored = localStorage.getItem('fi_lang');
@@ -12,20 +13,33 @@ const I18n = (() => {
     return map[browser] || DEFAULT;
   }
 
-  function resolve(key) {
+  function dig(obj, key) {
     const parts = key.split('.');
-    let val = strings;
+    let val = obj;
     for (const p of parts) {
-      if (val == null) return key;
+      if (val == null) return undefined;
       val = val[p];
     }
+    return val;
+  }
+
+  function resolve(key) {
+    let val = dig(strings, key);
+    if (val == null) val = dig(fallback, key);   // graceful English fallback
     return val != null ? String(val) : key;
   }
 
-  async function load(lang) {
+  async function fetchLocale(lang) {
     const base = document.querySelector('meta[name="base-path"]')?.content || '';
     const res = await fetch(`${base}locales/${lang}.json`);
-    strings = await res.json();
+    return res.json();
+  }
+
+  async function load(lang) {
+    if (!fallback.nav) {
+      try { fallback = await fetchLocale(DEFAULT); } catch (e) { fallback = {}; }
+    }
+    strings = lang === DEFAULT ? fallback : await fetchLocale(lang);
     current = lang;
     localStorage.setItem('fi_lang', lang);
     apply();

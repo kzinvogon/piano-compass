@@ -4,312 +4,428 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="base-path" content="">
-  <title>Stuart Conaghan — Concert Pianist &amp; Piano Consultant</title>
-  <meta name="description" content="Concert pianist and independent piano consultant for Spain and Portugal. Luxury editions, self-playing pianos, grand and upright pianos, bespoke custom design.">
-  <meta property="og:title" content="Stuart Conaghan">
-  <meta property="og:description" content="Vienna craftsmanship, Iberian passion. Independent piano consultancy for Spain and Portugal.">
+  <title>Piano Compass — Independent, Accredited Piano Advisory</title>
+  <meta name="description" content="Piano Compass is an independent, accredited piano advisory and source of truth. We help buyers and owners find the best-fit piano through an impartial, consultative process — across Feurich and all leading brands, plus vintage and pre-owned instruments.">
+  <meta property="og:title" content="Piano Compass — Find the piano that's right for you">
+  <meta property="og:description" content="Independent, accredited and impartial. A source of truth for your whole piano-owning journey.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <script>try{var t=localStorage.getItem('fi_theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/themes.css">
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- ============ NAV ============ -->
   <nav id="nav">
-    <a href="index.html" class="nav__logo">Stuart Conaghan<span>Concert Pianist &amp; Piano Consultant</span></a>
+    <a href="index.html" class="nav__logo" aria-label="Piano Compass home">
+      <svg class="nav__logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M16 6l3 8-3 12-3-12 3-8z" fill="currentColor"/>
+        <circle cx="16" cy="16" r="1.8" fill="var(--bg)"/>
+      </svg>
+      <span class="nav__logo-text"><b>Piano Compass</b><span>Independent Piano Advisory</span></span>
+    </a>
 
     <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
 
     <div class="nav__menu" id="nav-menu">
-      <a href="https://deploy-preview-2--piano-compass.netlify.app/" target="_blank" rel="noopener" class="nav__link nav__link--preview" style="color:var(--gold);border:1px solid var(--gold);padding:.45rem 1rem;border-radius:2px;white-space:nowrap">✦ New concept preview</a>
+      <a href="#finder" class="nav__link" data-i18n="nav.findPiano">Find Your Piano</a>
       <div class="nav__dropdown">
-        <a href="#collection" class="nav__link" data-i18n="nav.collection">Collection</a>
+        <a href="brands.html" class="nav__link" data-i18n="nav.brands">Brands</a>
         <ul class="nav__dropdown-menu">
-          <li><a href="collection/luxury.html" data-i18n="nav.luxury"></a></li>
-          <li><a href="collection/self-playing.html" data-i18n="nav.selfPlaying"></a></li>
-          <li><a href="collection/grand-uprights.html" data-i18n="nav.grandUprights"></a></li>
-          <li><a href="collection/custom-design.html" data-i18n="nav.customDesign"></a></li>
+          <li><a href="brands.html" data-i18n="nav.allBrands">All Brands We Advise On</a></li>
+          <li><a href="collection/luxury.html" data-i18n="nav.feurich">Feurich — Featured Partner</a></li>
+          <li><a href="collection/grand-uprights.html" data-i18n="nav.grandUprights">Grands &amp; Uprights</a></li>
+          <li><a href="collection/self-playing.html" data-i18n="nav.selfPlaying">Self-Playing Pianos</a></li>
+          <li><a href="vintage.html" data-i18n="nav.vintage">Vintage &amp; Pre-Owned</a></li>
         </ul>
       </div>
+      <a href="vintage.html" class="nav__link" data-i18n="nav.vintage">Vintage</a>
+      <a href="services.html" class="nav__link" data-i18n="nav.services">Services</a>
+      <a href="#process" class="nav__link" data-i18n="nav.process">Process</a>
+      <a href="about.html" class="nav__link" data-i18n="nav.about">About</a>
+      <a href="contact.html" class="nav__link" data-i18n="nav.contact">Contact</a>
 
-      <a href="#services" class="nav__link" data-i18n="nav.services"></a>
-      <a href="#journey" class="nav__link" data-i18n="nav.journey"></a>
-      <a href="#about" class="nav__link" data-i18n="nav.about"></a>
-      <a href="contact.html" class="nav__link" data-i18n="nav.contact"></a>
-      <a href="gallery.html" class="nav__link" data-i18n="nav.gallery"></a>
-
-      <div class="nav__dropdown nav__theme">
-        <button class="nav__link nav__theme-trigger" type="button"><span data-i18n="theme.label">Theme</span> ▾</button>
+      <div class="nav__dropdown nav__discover">
+        <a href="insights.html" class="nav__link">Discover</a>
         <ul class="nav__dropdown-menu">
-          <li><button type="button" data-theme-btn="noir" data-i18n="theme.noir"></button></li>
-          <li><button type="button" data-theme-btn="galeria" data-i18n="theme.galeria"></button></li>
-          <li><button type="button" data-theme-btn="hogar" data-i18n="theme.hogar"></button></li>
-          <li><button type="button" data-theme-btn="publico" data-i18n="theme.publico"></button></li>
-          <li><button type="button" data-theme-btn="familia" data-i18n="theme.familia"></button></li>
-          <li><button type="button" data-theme-btn="arte" data-i18n="theme.arte"></button></li>
+          <li><a href="insights.html">Insights &amp; Advice</a></li>
+          <li><a href="index.html#piano-of-week">Piano of the Week</a></li>
+          <li><a href="instruments.html">New &amp; Interesting</a></li>
+          <li><a href="videos.html">Videos</a></li>
         </ul>
       </div>
-      <div class="nav__lang">
-        <button data-lang="en">EN</button>
-        <button data-lang="es">ES</button>
-        <button data-lang="de">DE</button>
-        <button data-lang="fr">FR</button>
-        <button data-lang="pt">PT</button>
+      <div class="nav__utils">
+        <div class="nav__lang">
+          <button data-lang="en">EN</button>
+          <button data-lang="es">ES</button>
+          <button data-lang="de">DE</button>
+          <button data-lang="fr">FR</button>
+          <button data-lang="pt">PT</button>
+        </div>
+        <div class="social-icons social-icons--nav"><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="social-icons__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@" target="_blank" rel="noopener" aria-label="TikTok" class="social-icons__link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.3 2.1 1.6 3.7 3.7 4v2.5c-1.4 0-2.7-.4-3.7-1.1v5.8a5.7 5.7 0 1 1-5.7-5.7c.3 0 .6 0 .9.1v2.7a3 3 0 1 0 2.1 2.9V3h2.7z"/></svg></a><a href="https://www.youtube.com/@" target="_blank" rel="noopener" aria-label="YouTube" class="social-icons__link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.7 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1c.3-1.2.3-3.8.3-3.8s0-2.6-.3-3.8zM10 15V9l5.2 3-5.2 3z"/></svg></a></div>
+        <button class="nav__theme" id="theme-toggle" type="button" aria-label="Toggle light or dark theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.7 6.7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <a href="contact.html" class="nav__book" data-i18n="nav.bookConsultation">Book a Consultation</a>
       </div>
-
-      <a href="contact.html" class="nav__book" data-i18n="nav.bookConsultation"></a>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero" id="home">
-    <div class="hero__bg">
-      <div class="hero__slide is-active" data-slide="0"></div>
-      <div class="hero__slide" data-slide="1"></div>
-      <div class="hero__slide" data-slide="2"></div>
-    </div>
-    <div class="hero__content">
-      <p class="hero__eyebrow" data-i18n="hero.eyebrow"></p>
-      <h1 class="hero__title" data-i18n="hero.title"></h1>
-      <p class="hero__subtitle" data-i18n="hero.subtitle"></p>
-      <div class="hero__actions">
-        <a href="#collection" class="btn btn--gold" data-i18n="hero.cta"></a>
-        <a href="contact.html" class="btn btn--outline" data-i18n="hero.secondary"></a>
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__intro">
+          <p class="hero__eyebrow">
+            <b data-i18n="hero.tag1">Independent</b><span class="dot"></span>
+            <b data-i18n="hero.tag2">Accredited</b><span class="dot"></span>
+            <b data-i18n="hero.tag3">Impartial</b>
+          </p>
+          <h1 class="hero__title" data-i18n="hero.title">Find the piano that's <em>right for you</em></h1>
+          <p class="hero__subtitle" data-i18n="hero.subtitle">Your accredited source of truth for the whole piano-owning journey — impartial guidance for buyers and owners, across every leading brand and vintage instrument.</p>
+          <div class="hero__actions">
+            <a href="#finder" class="btn btn--gold" data-i18n="hero.cta">Start the best-fit finder</a>
+            <a href="contact.html" class="btn btn--outline" data-i18n="hero.secondary">Book a consultation</a>
+          </div>
+          <div class="hero__trust">
+            <span class="hero__trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="hero.trust1">No sales commission bias</span></span>
+            <span class="hero__trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="hero.trust2">Every leading brand</span></span>
+            <span class="hero__trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="hero.trust3">Vintage verified</span></span>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <div class="hero__card">
+            <img src="images/self-playing-walnut.jpeg" alt="A finely finished grand piano in a warm interior">
+          </div>
+          <div class="hero__quote" data-i18n="hero.quote">"The advice I wish I'd had before my first piano."</div>
+          <div class="hero__badge">
+            <b data-i18n="hero.badgeNum">25+ yrs</b>
+            <span data-i18n="hero.badgeLabel">advising pianists, families &amp; institutions</span>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="hero__dots" aria-hidden="true">
-      <button class="hero__dot is-active" data-dot="0"></button>
-      <button class="hero__dot" data-dot="1"></button>
-      <button class="hero__dot" data-dot="2"></button>
-    </div>
-    <div class="hero__scroll" aria-hidden="true">
-      <span>Scroll</span>
-      <div class="hero__scroll-line"></div>
+  </header>
+
+  <!-- ============ TRUST STRIP ============ -->
+  <section class="trust">
+    <div class="container">
+      <div class="trust__grid">
+        <div class="trust__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5l8-3z"/></svg>
+          <h4 data-i18n="trust.t1Title">Impartial by design</h4>
+          <p data-i18n="trust.t1Desc">We work for you, not a showroom. No brand quota, no pressure — only the best fit for your playing, space and budget.</p>
+        </div>
+        <div class="trust__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a4 4 0 100-8 4 4 0 000 8z"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+          <h4 data-i18n="trust.t2Title">Accredited expertise</h4>
+          <p data-i18n="trust.t2Desc">Guidance grounded in professional standards, decades of hands-on experience and an independent technician network.</p>
+        </div>
+        <div class="trust__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <h4 data-i18n="trust.t3Title">A source of truth</h4>
+          <p data-i18n="trust.t3Desc">Clear, jargon-free answers on brands, models, value and condition — so you can decide with confidence.</p>
+        </div>
+        <div class="trust__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.3-9-9a5 5 0 019-3 5 5 0 019 3c-2 4.7-9 9-9 9z"/></svg>
+          <h4 data-i18n="trust.t4Title">For the whole journey</h4>
+          <p data-i18n="trust.t4Desc">From first purchase to tuning, restoration, valuation and resale — one trusted partner for life.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Brand Introduction -->
-  <section class="brand-intro section" id="brand">
+  <!-- ============ BRAND INTRO / STATS ============ -->
+  <section class="section" id="approach">
     <div class="container">
       <div class="brand-intro__grid">
         <div class="brand-intro__text">
-          <p class="eyebrow" data-i18n="brandIntro.eyebrow"></p>
-          <div class="gold-rule"></div>
-          <h2 data-reveal data-i18n="brandIntro.title"></h2>
-          <p class="lead" data-reveal data-reveal-delay="1" data-i18n="brandIntro.text"></p>
+          <p class="eyebrow" data-i18n="intro.eyebrow">What Piano Compass is</p>
+          <h2 data-reveal data-i18n="intro.title">An accredited home for anyone on a piano-owning journey.</h2>
+          <p class="lead" data-reveal data-reveal-delay="1" data-i18n="intro.lead" style="margin-top:1.2rem">Buying or living with a piano should not mean navigating sales pressure and conflicting opinions alone.</p>
+          <p data-reveal data-reveal-delay="1" data-i18n="intro.text" style="margin-top:1.2rem">Piano Compass is an independent advisory that stands beside you — not behind a sales counter. We translate a complex market into clear guidance, help you shortlist and play-test the right instruments, arrange independent inspection, and support you for as long as you own the piano. We advise across Feurich, every leading maker, and carefully verified vintage instruments.</p>
         </div>
-        <div class="stats-row">
-          <div class="stat" data-reveal data-reveal-delay="1">
-            <span class="stat__number" data-count="1851" data-i18n="brandIntro.foundedYear"></span>
-            <span class="stat__label" data-i18n="brandIntro.foundedLabel"></span>
+        <div class="stats-row" data-reveal="right">
+          <div class="stat">
+            <span class="stat__number" data-i18n="intro.stat1Num">25+</span>
+            <span class="stat__label" data-i18n="intro.stat1Label">Years advising owners</span>
           </div>
-          <div class="stat" data-reveal data-reveal-delay="2">
-            <span class="stat__number" data-count="5" data-i18n="brandIntro.generationsNum"></span>
-            <span class="stat__label" data-i18n="brandIntro.generationsLabel"></span>
+          <div class="stat">
+            <span class="stat__number" data-i18n="intro.stat2Num">30+</span>
+            <span class="stat__label" data-i18n="intro.stat2Label">Brands we cover</span>
           </div>
-          <div class="stat" data-reveal data-reveal-delay="3">
-            <span class="stat__number" data-i18n="brandIntro.finishesNum"></span>
-            <span class="stat__label" data-i18n="brandIntro.finishesLabel"></span>
+          <div class="stat">
+            <span class="stat__number" data-i18n="intro.stat3Num">0</span>
+            <span class="stat__label" data-i18n="intro.stat3Label">Brand sales targets</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Collection -->
-  <section class="section section--dark" id="collection">
+  <!-- ============ WHO WE HELP ============ -->
+  <section class="section section--tint" id="who">
     <div class="container">
-      <div class="collection__header" data-reveal>
-        <p class="eyebrow" data-i18n="collection.eyebrow"></p>
-        <div class="gold-rule gold-rule--center"></div>
-        <h2 data-i18n="collection.title"></h2>
-        <p class="lead" style="margin-top:.8rem" data-i18n="collection.subtitle"></p>
+      <div class="section-head section-head--center" data-reveal>
+        <p class="eyebrow eyebrow--center" data-i18n="audience.eyebrow">Who we help</p>
+        <h2 data-i18n="audience.title">Wherever you are in your piano journey</h2>
       </div>
-      <div class="collection__grid">
-        <a href="collection/luxury.html" class="collection-card" data-reveal>
-          <div class="collection-card__img collection-card__img--luxury"></div>
-          <div class="collection-card__body">
-            <h3 data-i18n="collection.luxury.title"></h3>
-            <p data-i18n="collection.luxury.desc"></p>
-            <span class="collection-card__cta" data-i18n="collection.explore"></span>
-          </div>
-        </a>
-        <a href="collection/self-playing.html" class="collection-card" data-reveal data-reveal-delay="1">
-          <div class="collection-card__img collection-card__img--selfplaying"></div>
-          <div class="collection-card__body">
-            <h3 data-i18n="collection.selfPlaying.title"></h3>
-            <p data-i18n="collection.selfPlaying.desc"></p>
-            <span class="collection-card__cta" data-i18n="collection.explore"></span>
-          </div>
-        </a>
-        <a href="collection/grand-uprights.html" class="collection-card" data-reveal>
-          <div class="collection-card__img collection-card__img--grands"></div>
-          <div class="collection-card__body">
-            <h3 data-i18n="collection.grandUprights.title"></h3>
-            <p data-i18n="collection.grandUprights.desc"></p>
-            <span class="collection-card__cta" data-i18n="collection.explore"></span>
-          </div>
-        </a>
-        <a href="collection/custom-design.html" class="collection-card" data-reveal data-reveal-delay="1">
-          <div class="collection-card__img collection-card__img--custom"></div>
-          <div class="collection-card__body">
-            <h3 data-i18n="collection.customDesign.title"></h3>
-            <p data-i18n="collection.customDesign.desc"></p>
-            <span class="collection-card__cta" data-i18n="collection.explore"></span>
-          </div>
-        </a>
+      <div class="audience" style="margin-top:3rem">
+        <div class="audience__col" data-reveal>
+          <span class="audience__tag" data-i18n="audience.buyersTag">Buyers</span>
+          <h3 data-i18n="audience.buyersTitle" style="margin-top:.4rem">Finding the right instrument</h3>
+          <ul class="audience__list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="audience.b1">First-time buyers choosing between digital, upright and grand</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="audience.b2">Families matching a growing student to the right piano</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="audience.b3">Advancing pianists and professionals upgrading their instrument</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="audience.b4">Schools, hotels and venues specifying for public spaces</span></li>
+          </ul>
+        </div>
+        <div class="audience__col" data-reveal data-reveal-delay="1">
+          <span class="audience__tag" data-i18n="audience.ownersTag">Owners</span>
+          <h3 data-i18n="audience.ownersTitle" style="margin-top:.4rem">Caring for the piano you have</h3>
+          <ul class="audience__list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="audience.o1">Independent valuations and honest condition assessments</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="audience.o2">Tuning, regulation and restoration through vetted technicians</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="audience.o3">Relocation, insurance and inheritance guidance</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="audience.o4">Selling or trading up, at a fair and informed price</span></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Featured: Vienna V123 -->
-  <section class="featured section" id="vienna">
+  <!-- ============ BEST-FIT FINDER ============ -->
+  <section class="section" id="finder">
     <div class="container">
-      <div class="featured__grid">
-        <div class="featured__visual" data-reveal="left">
-          <div class="featured__badge" data-i18n="featured.madeIn"></div>
-          <img src="images/self-playing-walnut.jpeg" alt="Feurich Vienna V123 upright" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.85;">
-        </div>
-        <div class="featured__content" data-reveal="right">
-          <p class="eyebrow" data-i18n="featured.eyebrow"></p>
-          <div class="gold-rule"></div>
-          <h2 data-i18n="featured.title"></h2>
-          <p class="featured__subtitle" data-i18n="featured.madeIn"></p>
-          <p class="featured__text" data-i18n="featured.text"></p>
-          <div class="featured__specs">
-            <div class="featured__spec" data-i18n="featured.spec1"></div>
-            <div class="featured__spec" data-i18n="featured.spec2"></div>
-            <div class="featured__spec" data-i18n="featured.spec3"></div>
-            <div class="featured__spec" data-i18n="featured.spec4"></div>
-            <div class="featured__spec" data-i18n="featured.spec5"></div>
+      <div class="finder">
+        <div class="finder__inner">
+          <div class="finder__head">
+            <div>
+              <p class="eyebrow" data-i18n="finder.eyebrow">The best-fit finder</p>
+              <h2 data-i18n="finder.title">A consultative shortlist in four questions</h2>
+            </div>
+            <div class="finder__progress" aria-hidden="true">
+              <span class="on"></span><span></span><span></span><span></span>
+            </div>
           </div>
-          <a href="contact.html?interest=upright" class="btn btn--gold" data-i18n="featured.cta"></a>
+
+          <!-- Step 1 -->
+          <div class="finder__step active" data-step="0">
+            <p class="finder__q" data-i18n="finder.q1">Who will play it most?</p>
+            <p class="finder__hint" data-i18n="finder.q1hint">This shapes touch, tone and how much instrument you need.</p>
+            <div class="finder__opts">
+              <button class="finder__opt" data-value="beginner"><b data-i18n="finder.q1a">A beginner or child</b><span data-i18n="finder.q1as">Starting out, building habit</span></button>
+              <button class="finder__opt" data-value="hobby"><b data-i18n="finder.q1b">A returning / hobby player</b><span data-i18n="finder.q1bs">Playing for pleasure</span></button>
+              <button class="finder__opt" data-value="advanced"><b data-i18n="finder.q1c">An advanced pianist</b><span data-i18n="finder.q1cs">Exams, performance, teaching</span></button>
+              <button class="finder__opt" data-value="venue"><b data-i18n="finder.q1d">A venue or institution</b><span data-i18n="finder.q1ds">School, hotel, hall</span></button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="finder__step" data-step="1">
+            <p class="finder__q" data-i18n="finder.q2">What's the space like?</p>
+            <p class="finder__hint" data-i18n="finder.q2hint">Room size and acoustics guide the right size and type.</p>
+            <div class="finder__opts">
+              <button class="finder__opt" data-value="apartment"><b data-i18n="finder.q2a">Apartment / small room</b><span data-i18n="finder.q2as">Space is limited</span></button>
+              <button class="finder__opt" data-value="livingroom"><b data-i18n="finder.q2b">Family living room</b><span data-i18n="finder.q2bs">A room to fill, not overwhelm</span></button>
+              <button class="finder__opt" data-value="large"><b data-i18n="finder.q2c">Large / open-plan room</b><span data-i18n="finder.q2cs">Room for a grand to breathe</span></button>
+              <button class="finder__opt" data-value="public"><b data-i18n="finder.q2d">Public / performance space</b><span data-i18n="finder.q2ds">Projection matters most</span></button>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="finder__step" data-step="2">
+            <p class="finder__q" data-i18n="finder.q3">New, vintage, or open to both?</p>
+            <p class="finder__hint" data-i18n="finder.q3hint">Vintage can offer remarkable value — when properly verified.</p>
+            <div class="finder__opts">
+              <button class="finder__opt" data-value="new"><b data-i18n="finder.q3a">New instruments</b><span data-i18n="finder.q3as">Warranty and latest engineering</span></button>
+              <button class="finder__opt" data-value="vintage"><b data-i18n="finder.q3b">Vintage &amp; pre-owned</b><span data-i18n="finder.q3bs">Character and value</span></button>
+              <button class="finder__opt" data-value="either"><b data-i18n="finder.q3c">Open to both</b><span data-i18n="finder.q3cs">Best value, either way</span></button>
+              <button class="finder__opt" data-value="selfplay"><b data-i18n="finder.q3d">Self-playing capable</b><span data-i18n="finder.q3ds">Plays on its own too</span></button>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="finder__step" data-step="3">
+            <p class="finder__q" data-i18n="finder.q4">What matters most?</p>
+            <p class="finder__hint" data-i18n="finder.q4hint">We'll weight your shortlist toward this priority.</p>
+            <div class="finder__opts">
+              <button class="finder__opt" data-value="value"><b data-i18n="finder.q4a">Best value for money</b><span data-i18n="finder.q4as">Every euro well spent</span></button>
+              <button class="finder__opt" data-value="tone"><b data-i18n="finder.q4b">Tone &amp; touch</b><span data-i18n="finder.q4bs">The playing experience</span></button>
+              <button class="finder__opt" data-value="design"><b data-i18n="finder.q4c">Design &amp; finish</b><span data-i18n="finder.q4cs">A piece for the room</span></button>
+              <button class="finder__opt" data-value="longevity"><b data-i18n="finder.q4d">Longevity &amp; resale</b><span data-i18n="finder.q4ds">Holds its value</span></button>
+            </div>
+          </div>
+
+          <!-- Result -->
+          <div class="finder__result" data-result>
+            <p class="eyebrow" data-i18n="finder.resultEyebrow">Your starting point</p>
+            <h3 data-result-title>—</h3>
+            <p data-result-text>—</p>
+            <div class="finder__result-tags" data-result-tags></div>
+            <a href="contact.html" class="btn btn--brass" data-i18n="finder.resultCta">Book a consultation to refine this</a>
+          </div>
+
+          <div class="finder__nav">
+            <button class="finder__back" data-back hidden data-i18n="finder.back">Back</button>
+            <button class="finder__back" data-restart hidden data-i18n="finder.restart">Start again</button>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Self-Playing -->
-  <section class="self-playing section section--dark" id="self-playing">
+  <!-- ============ BRANDS ============ -->
+  <section class="section section--tint" id="brands">
     <div class="container">
-      <div class="self-playing__grid">
-        <div class="self-playing__content" data-reveal="left">
-          <p class="eyebrow" data-i18n="selfPlayingSection.eyebrow"></p>
-          <div class="gold-rule"></div>
-          <h2 data-i18n="selfPlayingSection.title"></h2>
-          <p class="lead" style="margin:.8rem 0 1.5rem" data-i18n="selfPlayingSection.text"></p>
-          <div class="self-playing__features">
-            <div class="sp-feature" data-i18n="selfPlayingSection.f1"></div>
-            <div class="sp-feature" data-i18n="selfPlayingSection.f2"></div>
-            <div class="sp-feature" data-i18n="selfPlayingSection.f3"></div>
-            <div class="sp-feature" data-i18n="selfPlayingSection.f4"></div>
-            <div class="sp-feature" data-i18n="selfPlayingSection.f5"></div>
-          </div>
-          <a href="collection/self-playing.html" class="btn btn--ghost" style="margin-top:1.5rem" data-i18n="selfPlayingSection.cta"></a>
+      <div class="section-head" data-reveal>
+        <p class="eyebrow" data-i18n="brands.eyebrow">Brands we advise on</p>
+        <h2 data-i18n="brands.title">Every leading maker — assessed on its merits</h2>
+        <p class="lead" data-i18n="brands.subtitle" style="margin-top:1rem">We hold no brand allegiance. Feurich is our featured partner, but our job is to recommend the maker and model that genuinely fits you — new or vintage.</p>
+      </div>
+      <div class="brands-grid">
+        <div class="brand-tile brand-tile--featured" data-reveal>
+          <span class="brand-tile__origin" data-i18n="brands.feurichOrigin">Vienna · Featured partner</span>
+          <span class="brand-tile__name">Feurich</span>
+          <p data-i18n="brands.feurichDesc">Viennese craftsmanship since 1851 — expressive uprights and grands, bespoke finishes and self-playing options.</p>
+          <span class="brand-tile__note" data-i18n="brands.feurichNote">Explore Feurich →</span>
         </div>
-        <div class="self-playing__visual" data-reveal="right">
-          <img src="images/self-playing-walnut.jpeg" alt="Feurich self-playing piano at sunset" class="self-playing__img" loading="lazy">
+        <div class="brand-tile" data-reveal data-reveal-delay="1">
+          <span class="brand-tile__origin" data-i18n="brands.steinwayOrigin">Hamburg / New York</span>
+          <span class="brand-tile__name">Steinway &amp; Sons</span>
+          <p data-i18n="brands.steinwayDesc">The performance benchmark for concert grands, with a legendary resale market.</p>
+        </div>
+        <div class="brand-tile" data-reveal data-reveal-delay="2">
+          <span class="brand-tile__origin" data-i18n="brands.bosendorferOrigin">Vienna</span>
+          <span class="brand-tile__name">Bösendorfer</span>
+          <p data-i18n="brands.bosendorferDesc">Warm, singing Viennese tone and the famed extended-bass Imperial.</p>
+        </div>
+        <div class="brand-tile" data-reveal>
+          <span class="brand-tile__origin" data-i18n="brands.fadioliOrigin">Italy</span>
+          <span class="brand-tile__name">Fazioli</span>
+          <p data-i18n="brands.fazioliDesc">Modern hand-built grands prized for clarity, power and craftsmanship.</p>
+        </div>
+        <div class="brand-tile" data-reveal data-reveal-delay="1">
+          <span class="brand-tile__origin" data-i18n="brands.yamahaOrigin">Japan</span>
+          <span class="brand-tile__name">Yamaha</span>
+          <p data-i18n="brands.yamahaDesc">Consistent, reliable instruments at every level — a superb first serious piano.</p>
+        </div>
+        <div class="brand-tile" data-reveal data-reveal-delay="2">
+          <span class="brand-tile__origin" data-i18n="brands.moreOrigin">And more</span>
+          <span class="brand-tile__name">Kawai · Blüthner · Bechstein</span>
+          <p data-i18n="brands.moreDesc">Schimmel, Grotrian, Shigeru Kawai and other respected makers — new and pre-owned.</p>
+          <span class="brand-tile__note"><a href="brands.html" data-i18n="brands.moreNote">See all brands →</a></span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services -->
+  <!-- ============ VINTAGE ============ -->
+  <section class="section" id="vintage">
+    <div class="container">
+      <div class="split">
+        <div class="split__content" data-reveal="left">
+          <p class="eyebrow" data-i18n="vintageHome.eyebrow">Vintage &amp; pre-owned</p>
+          <h2 data-i18n="vintageHome.title">The right vintage piano can be the buy of a lifetime</h2>
+          <p data-i18n="vintageHome.text" style="margin-top:1rem">A well-chosen vintage instrument offers character, craftsmanship and value that new pianos rarely match — but condition is everything. We source, appraise and independently verify vintage and pre-owned pianos so you buy with certainty, not hope.</p>
+          <ul class="checklist">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="vintageHome.c1">Provenance and serial-number dating</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="vintageHome.c2">Independent structural &amp; soundboard inspection</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="vintageHome.c3">Honest restoration cost and value forecast</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="vintageHome.c4">Bespoke sourcing for a specific maker or era</span></li>
+          </ul>
+          <a href="vintage.html" class="btn btn--gold" data-i18n="vintageHome.cta">Explore vintage sourcing</a>
+        </div>
+        <div class="split__media" data-reveal="right">
+          <img src="images/custom-grand-mosaic.jpeg" alt="A vintage grand piano being inspected">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="section section--tint" id="process">
+    <div class="container">
+      <div class="section-head section-head--center" data-reveal>
+        <p class="eyebrow eyebrow--center" data-i18n="process.eyebrow">The consultative process</p>
+        <h2 data-i18n="process.title">A calm, guided path to the right decision</h2>
+      </div>
+      <div class="process__grid" style="margin-top:3rem">
+        <div class="process-step" data-reveal>
+          <span class="process-step__num">01</span>
+          <h4 data-i18n="process.s1Title">Discovery</h4>
+          <p data-i18n="process.s1Desc">A relaxed conversation about your playing, space, taste and budget. No pressure, no jargon.</p>
+        </div>
+        <div class="process-step" data-reveal data-reveal-delay="1">
+          <span class="process-step__num">02</span>
+          <h4 data-i18n="process.s2Title">Impartial shortlist</h4>
+          <p data-i18n="process.s2Desc">A curated shortlist across brands, new and vintage — with the trade-offs explained clearly.</p>
+        </div>
+        <div class="process-step" data-reveal data-reveal-delay="2">
+          <span class="process-step__num">03</span>
+          <h4 data-i18n="process.s3Title">Play-test &amp; inspect</h4>
+          <p data-i18n="process.s3Desc">We arrange playing sessions and independent inspection so you compare like for like.</p>
+        </div>
+        <div class="process-step" data-reveal data-reveal-delay="3">
+          <span class="process-step__num">04</span>
+          <h4 data-i18n="process.s4Title">Acquire &amp; care</h4>
+          <p data-i18n="process.s4Desc">We help you buy well, arrange delivery, and support tuning and care for the life of the piano.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
   <section class="section" id="services">
     <div class="container">
-      <div class="services__header" data-reveal>
-        <p class="eyebrow" data-i18n="services.eyebrow"></p>
-        <div class="gold-rule gold-rule--center"></div>
-        <h2 data-i18n="services.title"></h2>
-        <p class="lead" style="margin-top:.8rem" data-i18n="services.subtitle"></p>
+      <div class="section-head section-head--center" data-reveal>
+        <p class="eyebrow eyebrow--center" data-i18n="servicesHome.eyebrow">Owner services</p>
+        <h2 data-i18n="servicesHome.title">Support for as long as you own the piano</h2>
       </div>
-      <div class="services__grid">
+      <div class="services__grid" style="margin-top:3rem">
         <div class="service-item" data-reveal>
-          <span class="service-item__icon">✦</span>
-          <h4 data-i18n="services.s1Title"></h4>
-          <p data-i18n="services.s1Desc"></p>
+          <span class="service-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 100-16 8 8 0 000 16z"/><path d="M12 8v4l3 2"/></svg></span>
+          <h4 data-i18n="servicesHome.s1Title">Independent consultation</h4>
+          <p data-i18n="servicesHome.s1Desc">One-to-one advice in your home or by video to find the right instrument for you.</p>
         </div>
         <div class="service-item" data-reveal data-reveal-delay="1">
-          <span class="service-item__icon">✦</span>
-          <h4 data-i18n="services.s2Title"></h4>
-          <p data-i18n="services.s2Desc"></p>
+          <span class="service-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V10M4 10l8-6 8 6M4 10h16v11"/></svg></span>
+          <h4 data-i18n="servicesHome.s2Title">Sourcing &amp; acquisition</h4>
+          <p data-i18n="servicesHome.s2Desc">We locate the right piano — new or vintage — and negotiate a fair, informed price.</p>
         </div>
         <div class="service-item" data-reveal data-reveal-delay="2">
-          <span class="service-item__icon">✦</span>
-          <h4 data-i18n="services.s3Title"></h4>
-          <p data-i18n="services.s3Desc"></p>
+          <span class="service-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M8 7h8M8 11h8M8 15h5"/></svg></span>
+          <h4 data-i18n="servicesHome.s3Title">Valuation &amp; appraisal</h4>
+          <p data-i18n="servicesHome.s3Desc">Independent written valuations for purchase, insurance, inheritance or sale.</p>
         </div>
         <div class="service-item" data-reveal>
-          <span class="service-item__icon">✦</span>
-          <h4 data-i18n="services.s4Title"></h4>
-          <p data-i18n="services.s4Desc"></p>
+          <span class="service-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 7l3 3M5 19l9-9-3-3-9 9v3h3z"/></svg></span>
+          <h4 data-i18n="servicesHome.s4Title">Tuning &amp; regulation</h4>
+          <p data-i18n="servicesHome.s4Desc">Access to a vetted network of accredited tuners and technicians across Iberia.</p>
         </div>
         <div class="service-item" data-reveal data-reveal-delay="1">
-          <span class="service-item__icon">✦</span>
-          <h4 data-i18n="services.s5Title"></h4>
-          <p data-i18n="services.s5Desc"></p>
+          <span class="service-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6 5.7 21l2.3-7.2-6-4.4h7.6z"/></svg></span>
+          <h4 data-i18n="servicesHome.s5Title">Restoration oversight</h4>
+          <p data-i18n="servicesHome.s5Desc">We specify and oversee restoration work so quality and value are protected.</p>
         </div>
         <div class="service-item" data-reveal data-reveal-delay="2">
-          <span class="service-item__icon">✦</span>
-          <h4 data-i18n="services.s6Title"></h4>
-          <p data-i18n="services.s6Desc"></p>
+          <span class="service-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18v13H3zM3 7l3-4h12l3 4M9 12h6"/></svg></span>
+          <h4 data-i18n="servicesHome.s6Title">Relocation &amp; resale</h4>
+          <p data-i18n="servicesHome.s6Desc">Specialist moving, insurance guidance, and help selling or trading up fairly.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Journey / Engagement Process -->
-  <section class="section section--dark" id="journey">
-    <div class="container">
-      <div class="journey__header" data-reveal>
-        <p class="eyebrow" data-i18n="journey.eyebrow"></p>
-        <div class="gold-rule gold-rule--center"></div>
-        <h2 data-i18n="journey.title"></h2>
-        <p class="lead" style="margin-top:.8rem" data-i18n="journey.subtitle"></p>
-      </div>
-      <div class="journey__steps">
-        <div class="journey-step" data-reveal>
-          <div class="journey-step__num">01</div>
-          <h4 data-i18n="journey.step1Title"></h4>
-          <p data-i18n="journey.step1Desc"></p>
-        </div>
-        <div class="journey-step" data-reveal data-reveal-delay="1">
-          <div class="journey-step__num">02</div>
-          <h4 data-i18n="journey.step2Title"></h4>
-          <p data-i18n="journey.step2Desc"></p>
-        </div>
-        <div class="journey-step" data-reveal data-reveal-delay="2">
-          <div class="journey-step__num">03</div>
-          <h4 data-i18n="journey.step3Title"></h4>
-          <p data-i18n="journey.step3Desc"></p>
-        </div>
-        <div class="journey-step" data-reveal>
-          <div class="journey-step__num">04</div>
-          <h4 data-i18n="journey.step4Title"></h4>
-          <p data-i18n="journey.step4Desc"></p>
-        </div>
-        <div class="journey-step" data-reveal data-reveal-delay="1">
-          <div class="journey-step__num">05</div>
-          <h4 data-i18n="journey.step5Title"></h4>
-          <p data-i18n="journey.step5Desc"></p>
-        </div>
-        <div class="journey-step" data-reveal data-reveal-delay="2">
-          <div class="journey-step__num">06</div>
-          <h4 data-i18n="journey.step6Title"></h4>
-          <p data-i18n="journey.step6Desc"></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section class="section" id="about">
+  <!-- ============ EXPERT ============ -->
+  <section class="section section--tint" id="about">
     <div class="container">
       <div class="about__grid">
         <div class="about__visual" data-reveal="left">
@@ -317,79 +433,194 @@
           <div class="about__img-frame"></div>
         </div>
         <div class="about__content" data-reveal="right">
-          <p class="eyebrow" data-i18n="about.eyebrow"></p>
-          <div class="gold-rule"></div>
-          <h2 data-i18n="about.title"></h2>
-          <p data-i18n="about.text1" style="margin-top:1.5rem"></p>
-          <p data-i18n="about.text2"></p>
-          <a href="about.html" class="btn btn--ghost" style="margin-top:2rem" data-i18n="about.cta"></a>
+          <p class="eyebrow" data-i18n="expert.eyebrow">Your accredited advisor</p>
+          <h2 data-i18n="expert.title">Stuart Conaghan</h2>
+          <p style="margin-top:1.2rem" data-i18n="expert.text1">A concert pianist and independent piano consultant, Stuart founded Piano Compass to give buyers and owners the impartial, expert guidance the market rarely offers — the advice he wished he'd had himself.</p>
+          <p data-i18n="expert.text2">Working across Spain and Portugal and remotely worldwide, Stuart brings decades at the keyboard, a deep knowledge of every leading maker, and an independent technician network — with no allegiance to any showroom or brand.</p>
+          <blockquote class="expert-quote" style="margin-top:1.8rem">
+            <span data-i18n="expert.quote">"My only job is to help you find the piano that's genuinely right for you — and then to look after it with you."</span>
+            <cite data-i18n="expert.cite">Stuart Conaghan, Founder</cite>
+          </blockquote>
+          <a href="about.html" class="btn btn--ghost" style="margin-top:1.8rem" data-i18n="expert.cta">Read the full story</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact CTA -->
-  <section class="contact-cta" id="contact">
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section" id="voices">
     <div class="container">
-      <p class="eyebrow" data-reveal data-i18n="contactCta.eyebrow"></p>
-      <div class="gold-rule gold-rule--center" data-reveal></div>
-      <h2 data-reveal data-i18n="contactCta.title"></h2>
-      <p data-reveal data-i18n="contactCta.subtitle"></p>
-      <a href="contact.html" class="btn btn--gold" data-reveal data-i18n="contactCta.cta"></a>
+      <div class="section-head section-head--center" data-reveal>
+        <p class="eyebrow eyebrow--center" data-i18n="voices.eyebrow">In their words</p>
+        <h2 data-i18n="voices.title">Decisions made with confidence</h2>
+      </div>
+      <div class="quotes" style="margin-top:3rem">
+        <div class="quote-card" data-reveal>
+          <div class="quote-card__stars" aria-hidden="true">★★★★★</div>
+          <p data-i18n="voices.q1">"Stuart steered us away from an expensive mistake and toward a vintage upright we adore. Completely impartial."</p>
+          <cite data-i18n="voices.q1cite">— Marta &amp; Luís, Lisbon</cite>
+        </div>
+        <div class="quote-card" data-reveal data-reveal-delay="1">
+          <div class="quote-card__stars" aria-hidden="true">★★★★★</div>
+          <p data-i18n="voices.q2">"Finally, advice with no agenda. He compared four brands honestly and found the right grand for our hall."</p>
+          <cite data-i18n="voices.q2cite">— Cultural Foundation, Madrid</cite>
+        </div>
+        <div class="quote-card" data-reveal data-reveal-delay="2">
+          <div class="quote-card__stars" aria-hidden="true">★★★★★</div>
+          <p data-i18n="voices.q3">"From choosing to tuning to insurance valuation — one trusted person for the whole journey."</p>
+          <cite data-i18n="voices.q3cite">— Private client, Marbella</cite>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- GEN:home-dynamic -->
+
+  <section class="section section--tint" id="piano-of-week">
+    <div class="container">
+      <div class="section-head ">
+      <p class="eyebrow ">Piano of the week</p>
+      <h2>This week's pick</h2>
+      
+    </div>
+      <div class="potw" style="margin-top:2rem">
+        <div class="potw__media"><img src="images/self-playing-walnut.jpeg" alt="Feurich Vienna 123"></div>
+        <div class="potw__body">
+          <span class="instrument-card__badge">Feurich · 2023</span>
+          <h3>Feurich Vienna 123</h3>
+          <p class="potw__specs">Upright · New</p>
+          <p>The flagship Viennese upright — a Renner action, all-RAL finishes and an optional invisible self-playing system.</p>
+          <div class="potw__foot">
+            <span class="instrument-card__price">On request</span>
+            <a class="btn btn--gold" href="contact.html?piano=feurich-vienna-123">Enquire about this piano</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="latest-insights">
+    <div class="container">
+      <div class="section-head" style="display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap">
+        <div><p class="eyebrow">Insights &amp; advice</p><h2>From the journal</h2></div>
+        <a class="btn--ghost" href="insights.html">All insights</a>
+      </div>
+      <div class="card-grid" style="margin-top:2.4rem"><a class="post-card" href="insights/choosing-your-first-piano.html">
+    <div class="post-card__img"><img src="images/self-playing-studio.jpeg" alt="How to choose your first piano" loading="lazy"></div>
+    <div class="post-card__body">
+      <span class="post-card__meta">10 September 2026 · Stuart Conaghan</span>
+      <h3>How to choose your first piano</h3>
+      <p>Digital, upright or grand? A calm, jargon-free guide to matching your first instrument to how you play and where it will live.</p>
+      <span class="post-card__cta">Read more</span>
+    </div>
+  </a>
+<a class="post-card" href="insights/new-vs-vintage.html">
+    <div class="post-card__img"><img src="images/custom-grand-mosaic.jpeg" alt="New vs vintage — which holds its value?" loading="lazy"></div>
+    <div class="post-card__body">
+      <span class="post-card__meta">28 August 2026 · Stuart Conaghan</span>
+      <h3>New vs vintage — which holds its value?</h3>
+      <p>A verified vintage piano can be the buy of a lifetime — or an expensive mistake. Here is how to tell the difference.</p>
+      <span class="post-card__cta">Read more</span>
+    </div>
+  </a></div>
+    </div>
+  </section>
+  <section class="section section--tint" id="latest-videos">
+    <div class="container">
+      <div class="section-head" style="display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap">
+        <div><p class="eyebrow">Videos</p><h2>Watch &amp; learn</h2></div>
+        <a class="btn--ghost" href="videos.html">All videos</a>
+      </div>
+      <div class="card-grid card-grid--videos" style="margin-top:2.4rem"><div class="video-card">
+    <div class="video-card__thumb">
+      <div class="video-card__placeholder"><span>Add a YouTube link or upload an MP4 in the CMS</span></div>
+      
+    </div>
+    <div class="video-card__body">
+      <h3>Feurich Vienna 123 — a short walkthrough</h3>
+      <p>A close look at the flagship Viennese upright — tone, action and finishes. Add the YouTube link in the CMS.</p>
+      <span class="video-card__meta">5 September 2026</span>
+    </div>
+  </div>
+<div class="video-card">
+    <div class="video-card__thumb">
+      <div class="video-card__placeholder"><span>Add a YouTube link or upload an MP4 in the CMS</span></div>
+      
+    </div>
+    <div class="video-card__body">
+      <h3>How we inspect a vintage piano</h3>
+      <p>What an independent condition inspection actually checks — soundboard, bridges, pinblock and action. Add the YouTube link in the CMS.</p>
+      <span class="video-card__meta">22 August 2026</span>
+    </div>
+  </div></div>
+    </div>
+  </section>
+  <!-- /GEN:home-dynamic -->
+
+  <!-- ============ CONTACT CTA ============ -->
+  <section class="contact-cta" id="contact">
+    <div class="container">
+      <p class="eyebrow eyebrow--center" data-reveal data-i18n="contactCta.eyebrow">Begin with a conversation</p>
+      <h2 data-reveal data-i18n="contactCta.title">Let's find the piano that's right for you</h2>
+      <p data-reveal data-i18n="contactCta.subtitle">Book a no-obligation consultation. Whether you're buying your first piano or caring for a treasured one, we're here to guide you.</p>
+      <a href="contact.html" class="btn btn--brass" data-reveal data-i18n="contactCta.cta">Book a consultation</a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
   <footer>
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <div class="footer__brand-logo">Stuart Conaghan</div>
-          <div class="footer__brand-sub">Concert Pianist &amp; Piano Consultant</div>
-          <p class="footer__tagline" data-i18n="footer.tagline"></p>
+          <div class="footer__brand-logo">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.6"/><path d="M16 6l3 8-3 12-3-12 3-8z" fill="currentColor"/></svg>
+            <b>Piano Compass</b>
+          </div>
+          <div class="footer__brand-sub" data-i18n="footer.sub">Independent Piano Advisory</div>
+          <p class="footer__tagline" data-i18n="footer.tagline">Independent, accredited and impartial — a source of truth for your whole piano-owning journey.</p>
+          <div class="social-icons social-icons--footer"><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="social-icons__link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@" target="_blank" rel="noopener" aria-label="TikTok" class="social-icons__link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.3 2.1 1.6 3.7 3.7 4v2.5c-1.4 0-2.7-.4-3.7-1.1v5.8a5.7 5.7 0 1 1-5.7-5.7c.3 0 .6 0 .9.1v2.7a3 3 0 1 0 2.1 2.9V3h2.7z"/></svg></a><a href="https://www.youtube.com/@" target="_blank" rel="noopener" aria-label="YouTube" class="social-icons__link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.7 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1c.3-1.2.3-3.8.3-3.8s0-2.6-.3-3.8zM10 15V9l5.2 3-5.2 3z"/></svg></a></div>
         </div>
         <div>
-          <p class="footer__col-title" data-i18n="nav.collection"></p>
+          <p class="footer__col-title" data-i18n="footer.explore">Explore</p>
           <ul class="footer__links">
-            <li><a href="collection/luxury.html" data-i18n="nav.luxury"></a></li>
-            <li><a href="collection/self-playing.html" data-i18n="nav.selfPlaying"></a></li>
-            <li><a href="collection/grand-uprights.html" data-i18n="nav.grandUprights"></a></li>
-            <li><a href="collection/custom-design.html" data-i18n="nav.customDesign"></a></li>
+            <li><a href="#finder" data-i18n="nav.findPiano">Find Your Piano</a></li>
+            <li><a href="brands.html" data-i18n="nav.brands">Brands</a></li>
+            <li><a href="vintage.html" data-i18n="nav.vintage">Vintage</a></li>
+            <li><a href="#process" data-i18n="nav.process">Our Process</a></li>
           </ul>
         </div>
         <div>
-          <p class="footer__col-title" data-i18n="nav.services"></p>
+          <p class="footer__col-title" data-i18n="nav.services">Services</p>
           <ul class="footer__links">
-            <li><a href="services.html" data-i18n="nav.services"></a></li>
-            <li><a href="#journey" data-i18n="nav.journey"></a></li>
-            <li><a href="about.html" data-i18n="nav.about"></a></li>
-            <li><a href="contact.html" data-i18n="nav.contact"></a></li>
+            <li><a href="services.html" data-i18n="footer.consultation">Consultation</a></li>
+            <li><a href="services.html" data-i18n="footer.valuation">Valuation</a></li>
+            <li><a href="services.html" data-i18n="footer.care">Tuning &amp; Care</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About</a></li>
           </ul>
         </div>
         <div>
-          <p class="footer__col-title" data-i18n="contact.emailLabel"></p>
+          <p class="footer__col-title" data-i18n="footer.contactTitle">Contact</p>
           <ul class="footer__links">
-            <li><a href="tel:+34911234567" data-i18n="contact.phoneVal"></a></li>
-            <li><a href="mailto:info@stuartconaghan.com" data-i18n="contact.emailVal"></a></li>
-            <li style="margin-top:.5rem"><span data-i18n="contact.hoursVal" style="font-size:.75rem;color:var(--text-muted);"></span></li>
+            <li><a href="tel:+34911234567">+34 91 123 4567</a></li>
+            <li><a href="mailto:hello@pianocompass.com">hello@pianocompass.com</a></li>
+            <li style="margin-top:.4rem"><span style="font-size:.8rem;color:var(--muted)" data-i18n="footer.region">Spain · Portugal · Worldwide by video</span></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
-        <p class="footer__copyright" data-i18n="footer.copyright"></p>
+        <p class="footer__copyright" data-i18n="footer.copyright">© 2026 Piano Compass. All rights reserved.</p>
         <div class="footer__legal">
-          <a href="#" data-i18n="footer.privacy"></a>
-          <a href="#" data-i18n="footer.terms"></a>
-          <a href="https://feurich.com" target="_blank" rel="noopener" data-i18n="footer.feurich"></a>
+          <a href="#" data-i18n="footer.privacy">Privacy</a>
+          <a href="#" data-i18n="footer.terms">Terms</a>
+          <a href="https://feurich.com" target="_blank" rel="noopener" data-i18n="footer.feurich">Feurich</a>
         </div>
       </div>
+      <p class="footer__disclaimer" data-i18n="footer.disclaimer">Piano Compass is an independent advisory. Brand names are the property of their respective owners and are referenced for identification only; mention does not imply endorsement or affiliation, except where a partnership is stated.</p>
     </div>
   </footer>
 
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
   <script src="js/theme.js"></script>
-  <script src="js/lightbox.js"></script>
-  <script src="js/hero-carousel.js"></script>
+  <script src="js/finder.js"></script>
 </body>
 </html>

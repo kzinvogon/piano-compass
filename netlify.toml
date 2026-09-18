@@ -1,0 +1,16 @@
+# Netlify build configuration for Piano Compass.
+#
+# The site is static HTML. This build step runs a small Node generator
+# (build/generate.mjs) that turns the files under content/ into
+# indexable HTML section pages (Insights, Videos, New & Interesting
+# Instruments) and fills the dynamic blocks on the homepage.
+#
+# Content is edited in Pages CMS (https://app.pagescms.org, config in
+# .pages.yml); saving commits to content/ and triggers this build.
+
+[build]
+  command = "npm run build"
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "20"

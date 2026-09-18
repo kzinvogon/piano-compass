@@ -2,274 +2,201 @@
   "lang": "de",
   "langLabel": "Deutsch",
   "nav": {
-    "home": "Startseite",
+    "home": "Start",
+    "findPiano": "Klavier finden",
+    "brands": "Marken",
+    "allBrands": "Alle Marken, die wir beraten",
+    "feurich": "Feurich — Partner",
     "collection": "Kollektion",
     "luxury": "Luxus-Editionen",
     "selfPlaying": "Selbstspielende Klaviere",
     "grandUprights": "Flügel & Klaviere",
-    "customDesign": "Individuelles Design",
-    "services": "Service",
+    "customDesign": "Sonderanfertigung",
+    "vintage": "Vintage",
+    "services": "Leistungen",
+    "process": "Prozess",
     "journey": "Unser Prozess",
     "about": "Über uns",
     "contact": "Kontakt",
-    "bookConsultation": "Beratung buchen",
-    "gallery": "Galerie"
+    "gallery": "Galerie",
+    "bookConsultation": "Beratung buchen"
   },
   "hero": {
-    "eyebrow": "Wiener Handwerkskunst · Iberische Leidenschaft",
-    "title": "Wo Musik auf\nMeisterschaft trifft",
-    "subtitle": "Konzertpianist und unabhängiger Klavierberater für Spanien und Portugal",
-    "cta": "Kollektion entdecken",
-    "secondary": "Private Beratung buchen",
-    "themes": {
-      "noir": {
-        "eyebrow": "Wiener Handwerkskunst · Iberische Leidenschaft",
-        "title": "Wo Musik auf\nMeisterschaft trifft",
-        "subtitle": "Konzertpianist und unabhängiger Klavierberater für Spanien und Portugal"
-      },
-      "galeria": {
-        "eyebrow": "Kuratierte Exzellenz",
-        "title": "Das Klavier\nals Kunstwerk",
-        "subtitle": "Eine redaktionelle Auswahl der außergewöhnlichsten Instrumente der Welt"
-      },
-      "hogar": {
-        "eyebrow": "Klaviere für Zuhause",
-        "title": "Musik Lebt\nHier",
-        "subtitle": "Warm, persönlich und gestaltet, um jeden Wohnraum zu bereichern"
-      },
-      "publico": {
-        "eyebrow": "Für Öffentliche Räume",
-        "title": "Instrumente\ndie Beeindrucken",
-        "subtitle": "Konzertsäle, Hotels, Kulturzentren — Feurich spielt in jeder Größenordnung"
-      },
-      "familia": {
-        "eyebrow": "Für Familien & Schüler",
-        "title": "Beginne Deine\nMusikalische Reise",
-        "subtitle": "Außergewöhnliche Instrumente auf jedem Niveau, für ein Leben voller Musik"
-      },
-      "arte": {
-        "eyebrow": "Klavier als Statement",
-        "title": "Kühn.\nGlänzend.\nEinzigartig.",
-        "subtitle": "Wo die Grenzen des Klavierdesigns in reinen künstlerischen Ausdruck übergehen"
-      }
-    }
+    "tag1": "Unabhängig",
+    "tag2": "Akkreditiert",
+    "tag3": "Unparteiisch",
+    "title": "Finden Sie das <em>richtige Klavier</em> für sich",
+    "subtitle": "Ihre akkreditierte, verlässliche Quelle für den gesamten Weg zum eigenen Klavier — unparteiische Beratung für Käufer und Besitzer, über alle führenden Marken und Vintage-Instrumente.",
+    "cta": "Passgenau-Finder starten",
+    "secondary": "Beratung buchen",
+    "trust1": "Keine Provisionsinteressen",
+    "trust2": "Alle führenden Marken",
+    "trust3": "Vintage geprüft",
+    "quote": "„Der Rat, den ich mir vor meinem ersten Klavier gewünscht hätte.“",
+    "badgeNum": "25+ Jahre",
+    "badgeLabel": "Beratung von Pianisten, Familien & Institutionen"
   },
-  "brandIntro": {
-    "eyebrow": "Gegr. 1851 · Wien, Österreich",
-    "title": "Ein Instrument. Ein Erbe.",
-    "text": "Seit 1851 verkörpert Feurich die höchste Tradition des Wiener Klavierbaus — fünf Generationen von Meisterhandwerkern, die die Kunst weiterentwickeln, ohne ihre Seele aufzugeben. Jedes Feurich-Klavier ist eine Verbindung aus technischer Präzision und künstlerischer Vision.",
-    "foundedYear": "1851",
-    "foundedLabel": "Gegründet in Wien",
-    "generationsNum": "5",
-    "generationsLabel": "Generationen Meisterschaft",
-    "finishesNum": "∞",
-    "finishesLabel": "Mögliche Ausführungen"
+  "trust": {
+    "t1Title": "Grundsätzlich unparteiisch",
+    "t2Title": "Akkreditierte Kompetenz",
+    "t3Title": "Eine verlässliche Quelle",
+    "t4Title": "Für den ganzen Weg"
   },
-  "collection": {
-    "eyebrow": "Die Kollektion",
-    "title": "Finden Sie Ihr Klavier",
-    "subtitle": "Von atemberaubenden Luxus-Editionen bis zu vollständig individuellen Auftragsarbeiten — jedes Feurich ist eine einzigartige Schöpfung.",
-    "explore": "Entdecken",
-    "luxury": {
-      "title": "Luxus-Editionen",
-      "desc": "Swarovski-Kristallintarsien, 24-Karat-Blattgold und außergewöhnliche künstlerische Ausführungen — Klaviere, die über Instrumente hinausgehen und zu Erbstücken werden."
-    },
-    "selfPlaying": {
-      "title": "Selbstspielende Klaviere",
-      "desc": "Eine Sinfonie auf Abruf. Feurich-Klaviere mit integrierter Pianoforce-Technologie, die mit atemberaubendem Realismus spielen."
-    },
-    "grandUprights": {
-      "title": "Flügel & Klaviere",
-      "desc": "Vom Konzertflügel 218 Concert 1 bis zum kompakten Vienna V116 — Instrumente für jeden Raum und jeden Anspruch."
-    },
-    "customDesign": {
-      "title": "Individuelles Design",
-      "desc": "Beauftragen Sie ein Klavier, das so einzigartig ist wie Sie. Jede Farbe, jedes Material, jede Vision — realisiert im Wiener Atelier von Feurich."
-    }
+  "intro": {
+    "eyebrow": "Was Piano Compass ist",
+    "title": "Ein akkreditiertes Zuhause für alle auf dem Weg zum eigenen Klavier.",
+    "stat1Label": "Jahre Beratung",
+    "stat2Label": "Betreute Marken",
+    "stat3Label": "Marken-Verkaufsziele"
   },
-  "featured": {
-    "eyebrow": "Flaggschiff-Modell",
-    "title": "Das Vienna V123",
-    "madeIn": "Made in Austria",
-    "text": "Das Feurich Modell 123 Vienna wird nicht nur gebaut — es wird komponiert. Mit einer neu gestalteten Renner-Mechanik, Hochgeschwindigkeits-KAMM-Technik und Weickert-Spezial-Filzhämmern ist dies das Wiener Klavier neu definiert. Erhältlich in allen RAL-Farben.",
-    "spec1": "Höhe: 123 cm",
-    "spec2": "Mechanik: Renner mit KAMM-Hochgeschwindigkeit",
-    "spec3": "Hämmer: Weickert-Spezial-Filz",
-    "spec4": "Ausführungen: Alle RAL-Farben verfügbar",
-    "spec5": "Herkunft: Made in Austria",
-    "cta": "Dieses Modell anfragen"
+  "audience": {
+    "eyebrow": "Wem wir helfen",
+    "title": "Egal, wo Sie auf Ihrem Klavierweg stehen",
+    "buyersTag": "Käufer",
+    "buyersTitle": "Das richtige Instrument finden",
+    "ownersTag": "Besitzer",
+    "ownersTitle": "Ihr vorhandenes Klavier pflegen"
   },
-  "selfPlayingSection": {
-    "eyebrow": "Pianoforce-Technologie",
-    "title": "Das Klavier, das sich selbst spielt",
-    "text": "Unsichtbar im Gehäuse integriert, verwandelt das Pianoforce-Selbstspiel-System jedes Feurich-Klavier in einen autonomen Konzertinterpreten. Streamen Sie aus einer kuratierten Bibliothek, nehmen Sie Ihr eigenes Spiel auf, oder lehnen Sie sich zurück und lassen Sie Beethoven den Raum füllen.",
-    "f1": "Unsichtbar im Gehäuse integriert",
-    "f2": "Aufnehmen, abspielen und streamen",
-    "f3": "Vollständige MIDI- und Audio-Bibliothekskompatibilität",
-    "f4": "Integrierte Lautsprecher für Begleitung",
-    "f5": "Kompatibel mit allen Feurich-Modellen",
-    "cta": "Pianoforce entdecken"
+  "finder": {
+    "eyebrow": "Der Passgenau-Finder",
+    "title": "Eine beratende Auswahl in vier Fragen",
+    "resultEyebrow": "Ihr Ausgangspunkt",
+    "resultCta": "Beratung buchen, um dies zu verfeinern",
+    "back": "Zurück",
+    "restart": "Neu beginnen"
   },
-  "services": {
-    "eyebrow": "Ganzheitlicher Service",
-    "title": "Eine vollständige Partnerschaft",
-    "subtitle": "Unsere Beziehung endet nicht bei der Lieferung. Wir bieten jeden Service, den Ihr Instrument jemals benötigen wird.",
-    "s1Title": "Private Beratung",
-    "s1Desc": "Einzelgespräche in unserem Showroom oder bei Ihnen zu Hause, um das perfekte Instrument zu finden.",
-    "s2Title": "White-Glove-Lieferung",
-    "s2Desc": "Spezialisierter Klaviertransport, Aufstellung und Installation durch ausgebildete Techniker.",
-    "s3Title": "Regulierung & Intonierung",
-    "s3Desc": "Fachkundige Einrichtung, damit Ihr Klavier vom ersten Ton an auf höchstem Niveau spielt.",
-    "s4Title": "Jährliche Stimmung",
-    "s4Desc": "Geplante Wartungsprogramme, um Ihr Instrument in perfekter Stimmung zu halten.",
-    "s5Title": "Restaurierung & Politur",
-    "s5Desc": "Restaurierung in Fabrikqualität und Gehäuseaufbereitung für jedes Feurich-Instrument.",
-    "s6Title": "Individuelle Finanzierung",
-    "s6Desc": "Maßgeschneiderte Zahlungspläne und Leasingoptionen, um Ihr Traumklavier Wirklichkeit werden zu lassen."
+  "brands": {
+    "eyebrow": "Marken, die wir beraten",
+    "title": "Jeder führende Hersteller — nach seinen Vorzügen beurteilt",
+    "subtitle": "Wir sind keiner Marke verpflichtet. Feurich ist unser Partner, doch unsere Aufgabe ist es, den Hersteller und das Modell zu empfehlen, das wirklich zu Ihnen passt — neu oder vintage."
   },
-  "journey": {
-    "eyebrow": "Unser Prozess",
-    "title": "Die Reise zu Ihrem Klavier",
-    "subtitle": "Wir begleiten Sie bei jedem Schritt, von der ersten Inspiration bis zum lebenslangen Besitz.",
-    "step1Title": "Entdeckung",
-    "step1Desc": "Wir beginnen mit einem Gespräch — Ihr musikalisches Leben, Ihr Raum, Ihre ästhetische Vision. Kein Druck. Nur Leidenschaft.",
-    "step2Title": "Private Besichtigung",
-    "step2Desc": "Besuchen Sie eine exklusive Besichtigung in unserem Showroom oder vereinbaren Sie einen Hausbesuch.",
-    "step3Title": "Personalisierung",
-    "step3Desc": "Wählen Sie Ihre Ausführung, Beschläge, innere Komponenten und individuelle Designelemente.",
-    "step4Title": "Auftrag",
-    "step4Desc": "Ihr Klavier tritt in die Feurich-Werkstatt in Wien ein. Meisterhandwerker beginnen, Ihre Spezifikation zum Leben zu erwecken.",
-    "step5Title": "White-Glove-Lieferung",
-    "step5Desc": "Unser spezialisiertes Logistikteam liefert und installiert Ihr Klavier mit der außergewöhnlichen Sorgfalt, die es verdient.",
-    "step6Title": "Lebenslange Partnerschaft",
-    "step6Desc": "Laufende Stimmung, Regulierung und Service — wir sind während der gesamten Lebensdauer Ihres Instruments für Sie da."
+  "vintageHome": {
+    "eyebrow": "Vintage & gebraucht",
+    "title": "Das richtige Vintage-Klavier kann der Kauf des Lebens sein",
+    "cta": "Vintage-Suche entdecken"
   },
-  "about": {
-    "eyebrow": "Über Stuart Conaghan",
-    "title": "Wiens Bestes,\nauf die Halbinsel gebracht",
-    "text1": "Wir sind eine unabhängige Klavierberatung für Spanien und Portugal und bringen Wiens feinste Klaviertradition mit der Leidenschaft und dem persönlichen Service auf die Iberische Halbinsel, die diese außergewöhnlichen Instrumente verdienen.",
-    "text2": "Wir begleiten Sie durch das gesamte Feurich-Portfolio — von intimen Klavieren bis hin zu Konzertflügeln, von Standardausführungen bis zu vollständig individuellen Luxusaufträgen — unterstützt von einem engagierten Kundendienst-Team.",
-    "cta": "Unsere Geschichte"
+  "process": {
+    "eyebrow": "Der beratende Prozess",
+    "title": "Ein ruhiger, begleiteter Weg zur richtigen Entscheidung",
+    "s1Title": "Kennenlernen",
+    "s2Title": "Unparteiische Auswahl",
+    "s3Title": "Spielen & prüfen",
+    "s4Title": "Erwerb & Pflege"
+  },
+  "servicesHome": {
+    "eyebrow": "Service für Besitzer",
+    "title": "Begleitung, solange Sie das Klavier besitzen"
+  },
+  "expert": {
+    "eyebrow": "Ihr akkreditierter Berater",
+    "title": "Stuart Conaghan",
+    "cite": "Stuart Conaghan, Gründer",
+    "cta": "Die ganze Geschichte lesen"
+  },
+  "voices": {
+    "eyebrow": "In ihren Worten",
+    "title": "Entscheidungen mit Zuversicht"
   },
   "contactCta": {
-    "eyebrow": "Beginnen Sie Ihre Reise",
-    "title": "Wir würden gerne von Ihnen hören",
-    "subtitle": "Besuchen Sie unseren Showroom oder vereinbaren Sie eine private Beratung.",
-    "cta": "Kontakt aufnehmen"
+    "eyebrow": "Beginnen Sie mit einem Gespräch",
+    "title": "Finden wir das richtige Klavier für Sie",
+    "subtitle": "Buchen Sie eine unverbindliche Beratung. Ob Sie Ihr erstes Klavier kaufen oder ein geschätztes pflegen — wir begleiten Sie.",
+    "cta": "Beratung buchen"
+  },
+  "brandsPage": {
+    "eyebrow": "Marken, die wir beraten",
+    "title": "Unparteiisch gegenüber jedem führenden Hersteller",
+    "featuredTag": "Partner",
+    "allEyebrow": "Der breitere Markt",
+    "allTitle": "Weitere Hersteller, die wir empfehlen",
+    "howEyebrow": "Wie wir vergleichen",
+    "howTitle": "Vorzüge, nicht Marketing",
+    "howCta": "Markenvergleich anfragen",
+    "ctaTitle": "Welches Klavier ist das richtige für Sie?"
+  },
+  "vintagePage": {
+    "eyebrow": "Vintage & gebraucht",
+    "title": "Kaufen Sie Vintage mit Gewissheit, nicht mit Hoffnung",
+    "cta": "Vintage-Suche starten",
+    "whyEyebrow": "Warum Vintage",
+    "whyTitle": "Charakter, Handwerk und Wert",
+    "processEyebrow": "Unsere Prüfung",
+    "processTitle": "Jedes Vintage-Klavier unabhängig geprüft",
+    "bespokeEyebrow": "Individuelle Suche",
+    "bespokeTitle": "Suchen Sie einen bestimmten Hersteller oder eine Epoche?",
+    "bespokeCta": "Vintage-Suche beauftragen",
+    "ctaTitle": "Finden Sie ein Vintage-Klavier, das sich lohnt"
+  },
+  "aboutPage": {
+    "eyebrow": "Über Piano Compass",
+    "title": "Unabhängig aus Überzeugung",
+    "valuesEyebrow": "Wofür wir stehen",
+    "valuesTitle": "Grundsätze ohne Kompromisse",
+    "expertEyebrow": "Ihr Berater",
+    "expertRole": "Konzertpianist & Gründer",
+    "timelineTitle": "Die Geschichte von Piano Compass",
+    "cta": "Beratung buchen"
+  },
+  "services": {
+    "eyebrow": "Service für Besitzer",
+    "title": "Alles, was Ihr Klavier je braucht",
+    "subtitle": "Ein vertrauenswürdiger, unabhängiger Partner — von der Wahl des Instruments bis zur jahrzehntelangen Pflege.",
+    "s1Title": "Unabhängige Beratung",
+    "s2Title": "Beschaffung & Erwerb",
+    "s3Title": "Bewertung & Gutachten",
+    "s4Title": "Stimmung & Regulierung",
+    "s5Title": "Restaurierungsaufsicht",
+    "s6Title": "Umzug & Wiederverkauf"
+  },
+  "journey": {
+    "eyebrow": "Der beratende Prozess",
+    "title": "Der Weg zum richtigen Klavier",
+    "subtitle": "Ein ruhiger, begleiteter Weg — an Ihrer Seite bei jedem Schritt und lange danach.",
+    "step1Title": "Kennenlernen",
+    "step2Title": "Unparteiische Auswahl",
+    "step3Title": "Anspielen",
+    "step4Title": "Unabhängige Prüfung",
+    "step5Title": "Erwerb & Lieferung",
+    "step6Title": "Lebenslange Pflege"
   },
   "contact": {
-    "eyebrow": "Kontakt",
-    "title": "Stuart Conaghan kontaktieren",
-    "subtitle": "Wir laden Sie ein, unseren Showroom zu besuchen oder eine private Beratung zu vereinbaren.",
+    "eyebrow": "Kontakt aufnehmen",
+    "title": "Beratung buchen",
+    "subtitle": "Sagen Sie uns, wo Sie auf Ihrem Klavierweg stehen, und wir melden uns persönlich für ein unverbindliches Gespräch — vor Ort oder per Video.",
     "namePlaceholder": "Vollständiger Name",
     "emailPlaceholder": "E-Mail-Adresse",
     "phonePlaceholder": "Telefonnummer",
-    "interestLabel": "Interessensbereich",
-    "messagePlaceholder": "Erzählen Sie uns von Ihrem idealen Klavier…",
+    "interestLabel": "Wie können wir helfen?",
+    "messagePlaceholder": "Erzählen Sie uns von Ihrem Spiel, Ihrem Raum und dem, was Sie suchen…",
     "submit": "Anfrage senden",
-    "interest1": "Luxus-Editionen",
-    "interest2": "Selbstspielende Klaviere",
-    "interest3": "Flügel",
-    "interest4": "Klaviere",
-    "interest5": "Individuelles Design",
+    "interest1": "Kauf — mein erstes Klavier",
+    "interest2": "Kauf — Klavier verbessern",
+    "interest3": "Vintage-/Gebrauchtsuche",
+    "interest4": "Bewertung / Gutachten",
+    "interest5": "Stimmung, Pflege oder Restaurierung",
     "interest6": "Allgemeine Anfrage",
-    "showroomLabel": "Showroom",
-    "address": "Paseo de la Castellana 123\nMadrid, 28046, Spanien",
+    "showroomLabel": "Ansässig in",
+    "address": "Spanien & Portugal\nBeratung vor Ort oder per Video",
     "phoneLabel": "Telefon",
-    "phoneVal": "+34 91 123 4567",
     "emailLabel": "E-Mail",
-    "emailVal": "info@stuartconaghan.com",
-    "hoursLabel": "Öffnungszeiten",
-    "hoursVal": "Montag – Samstag, 10:00 – 19:00 Uhr"
+    "hoursLabel": "Antwortzeit",
+    "hoursVal": "Wir antworten innerhalb eines Werktags",
+    "successMsg": "Vielen Dank. Wir melden uns persönlich innerhalb eines Werktags."
   },
   "footer": {
-    "tagline": "Wiener Handwerkskunst. Iberische Leidenschaft.",
-    "copyright": "© 2025 Stuart Conaghan. Alle Rechte vorbehalten.",
-    "privacy": "Datenschutzrichtlinie",
-    "terms": "Nutzungsbedingungen",
-    "feurich": "Offizielle Feurich-Website"
+    "sub": "Unabhängige Klavierberatung",
+    "tagline": "Unabhängig, akkreditiert und unparteiisch — eine verlässliche Quelle für Ihren gesamten Klavierweg.",
+    "explore": "Entdecken",
+    "consultation": "Beratung",
+    "valuation": "Bewertung",
+    "care": "Stimmung & Pflege",
+    "contactTitle": "Kontakt",
+    "region": "Spanien · Portugal · Weltweit per Video",
+    "copyright": "© 2026 Piano Compass. Alle Rechte vorbehalten.",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "feurich": "Feurich",
+    "disclaimer": "Piano Compass ist eine unabhängige Beratung. Markennamen sind Eigentum ihrer jeweiligen Inhaber und werden nur zur Kennzeichnung genannt; die Nennung bedeutet keine Empfehlung oder Verbindung, sofern keine Partnerschaft angegeben ist."
   },
-  "luxury": {
-    "heroEyebrow": "Luxus-Editionen",
-    "heroTitle": "Jenseits des Instruments",
-    "heroSubtitle": "Wo das Klavier zur Kunst wird",
-    "intro": "Für diejenigen, für die nur das Außergewöhnliche in Frage kommt, präsentieren wir eine Auswahl an Luxus-Edition-Aufträgen — Instrumente, die an der Schnittstelle von Musiktechnik und höchster Handwerkskunst entstehen.",
-    "crystalTitle": "Kristall-Intarsien",
-    "crystalText": "Swarovski- und maßgefertigte Kristallelemente werden von Meisterkünstlern von Hand in die Gehäuseoberflächen eingelegt und schaffen Instrumente, die im Licht schimmern und fesseln, bevor eine einzige Note gespielt wird.",
-    "goldTitle": "Blattgold",
-    "goldText": "Traditionelle 24-Karat-Blattgold-Applikation, ausgeführt von spezialisierten Vergoldern, die in den feinsten europäischen dekorativen Traditionen ausgebildet sind.",
-    "lacquerTitle": "Individuelle Lackierung & RAL",
-    "lacquerText": "Jede Farbe im RAL-System, in handpolierten Hochglanz- oder Satin-Ausführungen aufgetragen. Ihr Klavier kann jedes Interieur perfekt ergänzen.",
-    "inquiryCta": "Luxus-Edition beauftragen"
-  },
-  "selfPlayingPage": {
-    "heroEyebrow": "Selbstspielende Klaviere",
-    "heroTitle": "Das Klavier, das auftritt",
-    "heroSubtitle": "Pianoforce-Technologie unsichtbar in Feurich-Handwerkskunst integriert",
-    "intro": "Stellen Sie sich vor, eine Konzertdarbietung in Qualität beginnt in Ihrem Wohnzimmer auf einen einzigen Tastendruck. Mit Pianoforce-Technologie in jedem Feurich-Modell ist das keine Vorstellung — es ist Ihre neue Realität.",
-    "howTitle": "So funktioniert es",
-    "howText": "Pianoforce wird im Klaviergehäuse ohne sichtbare Modifikation eingebaut. Präzisionsmagnetspulen unter jeder Taste und jedem Pedal reagieren auf MIDI-Daten mit derselben Geschwindigkeit und Nuance wie der Anschlag eines Meisterpianisten.",
-    "libraryTitle": "Ein unendliches Repertoire",
-    "libraryText": "Greifen Sie auf Tausende von Interpretationen professioneller Pianisten zu, streamen Sie neue Aufnahmen oder laden Sie Ihre eigenen MIDI-Dateien hoch. Von Bach bis Gershwin — das Repertoire ist grenzenlos.",
-    "whyTitle": "Die Trophäen-Investition",
-    "whyText": "Ein selbstspielendes Feurich ist das ultimative Statement-Stück — ein Luxusobjekt, das auch ein komplettes Unterhaltungssystem, ein Lehrwerkzeug, ein Aufnahmeinstrument und ein Gesprächsstück ohne Gleichen ist.",
-    "galleryTitle": "Die Kollektion",
-    "galleryCap1": "Pianoforce — unsichtbar integriert",
-    "galleryCap2": "Zuhause im Licht",
-    "galleryCap3": "Nussbaum · Sonnenuntergang-Edition"
-  },
-  "grandUprightsPage": {
-    "heroEyebrow": "Flügel & Klaviere",
-    "heroTitle": "Die vollständige Palette",
-    "heroSubtitle": "Von 116 cm bis zum Konzertsaal: ein Instrument für jeden Raum und jeden Anspruch",
-    "uprightTitle": "Vienna Klavier-Serie",
-    "uprightText": "Die Vienna Klavier-Reihe repräsentiert den Gipfel der österreichischen Klavierherstellung.",
-    "grandTitle": "Dynamic Flügel-Serie",
-    "grandText": "Die Dynamic Flügel-Reihe liefert konzerttauglichen Klang und Anschlagsreaktion in Instrumenten, die für private Residenzen und professionelle Auftrittsorte geeignet sind.",
-    "v116Name": "Vienna V116",
-    "v116Spec": "Höhe: 116 cm · Kompakte Eleganz für intime Räume",
-    "v123Name": "Vienna V123",
-    "v123Spec": "Höhe: 123 cm · Flaggschiff-Klavier · Made in Austria · Alle RAL-Farben",
-    "v125Name": "Vienna V125",
-    "v125Spec": "Höhe: 125 cm · Maximale Kraft aus einem Klaviergehäuse",
-    "g162Name": "162 Dynamic",
-    "g162Spec": "Länge: 162 cm (5'4\") · Der verfeinerte Baby-Flügel",
-    "g179Name": "179 Dynamic",
-    "g179Spec": "Länge: 179 cm (5'10\") · Der vielseitige Flügel für Zuhause und Bühne",
-    "g218Name": "218 Concert 1",
-    "g218Spec": "Länge: 218 cm (7'2\") · Der Konzertflügel"
-  },
-  "customPage": {
-    "heroEyebrow": "Individuelles Design",
-    "heroTitle": "Beauftragen Sie Ihre Vision",
-    "heroSubtitle": "Jedes Detail, in Wien nach Ihrer genauen Spezifikation realisiert",
-    "intro": "Keine zwei Leben sind identisch. Keine zwei Häuser sind gleich. Feurich glaubt, dass auch keine zwei Klaviere gleich sein sollten. Unser maßgeschneiderter Auftragsservice ermöglicht es Ihnen, jeden Aspekt Ihres Instruments zu spezifizieren.",
-    "whatTitle": "Was angepasst werden kann",
-    "what1": "Gehäusefarbe — jede RAL-Farbe, jede Ausführung (Hochglanz, Satin, Matt)",
-    "what2": "Holzart — Nussbaum, Palisander, Ahorn, Ebenholz und exotische Furniere",
-    "what3": "Beschläge — Messing, Chrom, vergoldet oder individuelle Metallarbeiten",
-    "what4": "Abmessungen — Sondermaße für spezifische architektonische Räume",
-    "what5": "Intarsien und Marketerie — handgefertigte Dekorationselemente",
-    "what6": "Innere Komponenten — Premium-Renner-Mechaniken, Hammergüten, Saitenstärken",
-    "processTitle": "Der Auftragsprozess",
-    "processCta": "Auftrag beginnen",
-    "galleryTitle": "Maßgefertigte Kreationen",
-    "galleryCap1": "Beleuchtete LED-Kunst",
-    "galleryCap2": "Handveredeltes Mosaik",
-    "galleryCap3": "Maßgefertigter Flügel · Mosaik"
-  },
-  "gallery": {
-    "eyebrow": "Archiv",
-    "title": "Bildergalerie",
-    "subtitle": "Die vollständige Fotosammlung."
-  },
-  "theme": {
-    "label": "Thema",
-    "noir": "Noir",
-    "galeria": "Galerie",
-    "hogar": "Zuhause",
-    "publico": "Öffentlich",
-    "familia": "Familie",
-    "arte": "Kunst"
-  }
+  "theme": { "label": "Thema" }
 }

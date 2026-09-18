@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   preloadImages();
   initNav();
   initScrollReveal();
-  initCustomCursor();
   initCounters();
   initMobileMenu();
   initInterestPrefill();
@@ -121,36 +120,6 @@ function initScrollReveal() {
   });
 }
 
-function initCustomCursor() {
-  if (window.matchMedia('(pointer: coarse)').matches) return;
-  const cursor = document.createElement('div');
-  cursor.className = 'cursor';
-  const dot = document.createElement('div');
-  dot.className = 'cursor__dot';
-  document.body.appendChild(cursor);
-  document.body.appendChild(dot);
-
-  let mx = 0, my = 0, cx = 0, cy = 0;
-
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX;
-    my = e.clientY;
-    dot.style.transform = `translate(${mx}px, ${my}px)`;
-  });
-
-  (function animate() {
-    cx += (mx - cx) * 0.12;
-    cy += (my - cy) * 0.12;
-    cursor.style.transform = `translate(${cx}px, ${cy}px)`;
-    requestAnimationFrame(animate);
-  })();
-
-  document.querySelectorAll('a, button, [data-cursor-expand]').forEach(el => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('expanded'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('expanded'));
-  });
-}
-
 function initCounters() {
   const counters = document.querySelectorAll('[data-count]');
   if (!counters.length) return;
@@ -189,9 +158,9 @@ if (contactForm) {
     await new Promise(r => setTimeout(r, 1200));
     contactForm.innerHTML = `
       <div class="form-success">
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-          <circle cx="24" cy="24" r="23" stroke="#c9a84c" stroke-width="2"/>
-          <path d="M14 24l7 7 13-14" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" style="margin:0 auto 1.2rem;color:var(--pine)">
+          <circle cx="24" cy="24" r="23" stroke="currentColor" stroke-width="2"/>
+          <path d="M14 24l7 7 13-14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <p data-i18n="contact.successMsg">Thank you. We will be in touch shortly.</p>
       </div>`;

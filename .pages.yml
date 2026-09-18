@@ -1,0 +1,102 @@
+# Pages CMS configuration — https://pagescms.org
+#
+# How the owner publishes:
+#   1. Go to https://app.pagescms.org and sign in with GitHub.
+#   2. Choose the kzinvogon/piano-compass repository.
+#   3. Edit Pianos, Insights, Videos and Settings below. Saving commits to
+#      the repo, and Netlify rebuilds the site automatically.
+#
+# Photos upload into images/uploads and are referenced with a relative path
+# so the generated pages resolve them correctly.
+
+media:
+  input: images/uploads
+  output: images/uploads
+  extensions: [jpg, jpeg, png, webp, gif, svg, mp4, webm, mov]
+
+content:
+  # ── Instruments (New & Interesting / Piano of the Week) ──
+  - name: pianos
+    label: Pianos
+    type: collection
+    path: content/pianos
+    filename: '{fields.title}.md'
+    view:
+      fields: [title, constructor, year, category]
+    fields:
+      - { name: title, label: Title, type: string }
+      - name: constructor
+        label: Constructor / maker
+        type: select
+        options:
+          values: [Feurich, Bösendorfer, "Steinway & Sons", Yamaha, Kawai, Blüthner, "C. Bechstein", Fazioli, Schimmel, Grotrian, "Shigeru Kawai", Other]
+      - { name: year, label: Year of build, type: number }
+      - name: type
+        label: Type
+        type: select
+        options:
+          values: [Grand, "Baby Grand", Upright, Digital, Other]
+      - name: category
+        label: Category
+        type: select
+        options:
+          values: [New, Vintage, Restored, "Pre-owned"]
+      - name: section
+        label: Section
+        type: select
+        default: instruments
+        options:
+          values: [instruments]
+      - { name: featured, label: Feature as Piano of the Week candidate, type: boolean, default: false }
+      - { name: price, label: Price / guide (e.g. €38,000 or On request), type: string }
+      - { name: image, label: Main photo, type: image }
+      - { name: gallery, label: More photos, type: image, list: true }
+      - { name: excerpt, label: Short summary (shown on cards), type: text }
+      - { name: date, label: Date, type: date }
+      - { name: body, label: Full description, type: rich-text }
+
+  # ── Insights / Advice articles ──
+  - name: insights
+    label: Insights & Advice
+    type: collection
+    path: content/insights
+    filename: '{fields.title}.md'
+    view:
+      fields: [title, date]
+    fields:
+      - { name: title, label: Title, type: string }
+      - { name: date, label: Date, type: date }
+      - { name: author, label: Author, type: string, default: Stuart Conaghan }
+      - { name: image, label: Header image, type: image }
+      - { name: excerpt, label: Excerpt (shown on cards), type: text }
+      - { name: body, label: Body, type: rich-text }
+
+  # ── Videos (YouTube) ──
+  - name: videos
+    label: Videos
+    type: collection
+    path: content/videos
+    filename: '{fields.title}.md'
+    view:
+      fields: [title, date]
+    fields:
+      - { name: title, label: Title, type: string }
+      - { name: youtube, label: "YouTube link (best for large videos — paste the full URL)", type: string }
+      - { name: vimeo, label: "…or a Vimeo link (paste the full URL)", type: string }
+      - { name: video_file, label: "…or upload a short MP4 (a few MB max — GitHub rejects files over 100MB)", type: file }
+      - { name: video_url, label: "…or paste a direct link to an MP4 hosted elsewhere", type: string }
+      - { name: poster, label: Thumbnail image (optional, shown before play), type: image }
+      - { name: date, label: Date, type: date }
+      - { name: description, label: Description, type: text }
+
+  # ── Social links + Piano of the Week ──
+  - name: settings_social
+    label: Social & Piano of the Week
+    type: file
+    path: content/settings/social.json
+    fields:
+      - { name: instagram_url, label: Instagram URL, type: string }
+      - { name: tiktok_url, label: TikTok URL, type: string }
+      - { name: youtube_url, label: YouTube URL, type: string }
+      - { name: facebook_url, label: Facebook URL, type: string }
+      - { name: piano_of_the_week, label: "Piano of the Week — file name without .md (e.g. feurich-vienna-123)", type: string }

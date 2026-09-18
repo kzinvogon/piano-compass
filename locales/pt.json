@@ -3,273 +3,200 @@
   "langLabel": "Português",
   "nav": {
     "home": "Início",
+    "findPiano": "Encontre o seu piano",
+    "brands": "Marcas",
+    "allBrands": "Todas as marcas que aconselhamos",
+    "feurich": "Feurich — Parceiro em destaque",
     "collection": "Coleção",
-    "luxury": "Edições de Luxo",
-    "selfPlaying": "Pianos Autotocantes",
-    "grandUprights": "Caudas e Verticais",
-    "customDesign": "Design Personalizado",
+    "luxury": "Edições de luxo",
+    "selfPlaying": "Pianos automáticos",
+    "grandUprights": "Caudas e verticais",
+    "customDesign": "Design personalizado",
+    "vintage": "Vintage",
     "services": "Serviços",
-    "journey": "O Nosso Processo",
-    "about": "Sobre Nós",
+    "process": "Processo",
+    "journey": "O nosso processo",
+    "about": "Sobre nós",
     "contact": "Contacto",
-    "bookConsultation": "Reservar Consulta",
-    "gallery": "Galeria"
+    "gallery": "Galeria",
+    "bookConsultation": "Marcar consulta"
   },
   "hero": {
-    "eyebrow": "Artesanato Vienense · Paixão Ibérica",
-    "title": "Onde a Música\nEncontra a Mestria",
-    "subtitle": "Pianista de concerto e consultor de pianos independente para Espanha e Portugal",
-    "cta": "Descobrir a Coleção",
-    "secondary": "Reservar uma Consulta Privada",
-    "themes": {
-      "noir": {
-        "eyebrow": "Artesanato Vienense · Paixão Ibérica",
-        "title": "Onde a Música\nEncontra a Mestria",
-        "subtitle": "Pianista de concerto e consultor de pianos independente para Espanha e Portugal"
-      },
-      "galeria": {
-        "eyebrow": "Excelência Curada",
-        "title": "O Piano\ncomo Arte",
-        "subtitle": "Uma seleção editorial dos instrumentos mais extraordinários do mundo"
-      },
-      "hogar": {
-        "eyebrow": "Pianos para o Lar",
-        "title": "A Música\nVive Aqui",
-        "subtitle": "Caloroso, pessoal e criado para elevar cada espaço"
-      },
-      "publico": {
-        "eyebrow": "Para Espaços Públicos",
-        "title": "Instrumentos\nque Impressionam",
-        "subtitle": "Salas de concerto, hotéis, centros culturais — Feurich actua a toda a escala"
-      },
-      "familia": {
-        "eyebrow": "Para Famílias e Estudantes",
-        "title": "Comece a Sua\nViagem Musical",
-        "subtitle": "Instrumentos excepcionais em todos os níveis, para uma vida de música"
-      },
-      "arte": {
-        "eyebrow": "O Piano como Declaração",
-        "title": "Ousado.\nBrilhante.\nÚnico.",
-        "subtitle": "Onde os limites do design pianístico se dissolvem em expressão artística pura"
-      }
-    }
+    "tag1": "Independente",
+    "tag2": "Acreditado",
+    "tag3": "Imparcial",
+    "title": "Encontre o piano <em>certo para si</em>",
+    "subtitle": "A sua fonte de confiança acreditada para todo o percurso de ter um piano — aconselhamento imparcial para compradores e proprietários, em todas as grandes marcas e instrumentos vintage.",
+    "cta": "Iniciar o localizador ideal",
+    "secondary": "Marcar consulta",
+    "trust1": "Sem viés de comissões",
+    "trust2": "Todas as grandes marcas",
+    "trust3": "Vintage verificado",
+    "quote": "«O conselho que gostaria de ter tido no meu primeiro piano.»",
+    "badgeNum": "25+ anos",
+    "badgeLabel": "a aconselhar pianistas, famílias e instituições"
   },
-  "brandIntro": {
-    "eyebrow": "Fund. 1851 · Viena, Áustria",
-    "title": "Um Instrumento. Um Legado.",
-    "text": "Desde 1851, a Feurich tem incorporado a mais alta tradição da fabricação vienense de pianos — cinco gerações de mestres artesãos, cada um avançando a arte sem abandonar a sua alma. Cada piano Feurich é uma convergência de precisão de engenharia e visão artística.",
-    "foundedYear": "1851",
-    "foundedLabel": "Fundado em Viena",
-    "generationsNum": "5",
-    "generationsLabel": "Gerações de Mestria",
-    "finishesNum": "∞",
-    "finishesLabel": "Acabamentos Possíveis"
+  "trust": {
+    "t1Title": "Imparcial por princípio",
+    "t2Title": "Competência acreditada",
+    "t3Title": "Uma fonte de confiança",
+    "t4Title": "Para todo o percurso"
   },
-  "collection": {
-    "eyebrow": "A Coleção",
-    "title": "Encontre o seu Piano",
-    "subtitle": "De impressionantes edições de luxo a encomendas totalmente personalizadas — cada Feurich é uma criação singular.",
-    "explore": "Explorar",
-    "luxury": {
-      "title": "Edições de Luxo",
-      "desc": "Incrustações de cristal Swarovski, folha de ouro de 24k e acabamentos artísticos extraordinários — pianos que transcendem o instrumento para se tornarem heranças."
-    },
-    "selfPlaying": {
-      "title": "Pianos Autotocantes",
-      "desc": "Uma sinfonia ao seu comando. Pianos Feurich com tecnologia Pianoforce integrada que atuam com um realismo impressionante."
-    },
-    "grandUprights": {
-      "title": "Caudas e Verticais",
-      "desc": "Do grande 218 Concert 1 de sala de concerto ao íntimo Vienna V116 — instrumentos para cada espaço e ambição."
-    },
-    "customDesign": {
-      "title": "Design Personalizado",
-      "desc": "Encomende um piano tão único como você. Qualquer cor, qualquer material, qualquer visão — realizado pelo ateliê vienense da Feurich."
-    }
+  "intro": {
+    "eyebrow": "O que é a Piano Compass",
+    "title": "Um lar acreditado para quem inicia o percurso de ter um piano.",
+    "stat1Label": "Anos a aconselhar",
+    "stat2Label": "Marcas que cobrimos",
+    "stat3Label": "Metas de venda por marca"
   },
-  "featured": {
-    "eyebrow": "Modelo Emblemático",
-    "title": "O Vienna V123",
-    "madeIn": "Fabricado na Áustria",
-    "text": "O Feurich Modelo 123 Vienna não é simplesmente construído — é composto. Com uma mecânica Renner redesenhada, tecnologia de alta velocidade KAMM e martelos de feltro Weickert-Especial, este é o piano vertical vienense redefinido. Disponível em todas as cores do espectro RAL.",
-    "spec1": "Altura: 123 cm",
-    "spec2": "Mecânica: Renner com KAMM alta velocidade",
-    "spec3": "Martelos: Feltro Weickert-Especial",
-    "spec4": "Acabamentos: Todas as cores RAL disponíveis",
-    "spec5": "Origem: Fabricado na Áustria",
-    "cta": "Solicitar Este Modelo"
+  "audience": {
+    "eyebrow": "A quem ajudamos",
+    "title": "Onde quer que esteja no seu percurso",
+    "buyersTag": "Compradores",
+    "buyersTitle": "Encontrar o instrumento certo",
+    "ownersTag": "Proprietários",
+    "ownersTitle": "Cuidar do piano que já tem"
   },
-  "selfPlayingSection": {
-    "eyebrow": "Tecnologia Pianoforce",
-    "title": "O Piano que Toca Sozinho",
-    "text": "Integrado de forma invisível no gabinete, o sistema autotocante Pianoforce transforma qualquer piano Feurich num intérprete de concerto autónomo. Transmita de uma biblioteca selecionada, grave a sua própria interpretação, ou simplesmente deixe Beethoven preencher a sala.",
-    "f1": "Integrado de forma invisível no gabinete",
-    "f2": "Gravar, reproduzir e transmitir interpretações",
-    "f3": "Compatibilidade total com MIDI e biblioteca de áudio",
-    "f4": "Altifalantes integrados para acompanhamento",
-    "f5": "Compatível com todos os modelos Feurich",
-    "cta": "Descobrir Pianoforce"
+  "finder": {
+    "eyebrow": "O localizador ideal",
+    "title": "Uma pré-seleção consultiva em quatro perguntas",
+    "resultEyebrow": "O seu ponto de partida",
+    "resultCta": "Marque uma consulta para o afinar",
+    "back": "Voltar",
+    "restart": "Recomeçar"
   },
-  "services": {
-    "eyebrow": "Serviço Holístico",
-    "title": "Uma Parceria Completa",
-    "subtitle": "A nossa relação não termina com a entrega. Oferecemos todos os serviços de que o seu instrumento necessitará.",
-    "s1Title": "Consulta Privada",
-    "s1Desc": "Consultas individuais no nosso showroom ou em sua casa para encontrar o instrumento perfeito.",
-    "s2Title": "Entrega com Luvas Brancas",
-    "s2Desc": "Transporte especializado de piano, colocação e instalação por técnicos qualificados.",
-    "s3Title": "Regulação e Harmonização",
-    "s3Desc": "Configuração especializada para garantir que o seu piano atua ao mais alto nível desde a primeira nota.",
-    "s4Title": "Afinação Anual",
-    "s4Desc": "Programas de manutenção agendados para manter o seu instrumento em perfeita afinação.",
-    "s5Title": "Restauro e Repolimento",
-    "s5Desc": "Restauro de qualidade de fábrica, refinição do gabinete e recondicionamento para qualquer instrumento Feurich.",
-    "s6Title": "Financiamento Personalizado",
-    "s6Desc": "Planos de pagamento à medida e opções de leasing para tornar o piano dos seus sonhos uma realidade."
+  "brands": {
+    "eyebrow": "Marcas que aconselhamos",
+    "title": "Cada grande fabricante, avaliado pelos seus méritos",
+    "subtitle": "Não temos lealdade a nenhuma marca. A Feurich é o nosso parceiro em destaque, mas a nossa função é recomendar o fabricante e o modelo que realmente lhe convêm — novo ou vintage."
   },
-  "journey": {
-    "eyebrow": "O Nosso Processo",
-    "title": "A Viagem até ao seu Piano",
-    "subtitle": "Guiamo-lo em cada passo, desde a inspiração inicial até à propriedade vitalícia.",
-    "step1Title": "Descoberta",
-    "step1Desc": "Começamos com uma conversa — a sua vida musical, o seu espaço, a sua visão estética. Sem pressão. Apenas paixão.",
-    "step2Title": "Apresentação Privada",
-    "step2Desc": "Assista a uma apresentação exclusiva no nosso showroom ou organize uma visita domiciliária da nossa equipa.",
-    "step3Title": "Personalização",
-    "step3Desc": "Escolha o seu acabamento, ferragens, componentes internos e quaisquer elementos de design personalizados.",
-    "step4Title": "Encomenda",
-    "step4Desc": "O seu piano entra no atelier Feurich em Viena. Os mestres artesãos começam a dar vida à sua especificação.",
-    "step5Title": "Entrega com Luvas Brancas",
-    "step5Desc": "A nossa equipa de logística especializada entrega e instala o seu piano com o cuidado extraordinário que merece.",
-    "step6Title": "Parceria Vitalícia",
-    "step6Desc": "Afinação, regulação e serviço contínuos — estamos aqui durante toda a vida do seu instrumento."
+  "vintageHome": {
+    "eyebrow": "Vintage e usados",
+    "title": "O piano vintage certo pode ser a compra de uma vida",
+    "cta": "Descobrir a procura vintage"
   },
-  "about": {
-    "eyebrow": "Sobre Stuart Conaghan",
-    "title": "O Melhor de Viena,\nTrazido à Península",
-    "text1": "Somos uma consultoria de pianos independente ao serviço de Espanha e Portugal, trazendo a mais fina tradição pianística vienense à Península Ibérica com a paixão e o serviço pessoal que estes extraordinários instrumentos merecem.",
-    "text2": "Guiamo-lo por todo o portfólio Feurich — desde pianos verticais íntimos a grandes de cauda de sala de concertos, desde acabamentos padrão a encomendas de luxo totalmente personalizadas.",
-    "cta": "A Nossa História Completa"
+  "process": {
+    "eyebrow": "O processo consultivo",
+    "title": "Um caminho calmo e guiado para a decisão certa",
+    "s1Title": "Descoberta",
+    "s2Title": "Pré-seleção imparcial",
+    "s3Title": "Experimentar e inspecionar",
+    "s4Title": "Adquirir e cuidar"
+  },
+  "servicesHome": {
+    "eyebrow": "Serviços ao proprietário",
+    "title": "Apoio enquanto tiver o piano"
+  },
+  "expert": {
+    "eyebrow": "O seu consultor acreditado",
+    "title": "Stuart Conaghan",
+    "cite": "Stuart Conaghan, Fundador",
+    "cta": "Ler a história completa"
+  },
+  "voices": {
+    "eyebrow": "Nas suas palavras",
+    "title": "Decisões tomadas com confiança"
   },
   "contactCta": {
-    "eyebrow": "Inicie a sua Viagem",
-    "title": "Adoraríamos Ouvir de Si",
-    "subtitle": "Visite o nosso showroom ou organize uma consulta privada quando lhe for conveniente.",
-    "cta": "Contacte-nos"
+    "eyebrow": "Comece com uma conversa",
+    "title": "Vamos encontrar o piano certo para si",
+    "subtitle": "Marque uma consulta sem compromisso. Quer compre o seu primeiro piano ou cuide de um estimado, estamos aqui para o guiar.",
+    "cta": "Marcar consulta"
+  },
+  "brandsPage": {
+    "eyebrow": "Marcas que aconselhamos",
+    "title": "Imparciais perante cada grande fabricante",
+    "featuredTag": "Parceiro em destaque",
+    "allEyebrow": "O mercado mais amplo",
+    "allTitle": "Outros fabricantes que recomendamos",
+    "howEyebrow": "Como os comparamos",
+    "howTitle": "Mérito, não marketing",
+    "howCta": "Pedir uma comparação de marcas",
+    "ctaTitle": "Que piano é o certo para si?"
+  },
+  "vintagePage": {
+    "eyebrow": "Vintage e usados",
+    "title": "Compre vintage com certeza, não com esperança",
+    "cta": "Iniciar uma procura vintage",
+    "whyEyebrow": "Porquê vintage",
+    "whyTitle": "Carácter, arte e valor",
+    "processEyebrow": "A nossa verificação",
+    "processTitle": "Cada piano vintage, verificado de forma independente",
+    "bespokeEyebrow": "Procura personalizada",
+    "bespokeTitle": "Procura um fabricante ou época específicos?",
+    "bespokeCta": "Encomendar uma procura vintage",
+    "ctaTitle": "Encontre um piano vintage que valha a pena"
+  },
+  "aboutPage": {
+    "eyebrow": "Sobre a Piano Compass",
+    "title": "Independentes por convicção",
+    "valuesEyebrow": "O que defendemos",
+    "valuesTitle": "Princípios que não negociamos",
+    "expertEyebrow": "O seu consultor",
+    "expertRole": "Pianista de concerto e fundador",
+    "timelineTitle": "A história da Piano Compass",
+    "cta": "Marcar consulta"
+  },
+  "services": {
+    "eyebrow": "Serviços ao proprietário",
+    "title": "Tudo o que o seu piano vai precisar",
+    "subtitle": "Um único parceiro independente e de confiança — desde escolher um instrumento até cuidar dele durante décadas.",
+    "s1Title": "Consulta independente",
+    "s2Title": "Procura e aquisição",
+    "s3Title": "Avaliação e peritagem",
+    "s4Title": "Afinação e regulação",
+    "s5Title": "Supervisão de restauro",
+    "s6Title": "Transporte e revenda"
+  },
+  "journey": {
+    "eyebrow": "O processo consultivo",
+    "title": "O caminho para o piano certo",
+    "subtitle": "Um percurso calmo e guiado — ao seu lado em cada passo, e muito depois.",
+    "step1Title": "Descoberta",
+    "step2Title": "Pré-seleção imparcial",
+    "step3Title": "Experimentar",
+    "step4Title": "Inspeção independente",
+    "step5Title": "Aquisição e entrega",
+    "step6Title": "Cuidado para a vida"
   },
   "contact": {
-    "eyebrow": "Entre em Contacto",
-    "title": "Contacte Stuart Conaghan",
-    "subtitle": "Convidamo-lo a visitar o nosso showroom ou a organizar uma consulta privada à sua conveniência.",
-    "namePlaceholder": "Nome Completo",
-    "emailPlaceholder": "Endereço de Email",
-    "phonePlaceholder": "Número de Telefone",
-    "interestLabel": "Área de Interesse",
-    "messagePlaceholder": "Conte-nos sobre o seu piano ideal…",
-    "submit": "Enviar Pedido",
-    "interest1": "Edições de Luxo",
-    "interest2": "Pianos Autotocantes",
-    "interest3": "Pianos de Cauda",
-    "interest4": "Pianos Verticais",
-    "interest5": "Design Personalizado",
-    "interest6": "Consulta Geral",
-    "showroomLabel": "Showroom",
-    "address": "Paseo de la Castellana 123\nMadrid, 28046, Espanha",
+    "eyebrow": "Entre em contacto",
+    "title": "Marcar uma consulta",
+    "subtitle": "Diga-nos em que ponto do seu percurso está e responderemos pessoalmente para agendar uma conversa sem compromisso, presencial ou por vídeo.",
+    "namePlaceholder": "Nome completo",
+    "emailPlaceholder": "Endereço de e-mail",
+    "phonePlaceholder": "Número de telefone",
+    "interestLabel": "Como podemos ajudar?",
+    "messagePlaceholder": "Fale-nos da sua forma de tocar, do seu espaço e do que procura…",
+    "submit": "Enviar pedido",
+    "interest1": "Comprar — o meu primeiro piano",
+    "interest2": "Comprar — melhorar o meu piano",
+    "interest3": "Procura vintage / usados",
+    "interest4": "Avaliação / peritagem",
+    "interest5": "Afinação, cuidado ou restauro",
+    "interest6": "Pedido geral",
+    "showroomLabel": "Sediados em",
+    "address": "Espanha e Portugal\nConsultas presenciais ou por vídeo",
     "phoneLabel": "Telefone",
-    "phoneVal": "+34 91 123 4567",
-    "emailLabel": "Email",
-    "emailVal": "info@stuartconaghan.com",
-    "hoursLabel": "Horário de Funcionamento",
-    "hoursVal": "Segunda – Sábado, 10:00 – 19:00"
+    "emailLabel": "E-mail",
+    "hoursLabel": "Tempo de resposta",
+    "hoursVal": "Respondemos no prazo de um dia útil",
+    "successMsg": "Obrigado. Entraremos em contacto pessoalmente no prazo de um dia útil."
   },
   "footer": {
-    "tagline": "Artesanato Vienense. Paixão Ibérica.",
-    "copyright": "© 2025 Stuart Conaghan. Todos os direitos reservados.",
-    "privacy": "Política de Privacidade",
-    "terms": "Termos de Utilização",
-    "feurich": "Site Oficial da Feurich"
+    "sub": "Consultoria de pianos independente",
+    "tagline": "Independente, acreditada e imparcial — uma fonte de confiança para todo o seu percurso com o piano.",
+    "explore": "Explorar",
+    "consultation": "Consulta",
+    "valuation": "Avaliação",
+    "care": "Afinação e cuidado",
+    "contactTitle": "Contacto",
+    "region": "Espanha · Portugal · Todo o mundo por vídeo",
+    "copyright": "© 2026 Piano Compass. Todos os direitos reservados.",
+    "privacy": "Privacidade",
+    "terms": "Termos",
+    "feurich": "Feurich",
+    "disclaimer": "A Piano Compass é uma consultoria independente. Os nomes de marcas são propriedade dos respetivos titulares e são citados apenas para identificação; a sua menção não implica aprovação nem afiliação, salvo quando indicada uma parceria."
   },
-  "luxury": {
-    "heroEyebrow": "Edições de Luxo",
-    "heroTitle": "Para Além do Instrumento",
-    "heroSubtitle": "Onde o piano se torna arte",
-    "intro": "Para aqueles para quem só o extraordinário chega, apresentamos uma seleção de encomendas de Edição de Luxo — instrumentos criados na interseção da engenharia musical e da artesania de alto nível.",
-    "crystalTitle": "Incrustação de Cristal",
-    "crystalText": "Elementos de cristal Swarovski e personalizados são incrustados à mão nas superfícies do gabinete por mestres artistas decorativos, criando instrumentos que brilham sob a luz e cativam antes de uma única nota ser tocada.",
-    "goldTitle": "Folha de Ouro",
-    "goldText": "Aplicação tradicional de folha de ouro de 24 quilates, executada por douradores especializados formados nas mais finas tradições decorativas europeias.",
-    "lacquerTitle": "Laca e RAL Personalizados",
-    "lacquerText": "Todas as cores do sistema RAL, aplicadas em acabamentos de alto brilho ou acetinado polidos à mão. O seu piano pode combinar perfeitamente com qualquer interior.",
-    "inquiryCta": "Encomendar uma Edição de Luxo"
-  },
-  "selfPlayingPage": {
-    "heroEyebrow": "Pianos Autotocantes",
-    "heroTitle": "O Piano que Atua",
-    "heroSubtitle": "Tecnologia Pianoforce integrada de forma invisível no artesanato Feurich",
-    "intro": "Imagine uma atuação de concerto de qualidade a começar na sua sala de estar com um simples toque. Com tecnologia Pianoforce integrada em qualquer modelo Feurich, isto não é imaginação — é a sua nova realidade.",
-    "howTitle": "Como Funciona",
-    "howText": "O Pianoforce instala-se no interior do piano sem qualquer modificação visível. Solenoides de precisão sob cada tecla e pedal respondem a dados MIDI com a mesma velocidade e nuance que o toque de um pianista mestre.",
-    "libraryTitle": "Um Repertório Infinito",
-    "libraryText": "Aceda a milhares de interpretações de pianistas profissionais, transmita novas gravações ou carregue os seus próprios ficheiros MIDI. De Bach a Gershwin — o repertório é ilimitado.",
-    "whyTitle": "O Investimento Troféu",
-    "whyText": "Um Feurich autotocante é a peça central definitiva — um objeto de luxo que é também um sistema de entretenimento completo, uma ferramenta pedagógica, um instrumento de gravação e uma peça de conversa sem igual.",
-    "galleryTitle": "A Coleção",
-    "galleryCap1": "Pianoforce — integrado de forma invisível",
-    "galleryCap2": "Em casa, sob a luz",
-    "galleryCap3": "Nogueira · edição pôr do sol"
-  },
-  "grandUprightsPage": {
-    "heroEyebrow": "Caudas e Verticais",
-    "heroTitle": "A Gama Completa",
-    "heroSubtitle": "De 116 cm à sala de concertos: um instrumento para cada espaço e ambição",
-    "uprightTitle": "Série Vienna Vertical",
-    "uprightText": "A gama de pianos verticais Vienna representa o pináculo da fabricação austríaca de pianos verticais.",
-    "grandTitle": "Série Dynamic de Cauda",
-    "grandText": "A gama de pianos de cauda Dynamic oferece qualidade de som e resposta ao toque de concerto em instrumentos adequados tanto para residências privadas como para locais de atuação profissionais.",
-    "v116Name": "Vienna V116",
-    "v116Spec": "Altura: 116 cm · Elegância compacta para espaços íntimos",
-    "v123Name": "Vienna V123",
-    "v123Spec": "Altura: 123 cm · Vertical emblemático · Fabricado na Áustria · Todas as cores RAL",
-    "v125Name": "Vienna V125",
-    "v125Spec": "Altura: 125 cm · Potência máxima num gabinete vertical",
-    "g162Name": "162 Dynamic",
-    "g162Spec": "Comprimento: 162 cm (5'4\") · O refinado baby grand",
-    "g179Name": "179 Dynamic",
-    "g179Spec": "Comprimento: 179 cm (5'10\") · O versátil grande de cauda para casa e palco",
-    "g218Name": "218 Concert 1",
-    "g218Spec": "Comprimento: 218 cm (7'2\") · O grande de cauda de concerto"
-  },
-  "customPage": {
-    "heroEyebrow": "Design Personalizado",
-    "heroTitle": "Encomende a sua Visão",
-    "heroSubtitle": "Cada detalhe, realizado em Viena de acordo com a sua especificação exata",
-    "intro": "Nenhuma vida é idêntica. Nenhuma casa é igual. A Feurich acredita que nenhum piano também deveria ser. O nosso serviço de encomenda personalizado permite-lhe especificar cada aspeto do seu instrumento.",
-    "whatTitle": "O que Pode Ser Personalizado",
-    "what1": "Cor do gabinete — qualquer cor RAL, qualquer acabamento (brilhante, acetinado, mate)",
-    "what2": "Espécie de madeira — nogueira, pau-rosa, bordo, ébano e folheados exóticos",
-    "what3": "Ferragens — latão, cromo, banhado a ouro ou trabalho em metal personalizado",
-    "what4": "Dimensões — tamanhos não padrão para espaços arquitetónicos específicos",
-    "what5": "Incrustações e marchetaria — elementos decorativos feitos à mão",
-    "what6": "Componentes internos — mecânicas Renner premium, qualidades de martelo, calibres de corda",
-    "processTitle": "O Processo de Encomenda",
-    "processCta": "Iniciar a sua Encomenda",
-    "galleryTitle": "Criações Sob Medida",
-    "galleryCap1": "Arte LED iluminada",
-    "galleryCap2": "Mosaico acabado à mão",
-    "galleryCap3": "Cauda sob medida · mosaico"
-  },
-  "gallery": {
-    "eyebrow": "Arquivo",
-    "title": "Galeria de Imagens",
-    "subtitle": "A coleção fotográfica completa."
-  },
-  "theme": {
-    "label": "Tema",
-    "noir": "Noir",
-    "galeria": "Galeria",
-    "hogar": "Lar",
-    "publico": "Público",
-    "familia": "Família",
-    "arte": "Arte"
-  }
+  "theme": { "label": "Tema" }
 }
