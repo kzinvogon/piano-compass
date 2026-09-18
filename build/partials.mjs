@@ -1,5 +1,5 @@
-// Shared HTML partials for generated pages and for injecting the
-// dynamic-section nav/social into the hand-authored static pages.
+// Shared HTML partials for generated pages and for injecting the nav,
+// footer and dynamic blocks into the hand-authored static pages.
 // Matches the Piano Compass design (same CSS classes, Fraunces + Inter).
 
 export const esc = (s = '') =>
@@ -31,22 +31,35 @@ export function socialLinks(social = {}, cls = 'social-icons') {
   return items ? `<div class="${cls}">${items}</div>` : '';
 }
 
-// ---- Nav dropdown for the dynamic "Discover" sections ---------------------
-export function discoverDropdown(base = '', active = '') {
-  const is = (p) => (active === p ? ' class="active"' : '');
-  return `<div class="nav__dropdown nav__discover">
-        <a href="${base}insights.html" class="nav__link${active === 'discover' ? ' active' : ''}">Discover</a>
+// ---- Language switcher ----------------------------------------------------
+function langButtons() {
+  return `<div class="nav__lang">
+          <button data-lang="en">EN</button>
+          <button data-lang="es">ES</button>
+          <button data-lang="de">DE</button>
+          <button data-lang="uk">UK</button>
+          <button data-lang="ru">RU</button>
+          <button data-lang="nl">NL</button>
+        </div>`;
+}
+
+// ---- News dropdown (was "Discover") --------------------------------------
+export function newsDropdown(base = '', active = '') {
+  const on = (p) => (active === p ? ' class="active"' : '');
+  return `<div class="nav__dropdown nav__news">
+        <a href="${base}insights.html" class="nav__link${active === 'news' ? ' active' : ''}" data-i18n="nav.news">News</a>
         <ul class="nav__dropdown-menu">
-          <li><a href="${base}insights.html"${is('insights')}>Insights &amp; Advice</a></li>
-          <li><a href="${base}index.html#piano-of-week">Piano of the Week</a></li>
-          <li><a href="${base}instruments.html"${is('instruments')}>New &amp; Interesting</a></li>
-          <li><a href="${base}videos.html"${is('videos')}>Videos</a></li>
+          <li><a href="${base}insights.html"${on('insights')} data-i18n="nav.insights">Insights &amp; Advice</a></li>
+          <li><a href="${base}index.html#piano-of-week" data-i18n="nav.pianoOfWeek">Piano of the Week</a></li>
+          <li><a href="${base}instruments.html"${on('instruments')} data-i18n="nav.newInteresting">New &amp; Interesting</a></li>
+          <li><a href="${base}videos.html"${on('videos')} data-i18n="nav.videos">Videos</a></li>
         </ul>
       </div>`;
 }
 
-// ---- Full nav (for generated pages) --------------------------------------
+// ---- Full nav ------------------------------------------------------------
 export function nav({ base = '', active = '', social = {} }) {
+  const a = (k) => (active === k ? ' active' : '');
   return `<nav id="nav">
     <a href="${base}index.html" class="nav__logo" aria-label="Piano Compass home">
       <svg class="nav__logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
@@ -60,33 +73,27 @@ export function nav({ base = '', active = '', social = {} }) {
       <span></span><span></span><span></span>
     </button>
     <div class="nav__menu" id="nav-menu">
-      <a href="${base}index.html#finder" class="nav__link">Find Your Piano</a>
-      <div class="nav__dropdown">
-        <a href="${base}brands.html" class="nav__link${active === 'brands' ? ' active' : ''}">Brands</a>
-        <ul class="nav__dropdown-menu">
-          <li><a href="${base}brands.html">All Brands We Advise On</a></li>
-          <li><a href="${base}collection/luxury.html">Feurich — Featured Partner</a></li>
-          <li><a href="${base}vintage.html">Vintage &amp; Pre-Owned</a></li>
-        </ul>
-      </div>
-      <a href="${base}vintage.html" class="nav__link${active === 'vintage' ? ' active' : ''}">Vintage</a>
-      ${discoverDropdown(base, active)}
-      <a href="${base}services.html" class="nav__link${active === 'services' ? ' active' : ''}">Services</a>
-      <a href="${base}about.html" class="nav__link${active === 'about' ? ' active' : ''}">About</a>
-      <a href="${base}contact.html" class="nav__link${active === 'contact' ? ' active' : ''}">Contact</a>
+      <a href="${base}index.html#finder" class="nav__link${a('finder')}" data-i18n="nav.findPiano">Piano Finder</a>
+      <a href="${base}brands.html" class="nav__link${a('brands')}" data-i18n="nav.brands">Brands</a>
+      <a href="${base}collection/custom-design.html" class="nav__link${a('design')}" data-i18n="nav.design">Design</a>
+      <a href="${base}vintage.html" class="nav__link${a('used')}" data-i18n="nav.used">Used</a>
+      ${newsDropdown(base, active)}
+      <a href="${base}services.html" class="nav__link${a('services')}" data-i18n="nav.services">Services</a>
+      <a href="${base}about.html" class="nav__link${a('about')}" data-i18n="nav.about">About</a>
       <div class="nav__utils">
+        ${langButtons()}
         ${socialLinks(social, 'social-icons social-icons--nav')}
         <button class="nav__theme" id="theme-toggle" type="button" aria-label="Toggle light or dark theme">
           <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
           <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.7 6.7 0 0 0 9.8 9.8z"/></svg>
         </button>
-        <a href="${base}contact.html" class="nav__book">Book a Consultation</a>
+        <a href="${base}contact.html" class="nav__book" data-i18n="nav.bookConsultation">Book a Consultation</a>
       </div>
     </div>
   </nav>`;
 }
 
-// ---- Full footer (for generated pages) -----------------------------------
+// ---- Full footer ---------------------------------------------------------
 export function footer({ base = '', social = {} }) {
   const s = socialLinks(social, 'social-icons social-icons--footer');
   return `<footer>
@@ -97,46 +104,47 @@ export function footer({ base = '', social = {} }) {
             <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.6"/><path d="M16 6l3 8-3 12-3-12 3-8z" fill="currentColor"/></svg>
             <b>Piano Compass</b>
           </div>
-          <div class="footer__brand-sub">Independent Piano Advisory</div>
-          <p class="footer__tagline">Independent, accredited and impartial — a source of truth for your whole piano-owning journey.</p>
+          <div class="footer__brand-sub" data-i18n="footer.sub">Independent Piano Advisory</div>
+          <p class="footer__tagline" data-i18n="footer.tagline">Independent, accredited and impartial — a source of truth for your whole piano-owning journey.</p>
           ${s}
         </div>
         <div>
-          <p class="footer__col-title">Explore</p>
+          <p class="footer__col-title" data-i18n="footer.explore">Explore</p>
           <ul class="footer__links">
-            <li><a href="${base}index.html#finder">Find Your Piano</a></li>
-            <li><a href="${base}brands.html">Brands</a></li>
-            <li><a href="${base}vintage.html">Vintage</a></li>
-            <li><a href="${base}index.html#process">Our Process</a></li>
+            <li><a href="${base}index.html#finder" data-i18n="nav.findPiano">Piano Finder</a></li>
+            <li><a href="${base}brands.html" data-i18n="nav.brands">Brands</a></li>
+            <li><a href="${base}collection/custom-design.html" data-i18n="nav.design">Design</a></li>
+            <li><a href="${base}vintage.html" data-i18n="nav.used">Used</a></li>
           </ul>
         </div>
         <div>
-          <p class="footer__col-title">Discover</p>
+          <p class="footer__col-title" data-i18n="nav.news">News</p>
           <ul class="footer__links">
-            <li><a href="${base}insights.html">Insights &amp; Advice</a></li>
-            <li><a href="${base}instruments.html">New &amp; Interesting</a></li>
-            <li><a href="${base}videos.html">Videos</a></li>
-            <li><a href="${base}about.html">About</a></li>
+            <li><a href="${base}insights.html" data-i18n="nav.insights">Insights &amp; Advice</a></li>
+            <li><a href="${base}instruments.html" data-i18n="nav.newInteresting">New &amp; Interesting</a></li>
+            <li><a href="${base}videos.html" data-i18n="nav.videos">Videos</a></li>
+            <li><a href="${base}services.html" data-i18n="nav.services">Services</a></li>
           </ul>
         </div>
         <div>
-          <p class="footer__col-title">Contact</p>
+          <p class="footer__col-title" data-i18n="footer.contactTitle">Contact</p>
           <ul class="footer__links">
             <li><a href="tel:+34911234567">+34 91 123 4567</a></li>
             <li><a href="mailto:hello@pianocompass.com">hello@pianocompass.com</a></li>
-            <li style="margin-top:.4rem"><span style="font-size:.8rem;color:var(--muted)">Spain · Portugal · Worldwide by video</span></li>
+            <li style="margin-top:.4rem"><span style="font-size:.8rem;color:var(--muted)" data-i18n="footer.region">Spain · Portugal · Worldwide by video</span></li>
+            <li style="margin-top:.4rem"><a href="${base}about.html" data-i18n="nav.about">About</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
-        <p class="footer__copyright">© 2026 Piano Compass. All rights reserved.</p>
+        <p class="footer__copyright" data-i18n="footer.copyright">© 2026 Piano Compass. All rights reserved.</p>
         <div class="footer__legal">
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-          <a href="https://feurich.com" target="_blank" rel="noopener">Feurich</a>
+          <a href="#" data-i18n="footer.privacy">Privacy</a>
+          <a href="#" data-i18n="footer.terms">Terms</a>
+          <a href="https://feurich.com" target="_blank" rel="noopener" data-i18n="footer.feurich">Feurich</a>
         </div>
       </div>
-      <p class="footer__disclaimer">Piano Compass is an independent advisory. Brand names are the property of their respective owners and are referenced for identification only; mention does not imply endorsement or affiliation, except where a partnership is stated.</p>
+      <p class="footer__disclaimer" data-i18n="footer.disclaimer">Piano Compass is an independent advisory. Brand names are the property of their respective owners and are referenced for identification only; mention does not imply endorsement or affiliation, except where a partnership is stated.</p>
     </div>
   </footer>`;
 }

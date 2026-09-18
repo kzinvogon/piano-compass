@@ -12,7 +12,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
 import { marked } from 'marked';
-import { pageShell, socialLinks, discoverDropdown, esc } from './partials.mjs';
+import { pageShell, socialLinks, nav, footer, esc } from './partials.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = (p) => fs.readFileSync(path.join(ROOT, p), 'utf8');
@@ -286,34 +286,29 @@ function homeDynamicHtml() {
 }
 
 // ---- inject into hand-authored static pages ------------------------------
+// [file, base, activeNavKey]
 const STATIC = [
-  ['index.html', ''], ['about.html', ''], ['services.html', ''], ['contact.html', ''],
-  ['gallery.html', ''], ['brands.html', ''], ['vintage.html', ''],
-  ['collection/luxury.html', '../'], ['collection/self-playing.html', '../'],
-  ['collection/grand-uprights.html', '../'], ['collection/custom-design.html', '../'],
+  ['index.html', '', ''], ['about.html', '', 'about'], ['services.html', '', 'services'],
+  ['contact.html', '', ''], ['gallery.html', '', ''], ['brands.html', '', 'brands'],
+  ['vintage.html', '', 'used'],
+  ['collection/luxury.html', '../', 'brands'], ['collection/self-playing.html', '../', 'brands'],
+  ['collection/grand-uprights.html', '../', 'used'], ['collection/custom-design.html', '../', 'design'],
 ];
 
 function injectStatic() {
-  for (const [file, base] of STATIC) {
+  for (const [file, base, active] of STATIC) {
     if (!exists(file)) continue;
     let s = read(file);
 
-    // Discover dropdown before nav utils
-    if (!s.includes('nav__discover') && s.includes('<div class="nav__utils">')) {
-      s = s.replace('<div class="nav__utils">', `${discoverDropdown(base, '')}\n      <div class="nav__utils">`);
-    }
-    // Social icons in nav (before theme toggle)
-    if (!s.includes('social-icons--nav') && s.includes('<button class="nav__theme"')) {
-      s = s.replace('<button class="nav__theme"', `${socialLinks(social, 'social-icons social-icons--nav')}\n        <button class="nav__theme"`);
-    }
-    // Social icons in footer (after tagline)
-    if (!s.includes('social-icons--footer')) {
-      s = s.replace(/(<p class="footer__tagline"[^>]*>[\s\S]*?<\/p>)/, `$1\n          ${socialLinks(social, 'social-icons social-icons--footer')}`);
-    }
+    // Replace the whole nav and footer with the shared partials (single
+    // source of truth for menu structure, languages and social links).
+    s = s.replace(/<nav id="nav">[\s\S]*?<\/nav>/, () => nav({ base, active, social }));
+    s = s.replace(/<footer>[\s\S]*?<\/footer>/, () => footer({ base, social }));
+
     // Homepage dynamic block between markers
     if (file === 'index.html' && s.includes('<!-- GEN:home-dynamic -->')) {
       s = s.replace(/<!-- GEN:home-dynamic -->[\s\S]*?<!-- \/GEN:home-dynamic -->/,
-        `<!-- GEN:home-dynamic -->\n${homeDynamicHtml()}\n  <!-- /GEN:home-dynamic -->`);
+        () => `<!-- GEN:home-dynamic -->\n${homeDynamicHtml()}\n  <!-- /GEN:home-dynamic -->`);
     }
     write(file, s);
   }

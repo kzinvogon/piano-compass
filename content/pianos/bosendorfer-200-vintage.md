@@ -3,7 +3,7 @@ title: Bösendorfer 200 (Restored)
 constructor: Bösendorfer
 year: 1978
 type: Grand
-category: Vintage
+category: Used
 section: instruments
 featured: false
 price: "€38,000"

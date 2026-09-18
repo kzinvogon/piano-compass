@@ -22,7 +22,7 @@ touch and tone.
 A small apartment rewards a quality upright; a large, open room can let a
 grand breathe. Acoustics matter as much as floor space.
 
-## New, pre-owned or vintage?
+## New, pre-owned or used?
 
 A well-chosen pre-owned instrument often outperforms a cheaper new one.
 The key is condition — which is exactly what an independent inspection is
