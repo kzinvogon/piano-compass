@@ -8,11 +8,12 @@
 </head>
 <body>
   <!--
-    Sveltia CMS — a modern, drop-in content manager (Decap-compatible).
-    Configuration lives in ./config.yml. Media is handled by Cloudinary,
-    so images AND video are picked from one library with no repo size
-    limits. See MEDIA-CMS-SETUP.md for the one-time login + Cloudinary setup.
+    Decap CMS (formerly Netlify CMS). Configuration lives in ./config.yml.
+    Media is handled by Cloudinary's built-in media library, so images AND
+    video are picked from one grid with no repo size limits and no copy-
+    pasting URLs. See MEDIA-CMS-SETUP.md for the one-time login + Cloudinary
+    setup. (Decap bundles the Cloudinary integration; Sveltia does not.)
   -->
-  <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js" type="module"></script>
+  <script src="https://unpkg.com/decap-cms@^3.6.0/dist/decap-cms.js"></script>
 </body>
 </html>

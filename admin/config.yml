@@ -1,5 +1,5 @@
-# Sveltia CMS configuration (Decap-compatible).
-# Docs: https://github.com/sveltia/sveltia-cms  ·  https://decapcms.org/docs/
+# Decap CMS configuration.
+# Docs: https://decapcms.org/docs/  ·  Cloudinary: https://decapcms.org/docs/cloudinary/
 #
 # Login is GitHub (via Netlify's OAuth provider). Media is Cloudinary, so
 # the "Choose image/video" button opens one library over all media — no repo
