@@ -1,0 +1,243 @@
+# Sveltia CMS configuration (Decap-compatible).
+# Docs: https://github.com/sveltia/sveltia-cms  ·  https://decapcms.org/docs/
+#
+# Login is GitHub (via Netlify's OAuth provider). Media is Cloudinary, so
+# the "Choose image/video" button opens one library over all media — no repo
+# size limits, no copy-pasting URLs. See MEDIA-CMS-SETUP.md for the one-time
+# setup (OAuth app + Cloudinary API key).
+
+backend:
+  name: github
+  repo: kzinvogon/piano-compass
+  branch: main
+
+# Fallback location if an asset is ever stored in the repo instead of
+# Cloudinary. Cloudinary (below) is the default for all media.
+media_folder: images/uploads
+public_folder: /images/uploads
+
+# One media library for images AND video, hosted on Cloudinary.
+# cloud_name and api_key are PUBLIC, client-side identifiers (safe to commit).
+# Never put the Cloudinary API *secret* here.
+media_library:
+  name: cloudinary
+  output_filename_only: false
+  config:
+    cloud_name: m4t0vj8h
+    api_key: 'REPLACE_WITH_CLOUDINARY_API_KEY'
+
+collections:
+  # ── Editable pages (text + images) ──
+  - name: pages
+    label: Pages
+    files:
+      - name: home
+        label: Home page
+        file: content/pages/home.json
+        format: json
+        fields:
+          - name: hero
+            label: Hero (top of the page)
+            widget: object
+            fields:
+              - { name: title, label: Headline (you can use <em>…</em> for the italic accent), widget: string }
+              - { name: subtitle, label: Sub-heading, widget: text }
+              - { name: cta, label: Primary button, widget: string }
+              - { name: secondary, label: Secondary button, widget: string }
+              - { name: badgeNum, label: Badge — number, widget: string }
+              - { name: badgeLabel, label: Badge — caption, widget: string }
+          - name: intro
+            label: Introduction
+            widget: object
+            fields:
+              - { name: eyebrow, label: Eyebrow, widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: lead, label: Lead sentence, widget: text }
+              - { name: text, label: Body, widget: text }
+          - name: trust
+            label: Trust cards
+            widget: object
+            fields:
+              - { name: t1Title, label: Card 1 — title, widget: string }
+              - { name: t1Desc, label: Card 1 — text, widget: text }
+              - { name: t2Title, label: Card 2 — title, widget: string }
+              - { name: t2Desc, label: Card 2 — text, widget: text }
+              - { name: t3Title, label: Card 3 — title, widget: string }
+              - { name: t3Desc, label: Card 3 — text, widget: text }
+              - { name: t4Title, label: Card 4 — title, widget: string }
+              - { name: t4Desc, label: Card 4 — text, widget: text }
+          - name: images
+            label: Images
+            widget: object
+            fields:
+              - { name: hero, label: Hero image (pick or upload — appears top-right of the homepage), widget: image, required: false }
+      - name: about
+        label: About page
+        file: content/pages/about.json
+        format: json
+        fields:
+          - name: aboutPage
+            label: About text
+            widget: object
+            fields:
+              - { name: eyebrow, label: Eyebrow, widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: lead, label: Lead sentence, widget: text }
+              - { name: p1, label: Paragraph 1, widget: text }
+              - { name: p2, label: Paragraph 2, widget: text }
+              - { name: p3, label: Paragraph 3, widget: text }
+              - { name: expertEyebrow, label: Advisor — eyebrow, widget: string }
+              - { name: expertName, label: Advisor — name, widget: string }
+              - { name: expertRole, label: Advisor — role, widget: string }
+              - { name: expertBio, label: Advisor — bio, widget: text }
+              - { name: valuesEyebrow, label: Values — eyebrow, widget: string }
+              - { name: valuesTitle, label: Values — title, widget: string }
+              - { name: v1Title, label: Value 1 — title, widget: string }
+              - { name: v1Desc, label: Value 1 — text, widget: text }
+              - { name: v2Title, label: Value 2 — title, widget: string }
+              - { name: v2Desc, label: Value 2 — text, widget: text }
+              - { name: v3Title, label: Value 3 — title, widget: string }
+              - { name: v3Desc, label: Value 3 — text, widget: text }
+              - { name: v4Title, label: Value 4 — title, widget: string }
+              - { name: v4Desc, label: Value 4 — text, widget: text }
+              - { name: timelineTitle, label: Story — title, widget: string }
+              - { name: t1Year, label: Story 1 — label, widget: string }
+              - { name: t1Text, label: Story 1 — text, widget: text }
+              - { name: t2Year, label: Story 2 — label, widget: string }
+              - { name: t2Text, label: Story 2 — text, widget: text }
+              - { name: t3Year, label: Story 3 — label, widget: string }
+              - { name: t3Text, label: Story 3 — text, widget: text }
+              - { name: t4Year, label: Story 4 — label, widget: string }
+              - { name: t4Text, label: Story 4 — text, widget: text }
+              - { name: cta, label: Button, widget: string }
+          - name: images
+            label: Images
+            widget: object
+            fields:
+              - { name: about, label: Portrait image (pick or upload — appears on the About page), widget: image, required: false }
+      - name: services
+        label: Services page
+        file: content/pages/services.json
+        format: json
+        fields:
+          - name: services
+            label: Services intro & cards
+            widget: object
+            fields:
+              - { name: eyebrow, label: Eyebrow, widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: subtitle, label: Sub-heading, widget: text }
+              - { name: s1Title, label: Service 1 — title, widget: string }
+              - { name: s1Desc, label: Service 1 — text, widget: text }
+              - { name: s2Title, label: Service 2 — title, widget: string }
+              - { name: s2Desc, label: Service 2 — text, widget: text }
+              - { name: s3Title, label: Service 3 — title, widget: string }
+              - { name: s3Desc, label: Service 3 — text, widget: text }
+              - { name: s4Title, label: Service 4 — title, widget: string }
+              - { name: s4Desc, label: Service 4 — text, widget: text }
+              - { name: s5Title, label: Service 5 — title, widget: string }
+              - { name: s5Desc, label: Service 5 — text, widget: text }
+              - { name: s6Title, label: Service 6 — title, widget: string }
+              - { name: s6Desc, label: Service 6 — text, widget: text }
+          - name: journey
+            label: The journey (process steps)
+            widget: object
+            fields:
+              - { name: eyebrow, label: Eyebrow, widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: subtitle, label: Sub-heading, widget: text }
+              - { name: step1Title, label: Step 1 — title, widget: string }
+              - { name: step1Desc, label: Step 1 — text, widget: text }
+              - { name: step2Title, label: Step 2 — title, widget: string }
+              - { name: step2Desc, label: Step 2 — text, widget: text }
+              - { name: step3Title, label: Step 3 — title, widget: string }
+              - { name: step3Desc, label: Step 3 — text, widget: text }
+              - { name: step4Title, label: Step 4 — title, widget: string }
+              - { name: step4Desc, label: Step 4 — text, widget: text }
+              - { name: step5Title, label: Step 5 — title, widget: string }
+              - { name: step5Desc, label: Step 5 — text, widget: text }
+              - { name: step6Title, label: Step 6 — title, widget: string }
+              - { name: step6Desc, label: Step 6 — text, widget: text }
+
+  # ── Pianos (the library the finder and sections draw from) ──
+  - name: pianos
+    label: Pianos
+    label_singular: Piano
+    folder: content/pianos
+    create: true
+    extension: md
+    format: frontmatter
+    slug: '{{slug}}'
+    summary: '{{title}} — {{constructor}} {{year}}'
+    fields:
+      - { name: title, label: Title, widget: string }
+      - name: constructor
+        label: Constructor / maker
+        widget: select
+        options: [Feurich, Bösendorfer, 'Steinway & Sons', Yamaha, Kawai, Blüthner, 'C. Bechstein', Fazioli, Schimmel, Grotrian, 'Shigeru Kawai', Other]
+      - { name: year, label: Year of build, widget: number, value_type: int, required: false }
+      - { name: type, label: Type, widget: select, options: [Grand, 'Baby Grand', Upright, Digital, Other] }
+      - { name: category, label: Category, widget: select, options: [New, Used, Restored, 'Pre-owned'] }
+      - { name: section, label: Section, widget: hidden, default: instruments }
+      - { name: featured, label: Feature as Piano of the Week candidate, widget: boolean, default: false }
+      - { name: price, label: Price / guide (e.g. €38,000 or On request), widget: string, required: false }
+      - { name: image, label: Main photo, widget: image, required: false }
+      - name: gallery
+        label: More photos
+        widget: list
+        required: false
+        field: { name: photo, label: Photo, widget: image }
+      - { name: excerpt, label: Short summary (shown on cards), widget: text, required: false }
+      - { name: date, label: Date, widget: datetime, required: false }
+      - { name: body, label: Full description, widget: markdown, required: false }
+
+  # ── Insights / Advice ──
+  - name: insights
+    label: Insights & Advice
+    label_singular: Article
+    folder: content/insights
+    create: true
+    extension: md
+    format: frontmatter
+    slug: '{{slug}}'
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: Date, widget: datetime, required: false }
+      - { name: author, label: Author, widget: string, default: Stuart Conaghan, required: false }
+      - { name: image, label: Header image, widget: image, required: false }
+      - { name: excerpt, label: Excerpt (shown on cards), widget: text, required: false }
+      - { name: body, label: Body, widget: markdown, required: false }
+
+  # ── Videos (Cloudinary upload, or YouTube / Vimeo link) ──
+  - name: videos
+    label: Videos
+    label_singular: Video
+    folder: content/videos
+    create: true
+    extension: md
+    format: frontmatter
+    slug: '{{slug}}'
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: youtube, label: 'YouTube link (best for long videos — paste the full URL)', widget: string, required: false }
+      - { name: vimeo, label: '…or a Vimeo link (paste the full URL)', widget: string, required: false }
+      - { name: video_file, label: '…or pick / upload a video (Cloudinary — no size limit)', widget: file, required: false }
+      - { name: video_url, label: '…or paste a direct link to a video file', widget: string, required: false }
+      - { name: poster, label: Thumbnail image (optional, shown before play), widget: image, required: false }
+      - { name: date, label: Date, widget: datetime, required: false }
+      - { name: description, label: Description, widget: text, required: false }
+
+  # ── Social links + Piano of the Week ──
+  - name: settings
+    label: Settings
+    files:
+      - name: social
+        label: Social & Piano of the Week
+        file: content/settings/social.json
+        format: json
+        fields:
+          - { name: instagram_url, label: Instagram URL, widget: string, required: false }
+          - { name: tiktok_url, label: TikTok URL, widget: string, required: false }
+          - { name: youtube_url, label: YouTube URL, widget: string, required: false }
+          - { name: facebook_url, label: Facebook URL, widget: string, required: false }
+          - { name: piano_of_the_week, label: 'Piano of the Week — file name without .md (e.g. feurich-vienna-123)', widget: string, required: false }
