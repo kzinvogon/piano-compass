@@ -24,7 +24,7 @@ media_library:
   output_filename_only: false
   config:
     cloud_name: m4t0vj8h
-    api_key: 'REPLACE_WITH_CLOUDINARY_API_KEY'
+    api_key: '356284465347782'
 
 collections:
   # ── Editable pages (text + images) ──
