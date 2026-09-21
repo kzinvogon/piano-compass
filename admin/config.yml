@@ -178,6 +178,27 @@ collections:
       - { name: year, label: Year of build, widget: number, value_type: int, required: false }
       - { name: type, label: Type, widget: select, options: [Grand, 'Baby Grand', Upright, Digital, Other] }
       - { name: category, label: Category, widget: select, options: [New, Used, Restored, 'Pre-owned'] }
+      - { name: model, label: Model name (e.g. 123 Vienna), widget: string, required: false }
+      - { name: size, label: Size (e.g. 123 cm), widget: string, required: false }
+      - { name: self_playing, label: Self-playing capable, widget: boolean, default: false }
+      - name: fits_who
+        label: 'Finder — suits which players'
+        widget: select
+        multiple: true
+        required: false
+        options: [beginner, hobby, advanced, venue]
+      - name: fits_space
+        label: 'Finder — suits which spaces'
+        widget: select
+        multiple: true
+        required: false
+        options: [apartment, livingroom, large, public]
+      - name: priority
+        label: 'Finder — strengths'
+        widget: select
+        multiple: true
+        required: false
+        options: [value, tone, design, longevity]
       - { name: section, label: Section, widget: hidden, default: instruments }
       - { name: featured, label: Feature as Piano of the Week candidate, widget: boolean, default: false }
       - { name: price, label: Price / guide (e.g. €38,000 or On request), widget: string, required: false }

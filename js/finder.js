@@ -1,21 +1,33 @@
 /* Best-fit finder — a lightweight, client-side consultative shortlist.
-   No backend: it maps answers to a recommended starting point and
-   nudges the visitor toward a real consultation. */
+   Reads the piano library (data/pianos.json, generated from content/pianos)
+   and returns up to 5 matching instruments the visitor can choose from.
+   Per issue #4: results inlay -> chooser -> select = thank + CTA;
+   no selection = go back to the wizard. No backend. */
 (function () {
   const root = document.querySelector('.finder');
   if (!root) return;
 
-  const steps   = [...root.querySelectorAll('.finder__step')];
+  const steps    = [...root.querySelectorAll('.finder__step')];
   const progress = [...root.querySelectorAll('.finder__progress span')];
   const resultEl = root.querySelector('[data-result]');
   const titleEl  = root.querySelector('[data-result-title]');
   const textEl   = root.querySelector('[data-result-text]');
-  const tagsEl   = root.querySelector('[data-result-tags]');
+  const listEl   = root.querySelector('[data-result-list]');
+  const footEl   = root.querySelector('[data-result-foot]');
   const backBtn  = root.querySelector('[data-back]');
   const restartBtn = root.querySelector('[data-restart]');
 
   const answers = [];
   let index = 0;
+  let library = [];
+  let chosen = null;
+
+  // Load the piano library (path-aware for pages served from subfolders).
+  const base = document.querySelector('meta[name="base-path"]')?.content || '';
+  fetch(`${base}data/pianos.json`)
+    .then((r) => r.ok ? r.json() : [])
+    .then((data) => { library = Array.isArray(data) ? data : []; })
+    .catch(() => { library = []; });
 
   function t(key, fallback) {
     if (typeof I18n !== 'undefined' && I18n.resolve) {
@@ -23,6 +35,11 @@
       if (v !== key) return v;
     }
     return fallback;
+  }
+
+  function esc(s = '') {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
 
   function show(i) {
@@ -37,14 +54,14 @@
       index = step + 1;
       show(index);
     } else {
-      renderResult();
+      renderResults();
     }
   }
 
   steps.forEach((step, n) => {
-    step.querySelectorAll('.finder__opt').forEach(opt => {
+    step.querySelectorAll('.finder__opt').forEach((opt) => {
       opt.addEventListener('click', () => {
-        step.querySelectorAll('.finder__opt').forEach(o => o.classList.remove('selected'));
+        step.querySelectorAll('.finder__opt').forEach((o) => o.classList.remove('selected'));
         opt.classList.add('selected');
         setTimeout(() => select(n, opt.dataset.value), 160);
       });
@@ -64,58 +81,112 @@
   restartBtn.addEventListener('click', () => {
     answers.length = 0;
     index = 0;
+    chosen = null;
     resultEl.classList.remove('active');
     restartBtn.hidden = true;
-    steps.forEach(s => s.querySelectorAll('.finder__opt').forEach(o => o.classList.remove('selected')));
+    steps.forEach((s) => s.querySelectorAll('.finder__opt').forEach((o) => o.classList.remove('selected')));
     show(0);
   });
 
-  function renderResult() {
+  // ---- matching ------------------------------------------------------------
+  function kindOk(p, kind) {
+    if (kind === 'selfplay') return !!p.self_playing;
+    if (kind === 'used') return ['Used', 'Restored', 'Pre-owned'].includes(p.category);
+    if (kind === 'new') return p.category === 'New';
+    return true; // 'either'
+  }
+
+  function score(p, who, space, priority) {
+    let s = 0;
+    if ((p.fits_who || []).includes(who)) s += 3;
+    if ((p.fits_space || []).includes(space)) s += 2;
+    if ((p.priority || []).includes(priority)) s += 2;
+    if (space === 'apartment' && p.type === 'Grand') s -= 4;
+    if (space === 'public' && p.type === 'Upright') s -= 2;
+    if (space === 'large' && p.type === 'Grand') s += 1;
+    if (who === 'venue' && p.type === 'Grand') s += 1;
+    if (who === 'beginner' && p.type === 'Upright') s += 1;
+    return s;
+  }
+
+  function shortlist(who, space, kind, priority) {
+    let pool = library.filter((p) => kindOk(p, kind));
+    let note = '';
+    if (!pool.length) {
+      pool = library.slice();
+      note = kind === 'used'
+        ? t('finder.usedNote', "We don't have verified used instruments listed yet — here are the closest new options. We can source and independently verify a used piano for you.")
+        : t('finder.noneNote', "Here are the closest options — a short consultation will refine the shortlist.");
+    }
+    const ranked = pool
+      .map((p) => ({ p, s: score(p, who, space, priority) }))
+      .sort((a, b) => b.s - a.s)
+      .slice(0, 5)
+      .map((x) => x.p);
+    return { ranked, note };
+  }
+
+  // ---- rendering -----------------------------------------------------------
+  function card(p) {
+    const badge = [p.constructor, p.size].filter(Boolean).join(' · ');
+    const img = p.image
+      ? `<div class="finder-card__img"><img src="${esc(p.image)}" alt="${esc(p.title)}" loading="lazy"></div>`
+      : '<div class="finder-card__img finder-card__img--none"></div>';
+    return `<button type="button" class="finder-card" data-slug="${esc(p.slug)}">
+      ${img}
+      <div class="finder-card__body">
+        ${badge ? `<span class="finder-card__badge">${esc(badge)}</span>` : ''}
+        <h4>${esc(p.title)}</h4>
+        ${p.excerpt ? `<p>${esc(p.excerpt)}</p>` : ''}
+        <span class="finder-card__price">${esc(p.price || '')}</span>
+        <span class="finder-card__pick" data-i18n="finder.pick">Choose this piano</span>
+      </div>
+    </button>`;
+  }
+
+  function renderResults() {
+    chosen = null;
     const [who, space, kind, priority] = answers;
 
-    // Recommend an instrument category
-    let title, key;
-    if (space === 'apartment' || (who === 'beginner' && space !== 'large')) {
-      key = 'upright'; title = t('finderResult.upright', 'A quality upright piano');
-    } else if (space === 'public' || who === 'venue' || space === 'large') {
-      key = 'grand'; title = t('finderResult.grand', 'A grand piano sized to the room');
-    } else if (who === 'advanced') {
-      key = 'grandOrTall'; title = t('finderResult.grandOrTall', 'A tall upright or compact grand');
+    titleEl.textContent = t('finder.resultTitle', 'Your best-fit shortlist');
+
+    if (!library.length) {
+      textEl.textContent = t('finder.libEmpty', 'Book a consultation and we will build your shortlist personally.');
+      listEl.innerHTML = '';
+      footEl.innerHTML = `<a class="btn btn--gold" href="${base}contact.html">${esc(t('finder.resultCta', 'Book a consultation'))}</a>`;
     } else {
-      key = 'upright'; title = t('finderResult.midUpright', 'A refined mid-to-tall upright');
+      const { ranked, note } = shortlist(who, space, kind, priority);
+      textEl.textContent = t('finder.baseText', 'Based on your answers, here are the instruments that fit best. Choose one to continue — or go back to change your answers.') + (note ? ' ' + note : '');
+      listEl.innerHTML = ranked.map(card).join('');
+      footEl.innerHTML = `<p class="finder__hintline">${esc(t('finder.chooseHint', 'Select a piano to continue, or go back to adjust your answers.'))}</p>`;
+
+      listEl.querySelectorAll('.finder-card').forEach((el) => {
+        el.addEventListener('click', () => {
+          listEl.querySelectorAll('.finder-card').forEach((c) => c.classList.remove('selected'));
+          el.classList.add('selected');
+          chosen = ranked.find((p) => p.slug === el.dataset.slug);
+          renderChosen();
+        });
+      });
     }
 
-    // Body copy adapts to the "new vs vintage" choice + priority
-    let body = t('finderResult.baseText',
-      'Based on your answers, here is a sensible starting point. A short consultation will refine it into a specific shortlist of makes and models.');
-    if (kind === 'vintage') body += ' ' + t('finderResult.vintageAdd', 'A verified vintage instrument could offer excellent value here — we would inspect condition before you commit.');
-    if (kind === 'selfplay') body += ' ' + t('finderResult.selfAdd', 'We would also look at self-playing-capable models such as Feurich with integrated systems.');
-    if (priority === 'value') body += ' ' + t('finderResult.valueAdd', 'We will weight the shortlist toward the best value for your budget, new or pre-owned.');
-    if (priority === 'longevity') body += ' ' + t('finderResult.longevityAdd', 'We will favour makers with strong build quality and resale value.');
-
-    // Suggested brands / directions
-    const tagMap = {
-      value:     ['Yamaha', 'Kawai', 'Feurich', t('finderResult.tagVintage', 'Verified vintage')],
-      tone:      ['Feurich', 'Blüthner', 'Bösendorfer', 'Bechstein'],
-      design:    ['Feurich bespoke', 'Custom finishes', 'Steinway'],
-      longevity: ['Steinway', 'Yamaha', 'Kawai', 'Feurich'],
-    };
-    const tags = tagMap[priority] || ['Feurich', 'Yamaha', 'Kawai'];
-
-    titleEl.textContent = title;
-    textEl.textContent = body;
-    tagsEl.innerHTML = '';
-    tags.forEach(tag => {
-      const s = document.createElement('span');
-      s.textContent = tag;
-      tagsEl.appendChild(s);
-    });
-
-    steps.forEach(s => s.classList.remove('active'));
+    steps.forEach((s) => s.classList.remove('active'));
     resultEl.classList.add('active');
-    progress.forEach(p => p.classList.add('on'));
+    progress.forEach((p) => p.classList.add('on'));
     backBtn.hidden = false;
     restartBtn.hidden = false;
+    if (typeof I18n !== 'undefined' && I18n.apply) I18n.apply();
+    resultEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function renderChosen() {
+    if (!chosen) return;
+    const prefix = t('finder.chosenPrefix', 'Great choice — the');
+    const thanks = t('finder.chosenThanks', ". We'll tailor our advice around it. Book a no-obligation consultation and we'll compare it honestly against the alternatives for you.");
+    const cta = t('finder.chosenCta', 'Book a consultation about this piano');
+    footEl.innerHTML = `<p class="finder__chosen">${esc(prefix)} <b>${esc(chosen.title)}</b>${esc(thanks)}</p>
+      <a class="btn btn--gold" href="${base}contact.html?piano=${encodeURIComponent(chosen.slug)}">${esc(cta)}</a>`;
+    footEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 
   show(0);
