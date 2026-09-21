@@ -557,6 +557,9 @@ p  { color: var(--ink-soft); font-size: 1rem; }
 .contact-info { display: flex; flex-direction: column; gap: 2rem; }
 .contact-info__label { font-size: .68rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--brass); margin-bottom: .5rem; }
 .contact-info__value { font-size: .95rem; white-space: pre-line; color: var(--ink-soft); }
+.about-contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; text-align: center; max-width: 760px; margin: 2.4rem auto 0; }
+.about-contact-grid .contact-info__label { margin-bottom: .4rem; }
+@media (max-width: 640px) { .about-contact-grid { grid-template-columns: 1fr; gap: 1.4rem; } }
 
 /* ── Sub-hero (legacy inner pages) ──────────────────────── */
 .sub-hero { position: relative; padding: 150px 0 4rem; overflow: hidden; border-bottom: 1px solid var(--line); }
