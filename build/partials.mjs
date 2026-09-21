@@ -127,7 +127,7 @@ export function footer({ base = '', social = {} }) {
             <li><a href="${base}services.html" data-i18n="nav.services">Services</a></li>
           </ul>
         </div>
-        <div>
+        <div id="footer-contact">
           <p class="footer__col-title" data-i18n="footer.contactTitle">Contact</p>
           <ul class="footer__links">
             <li><a href="tel:+34911234567">+34 91 123 4567</a></li>
