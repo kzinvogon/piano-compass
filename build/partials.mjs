@@ -80,7 +80,6 @@ export function nav({ base = '', active = '', social = {} }) {
       ${newsDropdown(base, active)}
       <a href="${base}services.html" class="nav__link${a('services')}" data-i18n="nav.services">Services</a>
       <a href="${base}about.html" class="nav__link${a('about')}" data-i18n="nav.about">About</a>
-      <a href="${base}contact.html" class="nav__link${a('contact')}" data-i18n="nav.contact">Contact</a>
       <div class="nav__utils">
         ${langButtons()}
         ${socialLinks(social, 'social-icons social-icons--nav')}
