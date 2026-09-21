@@ -407,6 +407,7 @@ p  { color: var(--ink-soft); font-size: 1rem; }
 .finder-card__price { font-size: .8rem; font-weight: 600; color: var(--ink); margin-top: .1rem; }
 .finder-card__pick { margin-top: auto; font-size: .78rem; font-weight: 600; color: var(--pine); }
 .finder-card.selected .finder-card__pick { color: var(--brass); }
+.finder-card.selected .finder-card__pick::after { content: ' ✓'; }
 .finder__result-foot { margin-top: .4rem; }
 .finder__hintline { color: rgba(238,243,236,.7) !important; font-size: .85rem; }
 .finder__chosen { color: rgba(238,243,236,.92) !important; margin-bottom: 1.1rem; }
@@ -561,7 +562,7 @@ p  { color: var(--ink-soft); font-size: 1rem; }
 .sub-hero--luxury .sub-hero__bg      { background: url('../images/luxury-grand-blue.jpeg') center/cover; }
 .sub-hero--selfplaying .sub-hero__bg { background: url('../images/self-playing-sunburst.jpeg') center/cover; }
 .sub-hero--grands .sub-hero__bg      { background: url('../images/self-playing-studio.jpeg') center/cover; }
-.sub-hero--custom .sub-hero__bg      { background: url('../images/custom-grand-mosaic.jpeg') center/cover; }
+.sub-hero--custom .sub-hero__bg      { background: url('https://res.cloudinary.com/m4t0vj8h/image/upload/f_auto,q_auto,w_1600/v1789970597/Feurich_V123_laser_cut_backlit_in_villa_against_wall.jpg') center/cover; }
 .sub-hero__content { position: relative; z-index: 2; }
 .page-header { padding-top: 140px; padding-bottom: 2.6rem; border-bottom: 1px solid var(--line); margin-bottom: 3.4rem; }
 .about-page, .services-page { padding-top: 130px; }

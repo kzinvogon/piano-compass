@@ -20,7 +20,7 @@
   const answers = [];
   let index = 0;
   let library = [];
-  let chosen = null;
+  const chosen = new Map(); // slug -> piano (supports multiple selection)
 
   // Load the piano library (path-aware for pages served from subfolders).
   const base = document.querySelector('meta[name="base-path"]')?.content || '';
@@ -81,7 +81,7 @@
   restartBtn.addEventListener('click', () => {
     answers.length = 0;
     index = 0;
-    chosen = null;
+    chosen.clear();
     resultEl.classList.remove('active');
     restartBtn.hidden = true;
     steps.forEach((s) => s.querySelectorAll('.finder__opt').forEach((o) => o.classList.remove('selected')));
@@ -145,7 +145,7 @@
   }
 
   function renderResults() {
-    chosen = null;
+    chosen.clear();
     const [who, space, kind, priority] = answers;
 
     titleEl.textContent = t('finder.resultTitle', 'Your best-fit shortlist');
@@ -162,9 +162,9 @@
 
       listEl.querySelectorAll('.finder-card').forEach((el) => {
         el.addEventListener('click', () => {
-          listEl.querySelectorAll('.finder-card').forEach((c) => c.classList.remove('selected'));
-          el.classList.add('selected');
-          chosen = ranked.find((p) => p.slug === el.dataset.slug);
+          const slug = el.dataset.slug;
+          if (chosen.has(slug)) { chosen.delete(slug); el.classList.remove('selected'); el.setAttribute('aria-pressed', 'false'); }
+          else { chosen.set(slug, ranked.find((p) => p.slug === slug)); el.classList.add('selected'); el.setAttribute('aria-pressed', 'true'); }
           renderChosen();
         });
       });
@@ -180,12 +180,26 @@
   }
 
   function renderChosen() {
-    if (!chosen) return;
-    const prefix = t('finder.chosenPrefix', 'Great choice — the');
-    const thanks = t('finder.chosenThanks', ". We'll tailor our advice around it. Book a no-obligation consultation and we'll compare it honestly against the alternatives for you.");
-    const cta = t('finder.chosenCta', 'Book a consultation about this piano');
-    footEl.innerHTML = `<p class="finder__chosen">${esc(prefix)} <b>${esc(chosen.title)}</b>${esc(thanks)}</p>
-      <a class="btn btn--gold" href="${base}contact.html?piano=${encodeURIComponent(chosen.slug)}">${esc(cta)}</a>`;
+    if (chosen.size === 0) {
+      footEl.innerHTML = `<p class="finder__hintline">${esc(t('finder.chooseHint', 'Select one or more pianos to continue, or go back to adjust your answers.'))}</p>`;
+      return;
+    }
+    const list = [...chosen.values()];
+    const names = list.map((p) => p.title);
+    const and = t('finder.and', 'and');
+    const namesStr = names.length === 1
+      ? names[0]
+      : names.slice(0, -1).join(', ') + ' ' + and + ' ' + names[names.length - 1];
+    const prefix = list.length === 1
+      ? t('finder.chosenPrefixOne', 'Great choice — the')
+      : t('finder.chosenPrefixMany', 'Great shortlist —');
+    const thanks = t('finder.chosenThanks', ". We'll tailor our advice around your shortlist. Book a no-obligation consultation and we'll compare them honestly for you.");
+    const cta = list.length === 1
+      ? t('finder.chosenCtaOne', 'Book a consultation about this piano')
+      : t('finder.chosenCtaMany', 'Book a consultation about your shortlist');
+    const slugs = list.map((p) => p.slug).join(',');
+    footEl.innerHTML = `<p class="finder__chosen">${esc(prefix)} <b>${esc(namesStr)}</b>${esc(thanks)}</p>
+      <a class="btn btn--gold" href="${base}contact.html?piano=${encodeURIComponent(slugs)}">${esc(cta)}</a>`;
     footEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 

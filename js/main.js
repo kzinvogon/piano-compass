@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounters();
   initMobileMenu();
   initInterestPrefill();
+  initPianoPrefill();
 });
 
 // Pre-select the contact form's "Area of Interest" from a ?interest= link
@@ -17,6 +18,49 @@ function initInterestPrefill() {
   if (interest && [...select.options].some(o => o.value === interest)) {
     select.value = interest;
   }
+}
+
+// Prefill the contact form from a ?piano=slug[,slug2,...] link (from the
+// best-fit finder or a piano card). Looks up the titles in the library and
+// drops them into the message, and sets a sensible "Area of Interest".
+function initPianoPrefill() {
+  const message = document.getElementById('message');
+  if (!message) return;
+  const param = new URLSearchParams(window.location.search).get('piano');
+  if (!param) return;
+  const slugs = param.split(',').map((s) => s.trim()).filter(Boolean);
+  if (!slugs.length) return;
+
+  const base = document.querySelector('meta[name="base-path"]')?.content || '';
+  fetch(`${base}data/pianos.json`)
+    .then((r) => r.ok ? r.json() : [])
+    .then((lib) => {
+      const chosen = slugs
+        .map((slug) => (Array.isArray(lib) ? lib.find((p) => p.slug === slug) : null))
+        .filter(Boolean);
+      const titles = chosen.length ? chosen.map((p) => p.title) : slugs;
+
+      const list = titles.length === 1
+        ? titles[0]
+        : titles.slice(0, -1).join(', ') + ' and ' + titles[titles.length - 1];
+      const lead = titles.length === 1
+        ? `I'm interested in the ${list}.`
+        : `I'm interested in these pianos: ${list}.`;
+      if (!message.value.trim()) {
+        message.value = `${lead} Please advise on the best fit for me.`;
+      }
+
+      // Set the interest dropdown if all picks share a clear type.
+      const select = document.getElementById('interest');
+      if (select && chosen.length) {
+        const types = new Set(chosen.map((p) => (p.type || '').toLowerCase()));
+        let val = '';
+        if (types.size === 1 && types.has('upright')) val = 'upright';
+        else if ([...types].every((t) => t === 'grand' || t === 'baby grand')) val = 'grand';
+        if (val && [...select.options].some((o) => o.value === val)) select.value = val;
+      }
+    })
+    .catch(() => {});
 }
 
 function preloadImages() {
