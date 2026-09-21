@@ -100,7 +100,7 @@ function injectImages(s) {
   return s.replace(
     /<!--\s*CMS-IMG:([\w.]+)\s*-->([\s\S]*?)<!--\s*\/CMS-IMG:\1\s*-->/g,
     (full, key, inner) => {
-      const url = IMAGES[key];
+      const url = cldT(IMAGES[key], 'f_auto,q_auto,w_1600');
       if (!url || !String(url).trim()) return full; // no override -> keep default
       let out = inner;
       if (/url\(/.test(inner)) {
@@ -136,7 +136,7 @@ function vimeoId(url = '') {
 function instrumentCard(p, base = '') {
   const badge = [p.constructor, p.year].filter(Boolean).join(' · ');
   const specs = [p.type, p.category].filter(Boolean).join(' · ');
-  const img = p.image ? `<div class="instrument-card__img"><img src="${base}${esc(p.image)}" alt="${esc(p.title)}" loading="lazy"></div>` : '';
+  const img = p.image ? `<div class="instrument-card__img"><img src="${esc(imgSrc(p.image, base))}" alt="${esc(p.title)}" loading="lazy"></div>` : '';
   return `<article class="instrument-card">
     ${img}
     <div class="instrument-card__body">
@@ -153,7 +153,7 @@ function instrumentCard(p, base = '') {
 }
 
 function postCard(a, base = '') {
-  const img = a.image ? `<div class="post-card__img"><img src="${base}${esc(a.image)}" alt="${esc(a.title)}" loading="lazy"></div>` : '';
+  const img = a.image ? `<div class="post-card__img"><img src="${esc(imgSrc(a.image, base))}" alt="${esc(a.title)}" loading="lazy"></div>` : '';
   return `<a class="post-card" href="${base}insights/${esc(a.slug)}.html">
     ${img}
     <div class="post-card__body">
@@ -167,6 +167,20 @@ function postCard(a, base = '') {
 
 const isAbs = (u = '') => /^(https?:)?\/\//.test(String(u));
 const withBase = (u, base) => (isAbs(u) ? u : base + u);
+
+// Insert a Cloudinary transformation into a delivery URL (no-op for others),
+// so uploads (incl. HEIC) are delivered in an optimised, browser-safe format.
+const cldT = (u, t = 'f_auto,q_auto') =>
+  (typeof u === 'string' && u.includes('res.cloudinary.com') && u.includes('/upload/'))
+    ? u.replace('/upload/', `/upload/${t}/`) : u;
+
+// Resolve an image field to a usable src: Cloudinary URLs get transforms,
+// other absolute URLs pass through, repo-relative paths get the page base.
+const imgSrc = (u, base = '', t = 'f_auto,q_auto,w_900') => {
+  if (!u) return '';
+  if (/res\.cloudinary\.com/.test(String(u))) return cldT(u, t);
+  return isAbs(u) ? u : base + u;
+};
 
 function videoCard(v, base = '') {
   const id = ytId(v.youtube);
@@ -317,7 +331,7 @@ function homeDynamicHtml() {
     <div class="container">
       ${sectionHead('Piano of the week', 'This week\'s pick', '', false)}
       <div class="potw" style="margin-top:2rem">
-        <div class="potw__media">${potw.image ? `<img src="${esc(potw.image)}" alt="${esc(potw.title)}">` : ''}</div>
+        <div class="potw__media">${potw.image ? `<img src="${esc(imgSrc(potw.image, ''))}" alt="${esc(potw.title)}">` : ''}</div>
         <div class="potw__body">
           <span class="instrument-card__badge">${esc([potw.constructor, potw.year].filter(Boolean).join(' · '))}</span>
           <h3>${esc(potw.title)}</h3>
@@ -357,6 +371,29 @@ function homeDynamicHtml() {
   return `${potwBlock}${insightsBlock}${videosBlock}`;
 }
 
+// ---- data: piano library for the best-fit finder -------------------------
+// The finder (js/finder.js) fetches this at runtime and matches it against
+// the wizard answers. Sourced from content/pianos so the CMS is the library.
+function buildPianosData() {
+  const lib = pianos.map((p) => ({
+    slug: p.slug,
+    title: p.title,
+    model: p.model || '',
+    constructor: p.constructor || '',
+    type: p.type || '',
+    category: p.category || '',
+    size: p.size || '',
+    price: p.price || '',
+    self_playing: p.self_playing === true || p.self_playing === 'true',
+    fits_who: Array.isArray(p.fits_who) ? p.fits_who : [],
+    fits_space: Array.isArray(p.fits_space) ? p.fits_space : [],
+    priority: Array.isArray(p.priority) ? p.priority : [],
+    excerpt: p.excerpt || '',
+    image: imgSrc(p.image, '', 'f_auto,q_auto,w_700'),
+  }));
+  write('data/pianos.json', JSON.stringify(lib, null, 2) + '\n');
+}
+
 // ---- inject into hand-authored static pages ------------------------------
 // [file, base, activeNavKey]
 const STATIC = [
@@ -391,6 +428,7 @@ function injectStatic() {
 
 // ---- run ------------------------------------------------------------------
 overlayEnglishLocale();
+buildPianosData();
 buildInsightsIndex();
 buildArticles();
 buildInstruments();

@@ -179,6 +179,27 @@ content:
         type: select
         options:
           values: [New, Used, Restored, "Pre-owned"]
+      - { name: model, label: Model name (e.g. 123 Vienna), type: string }
+      - { name: size, label: Size (e.g. 123 cm), type: string }
+      - { name: self_playing, label: Self-playing capable, type: boolean, default: false }
+      - name: fits_who
+        label: "Finder — suits which players"
+        type: select
+        list: true
+        options:
+          values: [beginner, hobby, advanced, venue]
+      - name: fits_space
+        label: "Finder — suits which spaces"
+        type: select
+        list: true
+        options:
+          values: [apartment, livingroom, large, public]
+      - name: priority
+        label: "Finder — strengths"
+        type: select
+        list: true
+        options:
+          values: [value, tone, design, longevity]
       - name: section
         label: Section
         type: select

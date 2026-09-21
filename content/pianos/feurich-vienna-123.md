@@ -1,26 +1,20 @@
 ---
-title: Feurich Vienna 123
+title: "Feurich 123 Vienna"
 constructor: Feurich
-year: 2023
+model: "123 Vienna"
 type: Upright
 category: New
+size: "123 cm"
+price: "On request"
+self_playing: true
+fits_who: [hobby, advanced]
+fits_space: [livingroom, large]
+priority: [tone, design]
 section: instruments
 featured: true
-price: "On request"
-image: images/self-playing-walnut.jpeg
-gallery:
-  - images/self-playing-walnut.jpeg
-  - images/self-playing-studio.jpeg
-excerpt: The flagship Viennese upright — a Renner action, all-RAL finishes and an optional invisible self-playing system.
-status: published
+image: "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970599/FEURICH_123_-_Vienna_2_walnut_satin.jpg"
+excerpt: "The flagship 123 cm Vienna upright — made in Austria, available in any RAL finish, and self-playing capable."
 date: 2026-09-01
 ---
 
-The **Feurich Vienna 123** is the marque's flagship upright: 123 cm of
-Austrian craftsmanship with a redesigned Renner action, Weickert-special
-felt hammers and the option of an invisibly integrated self-playing
-system.
-
-Available in every colour of the RAL spectrum, it suits a family living
-room as readily as a concert foyer. As Feurich's featured advisor, Piano
-Compass can arrange a play-test and independent set-up.
+The Feurich 123 Vienna is part of the Feurich range we advise on as their featured partner. As an independent advisory, we will still tell you honestly when another maker or a used instrument suits you better. Book a consultation to compare it against the alternatives for your playing, space and budget.
