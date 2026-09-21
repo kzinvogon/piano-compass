@@ -417,6 +417,18 @@ function injectStatic() {
     // CMS-driven images (Home hero, About portrait)
     s = injectImages(s);
 
+    // Feurich range grid (Brands page): all current Feurich models from the library
+    if (s.includes('<!-- GEN:feurich-range -->')) {
+      const feurich = pianos
+        .filter((p) => (p.constructor || '') === 'Feurich')
+        .sort((a, b) => (a.type === b.type
+          ? (parseInt(a.size) || 0) - (parseInt(b.size) || 0)
+          : (a.type === 'Upright' ? -1 : 1)));
+      const grid = `<div class="card-grid card-grid--instruments">${feurich.map((p) => instrumentCard(p, base)).join('\n')}</div>`;
+      s = s.replace(/<!-- GEN:feurich-range -->[\s\S]*?<!-- \/GEN:feurich-range -->/,
+        () => `<!-- GEN:feurich-range -->\n${grid}\n      <!-- /GEN:feurich-range -->`);
+    }
+
     // Homepage dynamic block between markers
     if (file === 'index.html' && s.includes('<!-- GEN:home-dynamic -->')) {
       s = s.replace(/<!-- GEN:home-dynamic -->[\s\S]*?<!-- \/GEN:home-dynamic -->/,
