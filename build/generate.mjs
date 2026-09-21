@@ -100,7 +100,7 @@ function injectImages(s) {
   return s.replace(
     /<!--\s*CMS-IMG:([\w.]+)\s*-->([\s\S]*?)<!--\s*\/CMS-IMG:\1\s*-->/g,
     (full, key, inner) => {
-      const url = IMAGES[key];
+      const url = cldT(IMAGES[key], 'f_auto,q_auto,w_1600');
       if (!url || !String(url).trim()) return full; // no override -> keep default
       let out = inner;
       if (/url\(/.test(inner)) {
