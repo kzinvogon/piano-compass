@@ -12,7 +12,7 @@ fits_space: [apartment, livingroom]
 priority: [value]
 section: instruments
 featured: false
-image: "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970600/Mod._115_-_Premiere_10black_chrome_web.jpg"
+image: "https://res.cloudinary.com/m4t0vj8h/image/upload/site/piano/feurich-115-premiere"
 excerpt: "A compact 115 cm upright — an ideal, affordable first serious piano for small rooms and starting players."
 date: 2026-09-01
 ---

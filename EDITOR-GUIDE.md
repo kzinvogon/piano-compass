@@ -68,6 +68,58 @@ A photo and a short summary make the Finder card look good.
 
 ---
 
+## Getting into Cloudinary (the photo library)
+
+You don't make your own Cloudinary account — the owner **invites you into the
+shared one**:
+
+1. The owner goes to Cloudinary → **Settings → Users → Invite** and adds your
+   email.
+2. You get an email invite. Click it and set up your login — your own email
+   and password, or **Continue with GitHub**.
+3. You now see the same photo library as the owner, and can upload and replace
+   photos.
+
+---
+
+## Replacing a photo so the site updates automatically
+
+Some photos are wired to **fixed slots** in Cloudinary. If you replace the
+image in a slot, the website updates on its own — **no editor, no publishing
+needed.**
+
+The slots are:
+
+| Slot name in Cloudinary | Where it shows on the site |
+|---|---|
+| `site/hero` | The big photo on the homepage |
+| `site/piano/feurich-115-premiere` | Feurich 115 Premiere (Finder, Brands, New & Interesting) |
+| `site/piano/feurich-122-universal` | Feurich 122 Universal |
+| `site/piano/feurich-vienna-123` | Feurich 123 Vienna |
+| `site/piano/feurich-125-design` | Feurich 125 Design |
+| `site/piano/feurich-133-concert` | Feurich 133 Concert |
+| `site/piano/feurich-162-dynamic-i` | Feurich 162 Dynamic I |
+| `site/piano/feurich-179-dynamic-ii` | Feurich 179 Dynamic II |
+| `site/piano/feurich-218-concert-i` | Feurich 218 Concert I |
+
+**To change one of these photos:**
+
+1. In Cloudinary, open the **Upload** dialog.
+2. Upload your new photo and set its name (public ID) to **exactly** the slot
+   name above — e.g. `site/hero` — into the same place.
+3. When Cloudinary asks, choose **Overwrite**, and tick **Invalidate** (this
+   clears the old cached copy so the new one shows quickly).
+4. The website picks up the new photo within a few minutes — nothing else to do.
+
+> The simplest way to not get the name wrong: in the Media Library, open the
+> existing slot image, use **Replace / Upload new version**, and pick your new
+> file — the name stays the same automatically.
+
+Everything *else* (choosing which photo goes in a brand-new spot, and all
+text) is done in the `/admin` editor as above.
+
+---
+
 ## Where things live (for reference)
 
 - **The editor:** `/admin` on the website

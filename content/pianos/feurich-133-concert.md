@@ -12,7 +12,7 @@ fits_space: [livingroom, large]
 priority: [tone, longevity]
 section: instruments
 featured: false
-image: "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970600/Mod._133_-_Concert_10CHblack_chrome_LED_web.jpg"
+image: "https://res.cloudinary.com/m4t0vj8h/image/upload/site/piano/feurich-133-concert"
 excerpt: "At 133 cm, the tallest Feurich upright — grand-like power and sustain from an upright cabinet, self-playing capable."
 date: 2026-09-01
 ---
