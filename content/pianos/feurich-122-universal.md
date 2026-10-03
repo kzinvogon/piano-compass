@@ -12,7 +12,7 @@ fits_space: [apartment, livingroom]
 priority: [value, tone]
 section: instruments
 featured: false
-image: "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970600/Mod._122_-_Universal_18walnut_satin_web.jpg"
+image: "https://res.cloudinary.com/m4t0vj8h/image/upload/Mod._122_-_Universal_18walnut_satin_web"
 excerpt: "A versatile 122 cm upright with a fuller tone — a dependable all-rounder for the family living room."
 date: 2026-09-01
 ---

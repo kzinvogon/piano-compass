@@ -68,6 +68,62 @@ A photo and a short summary make the Finder card look good.
 
 ---
 
+## Getting into Cloudinary (the photo library)
+
+You don't make your own Cloudinary account — the owner **invites you into the
+shared one**:
+
+1. The owner goes to Cloudinary → **Settings → Users → Invite** and adds your
+   email.
+2. You get an email invite. Click it and set up your login — your own email
+   and password, or **Continue with GitHub**.
+3. You now see the same photo library as the owner, and can upload and replace
+   photos.
+
+---
+
+## Replacing a photo so the site updates automatically
+
+Some photos are wired to **fixed slots** in Cloudinary. If you replace the
+image in a slot, the website updates on its own — **no editor, no publishing
+needed.**
+
+These photos are wired to the site. The easy, reliable way to change one is
+to **replace it in place** so its name stays the same:
+
+**To change one of these photos:**
+
+1. In Cloudinary's **Media Library**, open the photo you want to change
+   (use the table below to find the right one).
+2. Click **Replace** / **Upload new version** and choose your new file.
+3. Tick **Invalidate** if offered (clears the old cached copy so the new one
+   shows quickly).
+4. The website picks up the new photo within a few minutes — **no editor, no
+   publishing needed.**
+
+> Using **Replace / Upload new version** keeps the name automatically, so you
+> never have to type anything — this is the safe way to do it.
+
+| This photo on the site | Is this image in Cloudinary |
+|---|---|
+| Homepage big photo (hero) | `Feurich_162_-_classic_piano_in_villa_setting` |
+| Feurich 115 Premiere | `Mod._115_-_Premiere_10black_chrome_web` |
+| Feurich 122 Universal | `Mod._122_-_Universal_18walnut_satin_web` |
+| Feurich 123 Vienna | `FEURICH_123_-_Vienna_2_walnut_satin` |
+| Feurich 125 Design | `Mod._125_-_Design_10black_chrome_web` |
+| Feurich 133 Concert | `Mod._133_-_Concert_10CHblack_chrome_LED_web` |
+| Feurich 162 Dynamic I | `Mod._162_-_Dynamic_I_18walnut_satin_web` |
+| Feurich 179 Dynamic II | `Mod._179_-_Dynamic_II_18_walnut_satin` |
+| Feurich 218 Concert I | `Mod._218_-_Concert_I_10CH_black_chrome` |
+
+(The piano photos also feed the **Finder**, the **Brands** page and **New &
+Interesting**, so replacing one updates it everywhere.)
+
+Everything *else* (choosing which photo goes in a brand-new spot, and all
+text) is done in the `/admin` editor as above.
+
+---
+
 ## Where things live (for reference)
 
 - **The editor:** `/admin` on the website

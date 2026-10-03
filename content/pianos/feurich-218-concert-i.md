@@ -12,7 +12,7 @@ fits_space: [public, large]
 priority: [tone, longevity]
 section: instruments
 featured: false
-image: "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970600/Mod._218_-_Concert_I_10CH_black_chrome.jpg"
+image: "https://res.cloudinary.com/m4t0vj8h/image/upload/Mod._218_-_Concert_I_10CH_black_chrome"
 excerpt: "The 218 cm concert grand — projection and power for halls, venues and serious performance spaces."
 date: 2026-09-01
 ---

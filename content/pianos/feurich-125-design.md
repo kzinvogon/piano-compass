@@ -12,7 +12,7 @@ fits_space: [livingroom, large]
 priority: [design]
 section: instruments
 featured: false
-image: "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970601/Mod._125_-_Design_10black_chrome_web.jpg"
+image: "https://res.cloudinary.com/m4t0vj8h/image/upload/Mod._125_-_Design_10black_chrome_web"
 excerpt: "A 125 cm design-led upright — striking finishes and hardware for a piano that is as much a statement as an instrument."
 date: 2026-09-01
 ---

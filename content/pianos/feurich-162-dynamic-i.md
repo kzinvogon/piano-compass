@@ -12,7 +12,7 @@ fits_space: [livingroom, large]
 priority: [tone, design]
 section: instruments
 featured: false
-image: "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970600/Mod._162_-_Dynamic_I_18walnut_satin_web.jpg"
+image: "https://res.cloudinary.com/m4t0vj8h/image/upload/Mod._162_-_Dynamic_I_18walnut_satin_web"
 excerpt: "A 162 cm baby grand — the refined choice where a grand's tone and presence are wanted without a large footprint."
 date: 2026-09-01
 ---
