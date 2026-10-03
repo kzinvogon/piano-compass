@@ -12,7 +12,7 @@ fits_space: [large, public]
 priority: [tone, longevity]
 section: instruments
 featured: true
-image: "https://res.cloudinary.com/m4t0vj8h/image/upload/site/piano/feurich-179-dynamic-ii"
+image: "https://res.cloudinary.com/m4t0vj8h/image/upload/Mod._179_-_Dynamic_II_18_walnut_satin"
 excerpt: "A 179 cm grand — the versatile performer for a large home or stage, with rich tone and a wide dynamic range."
 date: 2026-09-01
 ---

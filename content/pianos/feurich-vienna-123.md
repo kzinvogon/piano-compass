@@ -12,7 +12,7 @@ fits_space: [livingroom, large]
 priority: [tone, design]
 section: instruments
 featured: true
-image: "https://res.cloudinary.com/m4t0vj8h/image/upload/site/piano/feurich-vienna-123"
+image: "https://res.cloudinary.com/m4t0vj8h/image/upload/FEURICH_123_-_Vienna_2_walnut_satin"
 excerpt: "The flagship 123 cm Vienna upright — made in Austria, available in any RAL finish, and self-playing capable."
 date: 2026-09-01
 ---
