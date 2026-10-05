@@ -198,8 +198,11 @@ if (contactForm) {
     const btn = contactForm.querySelector('[type="submit"]');
     btn.disabled = true;
     btn.textContent = '…';
-    // Replace with real endpoint / Formspree / Netlify forms
-    await new Promise(r => setTimeout(r, 1200));
+    // Submit to Netlify Forms (the form carries name="contact" + data-netlify).
+    try {
+      const body = new URLSearchParams(new FormData(contactForm)).toString();
+      await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body });
+    } catch (err) { /* show the thank-you regardless; submission is best-effort */ }
     contactForm.innerHTML = `
       <div class="form-success">
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" style="margin:0 auto 1.2rem;color:var(--pine)">
