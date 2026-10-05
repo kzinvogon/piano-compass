@@ -209,7 +209,7 @@ if (contactForm) {
           <circle cx="24" cy="24" r="23" stroke="currentColor" stroke-width="2"/>
           <path d="M14 24l7 7 13-14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <p data-i18n="contact.successMsg">Thank you. We will be in touch shortly.</p>
+        <p data-i18n="contact.successMsg">Thank you — your enquiry is on its way. Stuart will reply to you personally, usually within one business day.</p>
       </div>`;
     if (typeof I18n !== 'undefined') I18n.init && document.querySelectorAll('[data-i18n]').forEach(el => {
       const val = I18n.resolve(el.dataset.i18n);
