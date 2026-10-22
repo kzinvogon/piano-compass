@@ -196,13 +196,33 @@ if (contactForm) {
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = contactForm.querySelector('[type="submit"]');
+    const label = btn.textContent;
     btn.disabled = true;
     btn.textContent = '…';
     // Submit to Netlify Forms (the form carries name="contact" + data-netlify).
+    let ok = false;
     try {
       const body = new URLSearchParams(new FormData(contactForm)).toString();
-      await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body });
-    } catch (err) { /* show the thank-you regardless; submission is best-effort */ }
+      const res = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body });
+      ok = res.ok;
+    } catch (err) { ok = false; }
+    if (!ok) {
+      // Don't claim success if the submission didn't go through.
+      btn.disabled = false;
+      btn.textContent = label;
+      let err = contactForm.querySelector('.form-error');
+      if (!err) {
+        err = document.createElement('p');
+        err.className = 'form-error';
+        err.setAttribute('role', 'alert');
+        err.style.cssText = 'color:#b00020;margin-top:1rem;font-size:.9rem';
+        (contactForm.querySelector('.form-submit') || contactForm).appendChild(err);
+      }
+      err.textContent = I18n.resolve('contact.errorMsg') !== 'contact.errorMsg'
+        ? I18n.resolve('contact.errorMsg')
+        : 'Sorry — your message could not be sent. Please try again in a moment.';
+      return;
+    }
     contactForm.innerHTML = `
       <div class="form-success">
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" style="margin:0 auto 1.2rem;color:var(--pine)">
