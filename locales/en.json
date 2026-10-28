@@ -390,7 +390,8 @@
     "hoursLabel": "Response time",
     "hoursVal": "We reply within one business day",
     "successMsg": "Thank you — your enquiry is on its way. Stuart will reply to you personally, usually within one business day.",
-    "errorMsg": "Sorry — your message could not be sent. Please try again in a moment."
+    "errorMsg": "Sorry — your message could not be sent. Please try again in a moment.",
+    "pianosLabel": "Piano(s) you're interested in"
   },
   "footer": {
     "sub": "Independent Piano Advisory",

@@ -43,21 +43,22 @@ function initPianoPrefill() {
       const list = titles.length === 1
         ? titles[0]
         : titles.slice(0, -1).join(', ') + ' and ' + titles[titles.length - 1];
+
+      // Dedicated field so the selected piano(s) are captured in the
+      // submission and the notification email, not just inside the message.
+      const pianosField = document.getElementById('pianos');
+      const pianosGroup = document.getElementById('pianos-group');
+      if (pianosField) {
+        pianosField.value = titles.join(', ');
+        if (pianosGroup) pianosGroup.style.display = '';
+      }
+
+      // Also seed the message for context, only if the visitor hasn't typed.
       const lead = titles.length === 1
         ? `I'm interested in the ${list}.`
         : `I'm interested in these pianos: ${list}.`;
       if (!message.value.trim()) {
         message.value = `${lead} Please advise on the best fit for me.`;
-      }
-
-      // Set the interest dropdown if all picks share a clear type.
-      const select = document.getElementById('interest');
-      if (select && chosen.length) {
-        const types = new Set(chosen.map((p) => (p.type || '').toLowerCase()));
-        let val = '';
-        if (types.size === 1 && types.has('upright')) val = 'upright';
-        else if ([...types].every((t) => t === 'grand' || t === 'baby grand')) val = 'grand';
-        if (val && [...select.options].some((o) => o.value === val)) select.value = val;
       }
     })
     .catch(() => {});
