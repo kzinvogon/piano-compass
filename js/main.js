@@ -20,9 +20,18 @@ function initInterestPrefill() {
   }
 }
 
+// Readable labels for the finder wizard answers passed on the URL, so the
+// contact form can show the full context the visitor selected.
+const FINDER_ANSWERS = {
+  who: { beginner: 'A beginner or child', hobby: 'A returning / hobby player', advanced: 'An advanced pianist', venue: 'A venue or institution' },
+  space: { apartment: 'Apartment / small room', livingroom: 'Family living room', large: 'Large / open-plan room', public: 'Public / performance space' },
+  kind: { new: 'New instruments', used: 'Used & pre-owned', either: 'Open to both', selfplay: 'Self-playing capable' },
+  priority: { value: 'Best value for money', tone: 'Tone & touch', design: 'Design & finish', longevity: 'Longevity & resale' },
+};
+
 // Prefill the contact form from a ?piano=slug[,slug2,...] link (from the
 // best-fit finder or a piano card). Looks up the titles in the library and
-// drops them into the message, and sets a sensible "Area of Interest".
+// drops them into the message, and shows the full set of finder answers.
 function initPianoPrefill() {
   const message = document.getElementById('message');
   if (!message) return;
@@ -53,12 +62,32 @@ function initPianoPrefill() {
         if (pianosGroup) pianosGroup.style.display = '';
       }
 
-      // Also seed the message for context, only if the visitor hasn't typed.
+      // Build a readable summary of every finder answer the visitor chose,
+      // so the form shows the full context (not just the piano).
+      const qs = new URLSearchParams(window.location.search);
+      const summaryLines = [
+        ['who', 'Who will play it most'],
+        ['space', 'The space'],
+        ['kind', 'New, used or open to both'],
+        ['priority', 'What matters most'],
+      ]
+        .map(([key, label]) => {
+          const v = qs.get(key);
+          return (v && FINDER_ANSWERS[key] && FINDER_ANSWERS[key][v])
+            ? `• ${label}: ${FINDER_ANSWERS[key][v]}`
+            : null;
+        })
+        .filter(Boolean);
+      const summary = summaryLines.length
+        ? `Your piano finder answers:\n${summaryLines.join('\n')}\n\n`
+        : '';
+
+      // Seed the message for context, only if the visitor hasn't typed.
       const lead = titles.length === 1
         ? `I'm interested in the ${list}.`
         : `I'm interested in these pianos: ${list}.`;
       if (!message.value.trim()) {
-        message.value = `${lead} Please advise on the best fit for me.`;
+        message.value = `${summary}${lead} Please advise on the best fit for me.`;
       }
     })
     .catch(() => {});

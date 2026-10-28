@@ -198,14 +198,23 @@
       ? t('finder.chosenCtaOne', 'Book a consultation about this piano')
       : t('finder.chosenCtaMany', 'Book a consultation about your shortlist');
     const slugs = list.map((p) => p.slug).join(',');
+    const [who, space, kind, priority] = answers;
     // Pre-select the contact form's "How can we help?" from the wizard answers.
     // (These are the current <option> values on contact.html for each reason.)
-    const who = answers[0], kind = answers[2];
     let interest = 'buying-upgrade';                  // Buying — upgrading my piano (default)
     if (kind === 'used') interest = 'used';           // Used & pre-owned search
     else if (who === 'beginner') interest = 'buying-first'; // Buying — my first piano
+    // Carry every wizard answer to the contact form so it can show the full
+    // context the visitor chose, not just the piano.
+    const qp = new URLSearchParams();
+    qp.set('piano', slugs);
+    qp.set('interest', interest);
+    if (who) qp.set('who', who);
+    if (space) qp.set('space', space);
+    if (kind) qp.set('kind', kind);
+    if (priority) qp.set('priority', priority);
     footEl.innerHTML = `<p class="finder__chosen">${esc(prefix)} <b>${esc(namesStr)}</b>${esc(thanks)}</p>
-      <a class="btn btn--gold" href="${base}contact.html?piano=${encodeURIComponent(slugs)}&interest=${interest}">${esc(cta)}</a>`;
+      <a class="btn btn--gold" href="${base}contact.html?${qp.toString()}">${esc(cta)}</a>`;
     footEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 
