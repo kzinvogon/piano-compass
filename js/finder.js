@@ -198,8 +198,14 @@
       ? t('finder.chosenCtaOne', 'Book a consultation about this piano')
       : t('finder.chosenCtaMany', 'Book a consultation about your shortlist');
     const slugs = list.map((p) => p.slug).join(',');
+    // Pre-select the contact form's "How can we help?" from the wizard answers.
+    // (These are the current <option> values on contact.html for each reason.)
+    const who = answers[0], kind = answers[2];
+    let interest = 'self-playing';          // Buying — upgrading my piano (default)
+    if (kind === 'used') interest = 'grand';          // Used & pre-owned search
+    else if (who === 'beginner') interest = 'luxury'; // Buying — my first piano
     footEl.innerHTML = `<p class="finder__chosen">${esc(prefix)} <b>${esc(namesStr)}</b>${esc(thanks)}</p>
-      <a class="btn btn--gold" href="${base}contact.html?piano=${encodeURIComponent(slugs)}">${esc(cta)}</a>`;
+      <a class="btn btn--gold" href="${base}contact.html?piano=${encodeURIComponent(slugs)}&interest=${interest}">${esc(cta)}</a>`;
     footEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 
