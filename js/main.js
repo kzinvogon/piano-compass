@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Pre-select the contact form's "Area of Interest" from a ?interest= link
-// (e.g. the "commission" CTA links to contact.html?interest=custom)
+// (e.g. the "commission" CTA links to contact.html?interest=design)
 function initInterestPrefill() {
   const select = document.getElementById('interest');
   if (!select) return;
