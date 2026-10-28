@@ -173,13 +173,13 @@ p  { color: var(--ink-soft); font-size: 1rem; }
 #nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-  padding: 1.15rem 2.2rem;
+  padding: 1.15rem 1.6rem;
   transition: background .35s, padding .35s, box-shadow .35s, transform .4s;
 }
 #nav.nav--scrolled {
   background: color-mix(in srgb, var(--bg) 88%, transparent);
   backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
-  padding: .7rem 2.2rem; box-shadow: 0 1px 0 var(--line);
+  padding: .7rem 1.6rem; box-shadow: 0 1px 0 var(--line);
 }
 #nav.nav--hidden { transform: translateY(-102%); }
 
@@ -195,10 +195,10 @@ p  { color: var(--ink-soft); font-size: 1rem; }
   letter-spacing: .26em; text-transform: uppercase; color: var(--brass); margin-top: .18rem;
 }
 
-.nav__menu { display: flex; align-items: center; gap: 1.3rem; }
+.nav__menu { display: flex; align-items: center; gap: 1.1rem; }
 .nav__link {
-  font-family: var(--sans); font-size: .74rem; font-weight: 500;
-  letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft);
+  font-family: var(--sans); font-size: .72rem; font-weight: 500;
+  letter-spacing: .07em; text-transform: uppercase; color: var(--ink-soft);
   position: relative; transition: color .25s; white-space: nowrap;
 }
 .nav__link::after {
@@ -227,8 +227,11 @@ p  { color: var(--ink-soft); font-size: 1rem; }
 }
 .nav__dropdown-menu a:hover { background: var(--surface2); color: var(--pine); }
 
-.nav__utils { display: flex; align-items: center; gap: .65rem; }
-.nav__lang { display: flex; gap: .1rem; align-items: center; padding-left: .65rem; border-left: 1px solid var(--line); }
+.nav__utils { display: flex; align-items: center; gap: .6rem; }
+/* Social icons live in the footer; keep the top bar compact so the full
+   horizontal menu fits on more screens. */
+.nav__utils .social-icons--nav { display: none; }
+.nav__lang { display: flex; gap: .1rem; align-items: center; padding-left: .6rem; border-left: 1px solid var(--line); }
 .nav__lang button {
   font-size: .62rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
   color: var(--muted); padding: .25rem .3rem; border-radius: 5px; transition: color .2s;
@@ -248,7 +251,7 @@ p  { color: var(--ink-soft); font-size: 1rem; }
 
 .nav__book {
   font-size: .72rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
-  padding: .6rem 1.15rem; border-radius: 999px; background: var(--pine); color: #f6f2e8;
+  padding: .5rem .9rem; border-radius: 999px; background: var(--pine); color: #f6f2e8;
   white-space: nowrap; transition: background .25s, box-shadow .25s;
 }
 .nav__book:hover { background: var(--pine-soft); box-shadow: var(--shadow-sm); }
@@ -649,8 +652,8 @@ body.lightbox-open { overflow: hidden; }
   .stats-row { flex-direction: row; flex-wrap: wrap; gap: 1.6rem 2.4rem; padding-left: 1.6rem; }
   .footer__grid { grid-template-columns: 1fr 1fr; }
 }
-/* Collapse to the hamburger before the full horizontal nav gets crowded. */
-@media (max-width: 1200px) {
+/* Collapse to the hamburger only once the full horizontal nav won't fit. */
+@media (max-width: 1000px) {
   .nav__menu { display: none; }
   .nav__menu.open {
     display: flex; flex-direction: column; position: fixed; inset: 0;
