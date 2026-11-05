@@ -40,7 +40,7 @@
     "trust2": "Alle führenden Marken",
     "trust3": "Vintage geprüft",
     "quote": "„Der Rat, den ich mir vor meinem ersten Klavier gewünscht hätte.“",
-    "badgeNum": "25+ Jahre",
+    "badgeNum": "20+ Jahre",
     "badgeLabel": "Beratung von Pianisten, Familien & Institutionen"
   },
   "trust": {
@@ -153,16 +153,16 @@
     "fadioliOrigin": "Italien",
     "fazioliDesc": "Moderne, handgefertigte Flügel, geschätzt für Klarheit, Kraft und Handwerkskunst.",
     "yamahaOrigin": "Japan",
-    "yamahaDesc": "Verlässliche, zuverlässige Instrumente auf jeder Ebene — ein hervorragendes erstes ernsthaftes Klavier.",
+    "yamahaDesc": "Verlässliche, zuverlässige Instrumente auf jeder Ebene — ein gutes erstes ernsthaftes Klavier.",
     "moreOrigin": "Und mehr",
-    "moreDesc": "Schimmel, Grotrian, Shigeru Kawai und weitere angesehene Hersteller — neu und gebraucht.",
+    "moreDesc": "Schimmel, Grotrian, Shigeru Kawai und weitere angesehene Hersteller.",
     "moreNote": "Alle Marken ansehen →"
   },
   "vintageHome": {
     "eyebrow": "Vintage & gebraucht",
     "title": "Das richtige Vintage-Klavier kann der Kauf des Lebens sein",
     "cta": "Vintage-Suche entdecken",
-    "text": "Ein gut gewähltes Gebrauchtinstrument bietet Charakter, Handwerkskunst und Wertigkeit, die neue Klaviere selten erreichen — doch der Zustand ist entscheidend. Wir beschaffen, bewerten und prüfen gebrauchte und vorbesessene Klaviere unabhängig, damit Sie mit Gewissheit statt mit Hoffnung kaufen.",
+    "text": "Ein gut gewähltes Gebrauchtinstrument kann Charakter, Handwerkskunst und ein gutes Preis-Leistungs-Verhältnis bieten. Ein eingespieltes Instrument kann zudem stabiler sein, da es bereits mehrfach gestimmt und gewartet wurde. Wir beschaffen, bewerten und prüfen gebrauchte und vorbesessene Klaviere unabhängig, damit Sie mit Gewissheit statt mit Hoffnung kaufen.",
     "c1": "Provenienz und Datierung über Seriennummer",
     "c2": "Unabhängige Prüfung von Konstruktion & Resonanzboden",
     "c3": "Ehrliche Prognose zu Restaurierungskosten und Wert",
@@ -201,8 +201,8 @@
     "title": "Stuart Conaghan",
     "cite": "Stuart Conaghan, Gründer",
     "cta": "Die ganze Geschichte lesen",
-    "text1": "Als Konzertpianist und unabhängiger Klavierberater gründete Stuart Piano Compass, um Käufern und Besitzern die unparteiliche, fachkundige Beratung zu bieten, die der Markt selten bietet — den Rat, den er sich selbst gewünscht hätte.",
-    "text2": "Stuart ist in Spanien und Portugal sowie weltweit per Fernberatung tätig und bringt jahrzehntelange Erfahrung am Klavier, tiefe Kenntnis jedes führenden Herstellers und ein unabhängiges Netzwerk von Technikern mit — ohne Bindung an ein Geschäft oder eine Marke.",
+    "text1": "Als Pianist und unabhängiger Klavierberater gründete Stuart Piano Compass, um Käufern und Besitzern die unparteiliche, fachkundige Beratung zu bieten, die der Markt selten bietet — den Rat, den er sich selbst gewünscht hätte.",
+    "text2": "Stuart ist in Spanien und Portugal sowie weltweit tätig und bringt jahrzehntelange Erfahrung am Klavier, tiefe Kenntnis jedes führenden Herstellers und ein unabhängiges Netzwerk von Klaviertechnikern und Fachhändlern mit — ohne Bindung an ein Geschäft oder eine Marke.",
     "quote": "„Meine einzige Aufgabe ist es, Ihnen zu helfen, das Klavier zu finden, das wirklich zu Ihnen passt — und es dann gemeinsam mit Ihnen zu pflegen.“"
   },
   "voices": {

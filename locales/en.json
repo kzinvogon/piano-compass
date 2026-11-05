@@ -40,7 +40,7 @@
     "trust2": "Every leading brand",
     "trust3": "Used verified",
     "quote": "“The advice I wish I'd had before my first piano.”",
-    "badgeNum": "25+ yrs",
+    "badgeNum": "20+ yrs",
     "badgeLabel": "advising pianists, families & institutions"
   },
   "trust": {
@@ -168,15 +168,15 @@
     "fadioliOrigin": "Italy",
     "fazioliDesc": "Modern hand-built grands prized for clarity, power and craftsmanship.",
     "yamahaOrigin": "Japan",
-    "yamahaDesc": "Consistent, reliable instruments at every level — a superb first serious piano.",
+    "yamahaDesc": "Consistent, reliable instruments at every level — a good first serious piano.",
     "moreOrigin": "And more",
-    "moreDesc": "Schimmel, Grotrian, Shigeru Kawai and other respected makers — new and pre-owned.",
+    "moreDesc": "Schimmel, Grotrian, Shigeru Kawai and other respected makers.",
     "moreNote": "See all brands →"
   },
   "vintageHome": {
     "eyebrow": "Used & pre-owned",
     "title": "The right used piano can be the buy of a lifetime",
-    "text": "A well-chosen used instrument offers character, craftsmanship and value that new pianos rarely match — but condition is everything. We source, appraise and independently verify used and pre-owned pianos so you buy with certainty, not hope.",
+    "text": "A well-chosen used instrument can offer character, craftsmanship and value for money. A played-in instrument can also be more stable having been tuned and serviced several times already. We source, appraise and independently verify used and pre-owned pianos so you buy with certainty, not hope.",
     "c1": "Provenance and serial-number dating",
     "c2": "Independent structural & soundboard inspection",
     "c3": "Honest restoration cost and value forecast",
@@ -214,8 +214,8 @@
   "expert": {
     "eyebrow": "Your accredited advisor",
     "title": "Stuart Conaghan",
-    "text1": "A concert pianist and independent piano consultant, Stuart founded Piano Compass to give buyers and owners the impartial, expert guidance the market rarely offers — the advice he wished he'd had himself.",
-    "text2": "Working across Spain and Portugal and remotely worldwide, Stuart brings decades at the keyboard, a deep knowledge of every leading maker, and an independent technician network — with no allegiance to any showroom or brand.",
+    "text1": "Pianist and independent piano consultant, Stuart founded Piano Compass to give buyers and owners the impartial, expert guidance the market rarely offers — the advice he wished he'd had himself.",
+    "text2": "Working across Spain and Portugal and worldwide, Stuart brings decades at the keyboard, a deep knowledge of every leading maker, and an independent network of piano technicians and retailers — with no allegiance to any showroom or brand.",
     "quote": "“My only job is to help you find the piano that's genuinely right for you — and then to look after it with you.”",
     "cite": "Stuart Conaghan, Founder",
     "cta": "Read the full story"

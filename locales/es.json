@@ -40,7 +40,7 @@
     "trust2": "Todas las grandes marcas",
     "trust3": "Vintage verificado",
     "quote": "«El consejo que ojalá hubiera tenido con mi primer piano.»",
-    "badgeNum": "+25 años",
+    "badgeNum": "+20 años",
     "badgeLabel": "asesorando a pianistas, familias e instituciones"
   },
   "trust": {
@@ -153,16 +153,16 @@
     "fadioliOrigin": "Italia",
     "fazioliDesc": "Pianos de cola modernos construidos a mano, apreciados por su claridad, potencia y artesanía.",
     "yamahaOrigin": "Japón",
-    "yamahaDesc": "Instrumentos consistentes y fiables en cada gama — un primer piano serio excelente.",
+    "yamahaDesc": "Instrumentos consistentes y fiables en cada gama — un buen primer piano serio.",
     "moreOrigin": "Y más",
-    "moreDesc": "Schimmel, Grotrian, Shigeru Kawai y otros fabricantes de prestigio — nuevos y de ocasión.",
+    "moreDesc": "Schimmel, Grotrian, Shigeru Kawai y otros fabricantes de prestigio.",
     "moreNote": "Ver todas las marcas →"
   },
   "vintageHome": {
     "eyebrow": "Vintage y segunda mano",
     "title": "El piano vintage adecuado puede ser la compra de tu vida",
     "cta": "Descubrir la búsqueda vintage",
-    "text": "Un instrumento de ocasión bien elegido ofrece un carácter, una artesanía y un valor que los pianos nuevos rara vez igualan — pero el estado lo es todo. Localizamos, tasamos y verificamos de forma independiente los pianos usados y de ocasión para que usted compre con certeza, no con esperanza.",
+    "text": "Un instrumento de ocasión bien elegido puede ofrecer carácter, artesanía y una buena relación calidad-precio. Un instrumento ya rodado puede además ser más estable, al haber sido afinado y revisado ya varias veces. Localizamos, tasamos y verificamos de forma independiente los pianos usados y de ocasión para que usted compre con certeza, no con esperanza.",
     "c1": "Procedencia y datación por número de serie",
     "c2": "Inspección estructural y de la tabla armónica independiente",
     "c3": "Previsión honesta del coste de restauración y del valor",
@@ -201,8 +201,8 @@
     "title": "Stuart Conaghan",
     "cite": "Stuart Conaghan, Fundador",
     "cta": "Leer la historia completa",
-    "text1": "Pianista de concierto y consultor independiente de pianos, Stuart fundó Piano Compass para ofrecer a compradores y propietarios el asesoramiento imparcial y experto que el mercado rara vez brinda — el consejo que a él mismo le hubiera gustado recibir.",
-    "text2": "Trabajando en España y Portugal, y a distancia en todo el mundo, Stuart aporta décadas de experiencia al teclado, un profundo conocimiento de todos los fabricantes de referencia y una red de técnicos independientes — sin ninguna vinculación con sala de exposición o marca alguna.",
+    "text1": "Pianista y consultor independiente de pianos, Stuart fundó Piano Compass para ofrecer a compradores y propietarios el asesoramiento imparcial y experto que el mercado rara vez brinda — el consejo que a él mismo le hubiera gustado recibir.",
+    "text2": "Trabajando en España y Portugal, y en todo el mundo, Stuart aporta décadas de experiencia al teclado, un profundo conocimiento de todos los fabricantes de referencia y una red independiente de técnicos y distribuidores de pianos — sin ninguna vinculación con sala de exposición o marca alguna.",
     "quote": "«Mi único cometido es ayudarle a encontrar el piano que realmente le conviene — y después cuidarlo junto a usted.»"
   },
   "voices": {
