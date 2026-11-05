@@ -27,6 +27,9 @@ pages, the pianos, articles, videos, and more — all from one simple editor.
 2. Change the text in the boxes, or click an image field to choose a photo.
 3. Click **Publish → Publish now** (top right).
 4. Wait **1–2 minutes**, then refresh the live site to see it.
+5. Changed wording on the **Home**, **About** and **Services** pages is
+   translated into the other languages for you. Those versions update a few
+   minutes after the English.
 
 > **Important:** always click **Publish**. *Save* on its own only keeps a
 > draft — it won't appear on the website.

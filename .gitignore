@@ -6,3 +6,7 @@
 # Node / build
 node_modules/
 .netlify/
+
+# Translation workflow scratch files
+.translate-plan.json
+.translations.json
