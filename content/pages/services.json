@@ -32,5 +32,13 @@
     "step5Desc": "We negotiate a fair price and arrange specialist delivery and installation.",
     "step6Title": "Lifelong Care",
     "step6Desc": "Ongoing tuning, regulation and advice for as long as you own the piano."
+  },
+  "images": {
+    "photo1": "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970597/IMG_2224.jpg",
+    "photo2": "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970597/IMG_2228.jpg",
+    "photo3": "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970597/IMG_2247.jpg",
+    "photo4": "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970598/IMG_2251.jpg",
+    "photo5": "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970597/IMG_2253.jpg",
+    "photo6": "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970597/IMG_2255.jpg"
   }
 }

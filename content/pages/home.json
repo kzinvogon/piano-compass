@@ -23,7 +23,100 @@
     "t4Title": "For the whole journey",
     "t4Desc": "From first purchase to tuning, restoration, valuation and resale — one trusted partner for life."
   },
+  "audience": {
+    "eyebrow": "Who we help",
+    "title": "Wherever you are in your piano journey",
+    "buyersTag": "Buyers",
+    "buyersTitle": "Finding the right instrument",
+    "b1": "First-time buyers choosing between digital, upright and grand",
+    "b2": "Families matching a growing student to the right piano",
+    "b3": "Advancing pianists and professionals upgrading their instrument",
+    "b4": "Schools, hotels and venues specifying for public spaces",
+    "ownersTag": "Owners",
+    "ownersTitle": "Caring for the piano you have",
+    "o1": "Independent valuations and honest condition assessments",
+    "o2": "Tuning, regulation and restoration through vetted technicians",
+    "o3": "Relocation, insurance and inheritance guidance",
+    "o4": "Selling or trading up, at a fair and informed price"
+  },
+  "brands": {
+    "eyebrow": "Brands we advise on",
+    "title": "Every leading maker — assessed on its merits",
+    "subtitle": "We hold no brand allegiance. Feurich is our featured partner, but our job is to recommend the maker and model that genuinely fits you — new or used.",
+    "feurichOrigin": "Vienna · Featured partner",
+    "feurichDesc": "Viennese craftsmanship since 1851 — expressive uprights and grands, bespoke finishes and self-playing options.",
+    "feurichNote": "Explore Feurich →",
+    "steinwayOrigin": "Hamburg / New York",
+    "steinwayDesc": "The performance benchmark for concert grands, with a legendary resale market.",
+    "bosendorferOrigin": "Vienna",
+    "bosendorferDesc": "Warm, singing Viennese tone and the famed extended-bass Imperial.",
+    "fadioliOrigin": "Italy",
+    "fazioliDesc": "Modern hand-built grands prized for clarity, power and craftsmanship.",
+    "yamahaOrigin": "Japan",
+    "yamahaDesc": "Consistent, reliable instruments at every level — a superb first serious piano.",
+    "moreOrigin": "And more",
+    "moreDesc": "Schimmel, Grotrian, Shigeru Kawai and other respected makers — new and pre-owned.",
+    "moreNote": "See all brands →"
+  },
+  "vintageHome": {
+    "eyebrow": "Used & pre-owned",
+    "title": "The right used piano can be the buy of a lifetime",
+    "text": "A well-chosen used instrument offers character, craftsmanship and value that new pianos rarely match — but condition is everything. We source, appraise and independently verify used and pre-owned pianos so you buy with certainty, not hope.",
+    "c1": "Provenance and serial-number dating",
+    "c2": "Independent structural & soundboard inspection",
+    "c3": "Honest restoration cost and value forecast",
+    "c4": "Bespoke sourcing for a specific maker or era",
+    "cta": "Explore used sourcing"
+  },
+  "process": {
+    "eyebrow": "The consultative process",
+    "title": "A calm, guided path to the right decision",
+    "s1Title": "Discovery",
+    "s1Desc": "A relaxed conversation about your playing, space, taste and budget. No pressure, no jargon.",
+    "s2Title": "Impartial shortlist",
+    "s2Desc": "A curated shortlist across brands, new and used — with the trade-offs explained clearly.",
+    "s3Title": "Play-test & inspect",
+    "s3Desc": "We arrange playing sessions and independent inspection so you compare like for like.",
+    "s4Title": "Acquire & care",
+    "s4Desc": "We help you buy well, arrange delivery, and support tuning and care for the life of the piano."
+  },
+  "servicesHome": {
+    "eyebrow": "Owner services",
+    "title": "Support for as long as you own the piano",
+    "s1Title": "Independent consultation",
+    "s1Desc": "One-to-one advice in your home or by video to find the right instrument for you.",
+    "s2Title": "Sourcing & acquisition",
+    "s2Desc": "We locate the right piano — new or used — and negotiate a fair, informed price.",
+    "s3Title": "Valuation & appraisal",
+    "s3Desc": "Independent written valuations for purchase, insurance, inheritance or sale.",
+    "s4Title": "Tuning & regulation",
+    "s4Desc": "Access to a vetted network of accredited tuners and technicians across Iberia.",
+    "s5Title": "Restoration oversight",
+    "s5Desc": "We specify and oversee restoration work so quality and value are protected.",
+    "s6Title": "Relocation & resale",
+    "s6Desc": "Specialist moving, insurance guidance, and help selling or trading up fairly."
+  },
+  "expert": {
+    "eyebrow": "Your accredited advisor",
+    "title": "Stuart Conaghan",
+    "text1": "A concert pianist and independent piano consultant, Stuart founded Piano Compass to give buyers and owners the impartial, expert guidance the market rarely offers — the advice he wished he'd had himself.",
+    "text2": "Working across Spain and Portugal and remotely worldwide, Stuart brings decades at the keyboard, a deep knowledge of every leading maker, and an independent technician network — with no allegiance to any showroom or brand.",
+    "quote": "“My only job is to help you find the piano that's genuinely right for you — and then to look after it with you.”",
+    "cite": "Stuart Conaghan, Founder",
+    "cta": "Read the full story"
+  },
+  "voices": {
+    "eyebrow": "In their words",
+    "title": "Decisions made with confidence",
+    "q1": "“Stuart steered us away from an expensive mistake and toward a used upright we adore. Completely impartial.”",
+    "q1cite": "— Marta & Luís, Lisbon",
+    "q2": "“Finally, advice with no agenda. He compared four brands honestly and found the right grand for our hall.”",
+    "q2cite": "— Cultural Foundation, Madrid",
+    "q3": "“From choosing to tuning to insurance valuation — one trusted person for the whole journey.”",
+    "q3cite": "— Private client, Marbella"
+  },
   "images": {
-    "hero": "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970599/Feurich_model_133_-_classic_piano_in_home_setting.jpg"
+    "hero": "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970599/Feurich_model_133_-_classic_piano_in_home_setting.jpg",
+    "vintage": "images/custom-grand-mosaic.jpeg"
   }
 }

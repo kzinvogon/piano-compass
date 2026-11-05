@@ -1,0 +1,39 @@
+{
+  "brandsPage": {
+    "eyebrow": "Brands we advise on",
+    "title": "Impartial across every leading maker",
+    "subtitle": "We are not a dealer for any single marque. We assess each maker — and each individual instrument — on tone, touch, build, value and resale, then recommend what genuinely fits you. Below is a guide to the brands we most often advise on, new and pre-owned.",
+    "featuredTag": "Featured partner",
+    "feurichTitle": "Feurich — Vienna, since 1851",
+    "feurichText": "Feurich pairs a long Viennese heritage with genuinely modern engineering: expressive uprights and grands, all-RAL bespoke finishes, and invisibly integrated self-playing systems. As our featured partner we know the range intimately — and we will still tell you honestly when another maker suits you better.",
+    "feurichCta": "Explore Feurich models",
+    "feurichCta2": "Self-playing options",
+    "allEyebrow": "The wider market",
+    "allTitle": "Other makers we regularly recommend",
+    "steinway": "The concert-grand benchmark, with unrivalled brand recognition and resale strength. We help you judge whether a new, restored or used Steinway is the right call.",
+    "bosendorfer": "Warm, complex Viennese tone and the extended-bass Imperial. A distinctive voice for players who want colour over sheer power.",
+    "fazioli": "Modern, hand-built grands celebrated for clarity, dynamic range and exceptional craftsmanship. Limited production, exceptional instruments.",
+    "yamaha": "Superb consistency and value at every level — often the ideal first serious piano, and a benchmark for reliability.",
+    "kawai": "Refined touch and tone, with the hand-built Shigeru line competing with Europe's finest at strong value.",
+    "bluthner": "The famous singing, romantic tone from the Aliquot fourth string — a favourite for lyrical repertoire.",
+    "bechstein": "Clear, articulate German voicing with a strong tradition — excellent new and as carefully restored used.",
+    "schimmel": "Respected German makers offering beautifully engineered instruments across a range of budgets.",
+    "notSureTag": "Not sure?",
+    "notSureName": "Let us match you",
+    "notSureText": "Tell us how you play and where the piano will live, and we'll build an impartial shortlist across all of these.",
+    "notSureCta": "Try the best-fit finder →",
+    "howEyebrow": "How we compare them",
+    "howTitle": "Merits, not marketing",
+    "h1": "Tone and touch matched to how and what you play",
+    "h2": "Build quality, serviceability and parts availability",
+    "h3": "Value new versus verified pre-owned or restored",
+    "h4": "Long-term resale and total cost of ownership",
+    "howCta": "Ask for a brand comparison",
+    "ctaTitle": "Which piano is right for you?"
+  },
+  "images": {
+    "logo": "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970596/LOGO_FEURICH_web.png",
+    "feurich": "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970599/Feurich_model_179_-_classic_piano_in_hotel_lobby.jpg",
+    "compare": "images/luxury-grand-blue.jpeg"
+  }
+}

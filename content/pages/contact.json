@@ -1,0 +1,31 @@
+{
+  "contact": {
+    "eyebrow": "Get in touch",
+    "title": "Book a Consultation",
+    "subtitle": "Tell us where you are in your piano journey and we'll reply personally to arrange a no-obligation conversation — in person or by video.",
+    "namePlaceholder": "Full Name",
+    "emailPlaceholder": "Email Address",
+    "phonePlaceholder": "Phone Number",
+    "interestLabel": "How can we help?",
+    "messagePlaceholder": "Tell us about your playing, your space and what you're looking for…",
+    "submit": "Send Enquiry",
+    "interest1": "Buying — my first piano",
+    "interest2": "Buying — upgrading my piano",
+    "interest3": "Used & pre-owned search",
+    "interestDesign": "Custom design / commission",
+    "interest4": "Valuation / appraisal",
+    "interest5": "Tuning, care or restoration",
+    "interest6": "General enquiry",
+    "showroomLabel": "Based in",
+    "address": "Spain & Portugal\nConsultations in person or by video",
+    "phoneLabel": "Telephone",
+    "phoneVal": "+34 91 123 4567",
+    "emailLabel": "Email",
+    "emailVal": "hello@pianocompass.com",
+    "hoursLabel": "Response time",
+    "hoursVal": "We reply within one business day",
+    "successMsg": "Thank you — your enquiry is on its way. Stuart will reply to you personally, usually within one business day.",
+    "errorMsg": "Sorry — your message could not be sent. Please try again in a moment.",
+    "pianosLabel": "Piano(s) you're interested in"
+  }
+}

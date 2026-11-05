@@ -1,0 +1,50 @@
+{
+  "nav": {
+    "home": "Home",
+    "findPiano": "Piano Finder",
+    "design": "Design",
+    "used": "Used",
+    "news": "News",
+    "insights": "Insights & Advice",
+    "pianoOfWeek": "Piano of the Week",
+    "newInteresting": "New & Interesting",
+    "videos": "Videos",
+    "brands": "Brands",
+    "allBrands": "All Brands We Advise On",
+    "feurich": "Feurich — Featured Partner",
+    "collection": "Collection",
+    "luxury": "Luxury Editions",
+    "selfPlaying": "Self-Playing Pianos",
+    "grandUprights": "Grands & Uprights",
+    "customDesign": "Custom Design",
+    "vintage": "Used",
+    "services": "Services",
+    "process": "Process",
+    "journey": "Our Process",
+    "about": "About",
+    "contact": "Contact",
+    "gallery": "Gallery",
+    "bookConsultation": "Book a Consultation"
+  },
+  "contactCta": {
+    "eyebrow": "Begin with a conversation",
+    "title": "Let's find the piano that's right for you",
+    "subtitle": "Book a no-obligation consultation. Whether you're buying your first piano or caring for a treasured one, we're here to guide you.",
+    "cta": "Book a consultation"
+  },
+  "footer": {
+    "sub": "Independent Piano Advisory",
+    "tagline": "Independent, accredited and impartial — a source of truth for your whole piano-owning journey.",
+    "explore": "Explore",
+    "consultation": "Consultation",
+    "valuation": "Valuation",
+    "care": "Tuning & Care",
+    "contactTitle": "Contact",
+    "region": "Spain · Portugal · Worldwide by video",
+    "copyright": "© 2026 Piano Compass. All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "feurich": "Feurich",
+    "disclaimer": "Piano Compass is an independent advisory. Brand names are the property of their respective owners and are referenced for identification only; mention does not imply endorsement or affiliation, except where a partnership is stated."
+  }
+}

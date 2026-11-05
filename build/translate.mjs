@@ -1,6 +1,6 @@
 // Piano Compass translation sync.
 //
-// The editor (/admin) saves the English copy for Home / About / Services to
+// The editor (/admin) saves the English copy for each page to
 // content/pages/*.json. This script finds every text field whose English no
 // longer matches locales/en.json (or that a language has no translation for
 // yet) and hands that work to Claude Code, then writes the translations back
@@ -11,9 +11,11 @@
 // main; the workflow runs Claude Code between the two steps below, commits
 // the updated locales, and Netlify redeploys.
 //
-//   node build/translate.mjs --plan <file>   write the fields to translate
-//                                            (no file when nothing to do)
-//   node build/translate.mjs --apply <file>  write translations into locales
+//   node build/translate.mjs --plan <dir>    write <dir>/<lang>.json listing the
+//                                            fields to translate (no dir when
+//                                            nothing to do)
+//   node build/translate.mjs --apply <dir>   write <dir>/<lang>.json translations
+//                                            into locales
 //   node build/translate.mjs                 list what needs translating
 
 import fs from 'node:fs';
@@ -24,7 +26,6 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const readJson = (p) => JSON.parse(fs.readFileSync(path.resolve(ROOT, p), 'utf8'));
 const writeJson = (p, o) => fs.writeFileSync(path.resolve(ROOT, p), JSON.stringify(o, null, 2) + '\n');
 
-const PAGES = ['home', 'about', 'services'];
 const LANGUAGE_NAMES = { nl: 'Dutch', de: 'German', es: 'Spanish', ru: 'Russian', uk: 'Ukrainian' };
 
 const get = (obj, key) => key.split('.').reduce((o, k) => (o == null ? undefined : o[k]), obj);
@@ -51,10 +52,8 @@ function flatten(obj, prefix = '', out = new Map()) {
 
 function loadPageCopy() {
   const copy = new Map();
-  for (const name of PAGES) {
-    const p = `content/pages/${name}.json`;
-    if (!fs.existsSync(path.join(ROOT, p))) continue;
-    const { images, ...text } = readJson(p);
+  for (const f of fs.readdirSync(path.join(ROOT, 'content/pages')).filter((n) => n.endsWith('.json')).sort()) {
+    const { images, ...text } = readJson(`content/pages/${f}`);
     for (const [k, v] of flatten(text)) copy.set(k, v);
   }
   return copy;
@@ -93,9 +92,13 @@ function summarise(plan) {
 
 // Check every planned field has a translation before writing anything, so a
 // partial result leaves the locales untouched and the next run retries.
-function apply(file) {
+function apply(dir) {
   const plan = buildPlan();
-  const translations = readJson(file);
+  const translations = {};
+  for (const lang of Object.keys(plan.languages)) {
+    const f = path.join(dir, `${lang}.json`);
+    translations[lang] = fs.existsSync(path.resolve(ROOT, f)) ? readJson(f) : {};
+  }
   for (const [lang, { fields }] of Object.entries(plan.languages)) {
     for (const { key } of fields) {
       const text = translations[lang]?.[key];
@@ -117,16 +120,19 @@ function apply(file) {
 }
 
 try {
-  const [mode, file] = process.argv.slice(2);
+  const [mode, target] = process.argv.slice(2);
   if (mode === '--apply') {
-    apply(file);
+    apply(target);
   } else {
     const plan = buildPlan();
     if (!Object.keys(plan.languages).length) {
       console.log('[translate] all languages are up to date with the page copy');
     } else {
       summarise(plan);
-      if (mode === '--plan') writeJson(file, plan);
+      if (mode === '--plan') {
+        fs.mkdirSync(path.resolve(ROOT, target), { recursive: true });
+        for (const [lang, entry] of Object.entries(plan.languages)) writeJson(path.join(target, `${lang}.json`), entry);
+      }
     }
   }
 } catch (err) {
