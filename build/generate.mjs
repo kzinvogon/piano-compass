@@ -278,6 +278,8 @@ function buildArticles() {
   }
 }
 
+const USED_CATEGORIES = ['Used', 'Restored', 'Pre-owned'];
+
 // ---- page: New & interesting instruments ---------------------------------
 function buildInstruments() {
   const list = pianos.filter((p) => (p.section || 'instruments') === 'instruments');
@@ -433,6 +435,26 @@ function injectStatic() {
       const grid = `<div class="card-grid card-grid--instruments">${feurich.map((p) => instrumentCard(p, base)).join('\n')}</div>`;
       s = s.replace(/<!-- GEN:feurich-range -->[\s\S]*?<!-- \/GEN:feurich-range -->/,
         () => `<!-- GEN:feurich-range -->\n${grid}\n      <!-- /GEN:feurich-range -->`);
+    }
+
+    // Used page: every piano listed as Used / Restored / Pre-owned (the same
+    // categories the Finder treats as used). Hidden while there are none.
+    if (s.includes('<!-- GEN:used-pianos -->')) {
+      const used = pianos.filter((p) => USED_CATEGORIES.includes(p.category));
+      const block = used.length ? `
+  <section class="section section--tint">
+    <div class="container">
+      <div class="section-head section-head--center" data-reveal>
+        <p class="eyebrow eyebrow--center" data-i18n="vintagePage.listEyebrow">Available now</p>
+        <h2 data-i18n="vintagePage.listTitle">Used &amp; pre-owned pianos</h2>
+        <p class="lead" data-i18n="vintagePage.listLead">Instruments we have found and checked. Ask about any of them, or let us search for the one you have in mind.</p>
+      </div>
+      <div class="card-grid card-grid--instruments" style="margin-top:2.4rem">${used.map((p) => instrumentCard(p, base)).join('\n')}</div>
+    </div>
+  </section>
+  ` : '';
+      s = s.replace(/<!-- GEN:used-pianos -->[\s\S]*?<!-- \/GEN:used-pianos -->/,
+        () => `<!-- GEN:used-pianos -->${block}<!-- /GEN:used-pianos -->`);
     }
 
     // Homepage dynamic block between markers
