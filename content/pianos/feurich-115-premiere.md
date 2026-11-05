@@ -1,19 +1,27 @@
 ---
-title: "Feurich 115 Premiere"
-constructor: Feurich
-model: "115 Premiere"
+title: Feurich 115 Premiere
 type: Upright
 category: New
-size: "115 cm"
-price: "On request"
+model: 115 Premiere
+size: 115 cm
 self_playing: false
-fits_who: [beginner, hobby]
-fits_space: [apartment, livingroom]
-priority: [value]
+fits_who:
+  - beginner
+  - hobby
+fits_space:
+  - apartment
+  - livingroom
+priority:
+  - value
 section: instruments
 featured: false
-image: "https://res.cloudinary.com/m4t0vj8h/image/upload/Mod._115_-_Premiere_10black_chrome_web"
-excerpt: "A compact 115 cm upright — an ideal, affordable first serious piano for small rooms and starting players."
+price: On request
+image: https://res.cloudinary.com/m4t0vj8h/image/upload/Mod._115_-_Premiere_10black_chrome_web
+excerpt: >-
+  A compact 115 cm upright — an ideal, affordable first serious piano for small
+  rooms and starting players. 
+
+  RRP 4,900Euro
 date: 2026-09-01
 ---
 
