@@ -5,7 +5,8 @@
   "type": "module",
   "description": "Piano Compass — static site with a small content generator for dynamic, indexable sections.",
   "scripts": {
-    "build": "node build/generate.mjs"
+    "build": "node build/generate.mjs",
+    "translate": "node build/translate.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

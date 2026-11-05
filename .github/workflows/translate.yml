@@ -1,0 +1,94 @@
+# Keeps the Dutch, German, Spanish, Russian and Ukrainian page text in step
+# with the English edited in /admin. build/translate.mjs works out which
+# fields need translating, Claude Code translates them, and the result is
+# committed to main (Netlify then redeploys).
+#
+# Needs a repository secret CLAUDE_CODE_OAUTH_TOKEN — run `claude setup-token`
+# with your Claude subscription and add the token under GitHub → Settings →
+# Secrets and variables → Actions.
+
+name: Translate page copy
+
+on:
+  push:
+    branches: [main]
+    paths: ['content/pages/**']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write
+
+concurrency:
+  group: translate
+  cancel-in-progress: false
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Find fields to translate
+        id: plan
+        run: |
+          node build/translate.mjs --plan .translate-plan.json
+          if [ -f .translate-plan.json ]; then
+            echo "needed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Translate with Claude Code
+        if: steps.plan.outputs.needed == 'true'
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          claude_args: --allowedTools Read,Write --max-turns 10
+          prompt: |
+            You are translating website copy for Piano Compass, an independent
+            piano advisory run by concert pianist Stuart Conaghan.
+
+            Read .translate-plan.json in the repository root. Under
+            "languages", each language code lists fields to translate from
+            English into that language. Each field has a "key", the new "english" text, and,
+            when the field was translated before, the "previousEnglish" and
+            the "previousTranslation" currently on the site.
+
+            Write .translations.json in the repository root as a JSON object
+            mapping each language code to an object of key -> translated
+            text, with an entry for every field in the plan. For example:
+            {"nl": {"aboutPage.title": "…"}, "de": {"aboutPage.title": "…"}}
+
+            - Where a previous translation exists, treat it as the house
+              style: keep its terminology, tone and form of address, and
+              change only what the English change requires.
+            - Keep any HTML tags (such as <em>…</em>) around the equivalent
+              words.
+            - Keep brand, model and personal names as they are (Feurich,
+              Steinway, Bösendorfer, Piano Compass, Stuart Conaghan, …).
+            - Write natural, polished text for a premium audience, not a
+              literal word-for-word rendering.
+
+            Do not create or change any other file.
+
+      - name: Apply translations
+        if: steps.plan.outputs.needed == 'true'
+        run: node build/translate.mjs --apply .translations.json
+
+      - name: Commit updated translations
+        if: steps.plan.outputs.needed == 'true'
+        run: |
+          if git diff --quiet -- locales; then
+            echo "No translation changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add locales
+          git commit -m "Update translations for edited page text"
+          git pull --rebase origin main
+          git push origin HEAD:main

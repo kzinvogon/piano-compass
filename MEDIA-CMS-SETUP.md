@@ -9,7 +9,7 @@ videos can still use YouTube/Vimeo (paste a link).
 It only needs to be done **once**. After that, editing is: open
 `/admin/`, log in with GitHub, edit, **Save** → the site rebuilds.
 
-There are three short jobs, all done by the repo owner (David).
+There are four short jobs, all done by the repo owner (David).
 
 ---
 
@@ -46,6 +46,25 @@ deprecated).
    - The cloud name (`m4t0vj8h`) is already filled in.
 
 ---
+
+## 4. Turn on automatic translations (Home / About / Services text)
+
+When the English text on those pages is edited, a GitHub Action
+(`.github/workflows/translate.yml`) uses Claude Code to translate the changed
+fields into Dutch, German, Spanish, Russian and Ukrainian and commits them.
+It runs on your Claude subscription, so there is no separate API bill.
+
+1. On your computer, run `claude setup-token` and sign in with your Claude
+   account. Copy the token it prints.
+2. GitHub → the **piano-compass** repo → **Settings** → **Secrets and
+   variables** → **Actions** → **New repository secret**. Name it
+   `CLAUDE_CODE_OAUTH_TOKEN` and paste the token.
+3. To translate the fields that have never been translated yet, run it once
+   by hand: **Actions** → **Translate page copy** → **Run workflow**.
+
+After that it runs on its own whenever the page text changes. Check progress
+under the repo's **Actions** tab. A failed run changes nothing, and the next
+edit (or **Run workflow**) tries again.
 
 ## Done — how to use it
 

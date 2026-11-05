@@ -46,8 +46,9 @@ const social = exists('content/settings/social.json')
 // copy for a page (mirroring the locales/en.json key structure) plus an
 // optional `images` object of picture URLs. The generator overlays the copy
 // onto the English locale so the existing i18n runtime shows it, and injects
-// the images into the hand-authored pages. Editing here never touches the
-// other languages — they keep working and fall back to English per key.
+// the images into the hand-authored pages. The other languages are kept in
+// step separately: build/translate.mjs (run by a GitHub Action) translates
+// changed fields into locales/<lang>.json and commits them.
 function loadPage(name) {
   const p = `content/pages/${name}.json`;
   if (!exists(p)) return {};
