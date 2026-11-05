@@ -12,16 +12,16 @@
     "cta": "Start a used search",
     "whyTitle": "Character, craftsmanship and value",
     "p1Desc": "We locate candidates to your brief and confirm age and origin from serial numbers and records.",
-    "p2Desc": "An independent technician examines soundboard, bridges, frame, pinblock, action and structure.",
+    "p2Desc": "An independent technician examines key components such as hammers, strings, soundboard, bridge, frame, pinblock, action and structure.",
     "p4Title": "Acquire & restore",
     "p3Desc": "We forecast any restoration cost and the fair market value — before and after work.",
-    "whyText": "Many of the finest pianos ever built are decades old. Golden-age instruments from the great European and American makers can be acquired for a fraction of their modern equivalents — and, properly restored, can outlast and outplay them. The key is knowing which instruments are worth the investment and which are not.",
+    "whyText": "Many of the finest pianos ever built are decades old. Golden-age instruments from the great European and American makers can be acquired for a fraction of their modern equivalents — and, properly serviced or restored, can play and sound just as good, if not better. The key is knowing which instruments are worth the investment and which are not.",
     "p3Title": "Cost & value",
     "p4Desc": "We negotiate, arrange transport, and oversee any restoration to protect quality and value.",
     "bespokeText": "Perhaps a pre-war Steinway, a Blüthner grand, a particular Bösendorfer, or a restored upright to inherit for generations. Tell us what you're searching for and we'll conduct a discreet, patient hunt across trade and private sources — verifying condition before you ever commit.",
     "p2Title": "Inspect",
     "p1Title": "Source & date",
-    "subtitle": "A well-chosen used or pre-owned piano can offer craftsmanship and value a new instrument rarely matches. But with older pianos, condition is everything — and it is easy to fall in love with a beautiful case hiding an expensive problem. We source, appraise and independently verify, so you commit with confidence.",
+    "subtitle": "A well-chosen used or pre-owned piano can offer craftsmanship and great value for money. But with older pianos, condition is everything — and it is easy to fall in love with a beautiful case hiding an expensive problem. We source, appraise and independently verify, so you commit with confidence.",
     "title": "Buy used with certainty, not hope",
     "listTitle": "Used & pre-owned pianos",
     "listLead": "Instruments we have found and checked. Ask about any of them, or let us search for the one you have in mind.",
@@ -32,6 +32,6 @@
     "w4": "Well-chosen examples hold or grow in value"
   },
   "images": {
-    "image": "https://res.cloudinary.com/m4t0vj8h/image/upload/v1793904486/Konzertflu%CC%88gel_BLU%CC%88THNER_Mod._I_280_-_Aliquot_schwarz_poliert_Bj._2000_5_Jahre_Garantie_3.jpg"
+    "image": "https://res.cloudinary.com/m4t0vj8h/image/upload/v1793919684/Steinway_Model_D.jpg"
   }
 }
