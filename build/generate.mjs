@@ -41,30 +41,32 @@ const videos = loadCollection('content/videos');
 const social = exists('content/settings/social.json')
   ? JSON.parse(read('content/settings/social.json')) : {};
 
-// ---- editable page content (Home / About / Services) ----------------------
-// Owners edit content/pages/*.json in Pages CMS. Each file holds the English
-// copy for a page (mirroring the locales/en.json key structure) plus an
-// optional `images` object of picture URLs. The generator overlays the copy
-// onto the English locale so the existing i18n runtime shows it, and injects
-// the images into the hand-authored pages. The other languages are kept in
-// step separately: build/translate.mjs (run by a GitHub Action) translates
-// changed fields into locales/<lang>.json and commits them.
-function loadPage(name) {
-  const p = `content/pages/${name}.json`;
-  if (!exists(p)) return {};
+// ---- editable page content (every hand-authored page) --------------------
+// Owners edit content/pages/*.json in the /admin editor. Each file holds the
+// English copy for a page (mirroring the locales/en.json key structure) plus
+// an optional `images` object of picture URLs. The generator overlays the
+// copy onto the English locale so the existing i18n runtime shows it, and
+// injects each image into the page's matching <!-- CMS-IMG:<file>.<name> -->
+// marker. The other languages are kept in step separately: build/translate.mjs
+// (run by a GitHub Action) translates changed fields into locales/<lang>.json
+// and commits them.
+function loadPage(file) {
+  const p = `content/pages/${file}`;
   try { return JSON.parse(read(p)); }
   catch (e) { console.warn(`[generate] could not parse ${p}: ${e.message}`); return {}; }
 }
 
-const pageHome = loadPage('home');
-const pageAbout = loadPage('about');
-const pageServices = loadPage('services');
+const PAGES = exists('content/pages')
+  ? fs.readdirSync(path.join(ROOT, 'content/pages')).filter((f) => f.endsWith('.json')).sort()
+    .map((f) => [f.replace(/\.json$/, ''), loadPage(f)])
+  : [];
 
-// Map of CMS-IMG marker keys -> image URL, sourced from the page `images`.
-const IMAGES = {
-  'home.hero': pageHome.images?.hero,
-  'about.image': pageAbout.images?.about,
-};
+// Map of CMS-IMG marker keys -> image URL, sourced from each page's `images`.
+const IMAGES = {};
+for (const [name, page] of PAGES) {
+  for (const [slot, url] of Object.entries(page.images || {})) IMAGES[`${name}.${slot}`] = url;
+}
+IMAGES['about.image'] = IMAGES['about.about']; // the About portrait's original marker name
 
 // Deep-merge `src` onto `target`, skipping empty strings so a blank CMS field
 // leaves the seeded English in place rather than wiping it.
@@ -87,7 +89,7 @@ function deepMerge(target, src) {
 function overlayEnglishLocale() {
   if (!exists('locales/en.json')) return;
   const en = JSON.parse(read('locales/en.json'));
-  for (const page of [pageHome, pageAbout, pageServices]) {
+  for (const [, page] of PAGES) {
     const { images, ...text } = page; // `images` is not an i18n key
     deepMerge(en, text);
   }
@@ -96,13 +98,16 @@ function overlayEnglishLocale() {
 
 // Replace the image reference inside a CMS-IMG marker block (works for both
 // <img src="…"> and CSS `background:url(…)`), keeping the markers so the next
-// build stays idempotent.
-function injectImages(s) {
+// build stays idempotent. A Cloudinary image keeps the size transform the
+// slot already uses; repo paths get the page's base (e.g. ../ in collection/).
+function injectImages(s, base = '') {
   return s.replace(
-    /<!--\s*CMS-IMG:([\w.]+)\s*-->([\s\S]*?)<!--\s*\/CMS-IMG:\1\s*-->/g,
+    /<!--\s*CMS-IMG:([\w.-]+)\s*-->([\s\S]*?)<!--\s*\/CMS-IMG:\1\s*-->/g,
     (full, key, inner) => {
-      const url = cldT(IMAGES[key], 'f_auto,q_auto,w_1600');
-      if (!url || !String(url).trim()) return full; // no override -> keep default
+      if (!IMAGES[key] || !String(IMAGES[key]).trim()) return full; // no override -> keep default
+      const t = inner.match(/res\.cloudinary\.com\/[^/]+\/(?:image|video)\/upload\/([a-z]{1,2}_[^/]*)\//)?.[1]
+        || 'f_auto,q_auto,w_1600';
+      const url = imgSrc(IMAGES[key], base, t);
       let out = inner;
       if (/url\(/.test(inner)) {
         out = inner.replace(/url\((['"]?).*?\1\)/, `url('${url}')`);
@@ -180,7 +185,7 @@ const cldT = (u, t = 'f_auto,q_auto') =>
 const imgSrc = (u, base = '', t = 'f_auto,q_auto,w_900') => {
   if (!u) return '';
   if (/res\.cloudinary\.com/.test(String(u))) return cldT(u, t);
-  return isAbs(u) ? u : base + u;
+  return isAbs(u) || String(u).startsWith('/') ? u : base + u;
 };
 
 function videoCard(v, base = '') {
@@ -415,8 +420,8 @@ function injectStatic() {
     s = s.replace(/<nav id="nav">[\s\S]*?<\/nav>/, () => nav({ base, active, social }));
     s = s.replace(/<footer>[\s\S]*?<\/footer>/, () => footer({ base, social }));
 
-    // CMS-driven images (Home hero, About portrait)
-    s = injectImages(s);
+    // CMS-driven images
+    s = injectImages(s, base);
 
     // Feurich range grid (Brands page): all current Feurich models from the library
     if (s.includes('<!-- GEN:feurich-range -->')) {
@@ -449,5 +454,5 @@ buildVideos();
 injectStatic();
 
 console.log(`[generate] pianos=${pianos.length} insights=${insights.length} videos=${videos.length}`);
-console.log(`[generate] overlaid page copy: home/about/services -> locales/en.json; images: ${Object.entries(IMAGES).filter(([, v]) => v).map(([k]) => k).join(', ') || 'none'}`);
+console.log(`[generate] overlaid page copy: ${PAGES.map(([n]) => n).join('/')} -> locales/en.json; images: ${Object.entries(IMAGES).filter(([, v]) => v).map(([k]) => k).join(', ') || 'none'}`);
 console.log('[generate] wrote insights.html, insights/*, instruments.html, videos.html; injected nav/social/home blocks');

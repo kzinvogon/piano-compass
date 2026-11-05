@@ -27,18 +27,19 @@ jobs:
   translate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 20
 
       - name: Find fields to translate
         id: plan
         run: |
-          node build/translate.mjs --plan .translate-plan.json
-          if [ -f .translate-plan.json ]; then
+          node build/translate.mjs --plan .translate-plan
+          if [ -d .translate-plan ]; then
             echo "needed=true" >> "$GITHUB_OUTPUT"
+            echo "langs=$(ls .translate-plan | sed 's/\.json$//' | tr '\n' ' ')" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Translate with Claude Code
@@ -47,21 +48,24 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          claude_args: --allowedTools Read,Write --max-turns 10
+          claude_args: --allowedTools Read,Write --max-turns 30
           prompt: |
             You are translating website copy for Piano Compass, an independent
             piano advisory run by concert pianist Stuart Conaghan.
 
-            Read .translate-plan.json in the repository root. Under
-            "languages", each language code lists fields to translate from
-            English into that language. Each field has a "key", the new "english" text, and,
-            when the field was translated before, the "previousEnglish" and
-            the "previousTranslation" currently on the site.
+            Translate into these languages: ${{ steps.plan.outputs.langs }}
 
-            Write .translations.json in the repository root as a JSON object
-            mapping each language code to an object of key -> translated
-            text, with an entry for every field in the plan. For example:
-            {"nl": {"aboutPage.title": "…"}, "de": {"aboutPage.title": "…"}}
+            For each language code, read .translate-plan/<code>.json in the
+            repository root (for example .translate-plan/nl.json). It names
+            the language and lists the fields to translate from English. Each
+            field has a "key", the new "english" text, and, when the field
+            was translated before, the "previousEnglish" and the
+            "previousTranslation" currently on the site.
+
+            Then write .translations/<code>.json: a JSON object mapping every
+            key in that language's plan to its translated text, e.g.
+            {"aboutPage.title": "…"}. Finish one language before starting the
+            next, and translate every field.
 
             - Where a previous translation exists, treat it as the house
               style: keep its terminology, tone and form of address, and
@@ -77,7 +81,7 @@ jobs:
 
       - name: Apply translations
         if: steps.plan.outputs.needed == 'true'
-        run: node build/translate.mjs --apply .translations.json
+        run: node build/translate.mjs --apply .translations
 
       - name: Commit updated translations
         if: steps.plan.outputs.needed == 'true'

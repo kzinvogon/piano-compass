@@ -1,0 +1,20 @@
+{
+  "gallery": {
+    "eyebrow": "Archive",
+    "title": "Image Gallery",
+    "subtitle": "A collection of piano photography from across the brands and instruments we advise on."
+  },
+  "images": {
+    "photo1": "images/luxury-grand-blue.jpeg",
+    "photo2": "images/self-playing-lifestyle.jpeg",
+    "photo3": "images/self-playing-studio.jpeg",
+    "photo4": "images/self-playing-sunburst.jpeg",
+    "photo5": "images/self-playing-walnut.jpeg",
+    "photo6": "images/bespoke-lacquer.jpeg",
+    "photo7": "images/crystal-inlay.jpeg",
+    "photo8": "images/custom-grand-mosaic.jpeg",
+    "photo9": "images/custom-led-upright.jpeg",
+    "photo10": "images/custom-mosaic-upright.jpeg",
+    "photo11": "images/gold-leaf.jpeg"
+  }
+}

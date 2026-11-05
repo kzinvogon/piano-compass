@@ -66,11 +66,125 @@ collections:
               - { name: t3Desc, label: Card 3 — text, widget: text }
               - { name: t4Title, label: Card 4 — title, widget: string }
               - { name: t4Desc, label: Card 4 — text, widget: text }
+          - name: audience
+            label: "Who we help"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: eyebrow, label: "Eyebrow", widget: string }
+              - { name: title, label: "Title", widget: string }
+              - { name: buyersTag, label: "Buyers tag", widget: string }
+              - { name: buyersTitle, label: "Buyers title", widget: string }
+              - { name: b1, label: "B 1", widget: string }
+              - { name: b2, label: "B 2", widget: string }
+              - { name: b3, label: "B 3", widget: string }
+              - { name: b4, label: "B 4", widget: string }
+              - { name: ownersTag, label: "Owners tag", widget: string }
+              - { name: ownersTitle, label: "Owners title", widget: string }
+              - { name: o1, label: "O 1", widget: string }
+              - { name: o2, label: "O 2", widget: string }
+              - { name: o3, label: "O 3", widget: string }
+              - { name: o4, label: "O 4", widget: string }
+          - name: brands
+            label: "Brands section"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: eyebrow, label: "Eyebrow", widget: string }
+              - { name: title, label: "Title", widget: string }
+              - { name: subtitle, label: "Subtitle", widget: text }
+              - { name: feurichOrigin, label: "Feurich origin", widget: string }
+              - { name: feurichDesc, label: "Feurich desc", widget: text }
+              - { name: feurichNote, label: "Feurich note", widget: string }
+              - { name: steinwayOrigin, label: "Steinway origin", widget: string }
+              - { name: steinwayDesc, label: "Steinway desc", widget: text }
+              - { name: bosendorferOrigin, label: "Bosendorfer origin", widget: string }
+              - { name: bosendorferDesc, label: "Bosendorfer desc", widget: string }
+              - { name: fadioliOrigin, label: "Fadioli origin", widget: string }
+              - { name: fazioliDesc, label: "Fazioli desc", widget: string }
+              - { name: yamahaOrigin, label: "Yamaha origin", widget: string }
+              - { name: yamahaDesc, label: "Yamaha desc", widget: text }
+              - { name: moreOrigin, label: "More origin", widget: string }
+              - { name: moreDesc, label: "More desc", widget: text }
+              - { name: moreNote, label: "More note", widget: string }
+          - name: vintageHome
+            label: "Used & pre-owned section"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: eyebrow, label: "Eyebrow", widget: string }
+              - { name: title, label: "Title", widget: string }
+              - { name: text, label: "Text", widget: text }
+              - { name: c1, label: "C 1", widget: string }
+              - { name: c2, label: "C 2", widget: string }
+              - { name: c3, label: "C 3", widget: string }
+              - { name: c4, label: "C 4", widget: string }
+              - { name: cta, label: "Cta", widget: string }
+          - name: process
+            label: "How it works"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: eyebrow, label: "Eyebrow", widget: string }
+              - { name: title, label: "Title", widget: string }
+              - { name: s1Title, label: "S 1 — title", widget: string }
+              - { name: s1Desc, label: "S 1 — desc", widget: text }
+              - { name: s2Title, label: "S 2 — title", widget: string }
+              - { name: s2Desc, label: "S 2 — desc", widget: text }
+              - { name: s3Title, label: "S 3 — title", widget: string }
+              - { name: s3Desc, label: "S 3 — desc", widget: text }
+              - { name: s4Title, label: "S 4 — title", widget: string }
+              - { name: s4Desc, label: "S 4 — desc", widget: text }
+          - name: servicesHome
+            label: "Services section"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: eyebrow, label: "Eyebrow", widget: string }
+              - { name: title, label: "Title", widget: string }
+              - { name: s1Title, label: "S 1 — title", widget: string }
+              - { name: s1Desc, label: "S 1 — desc", widget: text }
+              - { name: s2Title, label: "S 2 — title", widget: string }
+              - { name: s2Desc, label: "S 2 — desc", widget: text }
+              - { name: s3Title, label: "S 3 — title", widget: string }
+              - { name: s3Desc, label: "S 3 — desc", widget: text }
+              - { name: s4Title, label: "S 4 — title", widget: string }
+              - { name: s4Desc, label: "S 4 — desc", widget: text }
+              - { name: s5Title, label: "S 5 — title", widget: string }
+              - { name: s5Desc, label: "S 5 — desc", widget: text }
+              - { name: s6Title, label: "S 6 — title", widget: string }
+              - { name: s6Desc, label: "S 6 — desc", widget: text }
+          - name: expert
+            label: "Your advisor"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: eyebrow, label: "Eyebrow", widget: string }
+              - { name: title, label: "Title", widget: string }
+              - { name: text1, label: "Text 1", widget: text }
+              - { name: text2, label: "Text 2", widget: text }
+              - { name: quote, label: "Quote", widget: text }
+              - { name: cite, label: "Cite", widget: string }
+              - { name: cta, label: "Cta", widget: string }
+          - name: voices
+            label: "Testimonials"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: eyebrow, label: "Eyebrow", widget: string }
+              - { name: title, label: "Title", widget: string }
+              - { name: q1, label: "Q 1", widget: text }
+              - { name: q1cite, label: "Q1cite", widget: string }
+              - { name: q2, label: "Q 2", widget: text }
+              - { name: q2cite, label: "Q2cite", widget: string }
+              - { name: q3, label: "Q 3", widget: text }
+              - { name: q3cite, label: "Q3cite", widget: string }
           - name: images
             label: Images
             widget: object
             fields:
               - { name: hero, label: Hero image (pick or upload — appears top-right of the homepage), widget: image, required: false }
+              - { name: vintage, label: Used & pre-owned section image, widget: image, required: false }
       - name: about
         label: About page
         file: content/pages/about.json
@@ -158,6 +272,459 @@ collections:
               - { name: step5Desc, label: Step 5 — text, widget: text }
               - { name: step6Title, label: Step 6 — title, widget: string }
               - { name: step6Desc, label: Step 6 — text, widget: text }
+          - name: images
+            label: Images
+            widget: object
+            collapsed: true
+            fields:
+              - { name: photo1, label: "Gallery photo 1", widget: image, required: false }
+              - { name: photo2, label: "Gallery photo 2", widget: image, required: false }
+              - { name: photo3, label: "Gallery photo 3", widget: image, required: false }
+              - { name: photo4, label: "Gallery photo 4", widget: image, required: false }
+              - { name: photo5, label: "Gallery photo 5", widget: image, required: false }
+              - { name: photo6, label: "Gallery photo 6", widget: image, required: false }
+      - name: contact
+        label: "Contact page"
+        file: content/pages/contact.json
+        format: json
+        fields:
+          - name: contact
+            label: "Contact page text"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: eyebrow, label: "Eyebrow", widget: string }
+              - { name: title, label: "Title", widget: string }
+              - { name: subtitle, label: "Subtitle", widget: text }
+              - { name: namePlaceholder, label: "Name placeholder", widget: string }
+              - { name: emailPlaceholder, label: "Email placeholder", widget: string }
+              - { name: phonePlaceholder, label: "Phone placeholder", widget: string }
+              - { name: interestLabel, label: "Interest label", widget: string }
+              - { name: messagePlaceholder, label: "Message placeholder", widget: string }
+              - { name: submit, label: "Submit", widget: string }
+              - { name: interest1, label: "Interest 1", widget: string }
+              - { name: interest2, label: "Interest 2", widget: string }
+              - { name: interest3, label: "Interest 3", widget: string }
+              - { name: interestDesign, label: "Interest design", widget: string }
+              - { name: interest4, label: "Interest 4", widget: string }
+              - { name: interest5, label: "Interest 5", widget: string }
+              - { name: interest6, label: "Interest 6", widget: string }
+              - { name: showroomLabel, label: "Showroom label", widget: string }
+              - { name: address, label: "Address", widget: text }
+              - { name: phoneLabel, label: "Phone label", widget: string }
+              - { name: phoneVal, label: "Phone val", widget: string }
+              - { name: emailLabel, label: "Email label", widget: string }
+              - { name: emailVal, label: "Email val", widget: string }
+              - { name: hoursLabel, label: "Hours label", widget: string }
+              - { name: hoursVal, label: "Hours val", widget: string }
+              - { name: successMsg, label: "Success msg", widget: text }
+              - { name: errorMsg, label: "Error msg", widget: string }
+              - { name: pianosLabel, label: "Pianos label", widget: string }
+      - name: brands
+        label: "Brands page"
+        file: content/pages/brands.json
+        format: json
+        fields:
+          - name: brandsPage
+            label: "Brands page text"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: eyebrow, label: "Eyebrow", widget: string }
+              - { name: title, label: "Title", widget: string }
+              - { name: subtitle, label: "Subtitle", widget: text }
+              - { name: featuredTag, label: "Featured tag", widget: string }
+              - { name: feurichTitle, label: "Feurich title", widget: string }
+              - { name: feurichText, label: "Feurich text", widget: text }
+              - { name: feurichCta, label: "Feurich cta", widget: string }
+              - { name: feurichCta2, label: "Feurich cta 2", widget: string }
+              - { name: allEyebrow, label: "All eyebrow", widget: string }
+              - { name: allTitle, label: "All title", widget: string }
+              - { name: steinway, label: "Steinway", widget: text }
+              - { name: bosendorfer, label: "Bosendorfer", widget: text }
+              - { name: fazioli, label: "Fazioli", widget: text }
+              - { name: yamaha, label: "Yamaha", widget: text }
+              - { name: kawai, label: "Kawai", widget: text }
+              - { name: bluthner, label: "Bluthner", widget: text }
+              - { name: bechstein, label: "Bechstein", widget: text }
+              - { name: schimmel, label: "Schimmel", widget: text }
+              - { name: notSureTag, label: "Not sure tag", widget: string }
+              - { name: notSureName, label: "Not sure name", widget: string }
+              - { name: notSureText, label: "Not sure text", widget: text }
+              - { name: notSureCta, label: "Not sure cta", widget: string }
+              - { name: howEyebrow, label: "How eyebrow", widget: string }
+              - { name: howTitle, label: "How title", widget: string }
+              - { name: h1, label: "H 1", widget: string }
+              - { name: h2, label: "H 2", widget: string }
+              - { name: h3, label: "H 3", widget: string }
+              - { name: h4, label: "H 4", widget: string }
+              - { name: howCta, label: "How cta", widget: string }
+              - { name: ctaTitle, label: "Cta title", widget: string }
+          - name: images
+            label: Images
+            widget: object
+            collapsed: true
+            fields:
+              - { name: logo, label: "Feurich logo", widget: image, required: false }
+              - { name: feurich, label: "Feurich feature photo", widget: image, required: false }
+              - { name: compare, label: "Brand comparison photo", widget: image, required: false }
+      - name: used
+        label: "Used & pre-owned page"
+        file: content/pages/used.json
+        format: json
+        fields:
+          - name: vintagePage
+            label: "Used page text"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: eyebrow, label: "Eyebrow", widget: string }
+              - { name: title, label: "Title", widget: string }
+              - { name: subtitle, label: "Subtitle", widget: text }
+              - { name: cta, label: "Cta", widget: string }
+              - { name: whyEyebrow, label: "Why eyebrow", widget: string }
+              - { name: whyTitle, label: "Why title", widget: string }
+              - { name: whyText, label: "Why text", widget: text }
+              - { name: w1, label: "W 1", widget: string }
+              - { name: w2, label: "W 2", widget: string }
+              - { name: w3, label: "W 3", widget: string }
+              - { name: w4, label: "W 4", widget: string }
+              - { name: processEyebrow, label: "Process eyebrow", widget: string }
+              - { name: processTitle, label: "Process title", widget: string }
+              - { name: p1Title, label: "P 1 — title", widget: string }
+              - { name: p1Desc, label: "P 1 — desc", widget: text }
+              - { name: p2Title, label: "P 2 — title", widget: string }
+              - { name: p2Desc, label: "P 2 — desc", widget: text }
+              - { name: p3Title, label: "P 3 — title", widget: string }
+              - { name: p3Desc, label: "P 3 — desc", widget: text }
+              - { name: p4Title, label: "P 4 — title", widget: string }
+              - { name: p4Desc, label: "P 4 — desc", widget: text }
+              - { name: bespokeEyebrow, label: "Bespoke eyebrow", widget: string }
+              - { name: bespokeTitle, label: "Bespoke title", widget: string }
+              - { name: bespokeText, label: "Bespoke text", widget: text }
+              - { name: bespokeCta, label: "Bespoke cta", widget: string }
+              - { name: ctaTitle, label: "Cta title", widget: string }
+              - { name: ctaSubtitle, label: "Cta subtitle", widget: text }
+          - name: images
+            label: Images
+            widget: object
+            collapsed: true
+            fields:
+              - { name: image, label: "Why used — photo", widget: image, required: false }
+      - name: gallery
+        label: "Gallery page"
+        file: content/pages/gallery.json
+        format: json
+        fields:
+          - name: gallery
+            label: "Gallery text"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: eyebrow, label: "Eyebrow", widget: string }
+              - { name: title, label: "Title", widget: string }
+              - { name: subtitle, label: "Subtitle", widget: text }
+          - name: images
+            label: Images
+            widget: object
+            collapsed: true
+            fields:
+              - { name: photo1, label: "Photo 1", widget: image, required: false }
+              - { name: photo2, label: "Photo 2", widget: image, required: false }
+              - { name: photo3, label: "Photo 3", widget: image, required: false }
+              - { name: photo4, label: "Photo 4", widget: image, required: false }
+              - { name: photo5, label: "Photo 5", widget: image, required: false }
+              - { name: photo6, label: "Photo 6", widget: image, required: false }
+              - { name: photo7, label: "Photo 7", widget: image, required: false }
+              - { name: photo8, label: "Photo 8", widget: image, required: false }
+              - { name: photo9, label: "Photo 9", widget: image, required: false }
+              - { name: photo10, label: "Photo 10", widget: image, required: false }
+              - { name: photo11, label: "Photo 11", widget: image, required: false }
+      - name: luxury
+        label: "Collection — Luxury"
+        file: content/pages/luxury.json
+        format: json
+        fields:
+          - name: luxury
+            label: "Luxury page text"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: heroEyebrow, label: "Hero eyebrow", widget: string }
+              - { name: heroTitle, label: "Hero title", widget: string }
+              - { name: heroSubtitle, label: "Hero subtitle", widget: string }
+              - { name: intro, label: "Intro", widget: text }
+              - { name: crystalTitle, label: "Crystal title", widget: string }
+              - { name: crystalText, label: "Crystal text", widget: text }
+              - { name: goldTitle, label: "Gold title", widget: string }
+              - { name: goldText, label: "Gold text", widget: text }
+              - { name: lacquerTitle, label: "Lacquer title", widget: string }
+              - { name: lacquerText, label: "Lacquer text", widget: text }
+              - { name: inquiryCta, label: "Inquiry cta", widget: string }
+          - name: images
+            label: Images
+            widget: object
+            collapsed: true
+            fields:
+              - { name: photo1, label: "Feature photo 1", widget: image, required: false }
+              - { name: photo2, label: "Feature photo 2", widget: image, required: false }
+              - { name: photo3, label: "Feature photo 3", widget: image, required: false }
+      - name: self_playing
+        label: "Collection — Self-playing"
+        file: content/pages/self-playing.json
+        format: json
+        fields:
+          - name: selfPlayingPage
+            label: "Self-playing page text"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: heroEyebrow, label: "Hero eyebrow", widget: string }
+              - { name: heroTitle, label: "Hero title", widget: string }
+              - { name: heroSubtitle, label: "Hero subtitle", widget: string }
+              - { name: intro, label: "Intro", widget: text }
+              - { name: howTitle, label: "How title", widget: string }
+              - { name: howText, label: "How text", widget: text }
+              - { name: libraryTitle, label: "Library title", widget: string }
+              - { name: libraryText, label: "Library text", widget: text }
+              - { name: whyTitle, label: "Why title", widget: string }
+              - { name: whyText, label: "Why text", widget: text }
+              - { name: galleryTitle, label: "Gallery title", widget: string }
+              - { name: galleryCap1, label: "Gallery cap 1", widget: string }
+              - { name: galleryCap2, label: "Gallery cap 2", widget: string }
+              - { name: galleryCap3, label: "Gallery cap 3", widget: string }
+          - name: images
+            label: Images
+            widget: object
+            collapsed: true
+            fields:
+              - { name: photo1, label: "Photo 1", widget: image, required: false }
+              - { name: photo2, label: "Photo 2", widget: image, required: false }
+              - { name: photo3, label: "Photo 3", widget: image, required: false }
+      - name: grand_uprights
+        label: "Collection — Grands & uprights"
+        file: content/pages/grand-uprights.json
+        format: json
+        fields:
+          - name: grandUprightsPage
+            label: "Grands & uprights page text"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: heroEyebrow, label: "Hero eyebrow", widget: string }
+              - { name: heroTitle, label: "Hero title", widget: string }
+              - { name: heroSubtitle, label: "Hero subtitle", widget: text }
+              - { name: uprightTitle, label: "Upright title", widget: string }
+              - { name: uprightText, label: "Upright text", widget: text }
+              - { name: grandTitle, label: "Grand title", widget: string }
+              - { name: grandText, label: "Grand text", widget: text }
+              - { name: v116Name, label: "V 116 — name", widget: string }
+              - { name: v116Spec, label: "V 116 — spec", widget: string }
+              - { name: v123Name, label: "V 123 — name", widget: string }
+              - { name: v123Spec, label: "V 123 — spec", widget: string }
+              - { name: v125Name, label: "V 125 — name", widget: string }
+              - { name: v125Spec, label: "V 125 — spec", widget: string }
+              - { name: g162Name, label: "G 162 — name", widget: string }
+              - { name: g162Spec, label: "G 162 — spec", widget: string }
+              - { name: g179Name, label: "G 179 — name", widget: string }
+              - { name: g179Spec, label: "G 179 — spec", widget: string }
+              - { name: g218Name, label: "G 218 — name", widget: string }
+              - { name: g218Spec, label: "G 218 — spec", widget: string }
+          - name: images
+            label: Images
+            widget: object
+            collapsed: true
+            fields:
+              - { name: photo1, label: "Photo 1", widget: image, required: false }
+              - { name: photo2, label: "Photo 2", widget: image, required: false }
+              - { name: photo3, label: "Photo 3", widget: image, required: false }
+              - { name: photo4, label: "Photo 4", widget: image, required: false }
+              - { name: photo5, label: "Photo 5", widget: image, required: false }
+              - { name: photo6, label: "Photo 6", widget: image, required: false }
+      - name: custom_design
+        label: "Collection — Custom design"
+        file: content/pages/custom-design.json
+        format: json
+        fields:
+          - name: customPage
+            label: "Custom design page text"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: heroEyebrow, label: "Hero eyebrow", widget: string }
+              - { name: heroTitle, label: "Hero title", widget: string }
+              - { name: heroSubtitle, label: "Hero subtitle", widget: string }
+              - { name: intro, label: "Intro", widget: text }
+              - { name: whatTitle, label: "What title", widget: string }
+              - { name: what1, label: "What 1", widget: string }
+              - { name: what2, label: "What 2", widget: string }
+              - { name: what3, label: "What 3", widget: string }
+              - { name: what4, label: "What 4", widget: string }
+              - { name: what5, label: "What 5", widget: string }
+              - { name: what6, label: "What 6", widget: text }
+              - { name: processTitle, label: "Process title", widget: string }
+              - { name: processCta, label: "Process cta", widget: string }
+              - { name: galleryTitle, label: "Gallery title", widget: string }
+              - { name: galleryCap1, label: "Gallery cap 1", widget: string }
+              - { name: galleryCap2, label: "Gallery cap 2", widget: string }
+              - { name: galleryCap3, label: "Gallery cap 3", widget: string }
+          - name: images
+            label: Images
+            widget: object
+            collapsed: true
+            fields:
+              - { name: photo1, label: "Design photo 1", widget: image, required: false }
+              - { name: photo2, label: "Design photo 2", widget: image, required: false }
+              - { name: photo3, label: "Design photo 3", widget: image, required: false }
+              - { name: photo4, label: "Design photo 4", widget: image, required: false }
+              - { name: photo5, label: "Design photo 5", widget: image, required: false }
+              - { name: photo6, label: "Design photo 6", widget: image, required: false }
+      - name: finder
+        label: "Piano Finder wording"
+        file: content/pages/finder.json
+        format: json
+        fields:
+          - name: finder
+            label: "Finder questions"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: eyebrow, label: "Eyebrow", widget: string }
+              - { name: title, label: "Title", widget: string }
+              - { name: q1, label: "Q 1", widget: string }
+              - { name: q1hint, label: "Q1hint", widget: string }
+              - { name: q1a, label: "Q1a", widget: string }
+              - { name: q1as, label: "Q1as", widget: string }
+              - { name: q1b, label: "Q1b", widget: string }
+              - { name: q1bs, label: "Q1bs", widget: string }
+              - { name: q1c, label: "Q1c", widget: string }
+              - { name: q1cs, label: "Q1cs", widget: string }
+              - { name: q1d, label: "Q1d", widget: string }
+              - { name: q1ds, label: "Q1ds", widget: string }
+              - { name: q2, label: "Q 2", widget: string }
+              - { name: q2hint, label: "Q2hint", widget: string }
+              - { name: q2a, label: "Q2a", widget: string }
+              - { name: q2as, label: "Q2as", widget: string }
+              - { name: q2b, label: "Q2b", widget: string }
+              - { name: q2bs, label: "Q2bs", widget: string }
+              - { name: q2c, label: "Q2c", widget: string }
+              - { name: q2cs, label: "Q2cs", widget: string }
+              - { name: q2d, label: "Q2d", widget: string }
+              - { name: q2ds, label: "Q2ds", widget: string }
+              - { name: q3, label: "Q 3", widget: string }
+              - { name: q3hint, label: "Q3hint", widget: string }
+              - { name: q3a, label: "Q3a", widget: string }
+              - { name: q3as, label: "Q3as", widget: string }
+              - { name: q3b, label: "Q3b", widget: string }
+              - { name: q3bs, label: "Q3bs", widget: string }
+              - { name: q3c, label: "Q3c", widget: string }
+              - { name: q3cs, label: "Q3cs", widget: string }
+              - { name: q3d, label: "Q3d", widget: string }
+              - { name: q3ds, label: "Q3ds", widget: string }
+              - { name: q4, label: "Q 4", widget: string }
+              - { name: q4hint, label: "Q4hint", widget: string }
+              - { name: q4a, label: "Q4a", widget: string }
+              - { name: q4as, label: "Q4as", widget: string }
+              - { name: q4b, label: "Q4b", widget: string }
+              - { name: q4bs, label: "Q4bs", widget: string }
+              - { name: q4c, label: "Q4c", widget: string }
+              - { name: q4cs, label: "Q4cs", widget: string }
+              - { name: q4d, label: "Q4d", widget: string }
+              - { name: q4ds, label: "Q4ds", widget: string }
+              - { name: resultEyebrow, label: "Result eyebrow", widget: string }
+              - { name: resultCta, label: "Result cta", widget: string }
+              - { name: resultTitle, label: "Result title", widget: string }
+              - { name: baseText, label: "Base text", widget: text }
+              - { name: chooseHint, label: "Choose hint", widget: text }
+              - { name: pick, label: "Pick", widget: string }
+              - { name: and, label: "And", widget: string }
+              - { name: chosenPrefixOne, label: "Chosen prefix one", widget: string }
+              - { name: chosenPrefixMany, label: "Chosen prefix many", widget: string }
+              - { name: chosenThanks, label: "Chosen thanks", widget: text }
+              - { name: chosenCtaOne, label: "Chosen cta one", widget: string }
+              - { name: chosenCtaMany, label: "Chosen cta many", widget: string }
+              - { name: usedNote, label: "Used note", widget: text }
+              - { name: noneNote, label: "None note", widget: text }
+              - { name: libEmpty, label: "Lib empty", widget: string }
+              - { name: back, label: "Back", widget: string }
+              - { name: restart, label: "Restart", widget: string }
+          - name: finderResult
+            label: "Finder results"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: upright, label: "Upright", widget: string }
+              - { name: grand, label: "Grand", widget: string }
+              - { name: grandOrTall, label: "Grand or tall", widget: string }
+              - { name: midUpright, label: "Mid upright", widget: string }
+              - { name: baseText, label: "Base text", widget: text }
+              - { name: vintageAdd, label: "Vintage add", widget: text }
+              - { name: selfAdd, label: "Self add", widget: text }
+              - { name: valueAdd, label: "Value add", widget: text }
+              - { name: longevityAdd, label: "Longevity add", widget: string }
+              - { name: tagVintage, label: "Tag vintage", widget: string }
+      - name: site
+        label: "Menu, footer & contact banner (all pages)"
+        file: content/pages/site.json
+        format: json
+        fields:
+          - name: nav
+            label: "Menu"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: home, label: "Home", widget: string }
+              - { name: findPiano, label: "Find piano", widget: string }
+              - { name: design, label: "Design", widget: string }
+              - { name: used, label: "Used", widget: string }
+              - { name: news, label: "News", widget: string }
+              - { name: insights, label: "Insights", widget: string }
+              - { name: pianoOfWeek, label: "Piano of week", widget: string }
+              - { name: newInteresting, label: "New interesting", widget: string }
+              - { name: videos, label: "Videos", widget: string }
+              - { name: brands, label: "Brands", widget: string }
+              - { name: allBrands, label: "All brands", widget: string }
+              - { name: feurich, label: "Feurich", widget: string }
+              - { name: collection, label: "Collection", widget: string }
+              - { name: luxury, label: "Luxury", widget: string }
+              - { name: selfPlaying, label: "Self playing", widget: string }
+              - { name: grandUprights, label: "Grand uprights", widget: string }
+              - { name: customDesign, label: "Custom design", widget: string }
+              - { name: vintage, label: "Vintage", widget: string }
+              - { name: services, label: "Services", widget: string }
+              - { name: process, label: "Process", widget: string }
+              - { name: journey, label: "Journey", widget: string }
+              - { name: about, label: "About", widget: string }
+              - { name: contact, label: "Contact", widget: string }
+              - { name: gallery, label: "Gallery", widget: string }
+              - { name: bookConsultation, label: "Book consultation", widget: string }
+          - name: contactCta
+            label: "Contact banner (bottom of pages)"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: eyebrow, label: "Eyebrow", widget: string }
+              - { name: title, label: "Title", widget: string }
+              - { name: subtitle, label: "Subtitle", widget: text }
+              - { name: cta, label: "Cta", widget: string }
+          - name: footer
+            label: "Footer"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: sub, label: "Sub", widget: string }
+              - { name: tagline, label: "Tagline", widget: text }
+              - { name: explore, label: "Explore", widget: string }
+              - { name: consultation, label: "Consultation", widget: string }
+              - { name: valuation, label: "Valuation", widget: string }
+              - { name: care, label: "Care", widget: string }
+              - { name: contactTitle, label: "Contact title", widget: string }
+              - { name: region, label: "Region", widget: string }
+              - { name: copyright, label: "Copyright", widget: string }
+              - { name: privacy, label: "Privacy", widget: string }
+              - { name: terms, label: "Terms", widget: string }
+              - { name: feurich, label: "Feurich", widget: string }
+              - { name: disclaimer, label: "Disclaimer", widget: text }
 
   # ── Pianos (the library the finder and sections draw from) ──
   - name: pianos
@@ -178,8 +745,8 @@ collections:
       - { name: year, label: Year of build, widget: number, value_type: int, required: false }
       - { name: type, label: Type, widget: select, options: [Grand, 'Baby Grand', Upright, Digital, Other] }
       - { name: category, label: Category, widget: select, options: [New, Used, Restored, 'Pre-owned'] }
-      - { name: model, label: Model name (e.g. 123 Vienna), widget: string, required: false }
-      - { name: size, label: Size (e.g. 123 cm), widget: string, required: false }
+      - { name: model, label: Model name (e.g. 123 Vienna), widget: string }
+      - { name: size, label: Size (e.g. 123 cm), widget: string }
       - { name: self_playing, label: Self-playing capable, widget: boolean, default: false }
       - name: fits_who
         label: 'Finder — suits which players'
@@ -201,14 +768,14 @@ collections:
         options: [value, tone, design, longevity]
       - { name: section, label: Section, widget: hidden, default: instruments }
       - { name: featured, label: Feature as Piano of the Week candidate, widget: boolean, default: false }
-      - { name: price, label: Price / guide (e.g. €38,000 or On request), widget: string, required: false }
+      - { name: price, label: Price / guide (e.g. €38,000 or On request), widget: string }
       - { name: image, label: Main photo, widget: image, required: false }
       - name: gallery
         label: More photos
         widget: list
         required: false
         field: { name: photo, label: Photo, widget: image }
-      - { name: excerpt, label: Short summary (shown on cards), widget: text, required: false }
+      - { name: excerpt, label: Short summary (shown on cards), widget: text }
       - { name: date, label: Date, widget: datetime, required: false }
       - { name: body, label: Full description, widget: markdown, required: false }
 
@@ -226,7 +793,7 @@ collections:
       - { name: date, label: Date, widget: datetime, required: false }
       - { name: author, label: Author, widget: string, default: Stuart Conaghan, required: false }
       - { name: image, label: Header image, widget: image, required: false }
-      - { name: excerpt, label: Excerpt (shown on cards), widget: text, required: false }
+      - { name: excerpt, label: Excerpt (shown on cards), widget: text }
       - { name: body, label: Body, widget: markdown, required: false }
 
   # ── Videos (Cloudinary upload, or YouTube / Vimeo link) ──
@@ -240,13 +807,13 @@ collections:
     slug: '{{slug}}'
     fields:
       - { name: title, label: Title, widget: string }
-      - { name: youtube, label: 'YouTube link (best for long videos — paste the full URL)', widget: string, required: false }
-      - { name: vimeo, label: '…or a Vimeo link (paste the full URL)', widget: string, required: false }
+      - { name: youtube, label: 'YouTube link (best for long videos — paste the full URL)', widget: string }
+      - { name: vimeo, label: '…or a Vimeo link (paste the full URL)', widget: string }
       - { name: video_file, label: '…or pick / upload a video (Cloudinary — no size limit)', widget: file, required: false }
-      - { name: video_url, label: '…or paste a direct link to a video file', widget: string, required: false }
+      - { name: video_url, label: '…or paste a direct link to a video file', widget: string }
       - { name: poster, label: Thumbnail image (optional, shown before play), widget: image, required: false }
       - { name: date, label: Date, widget: datetime, required: false }
-      - { name: description, label: Description, widget: text, required: false }
+      - { name: description, label: Description, widget: text }
 
   # ── Social links + Piano of the Week ──
   - name: settings
@@ -257,8 +824,8 @@ collections:
         file: content/settings/social.json
         format: json
         fields:
-          - { name: instagram_url, label: Instagram URL, widget: string, required: false }
-          - { name: tiktok_url, label: TikTok URL, widget: string, required: false }
-          - { name: youtube_url, label: YouTube URL, widget: string, required: false }
-          - { name: facebook_url, label: Facebook URL, widget: string, required: false }
-          - { name: piano_of_the_week, label: 'Piano of the Week — file name without .md (e.g. feurich-vienna-123)', widget: string, required: false }
+          - { name: instagram_url, label: Instagram URL, widget: string }
+          - { name: tiktok_url, label: TikTok URL, widget: string }
+          - { name: youtube_url, label: YouTube URL, widget: string }
+          - { name: facebook_url, label: Facebook URL, widget: string }
+          - { name: piano_of_the_week, label: 'Piano of the Week — file name without .md (e.g. feurich-vienna-123)', widget: string }

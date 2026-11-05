@@ -47,9 +47,9 @@ deprecated).
 
 ---
 
-## 4. Turn on automatic translations (Home / About / Services text)
+## 4. Turn on automatic translations (page text)
 
-When the English text on those pages is edited, a GitHub Action
+When the English text on any page is edited in **Pages**, a GitHub Action
 (`.github/workflows/translate.yml`) uses Claude Code to translate the changed
 fields into Dutch, German, Spanish, Russian and Ukrainian and commits them.
 It runs on your Claude subscription, so there is no separate API bill.
@@ -69,7 +69,7 @@ edit (or **Run workflow**) tries again.
 ## Done — how to use it
 
 1. Go to **https://piano-compass.netlify.app/admin/** and **Log in with GitHub**.
-2. Edit **Home / About / Services**, **Pianos**, **Insights**, **Videos**,
+2. Edit **Pages**, **Pianos**, **Insights**, **Videos**,
    or **Settings**.
 3. For any picture or video, click the field's **Choose** button → the
    **Cloudinary library** opens → pick an existing file or drag a new one in.

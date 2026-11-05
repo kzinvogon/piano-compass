@@ -19,7 +19,12 @@ pages, the pianos, articles, videos, and more — all from one simple editor.
 ## 2. Making a change
 
 1. On the left, choose what to edit:
-   - **Home page**, **About page**, **Services page** — the wording and main images on those pages
+   - **Pages** — the wording and photos on every page: Home, About,
+     Services, Contact, Brands, Used & pre-owned, Gallery and the four
+     Collection pages, plus the **Piano Finder** wording and the **menu,
+     footer & contact banner** shared by all pages. Each page's text is
+     grouped into sections (click a section to open it) and its photos are
+     under **Images**.
    - **Pianos** — the instruments the Finder recommends (and that show under *New & Interesting* and *The Feurich range*)
    - **Insights & Advice** — articles
    - **Videos** — YouTube/Vimeo links or uploaded clips
@@ -27,9 +32,8 @@ pages, the pianos, articles, videos, and more — all from one simple editor.
 2. Change the text in the boxes, or click an image field to choose a photo.
 3. Click **Publish → Publish now** (top right).
 4. Wait **1–2 minutes**, then refresh the live site to see it.
-5. Changed wording on the **Home**, **About** and **Services** pages is
-   translated into the other languages for you. Those versions update a few
-   minutes after the English.
+5. Changed wording on any page is translated into the other languages for
+   you. Those versions update a few minutes after the English.
 
 > **Important:** always click **Publish**. *Save* on its own only keeps a
 > draft — it won't appear on the website.
@@ -109,7 +113,6 @@ to **replace it in place** so its name stays the same:
 
 | This photo on the site | Is this image in Cloudinary |
 |---|---|
-| Homepage big photo (hero) | `Feurich_162_-_classic_piano_in_villa_setting` |
 | Feurich 115 Premiere | `Mod._115_-_Premiere_10black_chrome_web` |
 | Feurich 122 Universal | `Mod._122_-_Universal_18walnut_satin_web` |
 | Feurich 123 Vienna | `FEURICH_123_-_Vienna_2_walnut_satin` |
@@ -118,6 +121,9 @@ to **replace it in place** so its name stays the same:
 | Feurich 162 Dynamic I | `Mod._162_-_Dynamic_I_18walnut_satin_web` |
 | Feurich 179 Dynamic II | `Mod._179_-_Dynamic_II_18_walnut_satin` |
 | Feurich 218 Concert I | `Mod._218_-_Concert_I_10CH_black_chrome` |
+
+The homepage big photo (hero) is chosen in **Pages → Home page → Images**,
+not by a fixed slot.
 
 (The piano photos also feed the **Finder**, the **Brands** page and **New &
 Interesting**, so replacing one updates it everywhere.)

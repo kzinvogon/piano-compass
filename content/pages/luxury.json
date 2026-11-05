@@ -1,0 +1,20 @@
+{
+  "luxury": {
+    "heroEyebrow": "Feurich · Luxury Editions",
+    "heroTitle": "Beyond the Instrument",
+    "heroSubtitle": "Where the piano becomes art",
+    "intro": "For those for whom only the extraordinary will suffice, Feurich's Luxury Edition commissions sit at the intersection of musical engineering and haute artisanship. As Feurich's featured advisor, we guide you through every option.",
+    "crystalTitle": "Crystal Inlay",
+    "crystalText": "Swarovski and bespoke crystal elements are hand-inlaid into the cabinet surfaces by master decorative artists, creating instruments that shimmer under light and captivate before a single note is played. Available on any Feurich model, in any crystal specification.",
+    "goldTitle": "Gold Leaf",
+    "goldText": "Traditional 24-karat gold leaf application, executed by specialist gilders trained in the finest European decorative traditions. Panels, legs, music desks and hardware can all be gilded — fully or partially — to create an instrument of sovereign beauty.",
+    "lacquerTitle": "Bespoke Lacquer & RAL",
+    "lacquerText": "Every colour in the RAL system, applied in hand-polished high-gloss or satin finishes. From purest white to deepest midnight, from vivid contemporary colour to restrained Scandinavian palette — your piano can match any interior perfectly.",
+    "inquiryCta": "Commission a Luxury Edition"
+  },
+  "images": {
+    "photo1": "images/crystal-inlay.jpeg",
+    "photo2": "images/gold-leaf.jpeg",
+    "photo3": "images/bespoke-lacquer.jpeg"
+  }
+}

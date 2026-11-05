@@ -1,0 +1,34 @@
+{
+  "vintagePage": {
+    "eyebrow": "Used & pre-owned",
+    "title": "Buy used with certainty, not hope",
+    "subtitle": "A well-chosen used or pre-owned piano can offer craftsmanship and value a new instrument rarely matches. But with older pianos, condition is everything — and it is easy to fall in love with a beautiful case hiding an expensive problem. We source, appraise and independently verify, so you commit with confidence.",
+    "cta": "Start a used search",
+    "whyEyebrow": "Why used",
+    "whyTitle": "Character, craftsmanship and value",
+    "whyText": "Many of the finest pianos ever built are decades old. Golden-age instruments from the great European and American makers can be acquired for a fraction of their modern equivalents — and, properly restored, can outlast and outplay them. The key is knowing which instruments are worth the investment and which are not.",
+    "w1": "Exceptional value versus new instruments",
+    "w2": "Materials and craftsmanship hard to find today",
+    "w3": "A distinctive voice with genuine character",
+    "w4": "Well-chosen examples hold or grow in value",
+    "processEyebrow": "Our verification",
+    "processTitle": "Every used piano, independently checked",
+    "p1Title": "Source & date",
+    "p1Desc": "We locate candidates to your brief and confirm age and origin from serial numbers and records.",
+    "p2Title": "Inspect",
+    "p2Desc": "An independent technician examines soundboard, bridges, frame, pinblock, action and structure.",
+    "p3Title": "Cost & value",
+    "p3Desc": "We forecast any restoration cost and the fair market value — before and after work.",
+    "p4Title": "Acquire & restore",
+    "p4Desc": "We negotiate, arrange transport, and oversee any restoration to protect quality and value.",
+    "bespokeEyebrow": "Bespoke search",
+    "bespokeTitle": "Looking for a specific maker or era?",
+    "bespokeText": "Perhaps a pre-war Steinway, a Blüthner grand, a particular Bösendorfer, or a restored upright to inherit for generations. Tell us what you're searching for and we'll conduct a discreet, patient hunt across trade and private sources — verifying condition before you ever commit.",
+    "bespokeCta": "Commission a used search",
+    "ctaTitle": "Find a used piano worth owning",
+    "ctaSubtitle": "Book a consultation and we'll search, verify and value on your behalf — impartially."
+  },
+  "images": {
+    "image": "images/custom-grand-mosaic.jpeg"
+  }
+}
