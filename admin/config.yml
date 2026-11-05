@@ -405,6 +405,9 @@ collections:
               - { name: bespokeCta, label: "Bespoke cta", widget: string }
               - { name: ctaTitle, label: "Cta title", widget: string }
               - { name: ctaSubtitle, label: "Cta subtitle", widget: text }
+              - { name: listEyebrow, label: "Used pianos list — eyebrow", widget: string }
+              - { name: listTitle, label: "Used pianos list — title", widget: string }
+              - { name: listLead, label: "Used pianos list — intro", widget: text }
           - name: images
             label: Images
             widget: object

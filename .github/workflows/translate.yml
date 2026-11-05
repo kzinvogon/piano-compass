@@ -17,7 +17,6 @@ on:
 
 permissions:
   contents: write
-  id-token: write
 
 concurrency:
   group: translate
@@ -44,12 +43,11 @@ jobs:
 
       - name: Translate with Claude Code
         if: steps.plan.outputs.needed == 'true'
-        uses: anthropics/claude-code-action@v1
-        with:
-          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          claude_args: --allowedTools Read,Write --max-turns 30
-          prompt: |
+        # The Claude Code CLI rather than claude-code-action, which does not
+        # accept push events.
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          PROMPT: |
             You are translating website copy for Piano Compass, an independent
             piano advisory run by concert pianist Stuart Conaghan.
 
@@ -78,6 +76,9 @@ jobs:
               literal word-for-word rendering.
 
             Do not create or change any other file.
+        run: |
+          npm install -g @anthropic-ai/claude-code
+          claude -p "$PROMPT" --allowedTools Read,Write --max-turns 30
 
       - name: Apply translations
         if: steps.plan.outputs.needed == 'true'
