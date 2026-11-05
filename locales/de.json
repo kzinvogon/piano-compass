@@ -47,14 +47,20 @@
     "t1Title": "Grundsätzlich unparteiisch",
     "t2Title": "Akkreditierte Kompetenz",
     "t3Title": "Eine verlässliche Quelle",
-    "t4Title": "Für den ganzen Weg"
+    "t4Title": "Für den ganzen Weg",
+    "t1Desc": "Wir arbeiten für Sie, nicht für einen Showroom. Keine Markenquote, kein Druck – nur die beste Wahl für Ihr Spiel, Ihre Räumlichkeiten und Ihr Budget.",
+    "t2Desc": "Beratung auf Grundlage professioneller Standards, jahrzehntelanger praktischer Erfahrung und eines unabhängigen Netzwerks von Technikern.",
+    "t3Desc": "Klare Antworten ohne Fachjargon zu Marken, Modellen, Wert und Zustand – damit Sie mit Zuversicht entscheiden können.",
+    "t4Desc": "Vom Erstkauf bis zu Stimmung, Restaurierung, Bewertung und Wiederverkauf – ein vertrauenswürdiger Partner fürs Leben."
   },
   "intro": {
     "eyebrow": "Was Piano Compass ist",
     "title": "Ein akkreditiertes Zuhause für alle auf dem Weg zum eigenen Klavier.",
     "stat1Label": "Jahre Beratung",
     "stat2Label": "Betreute Marken",
-    "stat3Label": "Marken-Verkaufsziele"
+    "stat3Label": "Marken-Verkaufsziele",
+    "lead": "Der Kauf eines Klaviers – oder das Leben mit ihm – sollte nicht bedeuten, sich allein durch Verkaufsdruck und widersprüchliche Meinungen zu kämpfen.",
+    "text": "Piano Compass ist eine unabhängige Beratung, die an Ihrer Seite steht – nicht hinter einem Verkaufstresen. Wir übersetzen einen komplexen Markt in klare Orientierung, helfen Ihnen, die richtigen Instrumente auszuwählen und zur Probe zu spielen, organisieren eine unabhängige Begutachtung und begleiten Sie, solange Sie das Klavier besitzen. Wir beraten zu Feurich, zu allen führenden Herstellern und zu sorgfältig geprüften gebrauchten Instrumenten."
   },
   "audience": {
     "eyebrow": "Wem wir helfen",
@@ -142,7 +148,29 @@
     "expertEyebrow": "Ihr Berater",
     "expertRole": "Konzertpianist & Gründer",
     "timelineTitle": "Die Geschichte von Piano Compass",
-    "cta": "Beratung buchen"
+    "cta": "Beratung buchen",
+    "lead": "Piano Compass hat sich zum Ziel gesetzt, Klavierkäufern und -besitzern zu bieten, was der Markt nur selten bietet: wirklich unparteiische, fachkundige Beratung ohne eigenes Interesse an Ihrer Entscheidung.",
+    "p1": "Die meisten Ratschläge zum Klavier kommen von jemandem, der ein Klavier verkaufen möchte. Piano Compass wurde auf einem anderen Prinzip gegründet: Wer Ihre Entscheidung begleitet, sollte weder Provision noch Markenquote noch einen Showroom zu füllen haben. Unser einziger Erfolgsmaßstab ist, dass Sie am Ende das Instrument besitzen, das zu Ihnen passt – und dass es über Jahre hinweg gut gepflegt wird.",
+    "p2": "Wir beraten zu allen führenden Herstellern – Feurich, unserem Partner im Fokus, ebenso wie Steinway, Bösendorfer, Fazioli, Yamaha, Kawai, Blüthner, Bechstein und weiteren – sowie zu geprüften gebrauchten Instrumenten. Wir treffen eine Vorauswahl, organisieren Probetermine, beauftragen unabhängige Begutachtungen, verhandeln fair und stehen Ihnen bei Stimmung, Restaurierung, Bewertung und eines Tages auch beim Wiederverkauf zur Seite.",
+    "p3": "Von der Iberischen Halbinsel aus betreuen wir Kunden in Spanien und Portugal – und per Fernberatung weltweit. Wir verbinden jahrzehntelange Erfahrung am Instrument mit einem unabhängigen Netzwerk akkreditierter Techniker und Restauratoren.",
+    "expertName": "Stuart Conaghan",
+    "expertBio": "Als Konzertpianist und unabhängiger Berater hat Stuart sein Leben im Umfeld edler Klaviere verbracht – er hat auf ihnen gespielt, sie ausgewählt und gepflegt. Er gründete Piano Compass, um der vertrauenswürdige Ratgeber zu sein, den er sich selbst gewünscht hätte: jemand, auf dessen Rat man sich gerade deshalb verlassen kann, weil er Ihnen nichts verkaufen will.",
+    "v1Title": "Unparteilichkeit",
+    "v1Desc": "Keine Provisionen, keine Markenbindung. Unsere Empfehlung richtet sich ausschließlich danach, was am besten zu Ihnen passt.",
+    "v2Title": "Aufrichtigkeit",
+    "v2Desc": "Klare, ehrliche Antworten – auch dann, wenn die ehrliche Antwort lautet: warten, weniger ausgeben oder Abstand nehmen.",
+    "v3Title": "Fachkompetenz",
+    "v3Desc": "Jahrzehntelange Spielerfahrung und ein Netzwerk akkreditierter Techniker stehen hinter jeder Empfehlung.",
+    "v4Title": "Partnerschaft",
+    "v4Desc": "Wir begleiten Sie auf dem ganzen Weg, nicht nur bis zum Verkauf – den es bei uns nie gab.",
+    "t1Year": "Das Problem",
+    "t1Text": "Käufer und Besitzer erhielten immer wieder widersprüchliche, verkaufsgetriebene Ratschläge – und bezahlten dafür mit schlechten Entscheidungen.",
+    "t2Year": "Die Idee",
+    "t2Text": "Eine Beratung, die ausschließlich für den Kunden arbeitet: unparteiische Orientierung über alle Marken hinweg, neu und gebraucht.",
+    "t3Year": "Die Partnerschaft",
+    "t3Text": "Eine Partnerschaft mit Feurich im Fokus bringt Wiener Handwerkskunst in das Angebot – ohne Exklusivität.",
+    "t4Year": "Heute",
+    "t4Text": "Piano Compass begleitet Pianisten, Familien und Institutionen auf der Iberischen Halbinsel und darüber hinaus – auf dem gesamten Weg des Klavierbesitzes."
   },
   "services": {
     "eyebrow": "Service für Besitzer",
@@ -153,7 +181,13 @@
     "s3Title": "Bewertung & Gutachten",
     "s4Title": "Stimmung & Regulierung",
     "s5Title": "Restaurierungsaufsicht",
-    "s6Title": "Umzug & Wiederverkauf"
+    "s6Title": "Umzug & Wiederverkauf",
+    "s1Desc": "Persönliche Beratung, bei Ihnen zu Hause oder per Video, um das richtige Instrument zu finden – ganz ohne Markeninteressen.",
+    "s2Desc": "Wir finden das passende Klavier, neu oder gebraucht, und verhandeln in Ihrem Namen einen fairen, fundierten Preis.",
+    "s3Desc": "Unabhängige schriftliche Gutachten für Kauf, Versicherung, Erbschaft oder Verkauf.",
+    "s4Desc": "Zugang zu einem geprüften Netzwerk akkreditierter Klavierstimmer und Techniker auf der gesamten Iberischen Halbinsel.",
+    "s5Desc": "Wir legen die Restaurierung fest und überwachen sie, damit Qualität und langfristiger Wert erhalten bleiben.",
+    "s6Desc": "Spezialtransport, Beratung zur Versicherung und Unterstützung beim fairen Verkauf oder Umtausch gegen ein höherwertiges Instrument."
   },
   "journey": {
     "eyebrow": "Der beratende Prozess",
@@ -164,7 +198,13 @@
     "step3Title": "Anspielen",
     "step4Title": "Unabhängige Prüfung",
     "step5Title": "Erwerb & Lieferung",
-    "step6Title": "Lebenslange Pflege"
+    "step6Title": "Lebenslange Pflege",
+    "step1Desc": "Ein entspanntes Gespräch über Ihr Spiel, Ihre Räumlichkeiten, Ihren Geschmack und Ihr Budget. Ohne Druck, ohne Fachjargon.",
+    "step2Desc": "Eine kuratierte Auswahl über alle Marken hinweg, neu und gebraucht – mit klar erläuterten Vor- und Nachteilen.",
+    "step3Desc": "Wir organisieren Spieltermine, damit Sie die Instrumente unter gleichen Bedingungen vergleichen können.",
+    "step4Desc": "Bei gebrauchten Instrumenten prüft ein unabhängiger Techniker den Zustand, bevor Sie sich festlegen.",
+    "step5Desc": "Wir verhandeln einen fairen Preis und organisieren fachgerechte Lieferung und Aufstellung.",
+    "step6Desc": "Fortlaufende Stimmung, Regulierung und Beratung, solange Sie das Klavier besitzen."
   },
   "contact": {
     "eyebrow": "Kontakt aufnehmen",
@@ -205,5 +245,7 @@
     "feurich": "Feurich",
     "disclaimer": "Piano Compass ist eine unabhängige Beratung. Markennamen sind Eigentum ihrer jeweiligen Inhaber und werden nur zur Kennzeichnung genannt; die Nennung bedeutet keine Empfehlung oder Verbindung, sofern keine Partnerschaft angegeben ist."
   },
-  "theme": { "label": "Thema" }
+  "theme": {
+    "label": "Thema"
+  }
 }

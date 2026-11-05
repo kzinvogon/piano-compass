@@ -37,14 +37,20 @@
     "t1Title": "Onpartijdig uit principe",
     "t2Title": "Erkende expertise",
     "t3Title": "Een bron van waarheid",
-    "t4Title": "Voor de hele reis"
+    "t4Title": "Voor de hele reis",
+    "t1Desc": "Wij werken voor u, niet voor een showroom. Geen merkquota, geen druk – alleen de beste keuze voor uw spel, uw ruimte en uw budget.",
+    "t2Desc": "Advies gebaseerd op professionele standaarden, tientallen jaren praktijkervaring en een onafhankelijk netwerk van technici.",
+    "t3Desc": "Heldere antwoorden zonder vakjargon over merken, modellen, waarde en staat – zodat u met vertrouwen kunt beslissen.",
+    "t4Desc": "Van eerste aankoop tot stemmen, restauratie, taxatie en wederverkoop – één betrouwbare partner voor het leven."
   },
   "intro": {
     "eyebrow": "Wat Piano Compass is",
     "title": "Een erkend thuis voor iedereen op de pianoreis.",
     "stat1Label": "Jaar advies",
     "stat2Label": "Merken die we dekken",
-    "stat3Label": "Verkoopdoelen per merk"
+    "stat3Label": "Verkoopdoelen per merk",
+    "lead": "Een piano kopen of ermee leven hoort niet te betekenen dat u er alleen voor staat tegenover verkoopdruk en tegenstrijdige meningen.",
+    "text": "Piano Compass is een onafhankelijk adviesbureau dat naast u staat – niet achter een verkoopbalie. Wij vertalen een complexe markt naar heldere richtlijnen, helpen u de juiste instrumenten te selecteren en uit te proberen, regelen een onafhankelijke keuring en ondersteunen u zolang u de piano bezit. Wij adviseren over Feurich, alle toonaangevende bouwers en zorgvuldig gecontroleerde tweedehands instrumenten."
   },
   "audience": {
     "eyebrow": "Wie we helpen",
@@ -132,7 +138,29 @@
     "expertEyebrow": "Uw adviseur",
     "expertRole": "Concertpianist en oprichter",
     "timelineTitle": "Het verhaal van Piano Compass",
-    "cta": "Consult aanvragen"
+    "cta": "Consult aanvragen",
+    "lead": "Piano Compass bestaat om pianokopers en -bezitters te bieden wat de markt zelden biedt: werkelijk onpartijdig, deskundig advies zonder enig belang bij uw keuze.",
+    "p1": "Het meeste pianoadvies komt van iemand die een piano wil verkopen. Piano Compass is opgericht vanuit een ander principe: wie u bij uw beslissing begeleidt, moet geen commissie, geen merkquota en geen showroom te vullen hebben. Onze enige maatstaf voor succes is dat u eindigt met het instrument dat bij u past en dat het jarenlang goed verzorgd wordt.",
+    "p2": "Wij adviseren over alle toonaangevende bouwers – Feurich, onze uitgelichte partner, naast Steinway, Bösendorfer, Fazioli, Yamaha, Kawai, Blüthner, Bechstein en meer – evenals over gecontroleerde tweedehands en pre-owned instrumenten. Wij stellen een shortlist samen, regelen proefsessies, laten onafhankelijke keuringen uitvoeren, onderhandelen eerlijk en blijven aan uw zijde bij stemmen, restauratie, taxatie en, op een dag, wederverkoop.",
+    "p3": "Vanuit het Iberisch schiereiland werken wij met klanten in heel Spanje en Portugal – en op afstand wereldwijd. Wij combineren tientallen jaren ervaring achter het klavier met een onafhankelijk netwerk van geaccrediteerde technici en restaurateurs.",
+    "expertName": "Stuart Conaghan",
+    "expertBio": "Als concertpianist en onafhankelijk consultant heeft Stuart zijn leven doorgebracht te midden van voortreffelijke piano's – ze bespelen, uitkiezen en verzorgen. Hij richtte Piano Compass op om de betrouwbare gids te zijn die hij zelf had willen hebben: iemand op wiens advies u kunt vertrouwen juist omdat hij u niets te verkopen heeft.",
+    "v1Title": "Onpartijdigheid",
+    "v1Desc": "Geen commissies, geen merkloyaliteit. Onze aanbeveling gaat er altijd om wat het beste bij u past.",
+    "v2Title": "Oprechtheid",
+    "v2Desc": "Duidelijke, eerlijke antwoorden – ook wanneer het eerlijke antwoord is: wachten, minder uitgeven of afzien van de aankoop.",
+    "v3Title": "Deskundigheid",
+    "v3Desc": "Tientallen jaren speelervaring en een netwerk van geaccrediteerde technici staan achter elke aanbeveling.",
+    "v4Title": "Partnerschap",
+    "v4Desc": "Wij zijn er voor het hele traject, niet alleen voor de verkoop die er nooit was.",
+    "t1Year": "Het probleem",
+    "t1Text": "Kopers en bezitters kregen steeds tegenstrijdig, verkoopgedreven advies – en betaalden daarvoor met verkeerde beslissingen.",
+    "t2Year": "Het idee",
+    "t2Text": "Een adviesbureau dat uitsluitend voor de klant werkt: onpartijdige begeleiding over alle merken, nieuw en gebruikt.",
+    "t3Year": "Het partnerschap",
+    "t3Text": "Een uitgelicht partnerschap met Feurich brengt Weense vakmanschap in het aanbod, zonder exclusiviteit.",
+    "t4Year": "Vandaag",
+    "t4Text": "Piano Compass begeleidt pianisten, gezinnen en instellingen in Iberië en daarbuiten, gedurende het hele traject van pianobezit."
   },
   "services": {
     "eyebrow": "Diensten voor eigenaren",
@@ -143,7 +171,13 @@
     "s3Title": "Taxatie & beoordeling",
     "s4Title": "Stemmen & reguleren",
     "s5Title": "Restauratietoezicht",
-    "s6Title": "Verhuizing & doorverkoop"
+    "s6Title": "Verhuizing & doorverkoop",
+    "s1Desc": "Persoonlijk advies, bij u thuis of per video, om het juiste instrument te vinden – zonder merkagenda.",
+    "s2Desc": "Wij vinden de juiste piano, nieuw of gebruikt, en onderhandelen namens u over een eerlijke, onderbouwde prijs.",
+    "s3Desc": "Onafhankelijke schriftelijke taxaties voor aankoop, verzekering, erfenis of verkoop.",
+    "s4Desc": "Toegang tot een zorgvuldig geselecteerd netwerk van geaccrediteerde stemmers en technici in heel Iberië.",
+    "s5Desc": "Wij specificeren en begeleiden de restauratie, zodat kwaliteit en waarde op lange termijn behouden blijven.",
+    "s6Desc": "Gespecialiseerd transport, advies over verzekering en hulp bij het eerlijk verkopen of inruilen voor een hoger model."
   },
   "journey": {
     "eyebrow": "Het adviesproces",
@@ -154,7 +188,13 @@
     "step3Title": "Proberen",
     "step4Title": "Onafhankelijke inspectie",
     "step5Title": "Aanschaf & levering",
-    "step6Title": "Levenslang onderhoud"
+    "step6Title": "Levenslang onderhoud",
+    "step1Desc": "Een ontspannen gesprek over uw spel, ruimte, smaak en budget. Geen druk, geen jargon.",
+    "step2Desc": "Een zorgvuldig samengestelde shortlist over merken heen, nieuw en gebruikt, met de afwegingen helder toegelicht.",
+    "step3Desc": "Wij regelen proefsessies, zodat u de instrumenten onder gelijke omstandigheden kunt vergelijken.",
+    "step4Desc": "Bij pre-owned en gebruikte instrumenten controleert een onafhankelijke technicus de staat voordat u zich vastlegt.",
+    "step5Desc": "Wij onderhandelen over een eerlijke prijs en regelen gespecialiseerde levering en installatie.",
+    "step6Desc": "Doorlopend stemmen, regulatie en advies zolang u de piano bezit."
   },
   "contact": {
     "eyebrow": "Neem contact op",
@@ -192,5 +232,7 @@
     "feurich": "Feurich",
     "disclaimer": "Piano Compass is een onafhankelijk adviesbureau. Merknamen zijn eigendom van hun respectieve eigenaren en worden uitsluitend ter identificatie genoemd; vermelding impliceert geen goedkeuring of samenwerking, behalve waar een samenwerking is vermeld."
   },
-  "theme": { "label": "Thema" }
+  "theme": {
+    "label": "Thema"
+  }
 }

@@ -47,14 +47,20 @@
     "t1Title": "Imparcial por principio",
     "t2Title": "Experiencia acreditada",
     "t3Title": "Una fuente de confianza",
-    "t4Title": "Para todo el camino"
+    "t4Title": "Para todo el camino",
+    "t1Desc": "Trabajamos para usted, no para una sala de exposición. Sin cuotas de marca ni presiones: solo lo que mejor se adapta a su forma de tocar, a su espacio y a su presupuesto.",
+    "t2Desc": "Asesoramiento basado en estándares profesionales, décadas de experiencia práctica y una red independiente de técnicos.",
+    "t3Desc": "Respuestas claras y sin jerga sobre marcas, modelos, valor y estado, para que decida con confianza.",
+    "t4Desc": "Desde la primera compra hasta la afinación, la restauración, la tasación y la reventa: un socio de confianza para toda la vida."
   },
   "intro": {
     "eyebrow": "Qué es Piano Compass",
     "title": "Un hogar acreditado para quien emprende el camino de tener un piano.",
     "stat1Label": "Años asesorando",
     "stat2Label": "Marcas que cubrimos",
-    "stat3Label": "Objetivos de venta por marca"
+    "stat3Label": "Objetivos de venta por marca",
+    "lead": "Comprar un piano, o convivir con él, no debería significar enfrentarse solo a la presión comercial y a opiniones contradictorias.",
+    "text": "Piano Compass es una asesoría independiente que está a su lado, no detrás de un mostrador de ventas. Traducimos un mercado complejo en orientación clara, le ayudamos a preseleccionar y probar los instrumentos adecuados, organizamos una inspección independiente y le acompañamos durante todo el tiempo que sea propietario del piano. Asesoramos sobre Feurich, sobre todos los grandes fabricantes y sobre instrumentos usados cuidadosamente verificados."
   },
   "audience": {
     "eyebrow": "A quién ayudamos",
@@ -142,7 +148,29 @@
     "expertEyebrow": "Tu asesor",
     "expertRole": "Pianista de concierto y fundador",
     "timelineTitle": "La historia de Piano Compass",
-    "cta": "Reservar consulta"
+    "cta": "Reservar consulta",
+    "lead": "Piano Compass nace para ofrecer a quienes compran o poseen un piano algo que el mercado rara vez ofrece: asesoramiento experto, verdaderamente imparcial y sin ningún interés en lo que usted elija.",
+    "p1": "La mayoría de los consejos sobre pianos proceden de alguien que tiene un piano que vender. Piano Compass se fundó sobre un principio distinto: quien guía su decisión no debe tener comisiones, ni cuotas de marca, ni una sala de exposición que llenar. Nuestra única medida del éxito es que usted termine con el instrumento adecuado y que este reciba el cuidado que merece durante muchos años.",
+    "p2": "Asesoramos sobre todos los grandes fabricantes —Feurich, nuestro socio destacado, junto con Steinway, Bösendorfer, Fazioli, Yamaha, Kawai, Blüthner, Bechstein y otros—, así como sobre instrumentos usados y de segunda mano verificados. Preseleccionamos, organizamos pruebas, encargamos inspecciones independientes, negociamos con equidad y le acompañamos en la afinación, la restauración, la tasación y, algún día, la reventa.",
+    "p3": "Con sede en Iberia, trabajamos con clientes de toda España y Portugal, y a distancia en cualquier parte del mundo. Combinamos décadas frente al teclado con una red independiente de técnicos y restauradores acreditados.",
+    "expertName": "Stuart Conaghan",
+    "expertBio": "Pianista de concierto y consultor independiente, Stuart ha pasado la vida entre pianos excepcionales: tocándolos, eligiéndolos y cuidándolos. Fundó Piano Compass para ser el guía de confianza que a él mismo le habría gustado tener: alguien en cuyo consejo se puede confiar precisamente porque no tiene nada que venderle.",
+    "v1Title": "Imparcialidad",
+    "v1Desc": "Sin comisiones ni lealtad a ninguna marca. Nuestra recomendación se basa únicamente en lo que mejor le conviene a usted.",
+    "v2Title": "Sinceridad",
+    "v2Desc": "Respuestas claras y honestas, incluso cuando lo honesto es esperar, gastar menos o renunciar a la compra.",
+    "v3Title": "Experiencia",
+    "v3Desc": "Décadas de experiencia como intérpretes y una red de técnicos acreditados respaldan cada recomendación.",
+    "v4Title": "Compromiso",
+    "v4Desc": "Estamos a su lado durante todo el camino, no solo hasta la venta, que nunca fue nuestro objetivo.",
+    "t1Year": "El problema",
+    "t1Text": "Compradores y propietarios recibían una y otra vez consejos contradictorios y movidos por las ventas, y lo pagaban con malas decisiones.",
+    "t2Year": "La idea",
+    "t2Text": "Una asesoría que trabaja únicamente para el cliente: orientación imparcial sobre todas las marcas, nuevas y usadas.",
+    "t3Year": "La alianza",
+    "t3Text": "Una alianza destacada con Feurich incorpora la artesanía vienesa a nuestra oferta, sin exclusividad.",
+    "t4Year": "Hoy",
+    "t4Text": "Piano Compass guía a pianistas, familias e instituciones en Iberia y más allá, a lo largo de todo el camino de ser propietario de un piano."
   },
   "services": {
     "eyebrow": "Servicios al propietario",
@@ -153,7 +181,13 @@
     "s3Title": "Valoración y tasación",
     "s4Title": "Afinación y regulación",
     "s5Title": "Supervisión de restauración",
-    "s6Title": "Traslado y reventa"
+    "s6Title": "Traslado y reventa",
+    "s1Desc": "Asesoramiento personalizado, en su domicilio o por videollamada, para encontrar el instrumento adecuado, sin ninguna agenda de marca.",
+    "s2Desc": "Localizamos el piano adecuado, nuevo o usado, y negociamos en su nombre un precio justo e informado.",
+    "s3Desc": "Tasaciones independientes por escrito para compra, seguro, herencia o venta.",
+    "s4Desc": "Acceso a una red seleccionada de afinadores y técnicos acreditados en toda Iberia.",
+    "s5Desc": "Especificamos y supervisamos la restauración para proteger la calidad y el valor a largo plazo.",
+    "s6Desc": "Traslados especializados, orientación sobre seguros y ayuda para vender o cambiar a un instrumento superior con equidad."
   },
   "journey": {
     "eyebrow": "El proceso consultivo",
@@ -164,7 +198,13 @@
     "step3Title": "Prueba",
     "step4Title": "Inspección independiente",
     "step5Title": "Adquisición y entrega",
-    "step6Title": "Cuidado de por vida"
+    "step6Title": "Cuidado de por vida",
+    "step1Desc": "Una conversación distendida sobre su forma de tocar, su espacio, sus gustos y su presupuesto. Sin presiones ni jerga.",
+    "step2Desc": "Una preselección cuidada entre marcas, nuevos y usados, con las ventajas e inconvenientes explicados con claridad.",
+    "step3Desc": "Organizamos sesiones de prueba para que compare los instrumentos en igualdad de condiciones.",
+    "step4Desc": "En los instrumentos de segunda mano y usados, un técnico independiente verifica el estado antes de que se comprometa.",
+    "step5Desc": "Negociamos un precio justo y organizamos la entrega y la instalación por especialistas.",
+    "step6Desc": "Afinación, regulación y asesoramiento continuos mientras sea propietario del piano."
   },
   "contact": {
     "eyebrow": "Ponte en contacto",
@@ -205,5 +245,7 @@
     "feurich": "Feurich",
     "disclaimer": "Piano Compass es una asesoría independiente. Los nombres de marcas son propiedad de sus respectivos dueños y se citan solo a título identificativo; su mención no implica respaldo ni afiliación, salvo cuando se indique una colaboración."
   },
-  "theme": { "label": "Tema" }
+  "theme": {
+    "label": "Tema"
+  }
 }
