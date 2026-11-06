@@ -2,8 +2,9 @@
 title: How to choose your first piano
 date: 2026-09-10
 author: Stuart Conaghan
-image: images/self-playing-studio.jpeg
-excerpt: Digital, upright or grand? A calm, jargon-free guide to matching your first instrument to how you play and where it will live.
+image: https://res.cloudinary.com/m4t0vj8h/image/upload/v1793919681/Schimmel_design.jpg
+excerpt: Digital, upright or grand? A calm, jargon-free guide to matching your
+  first instrument to how you play and where it will live.
 status: published
 ---
 
