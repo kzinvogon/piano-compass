@@ -1,19 +1,26 @@
 ---
-title: "Feurich 162 Dynamic I"
-constructor: Feurich
-model: "162 Dynamic I"
+title: Feurich 162 Dynamic I
 type: Grand
 category: New
-size: "162 cm"
-price: "On request"
+model: 162 Dynamic I
+size: 162 cm
 self_playing: true
-fits_who: [hobby, advanced]
-fits_space: [livingroom, large]
-priority: [tone, design]
+fits_who:
+  - hobby
+  - advanced
+fits_space:
+  - livingroom
+  - large
+priority:
+  - tone
+  - design
+  - value
 section: instruments
 featured: false
-image: "https://res.cloudinary.com/m4t0vj8h/image/upload/Mod._162_-_Dynamic_I_18walnut_satin_web"
-excerpt: "A 162 cm baby grand — the refined choice where a grand's tone and presence are wanted without a large footprint."
+price: "RRP 11,900 Euro "
+image: https://res.cloudinary.com/m4t0vj8h/image/upload/Mod._162_-_Dynamic_I_18walnut_satin_web
+excerpt: "A 162 cm baby grand — the refined choice where a grand's tone and
+  presence are wanted without a large footprint. "
 date: 2026-09-01
 ---
 
