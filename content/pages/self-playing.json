@@ -1,22 +1,22 @@
 {
   "selfPlayingPage": {
-    "heroEyebrow": "Feurich · Self-Playing Pianos",
-    "heroTitle": "The Piano That Performs",
-    "heroSubtitle": "Pianoforce technology integrated invisibly into Feurich craftsmanship",
-    "intro": "Imagine a concert-quality performance beginning in your living room at a single touch. With Pianoforce technology integrated into any Feurich model, this is not imagination — it is your new reality.",
-    "howTitle": "How It Works",
-    "howText": "Pianoforce installs within the piano cabinet without any visible modification. Precision solenoids under each key and pedal respond to MIDI data with the same velocity, timing and nuance as a master pianist's touch. The result is indistinguishable from live performance — because mechanically, it is.",
-    "libraryTitle": "An Infinite Repertoire",
-    "libraryText": "Access thousands of performances from professional pianists, stream new recordings, or upload your own MIDI files. From Bach to Gershwin, from private recordings to concert premieres — the repertoire is limitless.",
-    "whyTitle": "The Trophy Investment",
-    "whyText": "A self-playing Feurich is the ultimate statement piece — a luxury object that is also a complete entertainment system, a teaching aid, a recording instrument, and a conversation piece without equal. For hotels, private residences, showrooms and yachts, it is simply incomparable.",
     "galleryTitle": "The Collection",
+    "libraryText": "Access thousands of performances from professional pianists, stream new recordings, or upload your own MIDI files. From Bach to Gershwin, from private recordings to concert premieres — the repertoire is limitless.",
+    "howTitle": "How It Works",
+    "intro": "Imagine a concert-quality performance beginning in your living room at a single touch. With Pianoforce technology integrated into any Feurich model, this is not imagination — it is your new reality.",
+    "heroEyebrow": "Feurich · Self-Playing Pianos",
+    "whyTitle": "The Trophy Investment",
     "galleryCap1": "Pianoforce — integrated invisibly",
     "galleryCap2": "At home in the light",
-    "galleryCap3": "Walnut · sunset edition"
+    "heroSubtitle": "Pianoforce technology integrated invisibly into Feurich craftsmanship",
+    "galleryCap3": "Walnut · sunset edition",
+    "whyText": "A self-playing Feurich is the ultimate statement piece — a luxury object that is also a complete entertainment system, a teaching aid, a recording instrument, and a conversation piece without equal. For hotels, private residences, showrooms and yachts, it is simply incomparable.",
+    "howText": "Pianoforce installs within the piano cabinet without any visible modification. Precision solenoids under each key and pedal respond to MIDI data with the same velocity, timing and nuance as a master pianist's touch. The result is indistinguishable from live performance — because mechanically, it is.",
+    "libraryTitle": "An Infinite Repertoire",
+    "heroTitle": "The Piano That Performs"
   },
   "images": {
-    "photo1": "images/self-playing-studio.jpeg",
+    "photo1": "https://res.cloudinary.com/m4t0vj8h/image/upload/v1793925309/Untitled.jpg",
     "photo2": "images/self-playing-lifestyle.jpeg",
     "photo3": "images/self-playing-walnut.jpeg"
   }
