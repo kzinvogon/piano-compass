@@ -1,19 +1,29 @@
 ---
-title: "Feurich 133 Concert"
-constructor: Feurich
-model: "133 Concert"
+title: Feurich 133 Concert
 type: Upright
 category: New
-size: "133 cm"
-price: "On request"
+model: 133 Concert
+size: 133 cm
 self_playing: true
-fits_who: [advanced, hobby]
-fits_space: [livingroom, large]
-priority: [tone, longevity]
+fits_who:
+  - advanced
+  - hobby
+  - venue
+fits_space:
+  - livingroom
+  - large
+  - public
+priority:
+  - tone
+  - longevity
 section: instruments
 featured: false
-image: "https://res.cloudinary.com/m4t0vj8h/image/upload/Mod._133_-_Concert_10CHblack_chrome_LED_web"
-excerpt: "At 133 cm, the tallest Feurich upright — grand-like power and sustain from an upright cabinet, self-playing capable."
+price: RRP 7,900Euro
+image: https://res.cloudinary.com/m4t0vj8h/image/upload/Mod._133_-_Concert_10CHblack_chrome_LED_web
+excerpt: At 133 cm, the tallest Feurich upright — grand-like power and sustain
+  from an upright cabinet, self-playing and silent system compatible.  Powerful
+  enough, and with enough bass response to take the stage in small venues and
+  recording studios.
 date: 2026-09-01
 ---
 
