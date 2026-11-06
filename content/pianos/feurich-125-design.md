@@ -1,19 +1,25 @@
 ---
-title: "Feurich 125 Design"
-constructor: Feurich
-model: "125 Design"
+title: Feurich 125 Design
 type: Upright
 category: New
-size: "125 cm"
-price: "On request"
+model: 125 Design
+size: 125 cm
 self_playing: false
-fits_who: [hobby, advanced]
-fits_space: [livingroom, large]
-priority: [design]
+fits_who:
+  - hobby
+  - advanced
+fits_space:
+  - livingroom
+  - large
+priority:
+  - design
+  - tone
 section: instruments
 featured: false
-image: "https://res.cloudinary.com/m4t0vj8h/image/upload/Mod._125_-_Design_10black_chrome_web"
-excerpt: "A 125 cm design-led upright — striking finishes and hardware for a piano that is as much a statement as an instrument."
+price: "RRP 6,700Euro "
+image: https://res.cloudinary.com/m4t0vj8h/image/upload/Mod._125_-_Design_10black_chrome_web
+excerpt: A 125 cm design-led upright — striking finishes and features such as
+  duplex scaling, and precision-milled iron frame for superior tone and clarity.
 date: 2026-09-01
 ---
 
