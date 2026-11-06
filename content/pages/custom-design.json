@@ -1,22 +1,22 @@
 {
   "customPage": {
-    "heroEyebrow": "Feurich · Custom Design",
-    "heroTitle": "Commission Your Vision",
-    "heroSubtitle": "Every detail, realised in Vienna to your exact specification",
-    "intro": "No two lives are identical. No two homes are the same. Feurich believes no two pianos should be either. The bespoke commission service lets you specify every aspect of your instrument — from the wood species used in the cabinet to the design of the fallboard hardware.",
-    "whatTitle": "What Can Be Customised",
+    "processCta": "Begin Your Commission",
+    "galleryTitle": "Bespoke Creations",
+    "processTitle": "The Commission Process",
+    "intro": "No two lives are identical. No two homes are the same. We believe no two pianos should be either. The bespoke commission service lets you specify every aspect of your instrument — from the wood species used in the cabinet to the design of the fallboard hardware.",
     "what1": "Cabinet colour — any RAL colour, any finish (gloss, satin, matte)",
     "what2": "Wood species — walnut, rosewood, maple, ebony and exotic veneers",
     "what3": "Hardware — brass, chrome, gold-plated, or bespoke metalwork",
+    "heroEyebrow": "Feurich · Custom Design",
     "what4": "Dimensions — non-standard sizes for specific architectural spaces",
-    "what5": "Inlay and marquetry — hand-crafted decorative elements",
-    "what6": "Internal components — premium Renner actions, hammer grades, string gauges",
-    "processTitle": "The Commission Process",
-    "processCta": "Begin Your Commission",
-    "galleryTitle": "Bespoke Creations",
     "galleryCap1": "Illuminated LED artistry",
+    "what5": "Inlay and marquetry — hand-crafted decorative elements",
     "galleryCap2": "Hand-finished mosaic",
-    "galleryCap3": "Bespoke grand · mosaic finish"
+    "what6": "Internal components — premium Renner actions, hammer grades, string gauges",
+    "heroSubtitle": "Every detail, realised in Vienna to your exact specification",
+    "galleryCap3": "Bespoke grand · mosaic finish",
+    "whatTitle": "What Can Be Customised",
+    "heroTitle": "Commission Your Vision"
   },
   "images": {
     "photo1": "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970598/Feurich_V123_-_laser_cut_backlit_in_villa_setting.jpg",
