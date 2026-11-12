@@ -29,7 +29,9 @@ function loadCollection(dir) {
       const { data, content } = matter(read(path.join(dir, f)));
       // Pages CMS stores a markdown body field either as the file body or,
       // for some field setups, as a frontmatter `body:` — accept both.
-      return { slug: f.replace(/\.md$/, ''), ...data, body: (content.trim() || data.body || '') };
+      // `constructor` (the piano maker) defaults to '' so a missing field never
+      // falls through to the object's built-in constructor function.
+      return { slug: f.replace(/\.md$/, ''), constructor: '', ...data, body: (content.trim() || data.body || '') };
     })
     .filter((e) => e.status !== 'draft')
     .sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));

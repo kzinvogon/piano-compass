@@ -1,5 +1,6 @@
 ---
 title: Feurich 133 Concert
+constructor: Feurich
 type: Upright
 category: New
 model: 133 Concert

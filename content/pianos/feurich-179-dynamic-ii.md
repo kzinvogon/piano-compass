@@ -1,5 +1,6 @@
 ---
 title: Feurich 179 Dynamic II
+constructor: Feurich
 type: Grand
 category: New
 model: 179 Dynamic II

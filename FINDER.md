@@ -41,9 +41,9 @@ finder uses are:
 
 | Field in /admin | JSON key | Used for |
 | --- | --- | --- |
-| Category (New / Used / Restored / Pre-owned) | `category` | Filtering on Q3 |
+| Category (New / Used / Restored / Pre-owned) | `category` | Filtering on Q3 (a new digital piano also appears for "New instruments") |
 | Self-playing capable | `self_playing` | Filtering on Q3 ("Self-playing capable") |
-| Type (Grand, Baby Grand, Upright, …) | `type` | Score adjustments for room size and player |
+| Type (Grand, Baby Grand, Upright, Digital, …) | `type` | Filtering on Q3 ("Digital piano") and score adjustments for room size and player |
 | Finder — suits which players | `fits_who` | Scoring on Q1 |
 | Finder — suits which spaces | `fits_space` | Scoring on Q2 |
 | Finder — strengths | `priority` | Scoring on Q4 |
@@ -63,7 +63,7 @@ top-right show progress; **Back** returns to the previous question.
 | --- | --- | --- |
 | Q1 `who` | Who will play it most? | `beginner` · `hobby` · `advanced` · `venue` |
 | Q2 `space` | What's the space like? | `apartment` · `livingroom` · `large` · `public` |
-| Q3 `kind` | New, used, or open to both? | `new` · `used` · `either` · `selfplay` |
+| Q3 `kind` | New, used, or open to both? | `new` · `used` · `either` · `selfplay` · `digital` |
 | Q4 `priority` | What matters most? | `value` · `tone` · `design` · `longevity` |
 
 The wording comes from the `finder.*` keys in `locales/*.json`, so the finder
@@ -80,12 +80,18 @@ After Q4, `renderResults()` in `js/finder.js` builds the shortlist.
 | New instruments | `category` is `New` |
 | Used & pre-owned | `category` is `Used`, `Restored` or `Pre-owned` |
 | Self-playing capable | `self_playing` is ticked |
+| Digital piano | `type` is `Digital` |
 | Open to both | All pianos |
 
-If no piano passes the filter, the finder falls back to the **whole library**
-and adds a note to the results. For "Used & pre-owned" the note says no
-verified used pianos are listed yet and offers to source one; otherwise it
-says a consultation will refine the list.
+If no piano passes the filter:
+
+- **Used & pre-owned:** no shortlist is shown. Instead the finder explains
+  that we source and independently check used pianos, with a **Start a used
+  search** button (to the contact form, with "Used & pre-owned search" and
+  the four answers filled in) and a link to the Used page (`vintage.html`).
+  This matches where the Used menu item leads.
+- **Any other answer:** the finder falls back to the **whole library** and
+  adds a note that a consultation will refine the list.
 
 **Step 2: score each remaining piano.**
 
@@ -94,10 +100,10 @@ says a consultation will refine the list.
 | Piano's "suits which players" includes the Q1 answer | +3 |
 | Piano's "suits which spaces" includes the Q2 answer | +2 |
 | Piano's "strengths" includes the Q4 answer | +2 |
-| Q2 is Apartment / small room and the piano is a Grand | −4 |
+| Q2 is Apartment / small room and the piano is a Grand or Baby Grand | −4 |
 | Q2 is Public / performance space and the piano is an Upright | −2 |
-| Q2 is Large / open-plan room and the piano is a Grand | +1 |
-| Q1 is A venue or institution and the piano is a Grand | +1 |
+| Q2 is Large / open-plan room and the piano is a Grand or Baby Grand | +1 |
+| Q1 is A venue or institution and the piano is a Grand or Baby Grand | +1 |
 | Q1 is A beginner or child and the piano is an Upright | +1 |
 
 **Step 3: rank.** Pianos are sorted by score, highest first, and the top five
@@ -116,7 +122,8 @@ are shown. Ties keep the library's order: newest `date` first.
 - **Back** returns to Q4 with the earlier answers kept. **Start again** clears
   everything and returns to Q1.
 
-If the piano library couldn't be loaded or is empty, the results screen skips
+If the piano library couldn't be loaded or is empty (and the visitor didn't
+choose Used & pre-owned, which always gets the used-search screen above), the results screen skips
 the cards and shows a "Book a consultation" button straight to the contact
 page, with no answers attached.
 
@@ -143,7 +150,13 @@ On the contact page, `js/main.js` then:
    the notification email.
 3. **Writes a starter message**, only if the message box is empty, listing the
    four answers in plain English (from `FINDER_ANSWERS`) followed by "I'm
-   interested in the …. Please advise on the best fit for me."
+   interested in the …. Please advise on the best fit for me." On the
+   used-search path (no piano chosen) it ends instead with "I'm looking for a
+   used piano. Please help me find and check one."
+
+The Used page's "Start a used search", "Commission a used search" and "Book a
+consultation" buttons also link to `contact.html?interest=used`, so they
+pre-select "Used & pre-owned search" the same way.
 
 The visitor can edit anything before sending. The form posts to Netlify Forms
 as the `contact` form.
@@ -155,9 +168,6 @@ as the `contact` form.
   "Finder —" fields), the labels in `FINDER_ANSWERS` in `js/main.js`, and the
   `finder.*` text in `locales/*.json`. Q3 answers also need a rule in
   `kindOk()` in `js/finder.js`.
-- **"Baby Grand" counts as neither a Grand nor an Upright** in the scoring
-  rules, because they check the type exactly. A baby grand is not penalised
-  for an apartment and gets no bonus for a large room or venue.
 - **The library loads in the background.** If someone answered all four
   questions before `data/pianos.json` arrived (very slow connection), they
   would see the "no library" fallback rather than a shortlist.

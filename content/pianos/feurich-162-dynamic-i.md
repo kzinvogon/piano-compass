@@ -1,5 +1,6 @@
 ---
 title: Feurich 162 Dynamic I
+constructor: Feurich
 type: Grand
 category: New
 model: 162 Dynamic I
