@@ -32,11 +32,42 @@ const FINDER_ANSWERS = {
 // Prefill the contact form from a ?piano=slug[,slug2,...] link (from the
 // best-fit finder or a piano card). Looks up the titles in the library and
 // drops them into the message, and shows the full set of finder answers.
+// A summary of the finder answers on the URL, as lines for the message box.
+function finderSummary() {
+  const qs = new URLSearchParams(window.location.search);
+  const lines = [
+    ['who', 'Who will play it most'],
+    ['space', 'The space'],
+    ['kind', 'New, used or open to both'],
+    ['priority', 'What matters most'],
+  ]
+    .map(([key, label]) => {
+      const v = qs.get(key);
+      return (v && FINDER_ANSWERS[key] && FINDER_ANSWERS[key][v])
+        ? `• ${label}: ${FINDER_ANSWERS[key][v]}`
+        : null;
+    })
+    .filter(Boolean);
+  return lines.length ? `Your piano finder answers:\n${lines.join('\n')}\n\n` : '';
+}
+
+// Finder visitors sent here without a piano (the used-search path) still get
+// their answers in the message, so the enquiry carries the full context.
+function prefillFinderSearch(message) {
+  const summary = finderSummary();
+  if (!summary || message.value.trim()) return;
+  const kind = new URLSearchParams(window.location.search).get('kind');
+  const lead = kind === 'used'
+    ? "I'm looking for a used piano. Please help me find and check one."
+    : 'Please advise on the best piano for me.';
+  message.value = `${summary}${lead}`;
+}
+
 function initPianoPrefill() {
   const message = document.getElementById('message');
   if (!message) return;
   const param = new URLSearchParams(window.location.search).get('piano');
-  if (!param) return;
+  if (!param) { prefillFinderSearch(message); return; }
   const slugs = param.split(',').map((s) => s.trim()).filter(Boolean);
   if (!slugs.length) return;
 
@@ -62,25 +93,8 @@ function initPianoPrefill() {
         if (pianosGroup) pianosGroup.style.display = '';
       }
 
-      // Build a readable summary of every finder answer the visitor chose,
-      // so the form shows the full context (not just the piano).
-      const qs = new URLSearchParams(window.location.search);
-      const summaryLines = [
-        ['who', 'Who will play it most'],
-        ['space', 'The space'],
-        ['kind', 'New, used or open to both'],
-        ['priority', 'What matters most'],
-      ]
-        .map(([key, label]) => {
-          const v = qs.get(key);
-          return (v && FINDER_ANSWERS[key] && FINDER_ANSWERS[key][v])
-            ? `• ${label}: ${FINDER_ANSWERS[key][v]}`
-            : null;
-        })
-        .filter(Boolean);
-      const summary = summaryLines.length
-        ? `Your piano finder answers:\n${summaryLines.join('\n')}\n\n`
-        : '';
+      // Show the full context the visitor chose, not just the piano.
+      const summary = finderSummary();
 
       // Seed the message for context, only if the visitor hasn't typed.
       const lead = titles.length === 1

@@ -137,7 +137,9 @@
     "chosenThanks": ". Adaptaremos nuestro asesoramiento a su selección. Reserve una consulta sin compromiso y los compararemos con total honestidad por usted.",
     "chosenCtaOne": "Reservar una consulta sobre este piano",
     "chosenCtaMany": "Reservar una consulta sobre su selección",
-    "usedNote": "Todavía no tenemos instrumentos de ocasión verificados en nuestro listado — estas son las opciones nuevas más cercanas. Podemos localizar y verificar de forma independiente un piano de ocasión para usted.",
+    "usedNone": "Ahora mismo no tenemos pianos de segunda mano verificados en nuestra lista, pero encontrar uno y hacerlo revisar de forma independiente es precisamente lo que hacemos. Cuéntenos qué busca y empezaremos la búsqueda.",
+    "usedStart": "Iniciar una búsqueda de segunda mano",
+    "usedExplore": "Cómo encontramos pianos de segunda mano",
     "noneNote": "Estas son las opciones más cercanas — una breve consulta permitirá afinar la selección.",
     "libEmpty": "Reserve una consulta y elaboraremos su selección personalmente."
   },

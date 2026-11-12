@@ -137,7 +137,9 @@
     "chosenThanks": ". Wir richten unsere Beratung nach Ihrer Auswahl aus. Vereinbaren Sie eine unverbindliche Beratung, und wir vergleichen diese ehrlich für Sie.",
     "chosenCtaOne": "Beratung zu diesem Klavier vereinbaren",
     "chosenCtaMany": "Beratung zu Ihrer Auswahl vereinbaren",
-    "usedNote": "Wir haben derzeit keine geprüften Gebrauchtinstrumente gelistet — hier sind die nächstgelegenen neuen Optionen. Wir können für Sie ein gebrauchtes Klavier beschaffen und unabhängig prüfen.",
+    "usedNone": "Derzeit haben wir keine geprüften Gebrauchtklaviere gelistet — aber genau das ist unsere Aufgabe: eines zu finden und unabhängig prüfen zu lassen. Sagen Sie uns, was Sie suchen, und wir beginnen mit der Suche.",
+    "usedStart": "Gebrauchtsuche starten",
+    "usedExplore": "So finden wir gebrauchte Klaviere",
     "noneNote": "Hier sind die nächstgelegenen Optionen — eine kurze Beratung wird die Auswahl weiter verfeinern.",
     "libEmpty": "Vereinbaren Sie eine Beratung, und wir erstellen Ihre Auswahl persönlich."
   },

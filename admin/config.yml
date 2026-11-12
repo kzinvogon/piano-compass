@@ -648,7 +648,9 @@ collections:
               - { name: chosenThanks, label: "Chosen thanks", widget: text }
               - { name: chosenCtaOne, label: "Chosen cta one", widget: string }
               - { name: chosenCtaMany, label: "Chosen cta many", widget: string }
-              - { name: usedNote, label: "Used note", widget: text }
+              - { name: usedNone, label: "Used — none listed message", widget: text }
+              - { name: usedStart, label: "Used — start search button", widget: string }
+              - { name: usedExplore, label: "Used — link to Used page", widget: string }
               - { name: noneNote, label: "None note", widget: text }
               - { name: libEmpty, label: "Lib empty", widget: string }
               - { name: back, label: "Back", widget: string }

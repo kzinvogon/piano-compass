@@ -119,9 +119,7 @@
     let note = '';
     if (!pool.length) {
       pool = library.slice();
-      note = kind === 'used'
-        ? t('finder.usedNote', "We don't have verified used instruments listed yet — here are the closest new options. We can source and independently verify a used piano for you.")
-        : t('finder.noneNote', "Here are the closest options — a short consultation will refine the shortlist.");
+      note = t('finder.noneNote', "Here are the closest options — a short consultation will refine the shortlist.");
     }
     const ranked = pool
       .map((p) => ({ p, s: score(p, who, space, priority) }))
@@ -158,7 +156,21 @@
 
     titleEl.textContent = t('finder.resultTitle', 'Your best-fit shortlist');
 
-    if (!library.length) {
+    if (kind === 'used' && !library.some((p) => kindOk(p, 'used'))) {
+      // No used pianos listed: rather than offering new ones, point used
+      // buyers to the sourcing service (the same place the Used menu leads).
+      const qp = new URLSearchParams({ interest: 'used' });
+      if (who) qp.set('who', who);
+      if (space) qp.set('space', space);
+      qp.set('kind', kind);
+      if (priority) qp.set('priority', priority);
+      textEl.textContent = t('finder.usedNone', "We don't have verified used pianos listed right now — but finding one and having it independently checked is exactly what we do. Tell us what you're after and we'll start the search.");
+      listEl.innerHTML = '';
+      footEl.innerHTML = `<div class="finder__used-actions">
+        <a class="btn btn--gold" href="${base}contact.html?${qp.toString()}">${esc(t('finder.usedStart', 'Start a used search'))}</a>
+        <a class="finder__used-link" href="${base}vintage.html">${esc(t('finder.usedExplore', 'How we source used pianos'))} →</a>
+      </div>`;
+    } else if (!library.length) {
       textEl.textContent = t('finder.libEmpty', 'Book a consultation and we will build your shortlist personally.');
       listEl.innerHTML = '';
       footEl.innerHTML = `<a class="btn btn--gold" href="${base}contact.html">${esc(t('finder.resultCta', 'Book a consultation'))}</a>`;

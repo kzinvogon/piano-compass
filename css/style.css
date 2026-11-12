@@ -413,6 +413,11 @@ p  { color: var(--ink-soft); font-size: 1rem; }
 .finder-card.selected .finder-card__pick::after { content: ' ✓'; }
 .finder__result-foot { margin-top: .4rem; }
 .finder__hintline { color: rgba(238,243,236,.7) !important; font-size: .85rem; }
+/* The finder panel is pine green, so its call-to-action buttons use brass. */
+.finder .btn--gold { background: var(--brass); border-color: var(--brass); color: #1c1509; }
+.finder .btn--gold:hover { background: var(--brass-lt); border-color: var(--brass-lt); }
+.finder__used-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.6rem; margin-top: .6rem; }
+.finder__used-link { color: inherit; font-size: .9rem; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .finder__chosen { color: rgba(238,243,236,.92) !important; margin-bottom: 1.1rem; }
 
 /* ── Brands ─────────────────────────────────────────────── */

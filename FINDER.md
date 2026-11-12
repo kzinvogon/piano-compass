@@ -83,10 +83,15 @@ After Q4, `renderResults()` in `js/finder.js` builds the shortlist.
 | Digital piano | `type` is `Digital` |
 | Open to both | All pianos |
 
-If no piano passes the filter, the finder falls back to the **whole library**
-and adds a note to the results. For "Used & pre-owned" the note says no
-verified used pianos are listed yet and offers to source one; otherwise it
-says a consultation will refine the list.
+If no piano passes the filter:
+
+- **Used & pre-owned:** no shortlist is shown. Instead the finder explains
+  that we source and independently check used pianos, with a **Start a used
+  search** button (to the contact form, with "Used & pre-owned search" and
+  the four answers filled in) and a link to the Used page (`vintage.html`).
+  This matches where the Used menu item leads.
+- **Any other answer:** the finder falls back to the **whole library** and
+  adds a note that a consultation will refine the list.
 
 **Step 2: score each remaining piano.**
 
@@ -117,7 +122,8 @@ are shown. Ties keep the library's order: newest `date` first.
 - **Back** returns to Q4 with the earlier answers kept. **Start again** clears
   everything and returns to Q1.
 
-If the piano library couldn't be loaded or is empty, the results screen skips
+If the piano library couldn't be loaded or is empty (and the visitor didn't
+choose Used & pre-owned, which always gets the used-search screen above), the results screen skips
 the cards and shows a "Book a consultation" button straight to the contact
 page, with no answers attached.
 
@@ -144,7 +150,13 @@ On the contact page, `js/main.js` then:
    the notification email.
 3. **Writes a starter message**, only if the message box is empty, listing the
    four answers in plain English (from `FINDER_ANSWERS`) followed by "I'm
-   interested in the …. Please advise on the best fit for me."
+   interested in the …. Please advise on the best fit for me." On the
+   used-search path (no piano chosen) it ends instead with "I'm looking for a
+   used piano. Please help me find and check one."
+
+The Used page's "Start a used search", "Commission a used search" and "Book a
+consultation" buttons also link to `contact.html?interest=used`, so they
+pre-select "Used & pre-owned search" the same way.
 
 The visitor can edit anything before sending. The form posts to Netlify Forms
 as the `contact` form.
