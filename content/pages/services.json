@@ -1,44 +1,44 @@
 {
   "services": {
     "eyebrow": "Owner services",
-    "title": "Everything your piano will ever need",
-    "subtitle": "One trusted, independent partner — from choosing an instrument to caring for it for decades.",
-    "s1Title": "Independent Consultation",
     "s1Desc": "One-to-one advice, in your home or by video, to find the right instrument — with no brand agenda.",
-    "s2Title": "Sourcing & Acquisition",
     "s2Desc": "We locate the right piano, new or used, and negotiate a fair, informed price on your behalf.",
-    "s3Title": "Valuation & Appraisal",
     "s3Desc": "Independent written valuations for purchase, insurance, inheritance or sale.",
-    "s4Title": "Tuning & Regulation",
     "s4Desc": "Access to a vetted network of accredited tuners and technicians across Iberia.",
-    "s5Title": "Restoration Oversight",
     "s5Desc": "We specify and oversee restoration so quality and long-term value are protected.",
+    "s6Desc": "Specialist moving, insurance guidance and help selling or trading up fairly.",
     "s6Title": "Relocation & Resale",
-    "s6Desc": "Specialist moving, insurance guidance and help selling or trading up fairly."
+    "s5Title": "Restoration Oversight",
+    "s4Title": "Tuning & Regulation",
+    "subtitle": "One trusted, independent partner — from choosing an instrument to caring for it for decades.",
+    "s3Title": "Valuation & Appraisal",
+    "title": "Everything your piano will ever need",
+    "s2Title": "Sourcing & Acquisition",
+    "s1Title": "Independent Consultation"
   },
   "journey": {
     "eyebrow": "The consultative process",
-    "title": "The journey to the right piano",
-    "subtitle": "A calm, guided path — we're beside you at every step, and long after.",
+    "step6Title": "Lifelong Care",
+    "step5Title": "Acquire & Deliver",
+    "step4Title": "Independent Inspection",
+    "step3Title": "Play-Test",
+    "step2Title": "Impartial Shortlist",
     "step1Title": "Discovery",
     "step1Desc": "A relaxed conversation about your playing, space, taste and budget. No pressure, no jargon.",
-    "step2Title": "Impartial Shortlist",
     "step2Desc": "A curated shortlist across brands, new and used, with the trade-offs explained clearly.",
-    "step3Title": "Play-Test",
+    "subtitle": "A calm, guided path — we're beside you at every step, and long after.",
     "step3Desc": "We arrange playing sessions so you compare instruments like for like.",
-    "step4Title": "Independent Inspection",
+    "title": "The journey to the right piano",
     "step4Desc": "For pre-owned and used, an independent technician verifies condition before you commit.",
-    "step5Title": "Acquire & Deliver",
     "step5Desc": "We negotiate a fair price and arrange specialist delivery and installation.",
-    "step6Title": "Lifelong Care",
     "step6Desc": "Ongoing tuning, regulation and advice for as long as you own the piano."
   },
   "images": {
     "photo1": "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970597/IMG_2224.jpg",
     "photo2": "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970597/IMG_2228.jpg",
-    "photo3": "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970597/IMG_2247.jpg",
-    "photo4": "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970598/IMG_2251.jpg",
-    "photo5": "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970597/IMG_2253.jpg",
-    "photo6": "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970597/IMG_2255.jpg"
+    "photo3": "https://res.cloudinary.com/m4t0vj8h/image/upload/v1794455692/IMG_7478.jpg",
+    "photo4": "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970599/FEURICH_High_Speed_KAMM_Action_1.jpg",
+    "photo5": "https://res.cloudinary.com/m4t0vj8h/image/upload/v1789970599/FEURICH_Silencer_on_2.jpg",
+    "photo6": "https://res.cloudinary.com/m4t0vj8h/image/upload/v1794455697/IMG_7515.jpg"
   }
 }
