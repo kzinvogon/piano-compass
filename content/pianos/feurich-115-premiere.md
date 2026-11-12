@@ -1,5 +1,6 @@
 ---
 title: Feurich 115 Premiere
+constructor: Feurich
 type: Upright
 category: New
 model: 115 Premiere

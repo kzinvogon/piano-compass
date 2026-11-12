@@ -1,5 +1,6 @@
 ---
 title: Feurich 218 Concert I
+constructor: Feurich
 type: Grand
 category: New
 model: 218 Concert I

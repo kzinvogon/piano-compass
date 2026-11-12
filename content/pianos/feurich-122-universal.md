@@ -1,5 +1,6 @@
 ---
 title: Feurich 122 Universal
+constructor: Feurich
 type: Upright
 category: New
 model: 122 Universal

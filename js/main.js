@@ -25,7 +25,7 @@ function initInterestPrefill() {
 const FINDER_ANSWERS = {
   who: { beginner: 'A beginner or child', hobby: 'A returning / hobby player', advanced: 'An advanced pianist', venue: 'A venue or institution' },
   space: { apartment: 'Apartment / small room', livingroom: 'Family living room', large: 'Large / open-plan room', public: 'Public / performance space' },
-  kind: { new: 'New instruments', used: 'Used & pre-owned', either: 'Open to both', selfplay: 'Self-playing capable' },
+  kind: { new: 'New instruments', used: 'Used & pre-owned', either: 'Open to both', selfplay: 'Self-playing capable', digital: 'Digital piano' },
   priority: { value: 'Best value for money', tone: 'Tone & touch', design: 'Design & finish', longevity: 'Longevity & resale' },
 };
 

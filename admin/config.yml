@@ -624,6 +624,8 @@ collections:
               - { name: q3cs, label: "Q3cs", widget: string }
               - { name: q3d, label: "Q3d", widget: string }
               - { name: q3ds, label: "Q3ds", widget: string }
+              - { name: q3e, label: "Q3e", widget: string }
+              - { name: q3es, label: "Q3es", widget: string }
               - { name: q4, label: "Q 4", widget: string }
               - { name: q4hint, label: "Q4hint", widget: string }
               - { name: q4a, label: "Q4a", widget: string }

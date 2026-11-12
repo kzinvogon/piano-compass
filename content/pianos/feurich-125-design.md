@@ -1,5 +1,6 @@
 ---
 title: Feurich 125 Design
+constructor: Feurich
 type: Upright
 category: New
 model: 125 Design

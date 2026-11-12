@@ -91,6 +91,7 @@
   // ---- matching ------------------------------------------------------------
   function kindOk(p, kind) {
     if (kind === 'selfplay') return !!p.self_playing;
+    if (kind === 'digital') return p.type === 'Digital';
     if (kind === 'used') return ['Used', 'Restored', 'Pre-owned'].includes(p.category);
     if (kind === 'new') return p.category === 'New';
     return true; // 'either'
@@ -132,7 +133,10 @@
 
   // ---- rendering -----------------------------------------------------------
   function card(p) {
-    const badge = [p.constructor, p.size].filter(Boolean).join(' · ');
+    // Read the maker as an own property: a missing "constructor" key would
+    // otherwise resolve to the built-in Object constructor.
+    const maker = Object.prototype.hasOwnProperty.call(p, 'constructor') ? p.constructor : '';
+    const badge = [maker, p.size].filter(Boolean).join(' · ');
     const img = p.image
       ? `<div class="finder-card__img"><img src="${esc(p.image)}" alt="${esc(p.title)}" loading="lazy"></div>`
       : '<div class="finder-card__img finder-card__img--none"></div>';

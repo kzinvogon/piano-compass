@@ -41,9 +41,9 @@ finder uses are:
 
 | Field in /admin | JSON key | Used for |
 | --- | --- | --- |
-| Category (New / Used / Restored / Pre-owned) | `category` | Filtering on Q3 |
+| Category (New / Used / Restored / Pre-owned) | `category` | Filtering on Q3 (a new digital piano also appears for "New instruments") |
 | Self-playing capable | `self_playing` | Filtering on Q3 ("Self-playing capable") |
-| Type (Grand, Baby Grand, Upright, …) | `type` | Score adjustments for room size and player |
+| Type (Grand, Baby Grand, Upright, Digital, …) | `type` | Filtering on Q3 ("Digital piano") and score adjustments for room size and player |
 | Finder — suits which players | `fits_who` | Scoring on Q1 |
 | Finder — suits which spaces | `fits_space` | Scoring on Q2 |
 | Finder — strengths | `priority` | Scoring on Q4 |
@@ -63,7 +63,7 @@ top-right show progress; **Back** returns to the previous question.
 | --- | --- | --- |
 | Q1 `who` | Who will play it most? | `beginner` · `hobby` · `advanced` · `venue` |
 | Q2 `space` | What's the space like? | `apartment` · `livingroom` · `large` · `public` |
-| Q3 `kind` | New, used, or open to both? | `new` · `used` · `either` · `selfplay` |
+| Q3 `kind` | New, used, or open to both? | `new` · `used` · `either` · `selfplay` · `digital` |
 | Q4 `priority` | What matters most? | `value` · `tone` · `design` · `longevity` |
 
 The wording comes from the `finder.*` keys in `locales/*.json`, so the finder
@@ -80,6 +80,7 @@ After Q4, `renderResults()` in `js/finder.js` builds the shortlist.
 | New instruments | `category` is `New` |
 | Used & pre-owned | `category` is `Used`, `Restored` or `Pre-owned` |
 | Self-playing capable | `self_playing` is ticked |
+| Digital piano | `type` is `Digital` |
 | Open to both | All pianos |
 
 If no piano passes the filter, the finder falls back to the **whole library**
