@@ -94,10 +94,10 @@ says a consultation will refine the list.
 | Piano's "suits which players" includes the Q1 answer | +3 |
 | Piano's "suits which spaces" includes the Q2 answer | +2 |
 | Piano's "strengths" includes the Q4 answer | +2 |
-| Q2 is Apartment / small room and the piano is a Grand | −4 |
+| Q2 is Apartment / small room and the piano is a Grand or Baby Grand | −4 |
 | Q2 is Public / performance space and the piano is an Upright | −2 |
-| Q2 is Large / open-plan room and the piano is a Grand | +1 |
-| Q1 is A venue or institution and the piano is a Grand | +1 |
+| Q2 is Large / open-plan room and the piano is a Grand or Baby Grand | +1 |
+| Q1 is A venue or institution and the piano is a Grand or Baby Grand | +1 |
 | Q1 is A beginner or child and the piano is an Upright | +1 |
 
 **Step 3: rank.** Pianos are sorted by score, highest first, and the top five
@@ -155,9 +155,6 @@ as the `contact` form.
   "Finder —" fields), the labels in `FINDER_ANSWERS` in `js/main.js`, and the
   `finder.*` text in `locales/*.json`. Q3 answers also need a rule in
   `kindOk()` in `js/finder.js`.
-- **"Baby Grand" counts as neither a Grand nor an Upright** in the scoring
-  rules, because they check the type exactly. A baby grand is not penalised
-  for an apartment and gets no bonus for a large room or venue.
 - **The library loads in the background.** If someone answered all four
   questions before `data/pianos.json` arrived (very slow connection), they
   would see the "no library" fallback rather than a shortlist.

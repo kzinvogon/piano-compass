@@ -96,15 +96,19 @@
     return true; // 'either'
   }
 
+  // A baby grand is still a grand for sizing purposes: too big for a small
+  // room, and suited to large rooms and venues.
+  const isGrand = (p) => p.type === 'Grand' || p.type === 'Baby Grand';
+
   function score(p, who, space, priority) {
     let s = 0;
     if ((p.fits_who || []).includes(who)) s += 3;
     if ((p.fits_space || []).includes(space)) s += 2;
     if ((p.priority || []).includes(priority)) s += 2;
-    if (space === 'apartment' && p.type === 'Grand') s -= 4;
+    if (space === 'apartment' && isGrand(p)) s -= 4;
     if (space === 'public' && p.type === 'Upright') s -= 2;
-    if (space === 'large' && p.type === 'Grand') s += 1;
-    if (who === 'venue' && p.type === 'Grand') s += 1;
+    if (space === 'large' && isGrand(p)) s += 1;
+    if (who === 'venue' && isGrand(p)) s += 1;
     if (who === 'beginner' && p.type === 'Upright') s += 1;
     return s;
   }
