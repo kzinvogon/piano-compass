@@ -415,6 +415,22 @@ p  { color: var(--ink-soft); font-size: 1rem; }
 .finder__hintline { color: rgba(238,243,236,.7) !important; font-size: .85rem; }
 .finder__chosen { color: rgba(238,243,236,.92) !important; margin-bottom: 1.1rem; }
 
+/* Finder in the dark theme: --pine turns light green there, so the panel
+   gets its own deep pine and keeps the light-on-dark text it has in light mode. */
+:root[data-theme="dark"] .finder {
+  background: #173229; color: #eef3ec;
+  border: 1px solid rgba(130,189,163,.22);
+}
+:root[data-theme="dark"] .finder .btn--gold {
+  background: var(--brass); border-color: var(--brass); color: #1c1509;
+}
+:root[data-theme="dark"] .finder .btn--gold:hover {
+  background: var(--brass-lt); border-color: var(--brass-lt); color: #1c1509;
+}
+:root[data-theme="dark"] .finder__used-link { color: var(--brass-lt); }
+:root[data-theme="dark"] .finder__used-link:hover { color: #fff; }
+:root[data-theme="dark"] .finder-card { border-color: rgba(241,234,217,.14); }
+
 /* ── Brands ─────────────────────────────────────────────── */
 .brand-hero {
   display: grid; grid-template-columns: 1.1fr .9fr; gap: 2.4rem; align-items: stretch;
