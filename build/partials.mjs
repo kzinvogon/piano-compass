@@ -94,6 +94,11 @@ export function nav({ base = '', active = '', social = {} }) {
 }
 
 // ---- Full footer ---------------------------------------------------------
+// The phone number shown site-wide comes from /admin → Contact page
+// (contact.phoneVal); this is only the fallback if that is empty.
+export const DEFAULT_PHONE = '+43 699 1059 9099';
+export const telHref = (n) => 'tel:' + String(n).replace(/[^\d+]/g, '');
+
 export function footer({ base = '', social = {} }) {
   const s = socialLinks(social, 'social-icons social-icons--footer');
   return `<footer>
@@ -129,7 +134,7 @@ export function footer({ base = '', social = {} }) {
         <div id="footer-contact">
           <p class="footer__col-title" data-i18n="footer.contactTitle">Contact</p>
           <ul class="footer__links">
-            <li><a href="tel:+34911234567">+34 91 123 4567</a></li>
+            <li><a href="${esc(telHref(social.phone || DEFAULT_PHONE))}">${esc(social.phone || DEFAULT_PHONE)}</a></li>
             <li style="margin-top:.4rem"><span style="font-size:.8rem;color:var(--muted)" data-i18n="footer.region">Spain · Portugal · Worldwide by video</span></li>
             <li style="margin-top:.4rem"><a href="${base}about.html" data-i18n="nav.about">About</a></li>
           </ul>

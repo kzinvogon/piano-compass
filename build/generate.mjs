@@ -12,7 +12,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
 import { marked } from 'marked';
-import { pageShell, socialLinks, nav, footer, esc } from './partials.mjs';
+import { pageShell, socialLinks, nav, footer, esc, DEFAULT_PHONE, telHref } from './partials.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = (p) => fs.readFileSync(path.join(ROOT, p), 'utf8');
@@ -62,6 +62,12 @@ const PAGES = exists('content/pages')
   ? fs.readdirSync(path.join(ROOT, 'content/pages')).filter((f) => f.endsWith('.json')).sort()
     .map((f) => [f.replace(/\.json$/, ''), loadPage(f)])
   : [];
+
+// Site phone number: the one entered in /admin → Contact page. It feeds the
+// footer and replaces the old placeholder number in the static pages.
+const PHONE = (PAGES.find(([n]) => n === 'contact')?.[1]?.contact?.phoneVal || '').trim() || DEFAULT_PHONE;
+social.phone = PHONE;
+const OLD_PHONE = ['+34 91 123 4567', 'tel:+34911234567'];
 
 // Map of CMS-IMG marker keys -> image URL, sourced from each page's `images`.
 const IMAGES = {};
@@ -424,6 +430,9 @@ function injectStatic() {
     s = s.replace(/<nav id="nav">[\s\S]*?<\/nav>/, () => nav({ base, active, social }));
     s = s.replace(/<footer>[\s\S]*?<\/footer>/, () => footer({ base, social }));
 
+    // Phone number from /admin (replaces the old placeholder everywhere)
+    s = s.split(OLD_PHONE[1]).join(telHref(PHONE)).split(OLD_PHONE[0]).join(esc(PHONE));
+
     // CMS-driven images
     s = injectImages(s, base);
 
@@ -431,6 +440,10 @@ function injectStatic() {
     if (s.includes('<!-- GEN:feurich-range -->')) {
       const feurich = pianos
         .filter((p) => (p.constructor || '') === 'Feurich' && !USED_CATEGORIES.includes(p.category))
+        // One card per model (the OLYA EVO is listed once per finish): keep
+        // the entry with the shortest slug, i.e. the main one.
+        .filter((p, i, all) => !p.model || !all.some((q) => q !== p && q.model === p.model
+          && (q.slug.length < p.slug.length || (q.slug.length === p.slug.length && all.indexOf(q) < i))))
         .sort((a, b) => (a.type === b.type
           ? (parseInt(a.size) || 0) - (parseInt(b.size) || 0)
           : (a.type === 'Upright' ? -1 : 1)));

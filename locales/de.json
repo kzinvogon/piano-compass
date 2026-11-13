@@ -140,6 +140,7 @@
     "usedNone": "Derzeit haben wir keine geprüften Gebrauchtklaviere gelistet — aber genau das ist unsere Aufgabe: eines zu finden und unabhängig prüfen zu lassen. Sagen Sie uns, was Sie suchen, und wir beginnen mit der Suche.",
     "usedStart": "Gebrauchtsuche starten",
     "usedExplore": "So finden wir gebrauchte Klaviere",
+    "usedBrowse": "Alle unsere Gebrauchtklaviere ansehen",
     "noneNote": "Hier sind die nächstgelegenen Optionen — eine kurze Beratung wird die Auswahl weiter verfeinern.",
     "libEmpty": "Vereinbaren Sie eine Beratung, und wir erstellen Ihre Auswahl persönlich."
   },
@@ -419,7 +420,8 @@
     "galleryTitle": "Maßgefertigte Kreationen",
     "galleryCap1": "Beleuchtete LED-Kunstfertigkeit",
     "galleryCap2": "Handgefertigtes Mosaik",
-    "galleryCap3": "Maßgefertigter Flügel · Mosaik-Ausführung"
+    "galleryCap3": "Maßgefertigter Flügel · Mosaik-Ausführung",
+    "lightboxCta": "Gefällt Ihnen dieses Design? Beratung buchen"
   },
   "finderResult": {
     "upright": "Ein hochwertiges Klavier",
