@@ -748,7 +748,7 @@ collections:
       - name: constructor
         label: Constructor / maker
         widget: select
-        options: [Feurich, Bösendorfer, 'Steinway & Sons', Yamaha, Kawai, Blüthner, 'C. Bechstein', Fazioli, Schimmel, Grotrian, 'Shigeru Kawai', Other]
+        options: [Feurich, Bösendorfer, 'Steinway & Sons', Yamaha, Kawai, Blüthner, 'C. Bechstein', Fazioli, Schimmel, Grotrian, 'Shigeru Kawai', 'August Förster', Ehrbar, 'H. Rachse', 'W. Hoffmann', Other]
       - { name: year, label: Year of build, widget: number, value_type: int, required: false }
       - { name: type, label: Type, widget: select, options: [Grand, 'Baby Grand', Upright, Digital, Other] }
       - { name: category, label: Category, widget: select, options: [New, Used, Restored, 'Pre-owned'] }

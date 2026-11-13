@@ -430,7 +430,7 @@ function injectStatic() {
     // Feurich range grid (Brands page): all current Feurich models from the library
     if (s.includes('<!-- GEN:feurich-range -->')) {
       const feurich = pianos
-        .filter((p) => (p.constructor || '') === 'Feurich')
+        .filter((p) => (p.constructor || '') === 'Feurich' && !USED_CATEGORIES.includes(p.category))
         .sort((a, b) => (a.type === b.type
           ? (parseInt(a.size) || 0) - (parseInt(b.size) || 0)
           : (a.type === 'Upright' ? -1 : 1)));
