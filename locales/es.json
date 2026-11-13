@@ -140,6 +140,7 @@
     "usedNone": "Ahora mismo no tenemos pianos de segunda mano verificados en nuestra lista, pero encontrar uno y hacerlo revisar de forma independiente es precisamente lo que hacemos. Cuéntenos qué busca y empezaremos la búsqueda.",
     "usedStart": "Iniciar una búsqueda de segunda mano",
     "usedExplore": "Cómo encontramos pianos de segunda mano",
+    "usedBrowse": "Ver todos nuestros pianos de segunda mano",
     "noneNote": "Estas son las opciones más cercanas — una breve consulta permitirá afinar la selección.",
     "libEmpty": "Reserve una consulta y elaboraremos su selección personalmente."
   },
@@ -419,7 +420,8 @@
     "galleryTitle": "Creaciones a Medida",
     "galleryCap1": "Arte iluminado con LED",
     "galleryCap2": "Mosaico acabado a mano",
-    "galleryCap3": "Piano de cola a medida · acabado en mosaico"
+    "galleryCap3": "Piano de cola a medida · acabado en mosaico",
+    "lightboxCta": "¿Le gusta este diseño? Reserve una consulta"
   },
   "finderResult": {
     "upright": "Un piano vertical de calidad",

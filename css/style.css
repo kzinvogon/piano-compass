@@ -643,6 +643,8 @@ body.lightbox-open { overflow: hidden; }
 .lightbox__img { max-width: 94vw; max-height: 88vh; object-fit: contain; border-radius: 8px; box-shadow: 0 30px 90px rgba(0,0,0,.6); }
 .lightbox__close { position: absolute; top: 1.4rem; right: 1.8rem; font-size: 2.2rem; line-height: 1; color: #f4efe4; opacity: .85; }
 .lightbox__close:hover { opacity: 1; }
+.lightbox__cta { position: absolute; bottom: 3.6rem; left: 50%; transform: translateX(-50%); white-space: nowrap; }
+.lightbox__cta[hidden] { display: none; }
 .lightbox__caption { position: absolute; bottom: 1.6rem; left: 0; right: 0; text-align: center; color: rgba(244,239,228,.8); font-size: .76rem; letter-spacing: .1em; text-transform: uppercase; }
 
 /* ── Responsive ─────────────────────────────────────────── */

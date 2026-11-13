@@ -582,6 +582,9 @@ collections:
               - { name: photo4, label: "Design photo 4", widget: image, required: false }
               - { name: photo5, label: "Design photo 5", widget: image, required: false }
               - { name: photo6, label: "Design photo 6", widget: image, required: false }
+              - { name: photo7, label: "Design photo 7", widget: image, required: false }
+              - { name: photo8, label: "Design photo 8", widget: image, required: false }
+              - { name: photo9, label: "Design photo 9", widget: image, required: false }
       - name: finder
         label: "Piano Finder wording"
         file: content/pages/finder.json
@@ -651,6 +654,7 @@ collections:
               - { name: usedNone, label: "Used — none listed message", widget: text }
               - { name: usedStart, label: "Used — start search button", widget: string }
               - { name: usedExplore, label: "Used — link to Used page", widget: string }
+              - { name: usedBrowse, label: "Used — browse-all link under used results", widget: string }
               - { name: noneNote, label: "None note", widget: text }
               - { name: libEmpty, label: "Lib empty", widget: string }
               - { name: back, label: "Back", widget: string }

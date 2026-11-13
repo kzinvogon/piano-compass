@@ -117,6 +117,12 @@
   function shortlist(who, space, kind, priority) {
     let pool = library.filter((p) => kindOk(p, kind));
     let note = '';
+    // A beginner after a new (or either) piano at the best price is shown
+    // only the digital keyboard (the OLYA), if one is listed.
+    if (who === 'beginner' && priority === 'value' && (kind === 'new' || kind === 'either')) {
+      const digital = pool.filter((p) => p.type === 'Digital');
+      if (digital.length) pool = digital;
+    }
     if (!pool.length) {
       pool = library.slice();
       note = t('finder.noneNote', "Here are the closest options — a short consultation will refine the shortlist.");
@@ -181,6 +187,10 @@
     } else {
       const { ranked, note } = shortlist(who, space, kind, priority);
       textEl.textContent = t('finder.baseText', 'Based on your answers, here are the instruments that fit best. Choose one to continue — or go back to change your answers.') + (note ? ' ' + note : '');
+      // Used buyers can also browse the full list on the Used page.
+      if (kind === 'used') {
+        textEl.insertAdjacentHTML('beforeend', ` <a class="finder__used-link" href="${base}vintage.html">${esc(t('finder.usedBrowse', 'Browse all our used pianos'))} →</a>`);
+      }
       listEl.innerHTML = ranked.map(card).join('');
       footEl.innerHTML = `<p class="finder__hintline">${esc(t('finder.chooseHint', 'Select a piano to continue, or go back to adjust your answers.'))}</p>`;
 
