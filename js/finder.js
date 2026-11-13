@@ -123,7 +123,11 @@
     }
     const ranked = pool
       .map((p) => ({ p, s: score(p, who, space, priority) }))
-      .sort((a, b) => b.s - a.s)
+      // Beginners see digital pianos (the OLYA) first, whatever else they
+      // chose; the rest of the order is by score.
+      .sort((a, b) => (who === 'beginner'
+        ? (b.p.type === 'Digital') - (a.p.type === 'Digital')
+        : 0) || b.s - a.s)
       .slice(0, 5)
       .map((x) => x.p);
     return { ranked, note };

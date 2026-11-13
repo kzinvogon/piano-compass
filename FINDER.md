@@ -107,7 +107,9 @@ If no piano passes the filter:
 | Q1 is A beginner or child and the piano is an Upright | +1 |
 
 **Step 3: rank.** Pianos are sorted by score, highest first, and the top five
-are shown. Ties keep the library's order: newest `date` first.
+are shown. **Exception:** when Q1 is "A beginner or child", digital pianos
+(type `Digital`, i.e. the OLYA) are always placed first, then the rest by
+score. Ties keep the library's order: newest `date` first.
 
 ## 4. The results screen
 
